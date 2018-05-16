@@ -4356,7 +4356,7 @@ header {
 
 /*=== 5.4 PAGE TITLE SECTION ===*/
 .pageTitle {
-  background-image: url("../img/pages/page-title-bg.jpg");
+  background-image: url("../img/pages/page-title-bg5.jpg");
   width: 100%;
   background-size: cover;
   background-position: center top;
@@ -4375,6 +4375,12 @@ header {
     margin-top: 95px;
   }
 }
+
+@media (min-width: 768px) {
+    .pageTitle {
+        margin-top: 0px;  
+    }
+}/*es para que el banner quede arriba*/
 
 .pageTitle .titleTable {
   display: table;

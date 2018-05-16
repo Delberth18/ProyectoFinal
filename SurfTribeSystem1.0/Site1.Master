@@ -73,7 +73,7 @@
               <li class="active"><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i>Email:  info@startravel.com</a></li>
             </ul>
             <ul class="headerTopNavbar navbar-right">
-              <li class="active"><a href="" data-toggle="modal" data-target="#login"><i class="fa fa-user" aria-hidden="true"></i>Login</a></li>
+              <li class="active"><a href="" data-toggle="modal" data-target="#login"><i class="fa fa-user" aria-hidden="true"></i>Iniciar Sesión</a></li>
               <li class="dropdown searchBox">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                 <span class="searchIcon"><i class="fa fa-search" aria-hidden="true"></i> </span>
@@ -109,15 +109,11 @@
           <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav navbar-right">
               <li class="dropdown singleDrop active">
-                <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">Home</a>
-                <ul class="dropdown-menu dropdown-menu-left">
-                  <li class="dropdown singleDrop  "><a href="index.html">Home Main</a></li>
-                  <li class="dropdown singleDrop active "><a href="index-v2.html">Home City</a></li>
-                  <li class="dropdown singleDrop  "><a href="index-v3.html">Home Destination</a></li>
-                </ul>
+                <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">Inicio</a>
+                
               </li>
               <li class="dropdown megaDropMenu ">
-                <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="300" data-close-others="true" aria-expanded="false">Tours</a>
+                <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="300" data-close-others="true" aria-expanded="false">Escuelas</a>
                 <ul class="row dropdown-menu">
                   <li class="col-sm-3 col-xs-12">
                     <ul class="list-unstyled">
@@ -154,7 +150,7 @@
                 </ul>
               </li>
               <li class="dropdown megaDropMenu ">
-                <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="300" data-close-others="true" aria-expanded="false">Hotels</a>
+                <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="300" data-close-others="true" aria-expanded="false">Galeria</a>
                 <ul class="row dropdown-menu">
                   <li class="col-sm-3 col-xs-12">
                     <ul class="list-unstyled">
@@ -191,7 +187,7 @@
                 </ul>
               </li>
               <li class="dropdown singleDrop ">
-                <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">PAGES</a>
+                <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Información</a>
                 <ul class="dropdown-menu dropdown-menu-right">
                   <li class=""><a href="about-us.html">About Us</a></li>
                   <li class=""><a href="contact.html">Contact Us</a></li>
@@ -215,7 +211,7 @@
                 </ul>
               </li>
               <li class="dropdown singleDrop ">
-                <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Blog</a>
+                <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Acerca de </a>
                 <ul class="dropdown-menu dropdown-menu-right">
                   <li class="dropdown dropdown-submenu">
                     <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">Blog Grid View <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
@@ -241,28 +237,11 @@
                   </li>
                 </ul>
               </li>
-              <li class="dropdown singleDrop ">
-                <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admin</a>
-                <ul class="dropdown-menu dropdown-menu-right">
-                  <li class=""><a href="dashboard.html">Dashboard</a></li>
-                  <li class=""><a href="booking.html">Booking</a></li>
-                  <li class=""><a href="profile.html">Profile</a></li>
-                  <li class=""><a href="setting.html">Settings</a></li>
-                  <li class=""><a href="" data-toggle="modal" data-target="#signup">Signup</a></li>
-                  <li class=""><a href="" data-toggle="modal" data-target="#login">Login</a></li>
-                </ul>
-              </li>
-              <li class="dropdown singleDrop ">
-                <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Shortcodes</a>
-                <ul class="dropdown-menu dropdown-menu-right">
-                  <li class=""><a href="accordion-and-toggles.html">Accordions &amp; Toggles</a></li>
-                  <li class=""><a href="tabs-and-dropdown.html">Tabs &amp; Dropdowns</a></li>
-                  <li class=""><a href="pricing-table.html">Pricing Tables</a></li>
-                </ul>
-              </li>
+              
+              
               <li>
                 <div class="navbar-btn">
-                  <a class="btn btn-nav">Book Now</a>
+                  <a class="btn btn-nav"> Reserva ya</a>
                 </div>
               </li>
 
@@ -278,10 +257,10 @@
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
         </div>
-       </form>
+       </body></form</div>
       
 <!-- Signup Modal -->
-<div class="modal fade signupLoging" id="signup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal fade signupLoging" id="signup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" >
   <div class="modal-dialog" role="document">
     <div class="modal-content modalContentCustom">
       <div class="modal-header">
@@ -375,5 +354,5 @@
 <script src="ccss/star-1-3/Static HTML/plugins/slick/slick.min.js"></script>
 <script src="ccss/star-1-3/Static HTML/js/custom.js"></script>
    
-</body>
-
+    </body>
+    </html>
