@@ -244,6 +244,10 @@
     <Content Include="ccss\star-1-3\SCSS\img\home\packages\packages-4.jpg" />
     <Content Include="ccss\star-1-3\SCSS\img\home\packages\packages-5.jpg" />
     <Content Include="ccss\star-1-3\SCSS\img\home\packages\packages-6.jpg" />
+    <Content Include="ccss\star-1-3\SCSS\img\home\promotion\imagen1.jpg" />
+    <Content Include="ccss\star-1-3\SCSS\img\home\promotion\imagen2.jpg" />
+    <Content Include="ccss\star-1-3\SCSS\img\home\promotion\imagen3.jpg" />
+    <Content Include="ccss\star-1-3\SCSS\img\home\promotion\imagen4.jpg" />
     <Content Include="ccss\star-1-3\SCSS\img\home\promotion\promotion-1.jpg" />
     <Content Include="ccss\star-1-3\SCSS\img\home\promotion\promotion-2.jpg" />
     <Content Include="ccss\star-1-3\SCSS\img\home\slider\slider-01.jpg" />

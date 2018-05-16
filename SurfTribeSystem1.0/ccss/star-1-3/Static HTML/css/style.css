@@ -9768,14 +9768,15 @@ header {
 
 /*=== 11.2 ABOUT COMMENTS ===*/
 .aboutComments {
-  background-image: url("../img/home/promotion/promotion-1.jpg");
-  background-attachment: fixed;
-  width: 100%;
-  background-size: cover;
-  background-position: center;
-  color: #ffffff;
-  height: 407px;
-  padding: 0;
+    /*background-image: url("../img/packages/package-related-01.jpg");*/
+    background-image: url("../../SCSS/img/home/promotion/imagen4.jpg");
+    background-attachment: fixed;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    height: 407px;
+    padding: 0;
 }
 
 .aboutComments .commentsTable {
