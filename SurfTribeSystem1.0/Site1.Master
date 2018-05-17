@@ -70,7 +70,7 @@
           <div class="headerTopNav">
             <ul class="headerTopNavbar">
               
-              <li class="active"><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i>Email:  info@startravel.com</a></li>
+              <li class="active"><a href="#"><i class="fa " aria-hidden="true"></i></a></li>
             </ul>
             <ul class="headerTopNavbar navbar-right">
               <li class="active"><a href="" data-toggle="modal" data-target="#login"><i class="fa fa-user" aria-hidden="true"></i>Iniciar Sesión</a></li>

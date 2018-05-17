@@ -28,7 +28,7 @@
           <div class="col-xs-12">
             <div class="aboutTitle">
               <h4>Surf Tribe System </h4>
-              <p>Es una aplicación web que unifica la mayoria de escuelas de surf de Costa Rica, en la cual usted puede reservar sus clases de surf en una de las diferentes escuelas unicadas en todo el país, ademas de tener la opción de alquilar indumentaria en el proceso y reservar diferentes articulos de las escuelas para que se les sean entregados en el momento de su visita.  </p>
+              <p>Es una aplicación web que unifica la mayoria de escuelas de surf de Costa Rica, en la cual usted puede reservar sus clases de surf en una de las diferentes escuelas ubicadas en todo el país, ademas de tener la opción de alquilar indumentaria en el proceso y reservar diferentes articulos de las escuelas para que se les sean entregados en el momento de su visita para que no tengas que preocuparte por nada, solo de disfrutar.  </p>
             </div>
           </div>
         </div>
@@ -38,7 +38,7 @@
               <a class="media-left" href="#"><i class="fa fa-bell" aria-hidden="true"></i></a>
               <div class="media-body">
                 <h4 class="media-heading">Notificaciónes</h4>
-                <p>Vestibulum ut lacus non lorem pharetra efficitur. Nunc nibh elit, consectetur quis dapibu.</p>
+                <p>Mediante nuestra apliación usted podrá recibir notificaciones internas como información vía correo.</p>
               </div>
             </div>
           </div>
@@ -47,7 +47,7 @@
               <a class="media-left" href="#"><i class="fa fa-briefcase" aria-hidden="true"></i></a>
               <div class="media-body">
                 <h4 class="media-heading">Indumentaria</h4>
-                <p>Aenean dictum dui quis interdum volutpat. Integer in magna sit amet efficitur nec.</p>
+                <p>No tiene indumentaria adecuada? No se preocupe usted puede alquilarla mediante nuestra página.</p>
               </div>
             </div>
           </div>
@@ -56,7 +56,7 @@
               <a class="media-left" href="#"><i class="fa fa-cab" aria-hidden="true"></i></a>
               <div class="media-body">
                 <h4 class="media-heading">Variados Destinos</h4>
-                <p>Etiam posuere lorem ac pharetra laoreet. Nam magna mi, eleifend ac vulputate ac.</p>
+                <p>Echele un vistazo alas diferentes escuelas que estan en los litorales de nuestro país.</p>
               </div>
             </div>
           </div>
@@ -65,7 +65,7 @@
               <a class="media-left" href="#"><i class="fa fa-camera" aria-hidden="true"></i></a>
               <div class="media-body">
                 <h4 class="media-heading">Galeria</h4>
-                <p>Nunc eget sem ac lectus auctor viverra. Praesent sollicitudin leo velit sed, semper diam.</p>
+                <p>Disfrute de las bellas imagenes y videos de cada uno de las playas.</p>
               </div>
             </div>
           </div>
@@ -74,7 +74,7 @@
               <a class="media-left" href="#"><i class="fa  fa-clock-o" aria-hidden="true"></i></a>
               <div class="media-body">
                 <h4 class="media-heading">Reserve </h4>
-                <p>Nulla molestie leo vitae convallis sollicitudin. Nulla volutpat dapibus at pellentesque sem.</p>
+                <p>Reserve desde ya los días a su conveniencia para tomar clases de surf ademas de la indumentaria.</p>
               </div>
             </div>
           </div>
@@ -83,7 +83,7 @@
               <a class="media-left" href="#"><i class="fa fa-user" aria-hidden="true"></i></a>
               <div class="media-body">
                 <h4 class="media-heading">Registrese</h4>
-                <p>Aenean gravida, nisl et volutpat dapibus, nisl odio accumsan pretium lacus libero a lacus.</p>
+                <p>Registrese para poder reservar y disfrutar de las ofertas del momento.</p>
               </div>
             </div>
           </div>
@@ -116,33 +116,15 @@
         <div class="row">
           <div class="col-xs-12">
             <div class="sectionTitle">
-              <h2><span>our Team</span></h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-            </div>
-          </div>
+              <h2><span>¿Como Reservar?</span></h2>
+              
+            </div><center>
+              <p>- Para reservar necesitas tener una cuenta con la cual hacer la reserva.</p>
+              <p>- Despues de confirmar la reserva en la página, el administrador de la escuela se pondra en contacto con usted para que realice el depósito en la cuenta respectiva.</p>
+              <p>- Una vez echo el deposito y confirmado el respaldo por parte de la escuela su reserva quedara en firme.</p>    
+          </div></center>
         </div>
         <div class="row">
-          <div class="col-sm-4 col-xs-12">
-            <div class="teamMember">
-              <img src="img/about-us/team-01.jpg" alt="">
-              <div class="memberName">
-                <h4>Sarah Harlas</h4>
-                <p>Tour Guide</p>
-              </div>
-             
-            </div>
-          </div>
-          <div class="col-sm-4 col-xs-12">
-            <div class="teamMember">
-              <img src="img/about-us/team-02.jpg" alt="">
-              <div class="memberName">
-                <h4>Adam Smith</h4>
-                <p>Tour Guide</p>
-              </div>
-            
-            </div>
-          </div>
-        
         </div>
       </div>
     </section>
@@ -161,9 +143,9 @@
         <div class="col-sm-3 col-xs-12">
           <div class="footerContent">
             <h5>Contactenos</h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmod.</p>
+            <p>Si tiene alguna duda o problema contactenos.</p>
             <ul class="list-unstyled">
-              <li><i class="fa fa-home" aria-hidden="true"></i>61 Park Street, Fifth Avenue, NY</li>
+              
               <li><i class="fa fa-phone" aria-hidden="true"></i>[88] 657 524 332</li>
               <li><i class="fa fa-envelope-o" aria-hidden="true"></i><a href="mailTo:info@star-travel.com">info@star-travel.com</a></li>
             </ul>
@@ -216,15 +198,14 @@
       <div class="row">
         <div class="col-sm-6 col-sm-push-6 col-xs-12">
           <ul class="list-inline">
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Support</a></li>
-            <li><a href="#">Blog</a></li>
+            <li><a href="#">Políticas</a></li>
+            <li><a href="#">Acerca de</a></li>
+            
           </ul>
         </div>
         <div class="col-sm-6 col-sm-pull-6 col-xs-12">
           <div class="copyRightText">
-            <p>Copyright © 2016. All Rights Reserved by <a target="_blank" href="http://www.iamabdus.com/">Abdus</a>.</p>
+            <p>Copyright © 2018. Todos los derechos reservados</a>.</p>
           </div>
         </div>
       </div>
