@@ -65,32 +65,9 @@
 
     <!-- HEADER -->
     <header>
-      <section class="headerTop">
-        <div class="container">
-          <div class="headerTopNav">
-            <ul class="headerTopNavbar">
-              
-              <li class="active"><a href="#"><i class="fa " aria-hidden="true"></i></a></li>
-            </ul>
-            <ul class="headerTopNavbar navbar-right">
-              <li class="active"><a href="" data-toggle="modal" data-target="#login"><i class="fa fa-user" aria-hidden="true"></i>Iniciar Sesión</a></li>
-              <li class="dropdown searchBox">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                <span class="searchIcon"><i class="fa fa-search" aria-hidden="true"></i> </span>
-              </a>
-                <ul class="dropdown-menu dropdown-menu-right">
-                  <li>
-                    <span class="input-group">
-                      <input type="text" class="form-control" placeholder="Search..." aria-describedby="basic-addon2">
-                      <span class="input-group-addon" id="basic-addon2">Search</span>
-                    </span>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-        </div><!-- /.container -->
-      </section>
+     
+
+
       <nav class="navbar navbar-default navbar-main   lightHeader " role="navigation">
         <div class="container">
 
@@ -238,12 +215,47 @@
                 </ul>
               </li>
               
+                <!-- -->
+               <li> </br></br>  
+               <div class="headerTopNav"> 
+                   <ul class="headerTopNavbar navbar-right">
+             <li class="dropdown searchBox">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
               
-              <li>
-                <div class="navbar-btn">
-                  <a class="btn btn-nav"> Reserva ya</a>
-                </div>
-              </li>
+              <span class="searchIcon"><i class="fa fa-search" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+              </a>
+                <ul class="dropdown-menu dropdown-menu-right">
+                  <li>
+                    <span class="input-group">
+                      <input type="text" class="form-control" placeholder="Search..." aria-describedby="basic-addon2">
+                      <span class="input-group-addon" id="basic-addon2">Search</span>
+                    </span>
+                  </li>
+                </ul>
+              </li></ul></div>
+
+                </li>
+                <!-- -->
+              
+             
+
+                <li></br>
+            <div class="headerTopNav">
+            <ul class="headerTopNavbar">
+              
+              <li class="active"><a href="#"><i class="fa " aria-hidden="true"></i></a></li>
+            </ul>
+            <ul class="headerTopNavbar navbar-right">
+              <li class="active"><a href="" data-toggle="modal" data-target="#login"><i class="fa fa-user" aria-hidden="true"> </i> Iniciar Sesión </a></li>
+              
+            </ul>
+          </div>
+
+                </li>
+
+               
+               
+              
 
             </ul>
 
@@ -273,10 +285,10 @@
             <input type="text" class="form-control bg-ash" id="exampleInputEmail1" placeholder="Full Name">
           </div>
           <div class="form-group">
-            <input type="email" class="form-control bg-ash" id="exampleInputPassword1" placeholder="Email">
+            <input type="email" class="form-control bg-ash" id="exampleInputPassword2" placeholder="Email">
           </div>
           <div class="form-group">
-            <input type="password" class="form-control bg-ash" id="exampleInputPassword1" placeholder="Password">
+            <input type="password" class="form-control bg-ash" id="exampleInputPassword3" placeholder="Password">
           </div>
           <div class="checkbox">
             <label>
@@ -312,7 +324,7 @@
       <div class="modal-body">
         <form method="post" action="">
           <div class="form-group">
-            <input type="email" class="form-control bg-ash" id="exampleInputPassword1" placeholder="Correo">
+            <input type="email" class="form-control bg-ash" id="exampleInputPassword" placeholder="Correo">
           </div>
           <div class="form-group">
             <input type="password" class="form-control bg-ash" id="exampleInputPassword1" placeholder="Contraseña">
