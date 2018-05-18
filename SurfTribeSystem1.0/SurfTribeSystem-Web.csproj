@@ -3470,27 +3470,28 @@
     <Content Include="ccss\star-1-3\Static HTML\single-package-left-sidebar.html" />
     <Content Include="ccss\star-1-3\Static HTML\single-package-right-sidebar.html" />
     <Content Include="ccss\star-1-3\Static HTML\tabs-and-dropdown.html" />
-    <Content Include="defaultConLogeo.aspx" />
-    <Content Include="defaultSinLogeo.aspx" />
+    <Content Include="defaultConLogeoUN.aspx" />
+    <Content Include="defaultSinLogeoUN.aspx" />
     <Content Include="Global.asax" />
     <Content Include="InformaciónGeneral.aspx" />
+    <Content Include="registrarse.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexion\Conexion.cs" />
-    <Compile Include="defaultConLogeo.aspx.cs">
-      <DependentUpon>defaultConLogeo.aspx</DependentUpon>
+    <Compile Include="defaultConLogeoUN.aspx.cs">
+      <DependentUpon>defaultConLogeoUN.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="defaultConLogeo.aspx.designer.cs">
-      <DependentUpon>defaultConLogeo.aspx</DependentUpon>
+    <Compile Include="defaultConLogeoUN.aspx.designer.cs">
+      <DependentUpon>defaultConLogeoUN.aspx</DependentUpon>
     </Compile>
-    <Compile Include="defaultSinLogeo.aspx.cs">
-      <DependentUpon>defaultSinLogeo.aspx</DependentUpon>
+    <Compile Include="defaultSinLogeoUN.aspx.cs">
+      <DependentUpon>defaultSinLogeoUN.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="defaultSinLogeo.aspx.designer.cs">
-      <DependentUpon>defaultSinLogeo.aspx</DependentUpon>
+    <Compile Include="defaultSinLogeoUN.aspx.designer.cs">
+      <DependentUpon>defaultSinLogeoUN.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -3506,6 +3507,13 @@
     <Compile Include="Models\Credencial.cs" />
     <Compile Include="Models\Resultado.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="registrarse.aspx.cs">
+      <DependentUpon>registrarse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="registrarse.aspx.designer.cs">
+      <DependentUpon>registrarse.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Site1.Master.cs">
       <DependentUpon>Site1.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
