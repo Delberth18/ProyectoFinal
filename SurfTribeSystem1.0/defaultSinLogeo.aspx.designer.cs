@@ -10,6 +10,6 @@
 namespace SurfTribeSystem1._0 {
     
     
-    public partial class _default {
+    public partial class defaultSinLogeo {
     }
 }
