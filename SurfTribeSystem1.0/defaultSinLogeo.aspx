@@ -5,13 +5,13 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 
 
-<head>
+<head runat="server">
 
   <!-- SITE TITTLE -->
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Star Travel - Tour Booking Theme</title>
+  <title>Surf Tribe System</title>
 
   <!-- PLUGINS CSS STYLE -->
   <link href="ccss/star-1-3/Static HTML/plugins/jquery-ui/jquery-ui.min.css" rel="stylesheet">
@@ -31,11 +31,11 @@
   <link href='https://fonts.googleapis.com/css?family=Montserrat:400,600,700' rel='stylesheet' type='text/css'>
 
   <!-- CUSTOM CSS -->
-  <link href="css/style.css" rel="stylesheet">
+  <link href="ccss/star-1-3/Static HTML/css/style.css" rel="stylesheet">
   <link rel="stylesheet" href="ccss/star-1-3/Static HTML/css/colors/default.css" id="option_color">
 
   <!-- FAVICON -->
-  <link rel="shortcut icon" type="image/png" href="ccss/start-1-3/Static HTML/img/favicon.png"/>
+  <link rel="shortcut icon" type="image/png" href="ccss/star-1-3/Static HTML/img/favicon.png"/>
 
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -70,7 +70,7 @@
           <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav navbar-right">
               <li class="dropdown singleDrop active">
-                <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">Home </a>
+                <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">Inicio </a>
                 <ul class="dropdown-menu dropdown-menu-left">
                   <li class="dropdown singleDrop active "><a href="index.html">Home Main</a></li>
                   <li class="dropdown singleDrop  "><a href="index-v2.html">Home City</a></li>
@@ -78,7 +78,7 @@
                 </ul>
               </li>
               <li class="dropdown megaDropMenu ">
-                <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="300" data-close-others="true" aria-expanded="false">Tours</a>
+                <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="300" data-close-others="true" aria-expanded="false">Escuelas</a>
                 <ul class="row dropdown-menu">
                   <li class="col-sm-3 col-xs-12">
                     <ul class="list-unstyled">
@@ -115,7 +115,7 @@
                 </ul>
               </li>
               <li class="dropdown megaDropMenu ">
-                <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="300" data-close-others="true" aria-expanded="false">Hotels</a>
+                <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="300" data-close-others="true" aria-expanded="false">Galeria</a>
                 <ul class="row dropdown-menu">
                   <li class="col-sm-3 col-xs-12">
                     <ul class="list-unstyled">
@@ -152,7 +152,7 @@
                 </ul>
               </li>
               <li class="dropdown singleDrop ">
-                <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">PAGES</a>
+                <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Información</a>
                 <ul class="dropdown-menu dropdown-menu-right">
                   <li class=""><a href="about-us.html">About Us</a></li>
                   <li class=""><a href="contact.html">Contact Us</a></li>
@@ -176,7 +176,7 @@
                 </ul>
               </li>
               <li class="dropdown singleDrop ">
-                <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Blog</a>
+                <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Acerca de</a>
                 <ul class="dropdown-menu dropdown-menu-right">
                   <li class="dropdown dropdown-submenu">
                     <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">Blog Grid View <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
@@ -200,25 +200,6 @@
                       <li class=""><a href="blog-single-left-sidebar.html">Left Sidebar</a></li>
                     </ul>
                   </li>
-                </ul>
-              </li>
-              <li class="dropdown singleDrop ">
-                <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admin</a>
-                <ul class="dropdown-menu dropdown-menu-right">
-                  <li class=""><a href="dashboard.html">Dashboard</a></li>
-                  <li class=""><a href="booking.html">Booking</a></li>
-                  <li class=""><a href="profile.html">Profile</a></li>
-                  <li class=""><a href="setting.html">Settings</a></li>
-                  <li class=""><a href="" data-toggle="modal" data-target="#signup">Signup</a></li>
-                  <li class=""><a href="" data-toggle="modal" data-target="#login">Login</a></li>
-                </ul>
-              </li>
-              <li class="dropdown singleDrop ">
-                <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Shortcodes</a>
-                <ul class="dropdown-menu dropdown-menu-right">
-                  <li class=""><a href="accordion-and-toggles.html">Accordions &amp; Toggles</a></li>
-                  <li class=""><a href="tabs-and-dropdown.html">Tabs &amp; Dropdowns</a></li>
-                  <li class=""><a href="pricing-table.html">Pricing Tables</a></li>
                 </ul>
               </li>
               <li class="dropdown searchBox">
@@ -250,7 +231,7 @@
         <!-- SLIDE 1 -->
         <li data-transition="parallaxvertical" >
           <!-- MAIN IMAGE -->
-          <img src="img/home/slider/slider-01.jpg" alt="slidebg1"   data-bgparallax="3" class="rev-slidebg" data-no-retina>
+          <img src="ccss/star-1-3/Static HTML/img/home/slider/slider-01.jpg" alt="slidebg1"   data-bgparallax="3" class="rev-slidebg" data-no-retina>
 
           <!-- LAYERS -->
 
@@ -343,7 +324,7 @@
     <!-- SLIDE 2 -->
     <li data-transition="parallaxvertical">
       <!-- MAIN IMAGE -->
-      <img src="img/home/slider/slider-02.jpg" alt="slidebg1"   data-bgparallax="3" class="rev-slidebg" data-no-retina>
+      <img src="ccss/star-1-3/Static HTML/img/home/slider/slider-02.jpg" alt="slidebg1"   data-bgparallax="3" class="rev-slidebg" data-no-retina>
 
       <!-- LAYERS -->
 
@@ -426,7 +407,7 @@
     <!-- slide 3   -->
     <li data-transition="parallaxvertical">
       <!-- MAIN IMAGE -->
-      <img src="img/home/slider/slider-03.jpg" alt="slidebg1"   data-bgparallax="3" class="rev-slidebg" data-no-retina>
+      <img src="ccss/star-1-3/Static HTML/img/home/slider/slider-03.jpg" alt="slidebg1"   data-bgparallax="3" class="rev-slidebg" data-no-retina>
 
       <!-- LAYERS -->
 
@@ -515,7 +496,7 @@
     <!-- SLIDE 4 -->
     <li data-transition="parallaxvertical">
       <!-- MAIN IMAGE -->
-      <img src="img/home/slider/slider-04.jpg" alt="slidebg1"   data-bgparallax="3" class="rev-slidebg" data-no-retina>
+      <img src="ccss/star-1-3/Static HTML/img/home/slider/slider-04.jpg" alt="slidebg1"   data-bgparallax="3" class="rev-slidebg" data-no-retina>
 
       <!-- LAYERS -->
 
@@ -672,8 +653,8 @@
         <div class="row">
           <div class="col-sm-4 col-xs-12">
             <div class="thumbnail deals">
-              <img src="ccss/start-1-3/Static HTML/img/home/deal/deal-01.jpg" alt="deal-image">
-              <a href="ccss/start-1-3/Static HTML/single-package-right-sidebar.html" class="pageLink"></a>
+              <img src="ccss/star-1-3/Static HTML/img/home/deal/deal-01.jpg" alt="deal-image">
+              <a href="ccss/star-1-3/Static HTML/single-package-right-sidebar.html" class="pageLink"></a>
               <div class="discountInfo">
                 <div class="discountOffer">
                   <h4>
@@ -694,7 +675,7 @@
                 </ul>
               </div>
               <div class="caption">
-                <h4><a href="ccss/start-1-3/Static HTML/single-package-right-sidebar.html" class="captionTitle">Suspendisse Blandit</a></h4>
+                <h4><a href="ccss/star-1-3/Static HTML/single-package-right-sidebar.html" class="captionTitle">Suspendisse Blandit</a></h4>
                 <p>Integer purus ex, dictum nec elementum eu, tristique vel lectus. Donec rutrum lectus et pharetra egestas.</p>
                 <div class="detailsInfo">
                   <h5>
@@ -702,7 +683,7 @@
                     $299
                   </h5>
                   <ul class="list-inline detailsBtn">
-                    <li><a href='ccss/start-1-3/Static HTML/booking-1.html' class="btn buttonTransparent">Book now</a></li>
+                    <li><a href='ccss/star-1-3/Static HTML/booking-1.html' class="btn buttonTransparent">Book now</a></li>
                   </ul>
                 </div>
               </div>
@@ -710,8 +691,8 @@
           </div>
           <div class="col-sm-4 col-xs-12">
             <div class="thumbnail deals">
-              <img src="ccss/start-1-3/Static HTML/img/home/deal/deal-02.jpg" alt="deal-image">
-              <a href="ccss/start-1-3/Static HTML/single-package-fullwidth.html" class="pageLink"></a>
+              <img src="ccss/star-1-3/Static HTML/img/home/deal/deal-02.jpg" alt="deal-image">
+              <a href="ccss/star-1-3/Static HTML/single-package-fullwidth.html" class="pageLink"></a>
               <div class="discountInfo">
                 <div class="discountOffer">
                   <h4>
@@ -732,7 +713,7 @@
                 </ul>
               </div>
               <div class="caption">
-                <h4><a href="ccss/start-1-3/Static HTML/single-package-fullwidth.html" class="captionTitle">Suspendisse Eros Erat</a></h4>
+                <h4><a href="ccss/star-1-3/Static HTML/single-package-fullwidth.html" class="captionTitle">Suspendisse Eros Erat</a></h4>
                 <p>Proin convallis magna vel libero accumsan sollicitudin. Quisque dapibus vitae turpis eu magna sagittis.</p>
                 <div class="detailsInfo">
                   <h5>
@@ -748,8 +729,8 @@
           </div>
           <div class="col-sm-4 col-xs-12">
             <div class="thumbnail deals">
-              <img src="ccss/start-1-3/Static HTML/img/home/deal/deal-03.jpg" alt="deal-image">
-              <a href="ccss/start-1-3/Static HTML/single-package-left-sidebar.html" class="pageLink"></a>
+              <img src="ccss/star-1-3/Static HTML/img/home/deal/deal-03.jpg" alt="deal-image">
+              <a href="ccss/star-1-3/Static HTML/single-package-left-sidebar.html" class="pageLink"></a>
               <div class="discountInfo">
                 <div class="discountOffer">
                   <h4>
@@ -770,7 +751,7 @@
                 </ul>
               </div>
               <div class="caption">
-                <h4><a href="ccss/start-1-3/Static HTML/single-package-left-sidebar.html" class="captionTitle">Quisque Placerat Nunc</a></h4>
+                <h4><a href="ccss/star-1-3/Static HTML/single-package-left-sidebar.html" class="captionTitle">Quisque Placerat Nunc</a></h4>
                 <p>Vivamus eu mattis nibh. Quisque eget ipsum at odio fringilla consequat vel id erat. Suspendisse non feugiat mi.</p>
                 <div class="detailsInfo">
                   <h5>
@@ -778,7 +759,7 @@
                     $399
                   </h5>
                   <ul class="list-inline detailsBtn">
-                    <li><a href='ccss/start-1-3/Static HTML/booking-1.html' class="btn buttonTransparent">Book now</a></li>
+                    <li><a href='ccss/star-1-3/Static HTML/booking-1.html' class="btn buttonTransparent">Book now</a></li>
                   </ul>
                 </div>
               </div>
@@ -788,7 +769,7 @@
         <div class="row">
           <div class="col-xs-12">
             <div class="btnArea">
-              <a href="ccss/start-1-3/Static HTML/packages-grid.html" class="btn buttonTransparent">view all</a>
+              <a href="ccss/star-1-3/Static HTML/packages-grid.html" class="btn buttonTransparent">view all</a>
             </div>
           </div>
         </div>
@@ -813,7 +794,7 @@
                     <li><i class="fa fa-star" aria-hidden="true"></i></li>
                   </ul>
                   <p>$599 per person - 5 nights</p>
-                  <a href="ccss/start-1-3/Static HTML/single-package-right-sidebar.html" class="btn buttonCustomPrimary">View Details</a>
+                  <a href="ccss/star-1-3/Static HTML/single-package-right-sidebar.html" class="btn buttonCustomPrimary">View Details</a>
                 </div>
               </div>
             </div>
@@ -836,8 +817,8 @@
         <div class="row">
           <div class="col-xs-12">
             <div class="media destinations">
-              <a class="media-left" href="ccss/start-1-3/Static HTML/destination-cities.html">
-                <img class="media-object" src="ccss/start-1-3/Static HTML/img/home/destination.jpg" alt="Destination">
+              <a class="media-left" href="ccss/star-1-3/Static HTML/destination-cities.html">
+                <img class="media-object" src="ccss/star-1-3/Static HTML/img/home/destination.jpg" alt="Destination">
               </a>
               <div class="media-body">
                 <h3 class="media-heading">Choose <br>Your Destination</h3>
@@ -845,9 +826,9 @@
                 <div class="clearfix">
                   <ul class="list-unstyled">
                     <li><i class="fa fa-minus" aria-hidden="true"></i>Asia</li>
-                    <li><a href="ccss/start-1-3/Static HTML/destination-single-city.html"><i class="fa fa-square" aria-hidden="true"></i>Aenean</a></li>
-                    <li><a href="ccss/start-1-3/Static HTML/destination-single-city.html"><i class="fa fa-square" aria-hidden="true"></i>Etiam</a></li>
-                    <li><a href="ccss/start-1-3/Static HTML/destination-single-city.html"><i class="fa fa-square" aria-hidden="true"></i>Donec</a></li>
+                    <li><a href="ccss/star-1-3/Static HTML/destination-single-city.html"><i class="fa fa-square" aria-hidden="true"></i>Aenean</a></li>
+                    <li><a href="ccss/star-1-3/Static HTML/destination-single-city.html"><i class="fa fa-square" aria-hidden="true"></i>Etiam</a></li>
+                    <li><a href="ccss/star-1-3/Static HTML/destination-single-city.html"><i class="fa fa-square" aria-hidden="true"></i>Donec</a></li>
                   </ul>
                   <ul class="list-unstyled">
                     <li><i class="fa fa-minus" aria-hidden="true"></i>Europe</li>
@@ -955,7 +936,7 @@
             <div class="col-sm-4 isotopeSelector asia">
               <article class="">
                 <figure>
-                  <img src="img/home/packages/packages-1.jpg" alt="">
+                  <img src="ccss/star-1-3/Static HTML/img/home/packages/packages-1.jpg" alt="">
                   <h4>Vestibulum Tour</h4>
                   <div class="overlay-background">
                     <div class="inner"></div>
@@ -974,7 +955,7 @@
             <div class="col-sm-4 isotopeSelector america africa">
               <article class="">
                 <figure>
-                  <img src="img/home/packages/packages-2.jpg" alt="">
+                  <img src="ccss/star-1-3/Static HTML/img/home/packages/packages-2.jpg" alt="">
                   <h4>Maecenas Tour</h4>
                   <div class="overlay-background">
                     <div class="inner"></div>
@@ -993,7 +974,7 @@
             <div class="col-sm-4 isotopeSelector africa">
               <article class="">
                 <figure>
-                  <img src="img/home/packages/packages-3.jpg" alt="">
+                  <img src="ccss/star-1-3/Static HTML/img/home/packages/packages-3.jpg" alt="">
                   <h4>Lobortis Tour</h4>
                   <div class="overlay-background">
                     <div class="inner"></div>
@@ -1012,7 +993,7 @@
             <div class="col-sm-4 isotopeSelector asia america">
               <article class="">
                 <figure>
-                  <img src="img/home/packages/packages-4.jpg" alt="">
+                  <img src="ccss/star-1-3/Static HTML/img/home/packages/packages-4.jpg" alt="">
                   <h4>Leo Lacus Tour</h4>
                   <div class="overlay-background">
                     <div class="inner"></div>
@@ -1031,7 +1012,7 @@
             <div class="col-sm-4 isotopeSelector america">
               <article class="">
                 <figure>
-                  <img src="img/home/packages/packages-5.jpg" alt="">
+                  <img src="ccss/star-1-3/Static HTML/img/home/packages/packages-5.jpg" alt="">
                   <h4>Nullam Tour</h4>
                   <div class="overlay-background">
                     <div class="inner"></div>
@@ -1050,7 +1031,7 @@
             <div class="col-sm-4 isotopeSelector africa asia">
               <article class="">
                 <figure>
-                  <img src="img/home/packages/packages-6.jpg" alt="">
+                  <img src="ccss/star-1-3/Static HTML/img/home/packages/packages-6.jpg" alt="">
                   <h4>Hendrerit Tour</h4>
                   <div class="overlay-background">
                     <div class="inner"></div>
@@ -1106,7 +1087,7 @@
       <div class="row">
         <div class="col-sm-3 col-xs-12">
           <div class="footerContent">
-            <a href="index.html" class="footer-logo"><img src="img/logo-color-sm.png" alt="footer-logo"></a>
+            <a href="index.html" class="footer-logo"><img src="ccss/star-1-3/Static HTML/img/logo-color-sm.png" alt="footer-logo"></a>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute </p>
           </div>
         </div>
@@ -1126,22 +1107,22 @@
             <h5>Gallery</h5>
             <div class="row">
               <div class="col-xs-4">
-                <a class="fancybox-pop" href="ccss/start-1-3/Static HTML/img/home/gallery/gallery-1.jpg"><img src="img/home/gallery/thumb-gallery-1.jpg" alt="image"></a>
+                <a class="fancybox-pop" href="ccss/star-1-3/Static HTML/img/home/gallery/gallery-1.jpg"><img src="ccss/star-1-3/Static HTML/img/home/gallery/thumb-gallery-1.jpg" alt="image"></a>
               </div>
               <div class="col-xs-4">
-                <a class="fancybox-pop" href="ccss/start-1-3/Static HTML/img/home/gallery/gallery-2.jpg"><img src="img/home/gallery/thumb-gallery-2.jpg" alt="image"></a>
+                <a class="fancybox-pop" href="ccss/star-1-3/Static HTML/img/home/gallery/gallery-2.jpg"><img src="ccss/star-1-3/Static HTML/img/home/gallery/thumb-gallery-2.jpg" alt="image"></a>
               </div>
               <div class="col-xs-4">
-                <a class="fancybox-pop" href="img/home/gallery/gallery-3.jpg"><img src="img/home/gallery/thumb-gallery-3.jpg" alt="image"></a>
+                <a class="fancybox-pop" href="ccss/star-1-3/Static HTML/img/home/gallery/gallery-3.jpg"><img src="ccss/star-1-3/Static HTML/img/home/gallery/thumb-gallery-3.jpg" alt="image"></a>
               </div>
               <div class="col-xs-4">
-                <a class="fancybox-pop" href="img/home/gallery/gallery-4.jpg"><img src="img/home/gallery/thumb-gallery-4.jpg" alt="image"></a>
+                <a class="fancybox-pop" href="ccss/star-1-3/Static HTML/img/home/gallery/gallery-4.jpg"><img src="ccss/star-1-3/Static HTML/img/home/gallery/thumb-gallery-4.jpg" alt="image"></a>
               </div>
               <div class="col-xs-4">
-                <a class="fancybox-pop" href="img/home/gallery/gallery-5.jpg"><img src="img/home/gallery/thumb-gallery-5.jpg" alt="image"></a>
+                <a class="fancybox-pop" href="ccss/star-1-3/Static HTML/img/home/gallery/gallery-5.jpg"><img src="ccss/star-1-3/Static HTML/img/home/gallery/thumb-gallery-5.jpg" alt="image"></a>
               </div>
               <div class="col-xs-4">
-                <a class="fancybox-pop" href="img/home/gallery/gallery-6.jpg"><img src="img/home/gallery/thumb-gallery-6.jpg" alt="image"></a>
+                <a class="fancybox-pop" href="ccss/star-1-3/Static HTML/img/home/gallery/gallery-6.jpg"><img src="ccss/star-1-3/Static HTML/img/home/gallery/thumb-gallery-6.jpg" alt="image"></a>
               </div>
             </div>
           </div>

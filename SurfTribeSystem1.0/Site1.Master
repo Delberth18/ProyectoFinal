@@ -314,9 +314,10 @@
         <h4 class="modal-title" id="myModalLabel"> &nbsp Inicio de Sesión</h4>
       </div>
       <div class="modal-body">
-        <form method="post" action="">
+        <form method="post" action="" runat="server">
           <div class="form-group">
             <input type="email" class="form-control bg-ash" id="exampleInputPassword" placeholder="Correo">
+              <asp:TextBox runat="server" type="email" class="form-control bg-ash" id="exampleInputPassword23" placeholder="Correo"></asp:TextBox>
           </div>
           <div class="form-group">
             <input type="password" class="form-control bg-ash" id="exampleInputPassword1" placeholder="Contraseña">

@@ -121,7 +121,7 @@
             </div><center>
               <p>- Para reservar necesitas tener una cuenta con la cual hacer la reserva.</p>
               <p>- Despues de confirmar la reserva en la página, el administrador de la escuela se pondra en contacto con usted para que realice el depósito en la cuenta respectiva.</p>
-              <p>- Una vez echo el deposito y confirmado el respaldo por parte de la escuela su reserva quedara en firme.</p>    
+              <p>- Una vez hecho el deposito y confirmado el respaldo por parte de la escuela su reserva quedara en firme.</p>    
           </div></center>
         </div>
         <div class="row">
