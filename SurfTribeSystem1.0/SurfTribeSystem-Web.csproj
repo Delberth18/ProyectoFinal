@@ -3476,6 +3476,7 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Conexion\Conexion.cs" />
     <Compile Include="defaultSinLogeo.aspx.cs">
       <DependentUpon>defaultSinLogeo.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -3493,6 +3494,9 @@
     <Compile Include="InformaciónGeneral.aspx.designer.cs">
       <DependentUpon>InformaciónGeneral.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Logica\SeguridadGestion.cs" />
+    <Compile Include="Models\Credencial.cs" />
+    <Compile Include="Models\Resultado.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site1.Master.cs">
       <DependentUpon>Site1.Master</DependentUpon>
@@ -3653,7 +3657,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
