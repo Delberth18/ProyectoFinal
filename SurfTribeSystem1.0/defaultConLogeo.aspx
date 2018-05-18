@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="defaultSinLogeo.aspx.cs" Inherits="SurfTribeSystem1._0.defaultSinLogeo" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="defaultConLogeo.aspx.cs" Inherits="SurfTribeSystem1._0.defaultConLogeo" %>
 
 <!DOCTYPE html>
 
@@ -214,21 +214,51 @@
                 </ul>
               </li>
 
-                <li></br>
-            <div class="headerTopNav">
-            <ul class="headerTopNavbar">
-              
-              <li class="active"><a href="#"><i class="fa " aria-hidden="true"></i></a></li>
+          <li class="dropdown singleDrop">
+            <a href="#" class=" " data-toggle="" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-bell" aria-hidden="true"></i> <span class="notifyNumber">2</span></a>
+            <ul class="dropdown-menu dropdownMenu">
+              <li>
+                <a href="#">
+                  <h4>information</h4>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <h5>Maldive Tour Packages</h5>
+                  <p>6 Hours Ago</p>
+                  <i class="" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <h5>London Tour Booking</h5>
+                  <p>15 Hours Ago</p>
+                  <i class="fa " aria-hidden="true"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <h5>Maldive Tour Packages</h5>
+                  <p>2 Hours Ago</p>
+                  <i class="fa " aria-hidden="true"></i>
+                </a>
+              </li>
             </ul>
-            <ul class="headerTopNavbar navbar-right">
-              <li class="active"><a href="" data-toggle="modal" data-target="#login"><i class="fa fa-user" aria-hidden="true"> </i> Iniciar Sesión </a></li>
-              
+          </li>
+           
+                <li class="dropdown singleDrop">
+               
+                     
+                          
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img class="avatar" src="ccss\star-1-3\Static HTML\img\dashboard\dash-user.jpg" alt="">&nbsp;&nbsp;<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+            <ul class="dropdown-menu dropdownMenu">
+                <center><h5><b>Marcela Castro Rojas</b></h5></center>
+              <li><a href="profile.html"><h5>Profile</h5></a></li>
+              <li><a href="setting.html"><h5>Account Settings</h5></a></li>
+              <li><a href="#"><h5>Log out</h5></a></li>
             </ul>
-          </div>
-
-                </li>
-
-
+         
+                    </li>
             </ul>
           </div>
 

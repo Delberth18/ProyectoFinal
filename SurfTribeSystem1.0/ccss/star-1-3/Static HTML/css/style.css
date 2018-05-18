@@ -70,6 +70,21 @@
 /*=== MIXINS ===*/
 /*=== VARIABLES ===*/
 /*=== MEDIA QUERY ===*/
+
+img.avatar {
+    /* cambia estos dos valores para definir el tamaño de tu círculo */
+    height: 35px;
+    width: 35px;
+    /* los siguientes valores son independientes del tamaño del círculo */
+    background-repeat: no-repeat;
+    background-position: 50%;
+    border-radius: 50%;
+    background-size: 100% auto;
+}
+
+
+
+
 * {
   outline: 0;
   margin: 0;
