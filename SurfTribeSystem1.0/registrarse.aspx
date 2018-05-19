@@ -43,7 +43,7 @@
                     <input type="text" class="form-control" id="" placeholder="Contraseña"><br />
                 
                    
-                    <input type="text" class="form-control" id="" placeholder="Confirmar Contraseña"><br />
+                    <input type="text" class="form-control" id="txtcontra" name="txt" placeholder="Confirmar Contraseña"><br />
                   
                    
                     <input type="text" class="form-control" id="" placeholder="Nombre"><br />
@@ -57,9 +57,178 @@
 
 		            <asp:RadioButton ID="RadioButton2" GroupName="genero" runat="server" Text="Femenino" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-		            <asp:RadioButton ID="RadioButton3" GroupName="genero" runat="server" Text="Otro" />
+		            <asp:RadioButton ID="RadioButton3" GroupName="genero" runat="server" Text="Otro" /><br /><br />
 
-                    <asp:CheckBoxList  ></asp:CheckBoxList>
+                    <asp:DropDownList ID="ddlpaises" runat="server" class="form-control">
+                        <asp:listitem value ="Afganistán">Afganistán</asp:listitem>
+                        <asp:listitem value ="Alemania">Albania</asp:listitem >
+                        <asp:listitem value ="Andorra">Andorra</asp:listitem >
+                        <asp:listitem value ="Angola">Angola</asp:listitem >
+                        <asp:listitem value ="Antigua y Barbuda">Antigua y Barbuda</asp:listitem >
+                        <asp:listitem value ="Arabia Saudita">Arabia Saudita</asp:listitem >
+                        <asp:listitem value ="Argentina">Argentina</asp:listitem >
+                        <asp:listitem value ="Armenia">Armenia</asp:listitem>
+                        <asp:listitem value ="Austria">Austria</asp:listitem >
+                        <asp:listitem value ="Azerbaiyán">Azerbaiyán</asp:listitem >
+                        <asp:listitem value ="Bahamas">Bahamas</asp:listitem >
+                        <asp:listitem value ="Bangladés">Bangladés</asp:listitem >
+                        <asp:listitem value ="Barbados">Barbados</asp:listitem >
+                        <asp:listitem value ="Baréin">Baréin</asp:listitem >
+
+                        <asp:listitem value ="Bélgica">Bélgica</asp:listitem>
+                        <asp:listitem value ="Belice">Belice</asp:listitem >
+                        <asp:listitem value ="Bielorrusia">Bielorrusia</asp:listitem >
+                        <asp:listitem value ="Birmania">Birmania</asp:listitem >
+                        <asp:listitem value ="Bolivia">Bolivia</asp:listitem >
+                        <asp:listitem value ="Bosnia-Herzegovina">Bosnia-Herzegovina</asp:listitem >
+                        <asp:listitem value ="Brasil">Brasil</asp:listitem>
+                        <asp:listitem value ="Bulgaria">Bulgaria</asp:listitem >
+                        <asp:listitem value ="Cabo Verde">Cabo Verde</asp:listitem >
+                        <asp:listitem value ="Camboya">Camboya</asp:listitem >
+                        <asp:listitem value ="Camerún">Camerún</asp:listitem >
+                        <asp:listitem value ="Canadá">Canadá</asp:listitem >
+
+                         
+                        <asp:listitem value ="Catar">Catar</asp:listitem >
+                        <asp:listitem value ="Chile">Chile</asp:listitem >
+                        <asp:listitem value ="China">China</asp:listitem >
+                        <asp:listitem value ="Chipre">Chipre</asp:listitem >
+                        <asp:listitem value ="Colombia">Colombia</asp:listitem >
+                        <asp:listitem value ="Congo">Congo</asp:listitem >
+                        <asp:listitem value ="Corea del Norte">Corea del Norte</asp:listitem>
+                        <asp:listitem value ="Corea del Sur">Corea del Sur</asp:listitem >
+                        <asp:listitem value ="Costa de Marfil">Costa de Marfil</asp:listitem >
+                        <asp:listitem value ="Costa Rica">Costa Rica</asp:listitem >
+                        <asp:listitem value ="Croacia">Croacia</asp:listitem >
+                        <asp:listitem value ="Cuba">Cuba</asp:listitem >
+                        <asp:listitem value ="Dinamarca">Dinamarca</asp:listitem >
+
+                        <asp:listitem value ="Dominica">Dominica</asp:listitem >
+                        <asp:listitem value ="Ecuador">Ecuador</asp:listitem >
+                        <asp:listitem value ="Egipto">Egipto</asp:listitem >
+                        <asp:listitem value ="El Salvador">El Salvador</asp:listitem >
+                        <asp:listitem value ="Emiratos Árabes Unidos">Emiratos Árabes Unidos</asp:listitem >
+                        <asp:listitem value ="Eslovaquia">Eslovaquia</asp:listitem >
+                        <asp:listitem value ="Eslovenia">Eslovenia</asp:listitem>
+                        <asp:listitem value ="España">España</asp:listitem >
+                        <asp:listitem value ="Estados Unidos">Estados Unidos</asp:listitem >
+                        <asp:listitem value ="Estonia">Estonia</asp:listitem >
+                        <asp:listitem value ="Etiopía">Etiopía</asp:listitem >
+                        <asp:listitem value ="Filipinas">Filipinas</asp:listitem >
+                        <asp:listitem value ="Finlandia">Finlandia</asp:listitem >
+
+                        <asp:listitem value ="Fiyi">Fiyi</asp:listitem >
+                        <asp:listitem value ="Francia">Francia</asp:listitem >
+                        <asp:listitem value ="Gabón">Gabón</asp:listitem >
+                        <asp:listitem value ="Gambia">Gambia</asp:listitem >
+                        <asp:listitem value ="Georgia">Georgia</asp:listitem >
+                        <asp:listitem value ="Ghana">Ghana</asp:listitem >
+                        <asp:listitem value ="Granada">Granada</asp:listitem>
+                        <asp:listitem value ="Grecia">Grecia</asp:listitem >
+                        <asp:listitem value ="Guatemala">Guatemala</asp:listitem >
+                        <asp:listitem value ="Guinea">Guinea</asp:listitem >
+                        <asp:listitem value ="Guyana">Guyana</asp:listitem >
+                        <asp:listitem value ="Haití">Haití</asp:listitem >
+                        <asp:listitem value ="Honduras">Honduras</asp:listitem >
+
+                        <asp:listitem value ="Hungría">Hungría</asp:listitem >
+                        <asp:listitem value ="India">India</asp:listitem >
+                        <asp:listitem value ="Indonesia">Indonesia</asp:listitem >
+                        <asp:listitem value ="Irak">Irak</asp:listitem >
+                        <asp:listitem value ="Irán">Irán</asp:listitem >
+                        <asp:listitem value ="Irlanda">Irlanda</asp:listitem >
+                        <asp:listitem value ="Islandia">Islandia</asp:listitem>
+                        <asp:listitem value ="Islas Marshall">Islas Marshall</asp:listitem >
+                        <asp:listitem value ="Islas Salomón">Islas Salomón</asp:listitem >
+                        <asp:listitem value ="Israel">Israel</asp:listitem >
+                        <asp:listitem value ="Italia">Italia</asp:listitem >
+                        <asp:listitem value ="Jamaica">Jamaica</asp:listitem >
+                        <asp:listitem value ="Japón">Japón</asp:listitem >
+
+                        <asp:listitem value ="Jordania">Jordania</asp:listitem >
+                        <asp:listitem value ="Kazajistán">Kazajistán</asp:listitem >
+                        <asp:listitem value ="Kenia">Kenia</asp:listitem >
+                        <asp:listitem value ="Kosovo">Kosovo</asp:listitem >
+                        <asp:listitem value ="Kuwait">Kuwait</asp:listitem >
+                        <asp:listitem value ="Laos">Laos</asp:listitem >
+                        <asp:listitem value ="Letonia">Letonia</asp:listitem>
+                        <asp:listitem value ="Líbano">Líbano</asp:listitem >
+                        <asp:listitem value ="Liberia">Liberia</asp:listitem >
+                        <asp:listitem value ="Libia">Libia</asp:listitem >
+                        <asp:listitem value ="Lituania">Lituania</asp:listitem >
+                        <asp:listitem value ="Luxemburgo">Luxemburgo</asp:listitem >
+                        <asp:listitem value ="Macedonia">Macedonia</asp:listitem >
+
+                         <asp:listitem value ="Madagascar">Madagascar</asp:listitem >
+                        <asp:listitem value ="Malasia">Malasia</asp:listitem >
+                        <asp:listitem value ="Maldivas">Maldivas</asp:listitem >
+                        <asp:listitem value ="Malí">Malí</asp:listitem >
+                        <asp:listitem value ="Malta">Malta</asp:listitem >
+                        <asp:listitem value ="Marruecos">Marruecos</asp:listitem >
+                        <asp:listitem value ="México">México</asp:listitem>
+                        <asp:listitem value ="Mónaco">Mónaco</asp:listitem >
+                        <asp:listitem value ="Mongolia">Mongolia</asp:listitem >
+                        <asp:listitem value ="Montenegro">Montenegro</asp:listitem >
+                        <asp:listitem value ="Mozambique">Mozambique</asp:listitem >
+                        <asp:listitem value ="Nepal">Nepal</asp:listitem >
+                        <asp:listitem value ="Nicaragua">Nicaragua</asp:listitem >
+
+                          <asp:listitem value ="Nigeria">Nigeria</asp:listitem >
+                        <asp:listitem value ="Noruega">Noruega</asp:listitem >
+                        <asp:listitem value ="Nueva Zelanda">Nueva Zelanda</asp:listitem >
+                        <asp:listitem value ="Países Bajos">Países Bajos</asp:listitem >
+                        <asp:listitem value ="Pakistán">Pakistán</asp:listitem >
+                        <asp:listitem value ="Palestina	">Palestina	</asp:listitem >
+                        <asp:listitem value ="Panamá">Panamá</asp:listitem>
+                        <asp:listitem value ="Papúa Nueva Guinea">Papúa Nueva Guinea</asp:listitem >
+                        <asp:listitem value ="Paraguay">Paraguay</asp:listitem >
+                        <asp:listitem value ="Perú">Perú</asp:listitem >
+                        <asp:listitem value ="Polonia">Polonia</asp:listitem >
+                        <asp:listitem value ="Portugal">Portugal</asp:listitem >
+                        <asp:listitem value ="Reino Unido">Reino Unido</asp:listitem >
+
+                        <asp:listitem value ="República Centroafricana">República Centroafricana</asp:listitem >
+                        <asp:listitem value ="República Checa">República Checa</asp:listitem >
+                        <asp:listitem value ="República Democrática del Congo">República Democrática del Congo</asp:listitem >
+                        <asp:listitem value ="República Dominicana">República Dominicana</asp:listitem >
+                        <asp:listitem value ="Ruanda">Ruanda</asp:listitem >
+                        <asp:listitem value ="Rumania">Rumania</asp:listitem >
+                        <asp:listitem value ="Rusia">Rusia</asp:listitem>
+                        <asp:listitem value ="San Cristóbal y Nieves">San Cristóbal y Nieves</asp:listitem >
+                        <asp:listitem value ="San Marino">San Marino</asp:listitem >
+                        <asp:listitem value ="San Vicente y las Granadinas">San Vicente y las Granadinas</asp:listitem >
+                        <asp:listitem value ="Santa Lucía">Santa Lucía</asp:listitem >
+                        <asp:listitem value ="Portugal">Portugal</asp:listitem >
+                        <asp:listitem value ="Santo Tomé y Príncipe">Santo Tomé y Príncipe</asp:listitem >
+
+                        <asp:listitem value ="Senegal">Senegal</asp:listitem >
+                        <asp:listitem value ="Serbia">Serbia</asp:listitem >
+                        <asp:listitem value ="Sierra Leona">Sierra Leona</asp:listitem >
+                        <asp:listitem value ="Singapur">Singapur</asp:listitem >
+                        <asp:listitem value ="Siria">Siria</asp:listitem >
+                        <asp:listitem value ="Somalia">Somalia</asp:listitem >
+                        <asp:listitem value ="Sudáfrica">Sudáfrica</asp:listitem>
+                        <asp:listitem value ="Sudán">Sudán</asp:listitem >
+                        <asp:listitem value ="Suecia">Suecia</asp:listitem >
+                        <asp:listitem value ="Suiza">Suiza</asp:listitem >
+                        <asp:listitem value ="Surinam">Surinam</asp:listitem >
+                        <asp:listitem value ="Tailandia">Tailandial</asp:listitem >
+                        <asp:listitem value ="Taiwán">Taiwán</asp:listitem >
+
+                         <asp:listitem value ="Tanzania">Tanzania</asp:listitem >
+                        <asp:listitem value ="Togo">Togo</asp:listitem >
+                        <asp:listitem value ="Trinidad y Tobago">Trinidad y Tobago</asp:listitem >
+                        <asp:listitem value ="Túnez">Túnez</asp:listitem >
+                        <asp:listitem value ="Turquía">Turquía</asp:listitem >
+                        <asp:listitem value ="Ucrania">Ucrania</asp:listitem >
+                        <asp:listitem value ="Uganda">Uganda</asp:listitem>
+                        <asp:listitem value ="Uruguay">Uruguay</asp:listitem >
+                        <asp:listitem value ="Venezuela">Venezuela</asp:listitem >
+                        <asp:listitem value ="Vietnam">Vietnam</asp:listitem >
+                        <asp:listitem value ="Zambia">Zambia</asp:listitem >
+                       
+
+                    </asp:DropDownList>
 
                   </div>
                  
