@@ -32,7 +32,7 @@
           
             
             <div class="bookingForm">
-              <form  method="POST"  role="form" class="form" id="form1">
+              <form  method="POST"  role="form" class="form" id="form1" runat="server">
                 <div class="row">
                   <div class="form-group" style=" width: 300px;">
                    
@@ -46,18 +46,29 @@
                     <input type="text" class="form-control" id="" placeholder="Confirmar Contraseña"><br />
                   
                    
-                    <input type="text" class="form-control" id="" placeholder="Nombre Completo"><br />
-                  
-                    
-                    <input type="number" class="form-control" id="" placeholder="Telefono" ><br />
+                    <input type="text" class="form-control" id="" placeholder="Nombre"><br />
+
+
+                    <input type="text" class="form-control" id="" placeholder="Apellidos"><br />
+                
+                    <asp:TextBox runat="server" type="number" class="form-control" placeholder="Telefono" ID="tele" ></asp:TextBox><br />
+
+                    <asp:RadioButton ID="RadioButton1" GroupName="genero" runat="server" Text="Masculino" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+		            <asp:RadioButton ID="RadioButton2" GroupName="genero" runat="server" Text="Femenino" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+		            <asp:RadioButton ID="RadioButton3" GroupName="genero" runat="server" Text="Otro" />
+
+                    <asp:CheckBoxList  ></asp:CheckBoxList>
+
                   </div>
                  
                   
-                  <div class="checkbox col-xs-12">
+                
                     <label>
                       <input type="checkbox"> He leído y aceptado los <a href="#">términos y condiciones.</a>  
                     </label>
-                  </div>
+                  
                   <div >
                       <br />
                      <button class="btn btn-default" href="#" style=" background-color:darkorange; color:white;  font-family:Arial; text-transform: none; font-size:large;" ><b>&nbsp;&nbsp;Crear Cuenta&nbsp;&nbsp;</b></button>
