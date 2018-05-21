@@ -40,8 +40,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Conexion.cs" />
+    <Compile Include="FaqDatos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SeguridadDatos.cs" />
+    <Compile Include="UsuarioDatos.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SurfTribeSystem-Entidades\SurfTribeSystem-Entidades.csproj">
+      <Project>{51e3b1f3-84ad-4fd6-a57d-5d7bb72db95d}</Project>
+      <Name>SurfTribeSystem-Entidades</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

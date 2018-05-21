@@ -10,15 +10,6 @@
 namespace SurfTribeSystem1._0 {
     
     
-    public partial class defaultConLogeo {
-        
-        /// <summary>
-        /// option_color control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlLink option_color;
+    public partial class FAQlistado {
     }
 }

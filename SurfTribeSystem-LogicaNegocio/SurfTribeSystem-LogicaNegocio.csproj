@@ -40,8 +40,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="FaqLogica.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SeguridadLogica.cs" />
+    <Compile Include="UsuarioLogica.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SurfTribeSystem-Datos\SurfTribeSystem-Datos.csproj">
+      <Project>{3901993c-2d10-4440-8ccd-02dc71b866d6}</Project>
+      <Name>SurfTribeSystem-Datos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SurfTribeSystem-Entidades\SurfTribeSystem-Entidades.csproj">
+      <Project>{51e3b1f3-84ad-4fd6-a57d-5d7bb72db95d}</Project>
+      <Name>SurfTribeSystem-Entidades</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

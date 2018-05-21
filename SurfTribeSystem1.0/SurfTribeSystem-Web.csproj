@@ -3472,13 +3472,13 @@
     <Content Include="ccss\star-1-3\Static HTML\tabs-and-dropdown.html" />
     <Content Include="defaultConLogeoUN.aspx" />
     <Content Include="defaultSinLogeoUN.aspx" />
+    <Content Include="FAQlistado.aspx" />
     <Content Include="Global.asax" />
     <Content Include="InformaciónGeneral.aspx" />
     <Content Include="registrarse.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Conexion\Conexion.cs" />
     <Compile Include="defaultConLogeoUN.aspx.cs">
       <DependentUpon>defaultConLogeoUN.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -3493,6 +3493,13 @@
     <Compile Include="defaultSinLogeoUN.aspx.designer.cs">
       <DependentUpon>defaultSinLogeoUN.aspx</DependentUpon>
     </Compile>
+    <Compile Include="FAQlistado.aspx.cs">
+      <DependentUpon>FAQlistado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FAQlistado.aspx.designer.cs">
+      <DependentUpon>FAQlistado.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -3503,9 +3510,6 @@
     <Compile Include="InformaciónGeneral.aspx.designer.cs">
       <DependentUpon>InformaciónGeneral.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Logica\SeguridadGestion.cs" />
-    <Compile Include="Models\Credencial.cs" />
-    <Compile Include="Models\Resultado.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="registrarse.aspx.cs">
       <DependentUpon>registrarse.aspx</DependentUpon>
@@ -3673,6 +3677,16 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SurfTribeSystem-Entidades\SurfTribeSystem-Entidades.csproj">
+      <Project>{51e3b1f3-84ad-4fd6-a57d-5d7bb72db95d}</Project>
+      <Name>SurfTribeSystem-Entidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SurfTribeSystem-LogicaNegocio\SurfTribeSystem-LogicaNegocio.csproj">
+      <Project>{8d9e2efa-25b5-40b2-8707-94ca02e59828}</Project>
+      <Name>SurfTribeSystem-LogicaNegocio</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

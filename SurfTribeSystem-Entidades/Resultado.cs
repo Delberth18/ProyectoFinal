@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace SurfTribeSystem1._0.Models
+namespace SurfTribeSystem_Entidades
 {
     public class Resultado
     {

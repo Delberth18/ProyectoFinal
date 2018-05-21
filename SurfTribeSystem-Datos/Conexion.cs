@@ -5,7 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 
-namespace SurfTribeSystem1._0.Conexion
+namespace SurfTribeSystem_Datos
 {
     public class Conexion
     {
