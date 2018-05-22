@@ -15,7 +15,35 @@ namespace SurfTribeSystem1._0
         {
 
         }
+        
 
-     
+        protected void ingresarButton_Click(object sender, EventArgs e)
+        {
+
+            Resultado resultado = new Resultado();
+            try
+            {
+                Credencial credencial = new Credencial()
+                {
+                    ClaveUsuario = claveText.Text,
+                    CorreoUsuario = correoText.Text
+                };
+                resultado = new SeguridadLogica().ValidarUsuario(credencial);
+
+                if (resultado.TipoResultado == "OK")
+                {
+                    Response.Redirect("defaultConLogeoUN.aspx");
+                }
+                else
+                {
+                    Response.Write("< script > alert('Error: " + resultado.Mensaje + " \n Lo sentimos') </ script >");
+                }
+            }
+            catch (Exception ex)
+            {
+
+                Response.Write("< script > alert('Error: " + ex + " \n Lo sentimos') </ script >");
+            }
+        }
     }
 }

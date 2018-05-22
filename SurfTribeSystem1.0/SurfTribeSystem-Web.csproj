@@ -3470,6 +3470,7 @@
     <Content Include="ccss\star-1-3\Static HTML\single-package-left-sidebar.html" />
     <Content Include="ccss\star-1-3\Static HTML\single-package-right-sidebar.html" />
     <Content Include="ccss\star-1-3\Static HTML\tabs-and-dropdown.html" />
+    <Content Include="Configuración.aspx" />
     <Content Include="defaultConLogeoUN.aspx" />
     <Content Include="defaultSinLogeoUN.aspx" />
     <Content Include="FAQlistado.aspx" />
@@ -3480,6 +3481,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Configuración.aspx.cs">
+      <DependentUpon>Configuración.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Configuración.aspx.designer.cs">
+      <DependentUpon>Configuración.aspx</DependentUpon>
+    </Compile>
     <Compile Include="defaultConLogeoUN.aspx.cs">
       <DependentUpon>defaultConLogeoUN.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -3525,6 +3533,13 @@
     </Compile>
     <Compile Include="Site1.Master.designer.cs">
       <DependentUpon>Site1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Site2.Master.cs">
+      <DependentUpon>Site2.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site2.Master.designer.cs">
+      <DependentUpon>Site2.Master</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -3669,6 +3684,7 @@
     <Content Include="ccss\star-1-3\Static HTML\plugins\slick\slick.scss" />
     <None Include="packages.config" />
     <Content Include="Site1.Master" />
+    <Content Include="Site2.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -70,12 +70,8 @@
                     <div class="collapse navbar-collapse navbar-ex1-collapse">
                         <ul class="nav navbar-nav navbar-right">
                             <li class="dropdown singleDrop active">
-                                <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">Inicio </a>
-                                <ul class="dropdown-menu dropdown-menu-left">
-                                    <li class="dropdown singleDrop active "><a href="index.html">Home Main</a></li>
-                                    <li class="dropdown singleDrop  "><a href="index-v2.html">Home City</a></li>
-                                    <li class="dropdown singleDrop  "><a href="index-v3.html">Home Destination</a></li>
-                                </ul>
+                                <a href="javascript:void(0)" >Inicio </a>
+                                
                             </li>
                             <li class="dropdown megaDropMenu ">
                                 <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="300" data-close-others="true" aria-expanded="false">Escuelas</a>
@@ -1154,8 +1150,7 @@
                         <div class="row">
                             <div class="col-sm-3 col-xs-12">
                                 <div class="footerContent">
-                                    <a href="index.html" class="footer-logo">
-                                        <img src="ccss/star-1-3/SCSS/img/logo-color-sm.png" alt="footer-logo" /></a>
+                                     <a class="navbar-brand"></a>
 
                                 </div>
                             </div>

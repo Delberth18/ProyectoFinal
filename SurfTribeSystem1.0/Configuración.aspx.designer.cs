@@ -10,15 +10,15 @@
 namespace SurfTribeSystem1._0 {
     
     
-    public partial class defaultConLogeo {
+    public partial class Configuración {
         
         /// <summary>
-        /// Control option_color.
+        /// Control inputPassword.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlLink option_color;
+        protected global::System.Web.UI.WebControls.TextBox inputPassword;
     }
 }
