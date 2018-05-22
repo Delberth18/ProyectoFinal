@@ -3474,6 +3474,7 @@
     <Content Include="defaultSinLogeoUN.aspx" />
     <Content Include="FAQlistado.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="HtmlPage1.html" />
     <Content Include="InformaciónGeneral.aspx" />
     <Content Include="registrarse.aspx" />
     <Content Include="Web.config" />
