@@ -71,12 +71,8 @@
                         <div class="collapse navbar-collapse navbar-ex1-collapse">
                             <ul class="nav navbar-nav navbar-right">
                                 <li class="dropdown singleDrop active">
-                                    <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">Inicio </a>
-                                    <ul class="dropdown-menu dropdown-menu-left">
-                                        <li class="dropdown singleDrop active "><a href="index.html">Home Main</a></li>
-                                        <li class="dropdown singleDrop  "><a href="index-v2.html">Home City</a></li>
-                                        <li class="dropdown singleDrop  "><a href="index-v3.html">Home Destination</a></li>
-                                    </ul>
+                                    <a href="defaultSinLogeoUN.aspx" >Inicio </a>
+                                    
                                 </li>
                                 <li class="dropdown megaDropMenu ">
                                     <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="300" data-close-others="true" aria-expanded="false">Escuelas</a>
@@ -155,25 +151,11 @@
                                 <li class="dropdown singleDrop ">
                                     <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Información</a>
                                     <ul class="dropdown-menu dropdown-menu-right">
-                                        <li class=""><a href="about-us.html">About Us</a></li>
-                                        <li class=""><a href="contact.html">Contact Us</a></li>
-                                        <li class="dropdown dropdown-submenu ">
-                                            <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">Gallery <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
-                                            <ul class="dropdown-menu ">
-                                                <li class=""><a href="gallery-grid.html">Gallery Grid</a></li>
-                                                <li class=""><a href="gallery-masonry.html">Gallery Masonry</a></li>
-                                                <li class=""><a href="gallery-photo-slider.html">Photo Slider</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="dropdown dropdown-submenu ">
-                                            <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">Destinations <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
-                                            <ul class="dropdown-menu dropdown-menu-left">
-                                                <li class=""><a href="destination-cities.html">Destination Cities</a></li>
-                                                <li class=""><a href="destination-single-city.html">Single Destination</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="404.html">404 Not Found</a></li>
-                                        <li><a href="coming-soon.html">Coming Soon</a></li>
+                                        <li class=""><a href="InformaciónGeneral.aspx">Información Básica</a></li>
+                                        <li class=""><a href="registrarse.aspx">Preguntas Frecuentes</a></li>
+                                        
+                                        
+                                     
                                     </ul>
                                 </li>
                                 <li class="dropdown singleDrop ">
@@ -223,7 +205,7 @@
                                             <li class="active"><a href="#"><i class="fa " aria-hidden="true"></i></a></li>
                                         </ul>
                                         <ul class="headerTopNavbar navbar-right">
-                                            <li class="active"><a data-toggle="modal" data-target="#login"><i class="fa fa-user" aria-hidden="true"></i>Iniciar Sesión </a></li>
+                                            <li class="active"><a data-toggle="modal" data-target="#login"><i class="fa fa-user" aria-hidden="true">&nbsp;</i>Iniciar Sesión </a></li>
 
                                         </ul>
                                     </div>
@@ -1119,8 +1101,7 @@
                         <div class="row">
                             <div class="col-sm-3 col-xs-12">
                                 <div class="footerContent">
-                                    <a href="index.html" class="footer-logo">
-                                        <img src="ccss/star-1-3/SCSS/img/logo-color-sm.png" alt="footer-logo" /></a>
+                                    <a class="navbar-brand"></a>
 
                                 </div>
                             </div>
@@ -1250,7 +1231,7 @@
                 <div class="modal-content modalContentCustom">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title" id="myModalLabel">Log in to your account</h4>
+                        <h4 class="modal-title" id="myModalLabel">INICIO DE SESIÓN</h4>
                     </div>
                     <div class="modal-body">
                         <div class="form-group">
@@ -1260,22 +1241,17 @@
                             <asp:TextBox TextMode="Password" ID="claveText" runat="server" class="form-control bg-ash" placeholder="Clave" />
                         </div>
                         <div class="checkbox">
-                            <label>
-                                <input type="checkbox" />
-                                Remember me
-                            </label>
-                            <a class="forgotPass clerfix">Fogot Password?</a>
+                            
+                            <a class="forgotPass clerfix">Olvido su contraseña?</a><br />
                         </div>
                         <asp:Button ID="ingresarButton" class="btn btn-default" runat="server" Text="Ingresar" OnClick="ingresoButton_Click" />
-                        <div class="or">
-                            or
-                        </div>
-                        <a class="btn btn-default btnSocial" href="#">Log in with facebook</a>
+                       
+                       
                     </div>
 
                     <div class="modal-footer">
                         <div class="dontHaveAccount">
-                            <p>Don’t have an Account?<a href="registrarse.aspx"> Sign up</a></p>
+                            <p>Olvido su contraseña?<a href="registrarse.aspx"> Registrese</a></p>
                         </div>
                     </div>
                 </div>

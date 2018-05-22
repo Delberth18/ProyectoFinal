@@ -17,7 +17,12 @@ namespace SurfTribeSystem1._0
            
         }
 
-        protected void registrar_Click(object sender, EventArgs e)
+        
+    
+
+
+
+    protected void registrar_Click(object sender, EventArgs e)
         {
             if (correoText.Text == "")
             {
@@ -110,5 +115,8 @@ namespace SurfTribeSystem1._0
                 errorLabel.Text = "ERROR" +ex;
             }
         }
+
+
+
     }
 }

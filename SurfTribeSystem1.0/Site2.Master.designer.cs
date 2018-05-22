@@ -10,7 +10,7 @@
 namespace SurfTribeSystem1._0 {
     
     
-    public partial class defaultSinLogeo {
+    public partial class Site2 {
         
         /// <summary>
         /// Control option_color.
@@ -22,6 +22,15 @@ namespace SurfTribeSystem1._0 {
         protected global::System.Web.UI.HtmlControls.HtmlLink option_color;
         
         /// <summary>
+        /// Control head.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
+        
+        /// <summary>
         /// Control f1.
         /// </summary>
         /// <remarks>
@@ -31,30 +40,12 @@ namespace SurfTribeSystem1._0 {
         protected global::System.Web.UI.HtmlControls.HtmlForm f1;
         
         /// <summary>
-        /// Control correoText.
+        /// Control ContentPlaceHolder1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox correoText;
-        
-        /// <summary>
-        /// Control claveText.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox claveText;
-        
-        /// <summary>
-        /// Control ingresarButton.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ingresarButton;
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder1;
     }
 }

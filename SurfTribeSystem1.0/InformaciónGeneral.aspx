@@ -22,12 +22,14 @@
     </section>
 
     <!-- PAGE CONTENT -->
-    <section class="mainContentSection">
+    <section class=""><br /><br /><br /><br />
       <div class="container">
         <div class="row">
           <div class="col-xs-12">
             <div class="aboutTitle">
-              <h4>Surf Tribe System </h4>
+             
+                
+        <center><font size="14" color="black"><b FACE="arial"  size="30%">Surf Tribe System</b></font></center><br /><br />
               <p>Es una aplicación web que unifica la mayoria de escuelas de surf de Costa Rica, en la cual usted puede reservar sus clases de surf en una de las diferentes escuelas ubicadas en todo el país, ademas de tener la opción de alquilar indumentaria en el proceso y reservar diferentes articulos de las escuelas para que se les sean entregados en el momento de su visita para que no tengas que preocuparte por nada, solo de disfrutar.  </p>
             </div>
           </div>
@@ -129,89 +131,7 @@
       </div>
     </section>
 
-    <!-- FOOTER -->
-<footer>
-  <div class="footer clearfix">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-3 col-xs-12">
-          <div class="footerContent">
-            <a href="index.html" class="footer-logo"><img src="ccss/star-1-3/SCSS/img/logo-color-sm.png" alt="footer-logo"></a>
-            
-          </div>
-        </div>
-        <div class="col-sm-3 col-xs-12">
-          <div class="footerContent">
-            <h5>Contactenos</h5>
-            <p>Si tiene alguna duda o problema contactenos.</p>
-            <ul class="list-unstyled">
-              
-              <li><i class="fa fa-phone" aria-hidden="true"></i>[88] 657 524 332</li>
-              <li><i class="fa fa-envelope-o" aria-hidden="true"></i><a href="mailTo:info@star-travel.com">info@star-travel.com</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-sm-3 col-xs-12">
-          <div class="footerContent imgGallery">
-            <h5>Galeria</h5>
-            <div class="row">
-              <div class="col-xs-4">
-                <a class="fancybox-pop" href="img/home/gallery/gallery-1.jpg"><img src="img/home/gallery/thumb-gallery-1.jpg" alt="image"></a>
-              </div>
-              <div class="col-xs-4">
-                <a class="fancybox-pop" href="img/home/gallery/gallery-2.jpg"><img src="img/home/gallery/thumb-gallery-2.jpg" alt="image"></a>
-              </div>
-              <div class="col-xs-4">
-                <a class="fancybox-pop" href="img/home/gallery/gallery-3.jpg"><img src="img/home/gallery/thumb-gallery-3.jpg" alt="image"></a>
-              </div>
-              <div class="col-xs-4">
-                <a class="fancybox-pop" href="img/home/gallery/gallery-4.jpg"><img src="img/home/gallery/thumb-gallery-4.jpg" alt="image"></a>
-              </div>
-              <div class="col-xs-4">
-                <a class="fancybox-pop" href="img/home/gallery/gallery-5.jpg"><img src="img/home/gallery/thumb-gallery-5.jpg" alt="image"></a>
-              </div>
-              <div class="col-xs-4">
-                <a class="fancybox-pop" href="img/home/gallery/gallery-6.jpg"><img src="img/home/gallery/thumb-gallery-6.jpg" alt="image"></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-3 col-xs-12">
-          <div class="footerContent">
-            <h5>Redes Sociales</h5>
-       
-           
-            <ul class="list-inline">
-              <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-              <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-              <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-              <li><a href="#"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
-              <li><a href="#"><i class="fa fa-vimeo" aria-hidden="true"></i></a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="copyRight clearfix">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-6 col-sm-push-6 col-xs-12">
-          <ul class="list-inline">
-            <li><a href="#">Políticas</a></li>
-            <li><a href="#">Acerca de</a></li>
-            
-          </ul>
-        </div>
-        <div class="col-sm-6 col-sm-pull-6 col-xs-12">
-          <div class="copyRightText">
-            <p>Copyright © 2018. Todos los derechos reservados</a>.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</footer>
+   
 </div>
 
 </asp:Content>

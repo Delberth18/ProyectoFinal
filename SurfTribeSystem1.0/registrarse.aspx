@@ -30,7 +30,7 @@
 
     <section class="mainContentSection">
 
-         <form  method="POST"  role="form" class="form" id="form1" runat="server">
+         <form  method="POST"  role="form" class="form" id="form1" >
 
         <center><font size="14"><b FACE="arial" size="30%">Registrese</b></font></center>
         <br />
@@ -49,29 +49,29 @@
           
             
             <div class="bookingForm">
-             
+             <form  method="POST" role="form" class="form">
                 <div class="row">
-                  <div class="form-group" style=" width: 300px;">
+                  <div class="form-group" style=" width: 350px;">
                    
                       
-                    <asp:TextBox class="form-control" TextMode="Email" id="correoText" runat="server" placeholder="Correo electrónico" /><br />
+                    <asp:TextBox class="form-control  bg-ash"  TextMode="Email" id="correoText" runat="server" placeholder="Correo electrónico" /><br />
                  
                    
-                    <asp:TextBox class="form-control" TextMode="Password" id="contrasenaText" runat="server" placeholder="Contraseña"/><br />
+                    <asp:TextBox class="form-control bg-ashh" TextMode="Password" id="contrasenaText" runat="server" placeholder="Contraseña"/><br />
                 
                    
-                    <asp:TextBox class="form-control" TextMode="Password" id="confirmaContrasenaText" runat="server" placeholder="Confirme su contraseña"/><br />
+                    <asp:TextBox class="form-control bg-ashh" TextMode="Password" id="confirmaContrasenaText" runat="server" placeholder="Confirme su contraseña"/><br />
                   
                    
-                    <asp:TextBox class="form-control" id="nombreText" runat="server" placeholder="Nombre"/><br />
+                    <asp:TextBox class="form-control bg-ashh" id="nombreText" runat="server" placeholder="Nombre"/><br />
 
 
-                    <asp:TextBox class="form-control" id="apellidosText" runat="server" placeholder="Apellidos"/><br />
+                    <asp:TextBox class="form-control bg-ashh" id="apellidosText" runat="server" placeholder="Apellidos"/><br />
                 
-                    <asp:TextBox runat="server" type="number" class="form-control" placeholder="Teléfono" ID="telefonoText" ></asp:TextBox><br />
+                    <asp:TextBox runat="server" type="number" class="form-control bg-ashh" placeholder="Teléfono" ID="telefonoText" ></asp:TextBox><br />
 
 
-                    <asp:DropDownList ID="paisesList" runat="server" class="form-control">
+                    <asp:DropDownList ID="paisesList" runat="server" class="form-control bg-ash">
                         <asp:listitem value ="Afganistán">Afganistán</asp:listitem>
                         <asp:listitem value ="Alemania">Albania</asp:listitem >
                         <asp:listitem value ="Andorra">Andorra</asp:listitem >
@@ -254,10 +254,10 @@
                       <br />
                      <asp:button class="btn btn-default" OnClick="registrar_Click" runat="server" style=" background-color:darkorange; color:white;  font-family:Arial; text-transform: none; font-size:large;" Text=" Crear Cuenta " ></asp:button>
                   </div>
-                </div>
-              </form></center>
-            </div>
+                </div></form> </div></div>
         </div>
+              </form></center>
+           
 
     </section>
     
