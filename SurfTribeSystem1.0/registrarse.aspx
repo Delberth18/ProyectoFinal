@@ -1,5 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="registrarse.aspx.cs" Inherits="SurfTribeSystem1._0.registrarse" %>
 
+<%@ MasterType VirtualPath="~/Site1.master" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -254,7 +256,41 @@
                       <br />
                      <asp:button class="btn btn-default" OnClick="registrar_Click" runat="server" style=" background-color:darkorange; color:white;  font-family:Arial; text-transform: none; font-size:large;" Text=" Crear Cuenta " ></asp:button>
                   </div>
-                </div></form> </div></div>
+                </div>
+                     <div class="modal fade signupLoging" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content modalContentCustom">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">INICIO DE SESIÓN</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <asp:TextBox TextMode="Email" ID="correoText1" runat="server" class="form-control bg-ash" placeholder="Correo" />
+                        </div>
+                        <div class="form-group">
+                            <asp:TextBox TextMode="Password" ID="claveText" runat="server" class="form-control bg-ash" placeholder="Clave" />
+                        </div>
+                        <div class="checkbox">
+                            
+                            <a class="forgotPass clerfix">Olvido su contraseña?</a><br />
+                        </div>
+                        <asp:Button ID="ingresarButton" type="submit" class="btn btn-default" runat="server" Text="Ingresar" OnClick="ingresarButton_Click" />
+                       
+                       
+                    </div>
+
+                    <div class="modal-footer">
+                        <div class="dontHaveAccount">
+                            <p>Olvido su contraseña?<a href="registrarse.aspx"> Registrese</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+             </form> </div></div>
         </div>
               </form></center>
            

@@ -15,18 +15,21 @@ namespace SurfTribeSystem1._0
         {
 
         }
-        
 
-        protected void ingresarButton_Click(object sender, EventArgs e)
+
+        public void ingresarButton_Click(String claveUsu, String correoUsu)
         {
+
+            registrarse re = new registrarse();
+            
 
             Resultado resultado = new Resultado();
             try
             {
                 Credencial credencial = new Credencial()
                 {
-                    ClaveUsuario = claveText.Text,
-                    CorreoUsuario = correoText.Text
+                    ClaveUsuario = claveUsu,
+                    CorreoUsuario = correoUsu
                 };
                 resultado = new SeguridadLogica().ValidarUsuario(credencial);
 

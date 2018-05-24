@@ -1,5 +1,7 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="SurfTribeSystem1._0.Site1" %>
 
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head runat="server">
@@ -55,11 +57,11 @@
 
        
 
-<body class="body-wrapper  changeHeader "> <form id="f2" runat="server">
+<body class="body-wrapper  changeHeader "> <form id="f2" runat="server" >
   <div class="main-wrapper">
 
 
-    <!-- HEADER -->
+    <!-- HEADER --> 
     <header>
      
 
@@ -245,7 +247,7 @@
        </div>
 
      <!-- FOOTER -->
-        <footer>
+       <footer>
                 <div class="footer clearfix">
                     <div class="container">
                         <div class="row">
@@ -333,81 +335,8 @@
                     </div>
                 </div>
             </footer>
-      
-<!-- Signup Modal -->
-<div class="modal fade signupLoging" id="signup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" >
-  <div class="modal-dialog" role="document">
-    <div class="modal-content modalContentCustom">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Create your account</h4>
-      </div>
-      <div class="modal-body">
-        <form method="post" action="">
-          <div class="form-group">
-            <input type="text" class="form-control bg-ash" id="exampleInputEmail1" placeholder="Full Name">
-          </div>
-          <div class="form-group">
-            <input type="email" class="form-control bg-ash" id="exampleInputPassword2" placeholder="Email">
-          </div>
-          <div class="form-group">
-            <input type="password" class="form-control bg-ash" id="exampleInputPassword3" placeholder="Password">
-          </div>
-          <div class="checkbox">
-            <label>
-              <input type="checkbox"> I agree to the terms of use and privacy.
-            </label>
-          </div>
-          <button type="submit" class="btn btn-default">Login</button>
-        </form>
-        <div class="or">
-          or
-        </div>
-        <a class="btn btn-default btnSocial"  href="#">Log in with facebook</a>
-      </div>
-
-      <div class="modal-footer">
-          <div class="dontHaveAccount">
-            <p>Don’t have an Account?<a href=""> Sign up</a></p>
-          </div>
-      </div>
-    </div>
-  </div>
-</div>
 
 
-<!-- Login Modal -->
-     <div class="modal fade signupLoging" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content modalContentCustom">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title" id="myModalLabel">INICIO DE SESIÓN</h4>
-                    </div>
-                    <div class="modal-body">
-                        <div class="form-group">
-                            <asp:TextBox TextMode="Email" ID="correoText" runat="server" class="form-control bg-ash" placeholder="Correo" />
-                        </div>
-                        <div class="form-group">
-                            <asp:TextBox TextMode="Password" ID="claveText" runat="server" class="form-control bg-ash" placeholder="Clave" />
-                        </div>
-                        <div class="checkbox">
-                            
-                            <a class="forgotPass clerfix">Olvido su contraseña?</a><br />
-                        </div>
-                        <asp:Button ID="ingresarButton" class="btn btn-default" runat="server" Text="Ingresar" OnClick="ingresarButton_Click" />
-                       
-                       
-                    </div>
-
-                    <div class="modal-footer">
-                        <div class="dontHaveAccount">
-                            <p>Olvido su contraseña?<a href="registrarse.aspx"> Registrese</a></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
             <!-- JAVASCRIPTS -->
 <script src="ccss/star-1-3/Static HTML/plugins/jquery/jquery-2.2.4.min.js"></script>

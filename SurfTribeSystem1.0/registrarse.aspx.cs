@@ -12,17 +12,34 @@ namespace SurfTribeSystem1._0
 {
     public partial class registrarse : System.Web.UI.Page
     {
+      
         protected void Page_Load(object sender, EventArgs e)
         {
-           
         }
 
-        
-    
+        protected void ingresarButton_Click(object sender, EventArgs e)
+        {
+
+            Resultado resultado = new Resultado();
+            try
+            {
+
+               String ClaveUsuario = claveText.Text;
+               String CorreoUsuario = correoText1.Text;
+
+                Master.ingresarButton_Click(ClaveUsuario,CorreoUsuario);
+               
+               
+            }
+            catch (Exception ex)
+            {
+
+                Response.Write("< script > alert('Error: " + ex + " \n Lo sentimos') </ script >");
+            }
+        }
 
 
-
-    protected void registrar_Click(object sender, EventArgs e)
+        protected void registrar_Click(object sender, EventArgs e)
         {
             if (correoText.Text == "")
             {
