@@ -123,14 +123,14 @@
               <li class="dropdown singleDrop ">
                 <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Información</a>
                 <ul class="dropdown-menu dropdown-menu-right">
-                 <li class=""><a href="InformaciónGeneral.aspx">Información Básica</a></li>
                   <li class=""><a href="registrarse.aspx">Preguntas Frecuentes</a></li>
+                     <li class=""><a href="">Sea parte de nosotros</a></li>
                
                  
                 </ul>
               </li>
               <li class="dropdown singleDrop ">
-                <a href="" >Acerca de </a>
+                <a href="InformaciónGeneral.aspx" >Acerca de </a>
               
               </li>
               

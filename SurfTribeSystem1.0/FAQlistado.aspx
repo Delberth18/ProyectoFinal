@@ -28,165 +28,225 @@
     </section>
 
     <!-- PAGE CONTENT -->
-    <section class="mainContentSection">
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-12">
-            <div class="aboutTitle">
-              <h4>Nuestros usuarios nos comentan a veces sobre sus inquietudes, por esto la existencia de este apartado.</h4>
-              <p>Esperamos poder aclarar todas su dudas, aqui les mostramos las incognitas mas comunes de nuestros usuarios.</p>
-            </div>
-          </div>
-        </div>
-        <div class="row aboutItem">
-          <div class="col-sm-4 col-xs-12">
-            <div class="media">
-              <a class="media-left" href="#"><i class="fa fa-bell" aria-hidden="true"></i></a>
-              <div class="media-body">
-                <h4 class="media-heading">Donec Vel Libero</h4>
-                <p>Vestibulum ut lacus non lorem pharetra efficitur. Nunc nibh elit, consectetur quis dapibu.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-4 col-xs-12">
-            <div class="media">
-              <a class="media-left" href="#"><i class="fa fa-briefcase" aria-hidden="true"></i></a>
-              <div class="media-body">
-                <h4 class="media-heading">Vivamus Laoreet</h4>
-                <p>Aenean dictum dui quis interdum volutpat. Integer in magna sit amet efficitur nec.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-4 col-xs-12">
-            <div class="media">
-              <a class="media-left" href="#"><i class="fa fa-cab" aria-hidden="true"></i></a>
-              <div class="media-body">
-                <h4 class="media-heading">Ullamcorper Congue</h4>
-                <p>Etiam posuere lorem ac pharetra laoreet. Nam magna mi, eleifend ac vulputate ac.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-4 col-xs-12">
-            <div class="media">
-              <a class="media-left" href="#"><i class="fa fa-camera" aria-hidden="true"></i></a>
-              <div class="media-body">
-                <h4 class="media-heading">Proin Libero Erat</h4>
-                <p>Nunc eget sem ac lectus auctor viverra. Praesent sollicitudin leo velit sed, semper diam.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-4 col-xs-12">
-            <div class="media">
-              <a class="media-left" href="#"><i class="fa fa-cloud" aria-hidden="true"></i></a>
-              <div class="media-body">
-                <h4 class="media-heading">Amaiging Tour</h4>
-                <p>Nulla molestie leo vitae convallis sollicitudin. Nulla volutpat dapibus at pellentesque sem.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-4 col-xs-12">
-            <div class="media">
-              <a class="media-left" href="#"><i class="fa fa-cutlery" aria-hidden="true"></i></a>
-              <div class="media-body">
-                <h4 class="media-heading">Cras Vestibulum</h4>
-                <p>Aenean gravida, nisl et volutpat dapibus, nisl odio accumsan pretium lacus libero a lacus.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+  
 
-    <!-- QUOTE -->
-    <section class="darkSection aboutComments">
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-12">
-            <div class="commentsTable">
-              <div class="commentsTableInner">
-                <div class="commentsInfo">
-                  <i class="fa fa-quote-right" aria-hidden="true"></i>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
-                  <h5>Adam Smith, Designer</h5>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- TEAM -->
-    <section class="whiteSection">
+     <section class="mainContentSection">
       <div class="container">
         <div class="row">
           <div class="col-xs-12">
             <div class="sectionTitle">
-              <h2><span>our Team</span></h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-            </div>
+              <h2><span>Accordions</span></h2>
+
+            </div> <h4>Nuestros usuarios nos comentan a veces sobre sus inquietudes, por esto la existencia de este apartado.</h4>
+              <p>Esperamos poder aclarar todas su dudas, aqui les mostramos las incognitas mas comunes de nuestros usuarios.</p>
           </div>
         </div>
         <div class="row">
-          <div class="col-sm-4 col-xs-12">
-            <div class="teamMember">
-              <img src="img/about-us/team-01.jpg" alt="">
-              <div class="memberName">
-                <h4>Sarah Harlas</h4>
-                <p>Tour Guide</p>
-              </div>
-              <div class="maskingArea">
-                <p>orem ipsum dolor sit amet, consectetur adipisicing elit commodo.</p>
-                <ul class="list-inline">
-                  <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                  <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                  <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-                  <li><a href="#"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
-                  <li><a href="#"><i class="fa fa-vimeo" aria-hidden="true"></i></a></li>
-                </ul>
-              </div>
+          <div class="col-sm-6 col-xs-12 accordionsTransparent">
+            <div class="accordionWrappar">
+              <div class="panel-group" id="accordionIcons">
+                <div class="panel panel-default">
+                  <a class="panel-heading accordion-toggle active" data-toggle="collapse" data-parent="#accordionIcons" href="#collapseOne">
+                    <span>How can I manage Instant Book settings?</span>
+                    <i class="indicator fa fa-minus  pull-right"></i>
+                  </a>
+                  <div id="collapseOne" class="panel-collapse collapse in active">
+                    <div class="panel-body">
+                      <div class="media">
+                        <a class="media-left" href="#">
+                          <img class="media-object" src="img/toggle/toggle-01.jpg" alt="Image">
+                        </a>
+                        <div class="media-body">
+                          <h4 class="media-heading">Story &amp; History</h4>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipis icing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <a class="panel-heading accordion-toggle" data-toggle="collapse" data-parent="#accordionIcons" href="#collapseTwo">
+                    <span>How do I list multiple rooms?</span>
+                    <i class="indicator fa fa-plus  pull-right"></i>
+                  </a>
+                  <div id="collapseTwo" class="panel-collapse collapse">
+                    <div class="panel-body">
+                      <div class="media">
+                        <a class="media-left" href="#">
+                          <img class="media-object" src="img/toggle/toggle-01.jpg" alt="Image">
+                        </a>
+                        <div class="media-body">
+                          <h4 class="media-heading">Story &amp; History</h4>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipis icing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <a class="panel-heading accordion-toggle" data-toggle="collapse" data-parent="#accordionIcons" href="#collapseThree">
+                    <span>How do I use my calendar?</span>
+                    <i class="indicator fa fa-plus  pull-right"></i>
+                  </a>
+                  <div id="collapseThree" class="panel-collapse collapse">
+                    <div class="panel-body">
+                     <div class="media">
+                        <a class="media-left" href="#">
+                          <img class="media-object" src="img/toggle/toggle-01.jpg" alt="Image">
+                        </a>
+                        <div class="media-body">
+                          <h4 class="media-heading">Story &amp; History</h4>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipis icing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet.</p>
+                        </div>
+                      </div>
+                   </div>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <a class="panel-heading accordion-toggle" data-toggle="collapse" data-parent="#accordionIcons" href="#collapseFour">
+                    <span>How do I make reservation?</span>
+                    <i class="indicator fa fa-plus  pull-right"></i>
+                  </a>
+                  <div id="collapseFour" class="panel-collapse collapse">
+                    <div class="panel-body">
+                     <div class="media">
+                        <a class="media-left" href="#">
+                          <img class="media-object" src="img/toggle/toggle-01.jpg" alt="Image">
+                        </a>
+                        <div class="media-body">
+                          <h4 class="media-heading">Story &amp; History</h4>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipis icing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet.</p>
+                        </div>
+                      </div>
+                   </div>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <a class="panel-heading accordion-toggle" data-toggle="collapse" data-parent="#accordionIcons" href="#collapseFive">
+                    <span>How do I make reservation?</span>
+                    <i class="indicator fa fa-plus  pull-right"></i>
+                  </a>
+                  <div id="collapseFive" class="panel-collapse collapse">
+                    <div class="panel-body">
+                     <div class="media">
+                        <a class="media-left" href="#">
+                          <img class="media-object" src="img/toggle/toggle-01.jpg" alt="Image">
+                        </a>
+                        <div class="media-body">
+                          <h4 class="media-heading">Story &amp; History</h4>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipis icing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet.</p>
+                        </div>
+                      </div>
+                   </div>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <a class="panel-heading accordion-toggle hideBorder" data-toggle="collapse" data-parent="#accordionIcons" href="#collapseSix">
+                    <span>How do I make reservation?</span>
+                    <i class="indicator fa fa-plus  pull-right"></i>
+                  </a>
+                  <div id="collapseSix" class="panel-collapse collapse">
+                    <div class="panel-body">
+                     <div class="media">
+                        <a class="media-left" href="#">
+                          <img class="media-object" src="img/toggle/toggle-01.jpg" alt="Image">
+                        </a>
+                        <div class="media-body">
+                          <h4 class="media-heading">Story &amp; History</h4>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipis icing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet.</p>
+                        </div>
+                      </div>
+                   </div>
+                  </div>
+                </div>
+             </div>
             </div>
           </div>
-          <div class="col-sm-4 col-xs-12">
-            <div class="teamMember">
-              <img src="img/about-us/team-02.jpg" alt="">
-              <div class="memberName">
-                <h4>Adam Smith</h4>
-                <p>Tour Guide</p>
-              </div>
-              <div class="maskingArea">
-                <p>orem ipsum dolor sit amet, consectetur adipisicing elit commodo.</p>
-                <ul class="list-inline">
-                  <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                  <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                  <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-                  <li><a href="#"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
-                  <li><a href="#"><i class="fa fa-vimeo" aria-hidden="true"></i></a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-4 col-xs-12">
-            <div class="teamMember">
-              <img src="img/about-us/team-03.jpg" alt="">
-              <div class="memberName">
-                <h4>Jenet Immda</h4>
-                <p>Tour Guide</p>
-              </div>
-              <div class="maskingArea">
-                <p>orem ipsum dolor sit amet, consectetur adipisicing elit commodo.</p>
-                <ul class="list-inline">
-                  <li><a href="#"><i class="fa fa-facebook" aria-hidden="false"></i></a></li>
-                  <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                  <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-                  <li><a href="#"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
-                  <li><a href="#"><i class="fa fa-vimeo" aria-hidden="true"></i></a></li>
-                </ul>
-              </div>
+          <div class="col-sm-6 col-xs-12 accordionsTransparent">
+            <div class="solidBgTitle">
+              <div class="panel-group" id="accordionSolid">
+                <div class="panel panel-default">
+                  <a class="panel-heading accordion-toggle" data-toggle="collapse" data-parent="#accordionSolid" href="#collapse-aa">
+                    <span>How can I manage Instant Book settings?</span>
+                    <i class="indicator fa fa-minus  pull-right"></i>
+                  </a>
+                  <div id="collapse-aa" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                      <div class="media">
+                        <a class="media-left" href="#">
+                          <img class="media-object" src="img/toggle/toggle-02.jpg" alt="Image">
+                        </a>
+                        <div class="media-body">
+                          <h4 class="media-heading">Story &amp; History</h4>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipis icing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <a class="panel-heading accordion-toggle" data-toggle="collapse" data-parent="#accordionSolid" href="#collapse-bb">
+                    <span>How do I list multiple rooms?</span>
+                    <i class="indicator fa fa-plus  pull-right"></i>
+                  </a>
+                  <div id="collapse-bb" class="panel-collapse collapse">
+                    <div class="panel-body">
+                      <div class="media">
+                        <a class="media-left" href="#">
+                          <img class="media-object" src="img/toggle/toggle-02.jpg" alt="Image">
+                        </a>
+                        <div class="media-body">
+                          <h4 class="media-heading">Story &amp; History</h4>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipis icing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <a class="panel-heading accordion-toggle" data-toggle="collapse" data-parent="#accordionSolid" href="#collapse-cc">
+                    <span>How do I use my calendar?</span>
+                    <i class="indicator fa fa-plus  pull-right"></i>
+                  </a>
+                  <div id="collapse-cc" class="panel-collapse collapse">
+                    <div class="panel-body">
+                     <div class="media">
+                        <a class="media-left" href="#">
+                          <img class="media-object" src="img/toggle/toggle-02.jpg" alt="Image">
+                        </a>
+                        <div class="media-body">
+                          <h4 class="media-heading">Story &amp; History</h4>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipis icing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet.</p>
+                        </div>
+                      </div>
+                   </div>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <a class="panel-heading accordion-toggle" data-toggle="collapse" data-parent="#accordionSolid" href="#collapse-dd">
+                    <span>How do I make reservation?</span>
+                    <i class="indicator fa fa-plus  pull-right"></i>
+                  </a>
+                  <div id="collapse-dd" class="panel-collapse collapse">
+                    <div class="panel-body">
+                     <div class="media">
+                        <a class="media-left" href="#">
+                          <img class="media-object" src="img/toggle/toggle-02.jpg" alt="Image">
+                        </a>
+                        <div class="media-body">
+                          <h4 class="media-heading">Story &amp; History</h4>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipis icing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet.</p>
+                        </div>
+                      </div>
+                   </div>
+                  </div>
+                </div>
+             </div>
             </div>
           </div>
         </div>
       </div>
     </section>
+   
 
 </asp:Content>

@@ -56,7 +56,7 @@
                   <div class="form-group" style=" width: 350px;">
                    
                       
-                    <asp:TextBox class="form-control  bg-ash"  TextMode="Email" id="correoText" runat="server" placeholder="Correo electrónico" /><br />
+                    <asp:TextBox class="form-control  bg-ashh"  TextMode="Email" id="correoText" runat="server" placeholder="Correo electrónico" /><br />
                  
                    
                     <asp:TextBox class="form-control bg-ashh" TextMode="Password" id="contrasenaText" runat="server" placeholder="Contraseña"/><br />

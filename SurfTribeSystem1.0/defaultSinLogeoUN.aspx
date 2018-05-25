@@ -76,114 +76,51 @@
                                 </li>
                                 <li class="dropdown megaDropMenu ">
                                     <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="300" data-close-others="true" aria-expanded="false">Escuelas</a>
-                                    <ul class="row dropdown-menu">
-                                        <li class="col-sm-3 col-xs-12">
-                                            <ul class="list-unstyled">
-                                                <li>Tour Packages Grid View</li>
-                                                <li class=""><a href="packages-grid-left-sidebar.html">Packages Sidebar Left</a></li>
-                                                <li class=""><a href="packages-grid-right-sidebar.html">Packages Sidebar Right</a></li>
-                                                <li class=""><a href="packages-grid.html">Packages 3 Columns</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="col-sm-3 col-xs-12">
-                                            <ul class="list-unstyled">
-                                                <li>Tour Packages List View</li>
-                                                <li class=""><a href="packages-list-left-sidebar.html">Packages Sidebar Left</a></li>
-                                                <li class=""><a href="packages-list-right-sidebar.html">Packages Sidebar Right</a></li>
-                                                <li class=""><a href="packages-list.html">Packages List</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="col-sm-3 col-xs-12">
-                                            <ul class="list-unstyled">
-                                                <li>Single Package</li>
-                                                <li class=""><a href="single-package-left-sidebar.html">Packages Sidebar Left</a></li>
-                                                <li class=""><a href="single-package-right-sidebar.html">Packages Sidebar Right</a></li>
-                                                <li class=""><a href="single-package-fullwidth.html">Package Fullwidth</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="col-sm-3 col-xs-12">
-                                            <ul class="list-unstyled">
-                                                <li>Booking Steps</li>
-                                                <li class=""><a href="booking-1.html">Step 1 - Personal Info</a></li>
-                                                <li class=""><a href="booking-2.html">Step 2 - Payment Info</a></li>
-                                                <li class=""><a href="booking-3.html">Step 3 - Confirmation</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
+                                      <ul class="row dropdown-menu">
+                                          <li class="col-sm-4 col-xs-12">
+                                              <ul class="list-unstyled">
+                                                  <li>Guanacaste</li>
+                                                  <li class=""><a href="packages-grid-left-sidebar.html">Escuela de Surf Calof</a></li>
+                                                  <li class=""><a href="packages-grid-right-sidebar.html">Surf's Day</a></li>
+                                                  <li class=""><a href="packages-grid.html">Escuela para Surfeadores Las olas</a></li>
+                                              </ul>
+                                          </li>
+                                          <li class="col-sm-4 col-xs-12">
+                                              <ul class="list-unstyled">
+                                                  <li>Puntarenas</li>
+                                                  <li class=""><a href="packages-list-left-sidebar.html">Escuela de Surf Calof</a></li>
+                                                  <li class=""><a href="packages-list-right-sidebar.html">Surf's Day</a></li>
+                                                  <li class=""><a href="packages-list.html">Escuela para Surfeadores Las olas</a></li>
+                                              </ul>
+                                          </li>
+                                          <li class="col-sm-4 col-xs-12">
+                                              <ul class="list-unstyled">
+                                                  <li>Limón</li>
+                                                  <li class=""><a href="single-package-left-sidebar.html">Escuela de Surf Calof</a></li>
+                                                  <li class=""><a href="single-package-right-sidebar.html">Surf's Day</a></li>
+                                                  <li class=""><a href="single-package-fullwidth.html">Escuela para Surfeadores Las olas</a></li>
+                                              </ul>
+                                           </li>
+                                         </ul>
                                 </li>
                                 <li class="dropdown megaDropMenu ">
-                                    <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="300" data-close-others="true" aria-expanded="false">Galeria</a>
-                                    <ul class="row dropdown-menu">
-                                        <li class="col-sm-3 col-xs-12">
-                                            <ul class="list-unstyled">
-                                                <li>Hotels Grid View</li>
-                                                <li class=""><a href="hotels-grid-left-sidebar.html">Hotels Sidebar Left</a></li>
-                                                <li class=""><a href="hotels-grid-right-sidebar.html">Hotels Sidebar Right</a></li>
-                                                <li class=""><a href="hotels-grid.html">Hotels 3 Columns</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="col-sm-3 col-xs-12">
-                                            <ul class="list-unstyled">
-                                                <li>Hotels List View</li>
-                                                <li class=""><a href="hotels-list-left-sidebar.html">Hotels Sidebar Left</a></li>
-                                                <li class=""><a href="hotels-list-right-sidebar.html">Hotels Sidebar Right</a></li>
-                                                <li class=""><a href="hotels-list.html">Hotels List</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="col-sm-3 col-xs-12">
-                                            <ul class="list-unstyled">
-                                                <li>Single Hotel</li>
-                                                <li class=""><a href="single-hotel-left-sidebar.html">Hotels Sidebar Left</a></li>
-                                                <li class=""><a href="single-hotel-right-sidebar.html">Hotels Sidebar Right</a></li>
-                                                <li class=""><a href="single-hotel-fullwidth.html">Hotels Fullwidth</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="col-sm-3 col-xs-12">
-                                            <ul class="list-unstyled">
-                                                <li>Booking Steps</li>
-                                                <li class=""><a href="booking-1.html">Step 1 - Personal Info</a></li>
-                                                <li class=""><a href="booking-2.html">Step 2 - Payment Info</a></li>
-                                                <li class=""><a href="booking-3.html">Step 3 - Confirmation</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
+                                    <a href="" >Galeria</a>
+                                   
                                 </li>
                                 <li class="dropdown singleDrop ">
                                     <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Información</a>
                                     <ul class="dropdown-menu dropdown-menu-right">
-                                        <li class=""><a href="InformaciónGeneral.aspx">Información Básica</a></li>
+
                                         <li class=""><a href="registrarse.aspx">Preguntas Frecuentes</a></li>
+                                         <li class=""><a href="">Sea parte de nosotros</a></li>
                                         
                                         
                                      
                                     </ul>
                                 </li>
                                 <li class="dropdown singleDrop ">
-                                    <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Acerca de</a>
-                                    <ul class="dropdown-menu dropdown-menu-right">
-                                        <li class="dropdown dropdown-submenu">
-                                            <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">Blog Grid View <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
-                                            <ul class="dropdown-menu">
-                                                <li class=""><a href="blog-grid-three-col.html">Blog Grid 3 Col</a></li>
-                                                <li class=""><a href="blog-grid-two-col.html">Blog Grid 2 Col</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="dropdown dropdown-submenu">
-                                            <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">Blog List View <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
-                                            <ul class="dropdown-menu">
-                                                <li class=""><a href="blog-list-right-sidebar.html">Blog List Right Sidebar</a></li>
-                                                <li class=""><a href="blog-list-left-sidebar.html">blog-list-left-sidebar.html</a></li>
-                                                <li class=""><a href="blog-list-fullwidth.html">Blog List Fullwidth</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="dropdown dropdown-submenu">
-                                            <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">Single Blog Post <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
-                                            <ul class="dropdown-menu">
-                                                <li class=""><a href="blog-single-right-sidebar.html">Right Sidebar</a></li>
-                                                <li class=""><a href="blog-single-left-sidebar.html">Left Sidebar</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
+                                    <a href="InformaciónGeneral.aspx" >Acerca de</a>
+                                   
                                 </li>
                                 <li class="dropdown searchBox">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="searchIcon"><i class="fa fa-search" aria-hidden="true"></i></span></a>
