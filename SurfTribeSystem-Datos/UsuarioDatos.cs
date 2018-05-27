@@ -144,6 +144,11 @@ namespace SurfTribeSystem_Datos
                 {
                     resultado.TipoResultado = "OK";
 
+                    if (usuario.Tag=="LISTADO")
+                    {
+
+                    }
+
 
                 }
 

@@ -23,6 +23,8 @@ namespace SurfTribeSystem_Datos
                 SqlParameter param = new SqlParameter();
 
                 #region parametros
+
+                param = new SqlParameter();
                 param.ParameterName = "@PREGUNTA";
                 if (faq.Pregunta==null)
                 {
@@ -33,7 +35,8 @@ namespace SurfTribeSystem_Datos
                     param.Value = faq.Pregunta;
                 }
                 parametros.Add(param);
-                
+
+                param = new SqlParameter();
                 param.ParameterName = "@RESPUESTA";
                 if (faq.Respuesta == null)
                 {
@@ -44,7 +47,8 @@ namespace SurfTribeSystem_Datos
                     param.Value = faq.Respuesta;
                 }
                 parametros.Add(param);
-                
+
+                param = new SqlParameter();
                 param.ParameterName = "@TAG";
                 if (faq.Tag == null)
                 {
@@ -83,6 +87,7 @@ namespace SurfTribeSystem_Datos
                             });
                         }
                     }
+                    resultado.ObjetoResultado = faqs;
 
                 }
 

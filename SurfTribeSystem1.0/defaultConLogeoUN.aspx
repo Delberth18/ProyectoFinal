@@ -70,13 +70,13 @@
                     <div class="collapse navbar-collapse navbar-ex1-collapse">
                         <ul class="nav navbar-nav navbar-right">
                             <li class="dropdown singleDrop active">
-                                <a href="defaultConLogeoUN.aspx" >Inicio </a>
-                                
+                                <a href="defaultConLogeoUN.aspx">Inicio </a>
+
                             </li>
                             <li class="dropdown megaDropMenu ">
                                 <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="300" data-close-others="true" aria-expanded="false">Escuelas</a>
                                 <ul class="row dropdown-menu">
-                                   <li class="col-sm-4 col-xs-12">
+                                    <li class="col-sm-4 col-xs-12">
                                         <ul class="list-unstyled">
                                             <li>Guanacaste</li>
                                             <li class=""><a href="packages-grid-left-sidebar.html">Escuela de Surf Calof</a></li>
@@ -84,7 +84,7 @@
                                             <li class=""><a href="packages-grid.html">Escuela para Surfeadores Las olas</a></li>
                                         </ul>
                                     </li>
-                                  <li class="col-sm-4 col-xs-12">
+                                    <li class="col-sm-4 col-xs-12">
                                         <ul class="list-unstyled">
                                             <li>Puntarenas</li>
                                             <li class=""><a href="packages-list-left-sidebar.html">Escuela de Surf Calof</a></li>
@@ -92,7 +92,7 @@
                                             <li class=""><a href="packages-list.html">Escuela para Surfeadores Las olas</a></li>
                                         </ul>
                                     </li>
-                                   <li class="col-sm-4 col-xs-12">
+                                    <li class="col-sm-4 col-xs-12">
                                         <ul class="list-unstyled">
                                             <li>Limón</li>
                                             <li class=""><a href="single-package-left-sidebar.html">Escuela de Surf Calof</a></li>
@@ -100,25 +100,25 @@
                                             <li class=""><a href="single-package-fullwidth.html">Escuela para Surfeadores Las olas</a></li>
                                         </ul>
                                     </li>
-                                   
+
                                 </ul>
                             </li>
                             <li class="dropdown megaDropMenu ">
-                                <a href="" >Galeria</a>
-                               
+                                <a href="">Galeria</a>
+
                             </li>
-                          <li class="dropdown singleDrop ">
+                            <li class="dropdown singleDrop ">
                                 <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Información</a>
                                 <ul class="dropdown-menu dropdown-menu-right">
-                                   
+
                                     <li class=""><a href="FAQlistado.aspx">Preguntas Frecuentes</a></li>
-                                     <li class=""><a href="">Sea parte de nosotros</a></li>
+                                    <li class=""><a href="">Sea parte de nosotros</a></li>
 
                                 </ul>
                             </li>
                             <li class="dropdown singleDrop ">
-                                <a href="InformaciónGeneral.aspx" >Acerca de</a>
-                               
+                                <a href="InformaciónGeneral.aspx">Acerca de</a>
+
                             </li>
                             <li class="dropdown searchBox">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="searchIcon"><i class="fa fa-search" aria-hidden="true"></i></span></a>
@@ -193,202 +193,21 @@
 
 
         <!-- BANNER -->
-       <section class="bannercontainer">
+        <section class="bannercontainer">
 
-                <div id="rev_slider_wrapper1" class="rev_slider_wrapper fullscreen-container" data-alias="christmas-snow-scene" data-source="gallery" style="background-color: transparent; padding: 0px;">
-                    <!-- START REVOLUTION SLIDER 5.4.1 fullscreen mode -->
-                    <div id="rev_slider_container" class="rev_slider custom_rev_slider fullscreenbanner" style="display: none;" data-version="5.4.1">
-                        <ul>
-                            <!-- SLIDE 1 -->
-                            <li data-transition="parallaxvertical">
-                                <!-- MAIN IMAGE -->
-                                <img src="ccss/star-1-3/Static%20HTML/img/home/slider/slider-01.jpg" alt="slidebg1" data-bgparallax="3" class="rev-slidebg" data-no-retina=""/>
+            <div id="rev_slider_wrapper1" class="rev_slider_wrapper fullscreen-container" data-alias="christmas-snow-scene" data-source="gallery" style="background-color: transparent; padding: 0px;">
+                <!-- START REVOLUTION SLIDER 5.4.1 fullscreen mode -->
+                <div id="rev_slider_container" class="rev_slider custom_rev_slider fullscreenbanner" style="display: none;" data-version="5.4.1">
+                    <ul>
+                        <!-- SLIDE 1 -->
+                        <li data-transition="parallaxvertical">
+                            <!-- MAIN IMAGE -->
+                            <img src="ccss/star-1-3/Static%20HTML/img/home/slider/slider-01.jpg" alt="slidebg1" data-bgparallax="3" class="rev-slidebg" data-no-retina="" />
 
-                                <!-- LAYERS -->
+                            <!-- LAYERS -->
 
-                                <!-- LAYER NR. 1 -->
-                                <div class="container">
-                                    <div class="tp-caption tp-resizeme slide-layer-1" id="slide-layer-1"
-                                        data-x="left"
-                                        data-y="center"
-                                        data-hoffset="['20', '40', '80', '60']"
-                                        data-voffset="['-105']"
-                                        data-width="['auto']"
-                                        data-height="['auto']"
-                                        data-type="text"
-                                        data-responsive_offset="on"
-                                        data-frames='[{"delay":1000,"speed":800,"frame":"0","from":"y:-50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
-                                        data-textalign="['left']"
-                                        data-fontsize="['30', '30', '25', '16']"
-                                        data-color="#fff"
-                                        data-visibility="['on', 'on', 'on', 'on']"
-                                        style="z-index: 1; text-transform: uppercase;">
-                                        Discover The Most Amazing
-
-                                    </div>
-
-                                    <!-- LAYER NR. 2 -->
-                                    <div class="tp-caption tp-resizeme slide-layer-2" id="slide-layer-2"
-                                        data-x="left"
-                                        data-y="center"
-                                        data-hoffset="['20', '40', '80', '60']"
-                                        data-voffset="-50"
-                                        data-width="['auto']"
-                                        data-height="['auto']"
-                                        data-type="text"
-                                        data-responsive_offset="on"
-                                        data-frames='[{"delay":1000,"speed":800,"frame":"0","from":"y:-50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
-                                        data-textalign="['left']"
-                                        data-fontsize="['64', '54', '44', '34']"
-                                        data-color="#fff"
-                                        data-fontweight="bold"
-                                        style="z-index: 1; text-transform: uppercase;">
-                                        Travel Template
-
-                                    </div>
-
-                                    <!-- LAYER NR. 3 -->
-
-                                    <div class="tp-caption tp-resizeme slide-layer-2" id="slide-layer-2"
-                                        data-x="left"
-                                        data-y="center"
-                                        data-hoffset="['20', '40', '80', '60']"
-                                        data-voffset="20"
-                                        data-width="['auto']"
-                                        data-height="['auto']"
-                                        data-type="text"
-                                        data-responsive_offset="on"
-                                        data-frames='[{"delay":1200,"speed":1000,"frame":"0","from":"y:-50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
-                                        data-textalign="['left']"
-                                        data-fontsize="['14', '14', '14', '14']"
-                                        data-color="#fff"
-                                        data-visibility="['on','on','off','off']"
-                                        style="z-index: 1;">
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                        <br/>
-                                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex consequat.
-
-                                    </div>
-
-
-                                    <!-- LAYER NR. 4 -->
-                                    <div class="tp-caption tp-resizeme slide-layer-4" id="slide-layer-4"
-                                        data-x="['left','left','left','left']"
-                                        data-y="center"
-                                        data-hoffset="['20', '40', '80', '60']"
-                                        data-voffset="['108', '108', 15, '15']"
-                                        data-width="auto"
-                                        data-height="auto"
-                                        data-type="text"
-                                        data-responsive_offset="on"
-                                        data-frames='[{"delay":1400,"speed":1200,"frame":"0","from":"y:-50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
-                                        data-textalign="['left']"
-                                        data-lineheight="['45', '40', '35', '30']"
-                                        data-color="#FFF"
-                                        data-border="0"
-                                        data-paddingleft="30"
-                                        data-paddingright="30"
-                                        data-visibility="['on','on','on','on']"
-                                        style="z-index: 500; border-radius: 4px">
-                                        <span class="page-scroll"><a target="_blank" href="">Buy Now</a></span>
-                                    </div>
-                                </div>
-                            </li>
-
-                            <!-- SLIDE 2 -->
-                            <li data-transition="parallaxvertical">
-                                <!-- MAIN IMAGE -->
-                                <img src="ccss/star-1-3/Static%20HTML/img/home/slider/slider-02.jpg" alt="slidebg1" data-bgparallax="3" class="rev-slidebg" data-no-retina="" />
-
-                                <!-- LAYERS -->
-
-                                <!-- LAYER NR. 1 -->
-                                <div class="tp-caption tp-resizeme slide-layer-1" id="slide-layer-1"
-                                    data-x="center" data-hoffset=""
-                                    data-y="center" data-voffset="-105"
-                                    data-width="['auto']"
-                                    data-height="['auto']"
-                                    data-type="text"
-                                    data-responsive_offset="on"
-                                    data-frames='[{"delay":1000,"speed":800,"frame":"0","from":"y:-50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
-                                    data-textalign="['center']"
-                                    data-fontsize="['30', '30', '30', '25']"
-                                    data-color="#fff"
-                                    style="z-index: 1; text-transform: uppercase;">
-                                    Discover The Most Amazing
-
-                                </div>
-
-                                <!-- LAYER NR. 2 -->
-                                <div class="tp-caption tp-resizeme slide-layer-2" id="slide-layer-2"
-                                    data-x="center" data-hoffset=""
-                                    data-y="center" data-voffset="-50"
-                                    data-width="['auto']"
-                                    data-height="['auto']"
-                                    data-type="text"
-                                    data-responsive_offset="on"
-                                    data-frames='[{"delay":1000,"speed":800,"frame":"0","from":"y:-50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
-                                    data-textalign="['center']"
-                                    data-fontsize="['64', '54', '44', '34']"
-                                    data-color="#fff"
-                                    data-fontweight="bold"
-                                    style="z-index: 1; text-transform: uppercase;">
-                                    Travel Template
-
-                                </div>
-
-                                <!-- LAYER NR. 3 -->
-
-                                <div class="tp-caption tp-resizeme slide-layer-2" id="slide-layer-2"
-                                    data-x="center" data-hoffset="0"
-                                    data-y="center" data-voffset="20"
-                                    data-width="['auto']"
-                                    data-height="['auto']"
-                                    data-type="text"
-                                    data-responsive_offset="on"
-                                    data-frames='[{"delay":1200,"speed":1000,"frame":"0","from":"y:-50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
-                                    data-textalign="['center']"
-                                    data-fontsize="['14', '14', '14', '14']"
-                                    data-color="#fff"
-                                    data-visibility="['on','on','off','off']"
-                                    style="z-index: 1;">
-                                    Maecenas nec sodales justo. Vivamus auctor pulvinar mattis. Ut at elementum nunc. Quisque condimentum ligula ante, non
-                                    <br>
-                                    luctus enim pulvinar sed. Fusce quis congue odio.
-
-                                </div>
-
-
-                                <!-- LAYER NR. 4 -->
-                                <div class="tp-caption tp-resizeme slide-layer-4" id="slide-layer-4"
-                                    data-y="center"
-                                    data-x="center"
-                                    data-hoffset=""
-                                    data-voffset="['108', '108', 15, '15']"
-                                    data-width="auto"
-                                    data-height="auto"
-                                    data-type="text"
-                                    data-responsive_offset="on"
-                                    data-frames='[{"delay":1400,"speed":1200,"frame":"0","from":"y:-50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
-                                    data-textalign="['center']"
-                                    data-lineheight="['45', '40', '35', '30']"
-                                    data-color="#FFF"
-                                    data-border="0"
-                                    data-paddingleft="30"
-                                    data-paddingright="30"
-                                    style="z-index: 500; border-radius: 4px">
-                                    <span class="page-scroll"><a target="_blank" href="">Buy Now</a></span>
-                                </div>
-                            </li>
-
-                            <!-- slide 3   -->
-                            <li data-transition="parallaxvertical">
-                                <!-- MAIN IMAGE -->
-                                <img src="ccss/star-1-3/Static%20HTML/img/home/slider/slider-03.jpg" alt="slidebg1" data-bgparallax="3" class="rev-slidebg" data-no-retina="" />
-
-                                <!-- LAYERS -->
-
-                                <!-- LAYER NR. 1 -->
+                            <!-- LAYER NR. 1 -->
+                            <div class="container">
                                 <div class="tp-caption tp-resizeme slide-layer-1" id="slide-layer-1"
                                     data-x="left"
                                     data-y="center"
@@ -400,10 +219,11 @@
                                     data-responsive_offset="on"
                                     data-frames='[{"delay":1000,"speed":800,"frame":"0","from":"y:-50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
                                     data-textalign="['left']"
-                                    data-fontsize="['30', '30', '30', '25']"
+                                    data-fontsize="['30', '30', '25', '16']"
                                     data-color="#fff"
+                                    data-visibility="['on', 'on', 'on', 'on']"
                                     style="z-index: 1; text-transform: uppercase;">
-                                    Enjoy Ultimate Freedom
+                                    Discover The Most Amazing
 
                                 </div>
 
@@ -423,7 +243,7 @@
                                     data-color="#fff"
                                     data-fontweight="bold"
                                     style="z-index: 1; text-transform: uppercase;">
-                                    Bootstrap Theme
+                                    Travel Template
 
                                 </div>
 
@@ -444,9 +264,9 @@
                                     data-color="#fff"
                                     data-visibility="['on','on','off','off']"
                                     style="z-index: 1;">
-                                    Aenean congue nisi elit, vitae viverra leo luctus et. Donec interdum erat id mi scelerisque, vitae ullamcorper lorem gravida.
-                                    <br>
-                                    Nunc sed maximus ante. Nulla dictum turpis vitae vehicula auctor.
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                        <br />
+                                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex consequat.
 
                                 </div>
 
@@ -468,103 +288,283 @@
                                     data-border="0"
                                     data-paddingleft="30"
                                     data-paddingright="30"
+                                    data-visibility="['on','on','on','on']"
                                     style="z-index: 500; border-radius: 4px">
                                     <span class="page-scroll"><a target="_blank" href="">Buy Now</a></span>
                                 </div>
-                            </li>
+                            </div>
+                        </li>
 
-                            <!-- SLIDE 4 -->
-                            <li data-transition="parallaxvertical">
-                                <!-- MAIN IMAGE -->
-                                <img src="ccss/star-1-3/Static%20HTML/img/home/slider/slider-04.jpg" alt="slidebg1" data-bgparallax="3" class="rev-slidebg" data-no-retina="" />
+                        <!-- SLIDE 2 -->
+                        <li data-transition="parallaxvertical">
+                            <!-- MAIN IMAGE -->
+                            <img src="ccss/star-1-3/Static%20HTML/img/home/slider/slider-02.jpg" alt="slidebg1" data-bgparallax="3" class="rev-slidebg" data-no-retina="" />
 
-                                <!-- LAYERS --> 
+                            <!-- LAYERS -->
 
-                                <!-- LAYER NR. 1 -->
-                                <div class="tp-caption tp-resizeme slide-layer-1" id="slide-layer-1"
-                                    data-x="center" data-hoffset=""
-                                    data-y="center" data-voffset="-105"
-                                    data-width="['autp']"
-                                    data-height="['auto']"
-                                    data-type="text"
-                                    data-responsive_offset="on"
-                                    data-frames='[{"delay":1000,"speed":800,"frame":"0","from":"y:-50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
-                                    data-textalign="['center']"
-                                    data-fontsize="['30', '30', '30', '25']"
-                                    data-color="#fff"
-                                    style="z-index: 1; text-transform: uppercase;">
-                                    Go Where You Wanna Go
+                            <!-- LAYER NR. 1 -->
+                            <div class="tp-caption tp-resizeme slide-layer-1" id="slide-layer-1"
+                                data-x="center" data-hoffset=""
+                                data-y="center" data-voffset="-105"
+                                data-width="['auto']"
+                                data-height="['auto']"
+                                data-type="text"
+                                data-responsive_offset="on"
+                                data-frames='[{"delay":1000,"speed":800,"frame":"0","from":"y:-50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+                                data-textalign="['center']"
+                                data-fontsize="['30', '30', '30', '25']"
+                                data-color="#fff"
+                                style="z-index: 1; text-transform: uppercase;">
+                                Discover The Most Amazing
 
-                                </div>
+                            </div>
 
-                                <!-- LAYER NR. 2 -->
-                                <div class="tp-caption tp-resizeme slide-layer-2" id="slide-layer-2"
-                                    data-x="center" data-hoffset=""
-                                    data-y="center" data-voffset="-50"
-                                    data-width="['auto']"
-                                    data-height="['auto']"
-                                    data-type="text"
-                                    data-responsive_offset="on"
-                                    data-frames='[{"delay":1000,"speed":800,"frame":"0","from":"y:-50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
-                                    data-textalign="['center']"
-                                    data-fontsize="['64', '54', '44', '34']"
-                                    data-color="#fff"
-                                    data-fontweight="bold"
-                                    style="z-index: 1; text-transform: uppercase;">
-                                    24/7 Quick Support
+                            <!-- LAYER NR. 2 -->
+                            <div class="tp-caption tp-resizeme slide-layer-2" id="slide-layer-2"
+                                data-x="center" data-hoffset=""
+                                data-y="center" data-voffset="-50"
+                                data-width="['auto']"
+                                data-height="['auto']"
+                                data-type="text"
+                                data-responsive_offset="on"
+                                data-frames='[{"delay":1000,"speed":800,"frame":"0","from":"y:-50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+                                data-textalign="['center']"
+                                data-fontsize="['64', '54', '44', '34']"
+                                data-color="#fff"
+                                data-fontweight="bold"
+                                style="z-index: 1; text-transform: uppercase;">
+                                Travel Template
 
-                                </div>
+                            </div>
 
-                                <!-- LAYER NR. 3 -->
+                            <!-- LAYER NR. 3 -->
 
-                                <div class="tp-caption tp-resizeme slide-layer-2" id="slide-layer-2"
-                                    data-x="center" data-hoffset=""
-                                    data-y="center" data-voffset="20"
-                                    data-width="['auto']"
-                                    data-height="['auto']"
-                                    data-type="text"
-                                    data-responsive_offset="on"
-                                    data-frames='[{"delay":1200,"speed":1000,"frame":"0","from":"y:-50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
-                                    data-textalign="['center']"
-                                    data-fontsize="['14', '14', '14', '14']"
-                                    data-color="#fff"
-                                    data-visibility="['on','on','off','off']"
-                                    style="z-index: 1;">
-                                    Maecenas et leo nec nunc rutrum tempor. Mauris pharetra porttitor odio eget convallis. Praesent facilisis mattis pretium.
+                            <div class="tp-caption tp-resizeme slide-layer-2" id="slide-layer-2"
+                                data-x="center" data-hoffset="0"
+                                data-y="center" data-voffset="20"
+                                data-width="['auto']"
+                                data-height="['auto']"
+                                data-type="text"
+                                data-responsive_offset="on"
+                                data-frames='[{"delay":1200,"speed":1000,"frame":"0","from":"y:-50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+                                data-textalign="['center']"
+                                data-fontsize="['14', '14', '14', '14']"
+                                data-color="#fff"
+                                data-visibility="['on','on','off','off']"
+                                style="z-index: 1;">
+                                Maecenas nec sodales justo. Vivamus auctor pulvinar mattis. Ut at elementum nunc. Quisque condimentum ligula ante, non
                                     <br>
-                                    Aliquam sagittis efficitur risus, interdum euismod urna. Pellentesque vel augue augue.
+                                luctus enim pulvinar sed. Fusce quis congue odio.
 
-                                </div>
+                            </div>
 
 
-                                <!-- LAYER NR. 4 -->
-                                <div class="tp-caption tp-resizeme slide-layer-4" id="slide-layer-4"
-                                    data-y="center"
-                                    data-x="center"
-                                    data-hoffset=""
-                                    data-voffset="['108', '108', 15, '15']"
-                                    data-width="auto"
-                                    data-height="auto"
-                                    data-type="text"
-                                    data-responsive_offset="on"
-                                    data-frames='[{"delay":1400,"speed":1200,"frame":"0","from":"y:-50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
-                                    data-textalign="['center']"
-                                    data-lineheight="['45', '40', '35', '30']"
-                                    data-color="#FFF"
-                                    data-border="0"
-                                    data-paddingleft="30"
-                                    data-paddingright="30"
-                                    style="z-index: 500; border-radius: 4px">   
-                                    <span class="page-scroll"><a target="_blank" href="#">Buy Now</a></span>
-                                </div>
-                            </li>
-                        </ul>
+                            <!-- LAYER NR. 4 -->
+                            <div class="tp-caption tp-resizeme slide-layer-4" id="slide-layer-4"
+                                data-y="center"
+                                data-x="center"
+                                data-hoffset=""
+                                data-voffset="['108', '108', 15, '15']"
+                                data-width="auto"
+                                data-height="auto"
+                                data-type="text"
+                                data-responsive_offset="on"
+                                data-frames='[{"delay":1400,"speed":1200,"frame":"0","from":"y:-50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+                                data-textalign="['center']"
+                                data-lineheight="['45', '40', '35', '30']"
+                                data-color="#FFF"
+                                data-border="0"
+                                data-paddingleft="30"
+                                data-paddingright="30"
+                                style="z-index: 500; border-radius: 4px">
+                                <span class="page-scroll"><a target="_blank" href="">Buy Now</a></span>
+                            </div>
+                        </li>
 
-                        <div class="tp-bannertimer tp-bottom" style="visibility: hidden !important;"></div>
-                    </div>
-                    <!-- END REVOLUTION SLIDER -->
+                        <!-- slide 3   -->
+                        <li data-transition="parallaxvertical">
+                            <!-- MAIN IMAGE -->
+                            <img src="ccss/star-1-3/Static%20HTML/img/home/slider/slider-03.jpg" alt="slidebg1" data-bgparallax="3" class="rev-slidebg" data-no-retina="" />
+
+                            <!-- LAYERS -->
+
+                            <!-- LAYER NR. 1 -->
+                            <div class="tp-caption tp-resizeme slide-layer-1" id="slide-layer-1"
+                                data-x="left"
+                                data-y="center"
+                                data-hoffset="['20', '40', '80', '60']"
+                                data-voffset="['-105']"
+                                data-width="['auto']"
+                                data-height="['auto']"
+                                data-type="text"
+                                data-responsive_offset="on"
+                                data-frames='[{"delay":1000,"speed":800,"frame":"0","from":"y:-50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+                                data-textalign="['left']"
+                                data-fontsize="['30', '30', '30', '25']"
+                                data-color="#fff"
+                                style="z-index: 1; text-transform: uppercase;">
+                                Enjoy Ultimate Freedom
+
+                            </div>
+
+                            <!-- LAYER NR. 2 -->
+                            <div class="tp-caption tp-resizeme slide-layer-2" id="slide-layer-2"
+                                data-x="left"
+                                data-y="center"
+                                data-hoffset="['20', '40', '80', '60']"
+                                data-voffset="-50"
+                                data-width="['auto']"
+                                data-height="['auto']"
+                                data-type="text"
+                                data-responsive_offset="on"
+                                data-frames='[{"delay":1000,"speed":800,"frame":"0","from":"y:-50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+                                data-textalign="['left']"
+                                data-fontsize="['64', '54', '44', '34']"
+                                data-color="#fff"
+                                data-fontweight="bold"
+                                style="z-index: 1; text-transform: uppercase;">
+                                Bootstrap Theme
+
+                            </div>
+
+                            <!-- LAYER NR. 3 -->
+
+                            <div class="tp-caption tp-resizeme slide-layer-2" id="slide-layer-2"
+                                data-x="left"
+                                data-y="center"
+                                data-hoffset="['20', '40', '80', '60']"
+                                data-voffset="20"
+                                data-width="['auto']"
+                                data-height="['auto']"
+                                data-type="text"
+                                data-responsive_offset="on"
+                                data-frames='[{"delay":1200,"speed":1000,"frame":"0","from":"y:-50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+                                data-textalign="['left']"
+                                data-fontsize="['14', '14', '14', '14']"
+                                data-color="#fff"
+                                data-visibility="['on','on','off','off']"
+                                style="z-index: 1;">
+                                Aenean congue nisi elit, vitae viverra leo luctus et. Donec interdum erat id mi scelerisque, vitae ullamcorper lorem gravida.
+                                    <br>
+                                Nunc sed maximus ante. Nulla dictum turpis vitae vehicula auctor.
+
+                            </div>
+
+
+                            <!-- LAYER NR. 4 -->
+                            <div class="tp-caption tp-resizeme slide-layer-4" id="slide-layer-4"
+                                data-x="['left','left','left','left']"
+                                data-y="center"
+                                data-hoffset="['20', '40', '80', '60']"
+                                data-voffset="['108', '108', 15, '15']"
+                                data-width="auto"
+                                data-height="auto"
+                                data-type="text"
+                                data-responsive_offset="on"
+                                data-frames='[{"delay":1400,"speed":1200,"frame":"0","from":"y:-50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+                                data-textalign="['left']"
+                                data-lineheight="['45', '40', '35', '30']"
+                                data-color="#FFF"
+                                data-border="0"
+                                data-paddingleft="30"
+                                data-paddingright="30"
+                                style="z-index: 500; border-radius: 4px">
+                                <span class="page-scroll"><a target="_blank" href="">Buy Now</a></span>
+                            </div>
+                        </li>
+
+                        <!-- SLIDE 4 -->
+                        <li data-transition="parallaxvertical">
+                            <!-- MAIN IMAGE -->
+                            <img src="ccss/star-1-3/Static%20HTML/img/home/slider/slider-04.jpg" alt="slidebg1" data-bgparallax="3" class="rev-slidebg" data-no-retina="" />
+
+                            <!-- LAYERS -->
+
+                            <!-- LAYER NR. 1 -->
+                            <div class="tp-caption tp-resizeme slide-layer-1" id="slide-layer-1"
+                                data-x="center" data-hoffset=""
+                                data-y="center" data-voffset="-105"
+                                data-width="['autp']"
+                                data-height="['auto']"
+                                data-type="text"
+                                data-responsive_offset="on"
+                                data-frames='[{"delay":1000,"speed":800,"frame":"0","from":"y:-50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+                                data-textalign="['center']"
+                                data-fontsize="['30', '30', '30', '25']"
+                                data-color="#fff"
+                                style="z-index: 1; text-transform: uppercase;">
+                                Go Where You Wanna Go
+
+                            </div>
+
+                            <!-- LAYER NR. 2 -->
+                            <div class="tp-caption tp-resizeme slide-layer-2" id="slide-layer-2"
+                                data-x="center" data-hoffset=""
+                                data-y="center" data-voffset="-50"
+                                data-width="['auto']"
+                                data-height="['auto']"
+                                data-type="text"
+                                data-responsive_offset="on"
+                                data-frames='[{"delay":1000,"speed":800,"frame":"0","from":"y:-50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+                                data-textalign="['center']"
+                                data-fontsize="['64', '54', '44', '34']"
+                                data-color="#fff"
+                                data-fontweight="bold"
+                                style="z-index: 1; text-transform: uppercase;">
+                                24/7 Quick Support
+
+                            </div>
+
+                            <!-- LAYER NR. 3 -->
+
+                            <div class="tp-caption tp-resizeme slide-layer-2" id="slide-layer-2"
+                                data-x="center" data-hoffset=""
+                                data-y="center" data-voffset="20"
+                                data-width="['auto']"
+                                data-height="['auto']"
+                                data-type="text"
+                                data-responsive_offset="on"
+                                data-frames='[{"delay":1200,"speed":1000,"frame":"0","from":"y:-50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+                                data-textalign="['center']"
+                                data-fontsize="['14', '14', '14', '14']"
+                                data-color="#fff"
+                                data-visibility="['on','on','off','off']"
+                                style="z-index: 1;">
+                                Maecenas et leo nec nunc rutrum tempor. Mauris pharetra porttitor odio eget convallis. Praesent facilisis mattis pretium.
+                                    <br>
+                                Aliquam sagittis efficitur risus, interdum euismod urna. Pellentesque vel augue augue.
+
+                            </div>
+
+
+                            <!-- LAYER NR. 4 -->
+                            <div class="tp-caption tp-resizeme slide-layer-4" id="slide-layer-4"
+                                data-y="center"
+                                data-x="center"
+                                data-hoffset=""
+                                data-voffset="['108', '108', 15, '15']"
+                                data-width="auto"
+                                data-height="auto"
+                                data-type="text"
+                                data-responsive_offset="on"
+                                data-frames='[{"delay":1400,"speed":1200,"frame":"0","from":"y:-50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+                                data-textalign="['center']"
+                                data-lineheight="['45', '40', '35', '30']"
+                                data-color="#FFF"
+                                data-border="0"
+                                data-paddingleft="30"
+                                data-paddingright="30"
+                                style="z-index: 500; border-radius: 4px">
+                                <span class="page-scroll"><a target="_blank" href="#">Buy Now</a></span>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div class="tp-bannertimer tp-bottom" style="visibility: hidden !important;"></div>
                 </div>
-            </section>
+                <!-- END REVOLUTION SLIDER -->
+            </div>
+        </section>
 
 
         <!-- SEARCH TOUR -->
@@ -1067,94 +1067,94 @@
 
         <!-- FOOTER -->
         <footer>
-                <div class="footer clearfix">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-sm-3 col-xs-12">
-                                <div class="footerContent">
-                                     <a class="navbar-brand"></a>
+            <div class="footer clearfix">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-3 col-xs-12">
+                            <div class="footerContent">
+                                <a class="navbar-brand"></a>
 
-                                </div>
                             </div>
-                            <div class="col-sm-3 col-xs-12">
-                                <div class="footerContent">
-                                    <h5>Contactenos</h5>
-                                    <p>Si tiene alguna duda o problema contactenos.</p>
-                                    <ul class="list-unstyled">
+                        </div>
+                        <div class="col-sm-3 col-xs-12">
+                            <div class="footerContent">
+                                <h5>Contactenos</h5>
+                                <p>Si tiene alguna duda o problema contactenos.</p>
+                                <ul class="list-unstyled">
 
-                                        <li><i class="fa fa-phone" aria-hidden="true"></i>[88] 657 524 332</li>
-                                        <li><i class="fa fa-envelope-o" aria-hidden="true"></i><a href="mailTo:info@star-travel.com">info@star-travel.com</a></li>
-                                    </ul>
-                                </div>
+                                    <li><i class="fa fa-phone" aria-hidden="true"></i>[88] 657 524 332</li>
+                                    <li><i class="fa fa-envelope-o" aria-hidden="true"></i><a href="mailTo:info@star-travel.com">info@star-travel.com</a></li>
+                                </ul>
                             </div>
-                            <div class="col-sm-3 col-xs-12">
-                                <div class="footerContent imgGallery">
-                                    <h5>Galeria</h5>
-                                    <div class="row">
-                                        <div class="col-xs-4">
-                                            <a class="fancybox-pop" href="ccss/star-1-3/Static%20HTML/img/home/gallery/gallery-1.jpg">
-                                                <img src="ccss/star-1-3/Static%20HTML/img/home/gallery/thumb-gallery-1.jpg" alt="image"/></a>
-                                        </div>
-                                        <div class="col-xs-4">
-                                            <a class="fancybox-pop" href="ccss/star-1-3/Static%20HTML/img/home/gallery/gallery-2.jpg">
-                                                <img src="ccss/star-1-3/Static%20HTML/img/home/gallery/thumb-gallery-2.jpg" alt="image"/></a>
-                                        </div>
-                                        <div class="col-xs-4">
-                                            <a class="fancybox-pop" href="ccss/star-1-3/Static%20HTML/img/home/gallery/gallery-3.jpg">
-                                                <img src="ccss/star-1-3/Static%20HTML/img/home/gallery/thumb-gallery-3.jpg" alt="image"/></a>
-                                        </div>
-                                        <div class="col-xs-4">
-                                            <a class="fancybox-pop" href="ccss/star-1-3/Static%20HTML/img/home/gallery/gallery-4.jpg">
-                                                <img src="ccss/star-1-3/Static%20HTML/img/home/gallery/thumb-gallery-4.jpg" alt="image"/></a>
-                                        </div>
-                                        <div class="col-xs-4">
-                                            <a class="fancybox-pop" href="ccss/star-1-3/Static%20HTML/img/home/gallery/gallery-5.jpg">
-                                                <img src="ccss/star-1-3/Static%20HTML/img/home/gallery/thumb-gallery-5.jpg" alt="image"/></a>
-                                        </div>
-                                        <div class="col-xs-4">
-                                            <a class="fancybox-pop" href="ccss/star-1-3/Static%20HTML/img/home/gallery/gallery-6.jpg">
-                                                <img src="ccss/star-1-3/Static%20HTML/img/home/gallery/thumb-gallery-6.jpg" alt="image"/></a>
-                                        </div>
+                        </div>
+                        <div class="col-sm-3 col-xs-12">
+                            <div class="footerContent imgGallery">
+                                <h5>Galeria</h5>
+                                <div class="row">
+                                    <div class="col-xs-4">
+                                        <a class="fancybox-pop" href="ccss/star-1-3/Static%20HTML/img/home/gallery/gallery-1.jpg">
+                                            <img src="ccss/star-1-3/Static%20HTML/img/home/gallery/thumb-gallery-1.jpg" alt="image" /></a>
+                                    </div>
+                                    <div class="col-xs-4">
+                                        <a class="fancybox-pop" href="ccss/star-1-3/Static%20HTML/img/home/gallery/gallery-2.jpg">
+                                            <img src="ccss/star-1-3/Static%20HTML/img/home/gallery/thumb-gallery-2.jpg" alt="image" /></a>
+                                    </div>
+                                    <div class="col-xs-4">
+                                        <a class="fancybox-pop" href="ccss/star-1-3/Static%20HTML/img/home/gallery/gallery-3.jpg">
+                                            <img src="ccss/star-1-3/Static%20HTML/img/home/gallery/thumb-gallery-3.jpg" alt="image" /></a>
+                                    </div>
+                                    <div class="col-xs-4">
+                                        <a class="fancybox-pop" href="ccss/star-1-3/Static%20HTML/img/home/gallery/gallery-4.jpg">
+                                            <img src="ccss/star-1-3/Static%20HTML/img/home/gallery/thumb-gallery-4.jpg" alt="image" /></a>
+                                    </div>
+                                    <div class="col-xs-4">
+                                        <a class="fancybox-pop" href="ccss/star-1-3/Static%20HTML/img/home/gallery/gallery-5.jpg">
+                                            <img src="ccss/star-1-3/Static%20HTML/img/home/gallery/thumb-gallery-5.jpg" alt="image" /></a>
+                                    </div>
+                                    <div class="col-xs-4">
+                                        <a class="fancybox-pop" href="ccss/star-1-3/Static%20HTML/img/home/gallery/gallery-6.jpg">
+                                            <img src="ccss/star-1-3/Static%20HTML/img/home/gallery/thumb-gallery-6.jpg" alt="image" /></a>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-sm-3 col-xs-12">
-                                <div class="footerContent">
-                                    <h5>Redes Sociales</h5>
-
-
-                                    <ul class="list-inline">
-                                        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-vimeo" aria-hidden="true"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="copyRight clearfix">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-sm-6 col-sm-push-6 col-xs-12">
-                                <ul class="list-inline">
-                                    <li><a href="#">Políticas</a></li>
-                                    <li><a href="#">Acerca de</a></li>
+                        <div class="col-sm-3 col-xs-12">
+                            <div class="footerContent">
+                                <h5>Redes Sociales</h5>
 
+
+                                <ul class="list-inline">
+                                    <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-vimeo" aria-hidden="true"></i></a></li>
                                 </ul>
                             </div>
-                            <div class="col-sm-6 col-sm-pull-6 col-xs-12">
-                                <div class="copyRightText">
-                                    <p>Copyright © 2018. Todos los derechos reservados</a>.</p>
-                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyRight clearfix">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6 col-sm-push-6 col-xs-12">
+                            <ul class="list-inline">
+                                <li><a href="#">Políticas</a></li>
+                                <li><a href="#">Acerca de</a></li>
+
+                            </ul>
+                        </div>
+                        <div class="col-sm-6 col-sm-pull-6 col-xs-12">
+                            <div class="copyRightText">
+                                <p>Copyright © 2018. Todos los derechos reservados</a>.</p>
                             </div>
                         </div>
                     </div>
                 </div>
-            </footer>
-        </div>
+            </div>
+        </footer>
+    </div>
 
     <!-- Signup Modal -->
     <div class="modal fade signupLoging" id="signup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">

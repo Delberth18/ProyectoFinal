@@ -10,7 +10,7 @@
 namespace SurfTribeSystem1._0 {
     
     
-    public partial class registrarse {
+    public partial class FAQRegistro {
         
         /// <summary>
         /// errorLabel control.
@@ -31,67 +31,22 @@ namespace SurfTribeSystem1._0 {
         protected global::System.Web.UI.WebControls.Label confirmaLabel;
         
         /// <summary>
-        /// correoText control.
+        /// preguntaText control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox correoText;
+        protected global::System.Web.UI.WebControls.TextBox preguntaText;
         
         /// <summary>
-        /// contrasenaText control.
+        /// respuestaText control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox contrasenaText;
-        
-        /// <summary>
-        /// confirmaContrasenaText control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox confirmaContrasenaText;
-        
-        /// <summary>
-        /// nombreText control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox nombreText;
-        
-        /// <summary>
-        /// apellidosText control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox apellidosText;
-        
-        /// <summary>
-        /// telefonoText control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox telefonoText;
-        
-        /// <summary>
-        /// paisesList control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList paisesList;
+        protected global::System.Web.UI.WebControls.TextBox respuestaText;
         
         /// <summary>
         /// correoText1 control.

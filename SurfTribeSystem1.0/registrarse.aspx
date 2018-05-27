@@ -53,7 +53,12 @@
             <div class="bookingForm">
              <form  method="POST" role="form" class="form">
                 <div class="row">
-                  <div class="form-group" style=" width: 350px;">
+                  <div class="form-group" style=" 
+                            border: solid 1px #000000;
+                            border-top-left-radius:27px;
+                            border-top-right-radius:27px;
+                            border-bottom-left-radius:27px;
+                            border-bottom-right-radius:28px;  padding:15px 15px 15px 15px; width: 650px;">
                    
                       
                     <asp:TextBox class="form-control  bg-ashh"  TextMode="Email" id="correoText" runat="server" placeholder="Correo electrónico" /><br />
@@ -254,7 +259,7 @@
                   
                   <div >
                       <br />
-                     <asp:button class="btn btn-default" OnClick="registrar_Click" runat="server" style=" background-color:darkorange; color:white;  font-family:Arial; text-transform: none; font-size:large;" Text=" Crear Cuenta " ></asp:button>
+                     <asp:button class="btn btn-default" OnClick="registrar_Click" runat="server" style="padding:15px; background-color:darkorange; color:white;  font-family:Arial; text-transform: none; font-size:large;" Text=" Crear Cuenta " ></asp:button>
                   </div>
                 </div>
                      <div class="modal fade signupLoging" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">

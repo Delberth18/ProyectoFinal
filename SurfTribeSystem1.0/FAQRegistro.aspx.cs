@@ -9,27 +9,42 @@ using System.Web.UI.WebControls;
 
 namespace SurfTribeSystem1._0
 {
-    public partial class FAQlistado : System.Web.UI.Page
+    public partial class FAQRegistro : System.Web.UI.Page
     {
         Faq faq = new Faq();
-        List<Faq> faqs = new List<Faq>();
         protected void Page_Load(object sender, EventArgs e)
         {
-            ObtenerListado();
+
         }
 
-        private void ObtenerListado()
+        protected void Guardar_Click(object sender, EventArgs e)
         {
             Resultado resultado = new Resultado();
             try
             {
-                faq.Tag = "LISTADO";
+
+                faq.Tag = "INSER_ACTUA";
+                if (preguntaText.Text=="")
+                {
+                    errorLabel.Visible = true;
+                    errorLabel.Text="*Debe ingresar una pregunta";
+                    return;
+                }
+                if (respuestaText.Text == "")
+                {
+                    errorLabel.Visible = true;
+                    errorLabel.Text = "*Debe ingresar una respuesta a la pregunta";
+                    return;
+                }
+                faq.Pregunta = preguntaText.Text;
+                faq.Respuesta = respuestaText.Text;
+
                 resultado = new FaqLogica().Listado(faq);
                 if (resultado.TipoResultado == "OK")
                 {
-                    faqs = (List<Faq>)resultado.ObjetoResultado;
-                    preguntasLst.DataSource = faqs;
-                    preguntasLst.DataBind();
+                    errorLabel.Visible = false;
+                    confirmaLabel.Visible = true;
+                    confirmaLabel.Text = "Se registro la pregunta con éxito";
                 }
                 else
                 {

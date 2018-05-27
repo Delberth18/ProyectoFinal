@@ -10,7 +10,7 @@ namespace SurfTribeSystem_LogicaNegocio
 {
     public class FaqLogica
     {
-        public Resultado ValidarUsuario(Faq faq)
+        public Resultado Listado(Faq faq)
         {
             Resultado resultado = new Resultado();
             try
