@@ -10,42 +10,42 @@
 namespace SurfTribeSystem1._0 {
     
     
-    public partial class Site1 {
+    public partial class FAQMantenimiento {
         
         /// <summary>
-        /// option_color control.
+        /// tituloLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlLink option_color;
+        protected global::System.Web.UI.WebControls.Label tituloLabel;
         
         /// <summary>
-        /// head control.
+        /// info1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
+        protected global::System.Web.UI.WebControls.Label info1;
         
         /// <summary>
-        /// f2 control.
+        /// info2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm f2;
+        protected global::System.Web.UI.WebControls.Label info2;
         
         /// <summary>
-        /// ContentPlaceHolder1 control.
+        /// preguntasLst control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder1;
+        protected global::System.Web.UI.WebControls.ListView preguntasLst;
     }
 }

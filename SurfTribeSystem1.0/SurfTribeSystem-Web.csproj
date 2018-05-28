@@ -3474,6 +3474,7 @@
     <Content Include="defaultConLogeoUN.aspx" />
     <Content Include="defaultSinLogeoUN.aspx" />
     <Content Include="FAQlistado.aspx" />
+    <Content Include="FAQMantenimiento.aspx" />
     <Content Include="FAQRegistro.aspx" />
     <Content Include="galeria.aspx" />
     <Content Include="Global.asax" />
@@ -3509,6 +3510,13 @@
     </Compile>
     <Compile Include="FAQlistado.aspx.designer.cs">
       <DependentUpon>FAQlistado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FAQMantenimiento.aspx.cs">
+      <DependentUpon>FAQMantenimiento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FAQMantenimiento.aspx.designer.cs">
+      <DependentUpon>FAQMantenimiento.aspx</DependentUpon>
     </Compile>
     <Compile Include="FAQRegistro.aspx.cs">
       <DependentUpon>FAQRegistro.aspx</DependentUpon>

@@ -1,4 +1,4 @@
-﻿<%@  Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="FAQlistado.aspx.cs" Inherits="SurfTribeSystem1._0.FAQlistado" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="FAQMantenimiento.aspx.cs" Inherits="SurfTribeSystem1._0.FAQMantenimiento" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
@@ -31,7 +31,7 @@
                 <div class="col-xs-12">
                     <div class="sectionTitle">
                         <h2>
-                            <asp:Label runat="server" ID="tituloLabel" Text="Sus dudas"></asp:Label></h2>
+                            <asp:Label runat="server" ID="tituloLabel" Text="Mantenimiento"></asp:Label></h2>
 
                     </div>
                     <h4>
@@ -51,8 +51,8 @@
                             <asp:ListView runat="server" ID="preguntasLst">
                                 <ItemTemplate>
 
-                                    <div class="panel panel-default" style="margin:10px 10px 10px 10px">
-                                        <a class="panel-heading accordion-toggle" data-toggle="collapse" 
+                                    <div class="panel panel-default" style="margin: 10px 10px 10px 10px">
+                                        <a class="panel-heading accordion-toggle" data-toggle="collapse"
                                             data-parent="#accordionSolid" href='<%# "#"+ Eval("Pregunta").ToString().Replace(' ','_') %>'>
 
                                             <span>¿<asp:Label runat="server" ID="preguntaLabel" Text='<%# Eval("Pregunta") %>'></asp:Label>?</span>
@@ -62,17 +62,22 @@
                                         </a>
                                         <div id='<%# Eval("Pregunta").ToString().Replace(' ','_') %>' class="panel-collapse collapse">
                                             <div class="panel-body">
-                                                <div class="media" style="overflow-wrap:break-word">
+                                                <div class="media" style="overflow-wrap: break-word">
 
-                                                        <p><%# Eval("Respuesta").ToString() %></p>
-                                                        <!--No puedo hacer que se vean varias lineas-->
-                                                  
+                                                    <p><%# Eval("Respuesta").ToString() %></p>
+                                                    <!--No puedo hacer que se vean varias lineas-->
+                                                    <a href="#" aria-label="Editar" >
+                                                        <span aria-hidden="true">Editar</span>&nbsp &nbsp
+                                                    </a>
+                                                    <a href="#" aria-label="Borrar" >
+                                                        <span aria-hidden="true">Borrar</span>
+                                                    </a>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
 
-                                            
+
                                 </ItemTemplate>
                             </asp:ListView>
                         </div>
@@ -85,3 +90,4 @@
 
 
 </asp:Content>
+
