@@ -82,7 +82,14 @@ img.avatar {
     background-size: 100% auto;
 }
 
-
+a.reserva {
+    display: table-cell;
+    position: relative;
+    text-align: center;
+    font-weight: 400;
+    width: 170px;
+    height: 35px;
+}
 
 
 * {
@@ -11854,10 +11861,10 @@ header {
 }
 
 .bookingTypeSection .bookingType .bookingList li a {
-  font-size: 14px;
-  line-height: 24px;
+  font-size: 18px;
+  line-height: 34px;
   color: #222222;
-  text-transform: uppercase;
+  text-transform:  inherit;
 }
 
 .bookingTypeSection .bookingType .bookingList li a.active, .bookingTypeSection .bookingType .bookingList li a:hover, .bookingTypeSection .bookingType .bookingList li a:active {

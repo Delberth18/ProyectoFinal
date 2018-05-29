@@ -3480,6 +3480,7 @@
     <Content Include="Global.asax" />
     <Content Include="InformaciónGeneral.aspx" />
     <Content Include="registrarse.aspx" />
+    <Content Include="reservaClases.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -3549,6 +3550,13 @@
     </Compile>
     <Compile Include="registrarse.aspx.designer.cs">
       <DependentUpon>registrarse.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="reservaClases.aspx.cs">
+      <DependentUpon>reservaClases.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="reservaClases.aspx.designer.cs">
+      <DependentUpon>reservaClases.aspx</DependentUpon>
     </Compile>
     <Compile Include="Site1.Master.cs">
       <DependentUpon>Site1.Master</DependentUpon>

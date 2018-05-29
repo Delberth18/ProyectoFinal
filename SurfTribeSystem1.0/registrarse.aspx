@@ -262,6 +262,8 @@
                      <asp:button class="btn btn-default" OnClick="registrar_Click" runat="server" style="padding:15px; background-color:darkorange; color:white;  font-family:Arial; text-transform: none; font-size:large;" Text=" Crear Cuenta " ></asp:button>
                   </div>
                 </div>
+
+
                      <div class="modal fade signupLoging" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
             <div class="modal-dialog" role="document">
                 <div class="modal-content modalContentCustom">
