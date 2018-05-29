@@ -9,11 +9,10 @@ using System.Web.UI.WebControls;
 
 namespace SurfTribeSystem1._0
 {
-    public partial class FAQMantenimiento : System.Web.UI.Page
+    public partial class ComentariosListado : System.Web.UI.Page
     {
-        Faq faq = new Faq();
-        List<Faq> faqs = new List<Faq>();
-
+        Comentario comentario = new Comentario();
+        List<Comentario> comentarios = new List<Comentario>();
         protected void Page_Load(object sender, EventArgs e)
         {
             ObtenerListado();
@@ -24,12 +23,12 @@ namespace SurfTribeSystem1._0
             Resultado resultado = new Resultado();
             try
             {
-                faq.Tag = "LISTADO";
-                resultado = new FaqLogica().Listado(faq);
+                comentario.Tag = "LISTADO_APROBADO";
+                resultado = new ComentarioLogica().ListadoAprobado(comentario);
                 if (resultado.TipoResultado == "OK")
                 {
-                    faqs = (List<Faq>)resultado.ObjetoResultado;
-                    preguntasLst.DataSource = faqs;
+                    comentarios = (List<Comentario>)resultado.ObjetoResultado;
+                    preguntasLst.DataSource = comentarios;
                     preguntasLst.DataBind();
                 }
                 else
@@ -43,5 +42,6 @@ namespace SurfTribeSystem1._0
                 Response.Write("< script > alert('Error: " + ex + " \n Lo sentimos') </ script >");
             }
         }
+
     }
 }
