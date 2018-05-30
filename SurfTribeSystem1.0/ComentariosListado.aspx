@@ -34,18 +34,18 @@
 
                     <div class="review-aria">
                         <div class="sectionTitle2">
-                            <h2>Reviews</h2>
-                            <p><asp:Label runat="server" ID="Label1" Text="En este apartado se muestran todos las opiniones de nuestros diferentes usuarios"></asp:Label></p>
+                            <h2>
+                            <asp:Label runat="server" ID="Label1" Text="En este apartado se muestran todos las opiniones de nuestros diferentes usuarios"></asp:Label></h2>
                         </div>
                         <div class="reviewContent" style="margin: 8px 8px 8px 8px;">
-                            <h3 class="reviewTitle">Reviews (3)
-                        <span>
+                            <h3 class="reviewTitle" >Opiniones <asp:Label ForeColor="#333333" runat="server" ID="cantidadLabel" ></asp:Label>
+                     <%--   <span>
                             <i class="fa fa-star" aria-hidden="true"></i>
                             <i class="fa fa-star" aria-hidden="true"></i>
                             <i class="fa fa-star" aria-hidden="true"></i>
                             <i class="fa fa-star" aria-hidden="true"></i>
                             <i class="fa fa-star-o" aria-hidden="true"></i>
-                        </span>
+                        </span>--%>
                             </h3>
 
                             <asp:ListView runat="server" ID="preguntasLst">
@@ -74,7 +74,7 @@
                                 </ItemTemplate>
                             </asp:ListView>
                             
-                            <h3 class="reviewTitle">Leave your review</h3>
+                            <h3 class="reviewTitle">Brindenos su opinión</h3>
                             <%--<p>
                                 Want to Rate it? <span>
                                     <i class="fa fa-star" aria-hidden="true"></i>
@@ -87,11 +87,11 @@
                             <div class="row">
                                 <div class="col-xs-12">
                                     <div class="form-group">
-                                        <textarea class="form-control" rows="3" placeholder="Comment"></textarea>
+                                        <asp:TextBox TextMode="MultiLine" runat="server" ID="comentarioText" Class="form-control" Rows="5"></asp:TextBox>
                                     </div>
                                 </div>
                             </div>
-                            <asp:Button class="btn btn-default" runat="server" Style="padding: 15px; background-color: darkorange; color: white; font-family: Arial; text-transform: none; font-size: large;" Text=" Guardar pregunta "></asp:Button>
+                            <asp:Button OnClick="Unnamed_Click" class="btn btn-default" runat="server" Style="padding: 15px; background-color: darkorange; color: white; font-family: Arial; text-transform: none; font-size: large;" Text=" Guardar pregunta "></asp:Button>
                         </div>
                     </div>
                 </div>

@@ -24,12 +24,13 @@ namespace SurfTribeSystem1._0
             try
             {
                 comentario.Tag = "LISTADO_APROBADO";
-                resultado = new ComentarioLogica().ListadoAprobado(comentario);
+                resultado = new ComentarioLogica().Acciones(comentario);
                 if (resultado.TipoResultado == "OK")
                 {
                     comentarios = (List<Comentario>)resultado.ObjetoResultado;
                     preguntasLst.DataSource = comentarios;
                     preguntasLst.DataBind();
+                    cantidadLabel.Text = "(" + comentarios.Count + ")";
                 }
                 else
                 {
@@ -43,5 +44,34 @@ namespace SurfTribeSystem1._0
             }
         }
 
+        private void Guardar()
+        {
+            Resultado resultado = new Resultado();
+            try
+            {
+                comentario.Tag = "GUARDAR";
+                comentario.Comentariol = comentarioText.Text;
+                comentario.Id_Usuario = "tavoval@live.com";//aqui debe ir el que esta logueado
+                resultado = new ComentarioLogica().Acciones(comentario);
+                if (resultado.TipoResultado == "OK")
+                {
+                    ObtenerListado();//en lugar de esto mostrar un mensaje diciendo que se va a revisar el comentario
+                }
+                else
+                {
+                    Response.Write("< script > alert('Error: " + resultado.Mensaje + " \n Lo sentimos') </ script >");
+                }
+            }
+            catch (Exception ex)
+            {
+
+                Response.Write("< script > alert('Error: " + ex + " \n Lo sentimos') </ script >");
+            }
+        }
+
+        protected void Unnamed_Click(object sender, EventArgs e)
+        {
+            Guardar();
+        }
     }
 }

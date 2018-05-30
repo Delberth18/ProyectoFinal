@@ -1,4 +1,4 @@
-﻿<%@  Page Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="FAQlistado.aspx.cs" Inherits="SurfTribeSystem1._0.FAQlistado" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="PreciosListado.aspx.cs" Inherits="SurfTribeSystem1._0.PreciosListado" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
@@ -12,7 +12,7 @@
                     <div class="titleTable">
                         <div class="titleTableInner">
                             <div class="pageTitleInfo">
-                                <h1>Preguntas frecuentes</h1>
+                                <h1>Nuestros Precios</h1>
                                 <div class="under-border"></div>
                             </div>
                         </div>
@@ -51,28 +51,35 @@
                             <asp:ListView runat="server" ID="preguntasLst">
                                 <ItemTemplate>
 
-                                    <div class="panel panel-default" style="margin:10px 10px 10px 10px">
-                                        <a class="panel-heading accordion-toggle" data-toggle="collapse" 
-                                            data-parent="#accordionSolid" href='<%# "#"+ Eval("Pregunta").ToString().Replace(' ','_') %>'>
-
-                                            <span>¿<asp:Label runat="server" ID="preguntaLabel" Text='<%# Eval("Pregunta") %>'></asp:Label>?</span>
-
-                                            <i class="indicator fa fa-plus  pull-right"></i>
-
-                                        </a>
-                                        <div id='<%# Eval("Pregunta").ToString().Replace(' ','_') %>' class="panel-collapse collapse">
-                                            <div class="panel-body">
-                                                <div class="media" style="overflow-wrap:break-word">
-
-                                                        <p><%# Eval("Respuesta").ToString() %></p>
-                                                        <!--No puedo hacer que se vean varias lineas-->
-                                                  
-                                                </div>
+                                    <div class="media-body">
+                                        <div class="bodyLeft">
+                                            <h4 class="media-heading"><a href="single-package-right-sidebar.html">Suspendisse Tour</a></h4>
+                                            <div class="countryRating">
+                                                <span>Asia</span>
+                                                <ul class="list-inline rating">
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                </ul>
+                                            </div>
+                                            <p>Integer purus ex, dictum nec elementum eu, tristique vel lectus. Donec rutrum lectus et pharetra egestas.</p>
+                                            <ul class="list-inline detailsBtn">
+                                                <li><span class="textInfo"><i class="fa fa-calendar" aria-hidden="true"></i>27 jan, 2016</span></li>
+                                                <li><span class="textInfo"><i class="fa fa-clock-o" aria-hidden="true"></i>5 days</span></li>
+                                            </ul>
+                                        </div>
+                                        <div class="bodyRight">
+                                            <div class="bookingDetails">
+                                                <h2>$499</h2>
+                                                <p>Per Person</p>
+                                                <a href="single-package-right-sidebar.html" class="btn buttonTransparent clearfix">Details</a>
+                                                <a data-toggle="modal" data-target="#inquiryModal" href="#" class="btn buttonTransparent">Inquiry</a>
                                             </div>
                                         </div>
                                     </div>
 
-                                            
                                 </ItemTemplate>
                             </asp:ListView>
                         </div>
@@ -85,3 +92,6 @@
 
 
 </asp:Content>
+
+
+

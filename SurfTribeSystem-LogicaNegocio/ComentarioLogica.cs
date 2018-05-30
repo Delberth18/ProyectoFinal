@@ -11,7 +11,7 @@ namespace SurfTribeSystem_LogicaNegocio
     public class ComentarioLogica
     {
 
-        public Resultado ListadoAprobado(Comentario comentario)
+        public Resultado Acciones(Comentario comentario)
         {
             Resultado resultado = new Resultado();
             try
