@@ -10,6 +10,7 @@
         <div class="bookingType bg-ash">
           <ul class="bookingList">
             <li><a class="active reserva progress-wizard-dot"  href="#Lugar"  data-toggle="tab">Lugar</a></li>
+            <li><a class="reserva  progress-wizard-dot" href="#Nivel"  data-toggle="tab">Escuela</a></li>
             <li><a class="reserva  progress-wizard-dot" href="#Nivel"  data-toggle="tab">Nivel</a></li>
             <li><a href="" class="reserva">Indumentaria</a></li>
             <li><a href="" class="reserva">Horario</a></li>
@@ -20,7 +21,7 @@
 
                 <section class="recentActivitySection">
   <div class="container">
-		<div class="row">
+		<div class="de">
 			<div class="col-xs-12 ">
         <div class="recentActivityContent bg-ash">
           <div class="dashboardPageTitle">
@@ -214,7 +215,7 @@
                
                 <section class="recentActivitySection">
   <div class="container">
-		<div class="row">
+		<div class="de">
 			<div class="col-xs-12 ">
         <div class="recentActivityContent bg-ash">
           <div class="dashboardPageTitle">

@@ -87,10 +87,14 @@ a.reserva {
     position: relative;
     text-align: center;
     font-weight: 400;
-    width: 170px;
+    width: 140px;
     height: 35px;
 }
 
+div.de {
+    margin-right: 20px;
+    margin-left: -50px;
+}
 
 * {
     outline: 0;
