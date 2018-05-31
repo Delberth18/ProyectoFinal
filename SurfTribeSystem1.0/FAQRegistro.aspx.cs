@@ -39,7 +39,7 @@ namespace SurfTribeSystem1._0
                 faq.Pregunta = preguntaText.Text;
                 faq.Respuesta = respuestaText.Text;
 
-                resultado = new FaqLogica().Listado(faq);
+                resultado = new FaqLogica().Acciones(faq);
                 if (resultado.TipoResultado == "OK")
                 {
                     errorLabel.Visible = false;

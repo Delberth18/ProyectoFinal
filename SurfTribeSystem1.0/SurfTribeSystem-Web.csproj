@@ -3480,6 +3480,7 @@
     <Content Include="galeria.aspx" />
     <Content Include="Global.asax" />
     <Content Include="InformaciónGeneral.aspx" />
+    <Content Include="PreciosListado.aspx" />
     <Content Include="registrarse.aspx" />
     <Content Include="reservaClases.aspx" />
     <Content Include="Web.config" />
@@ -3550,6 +3551,13 @@
     </Compile>
     <Compile Include="InformaciónGeneral.aspx.designer.cs">
       <DependentUpon>InformaciónGeneral.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PreciosListado.aspx.cs">
+      <DependentUpon>PreciosListado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PreciosListado.aspx.designer.cs">
+      <DependentUpon>PreciosListado.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="registrarse.aspx.cs">

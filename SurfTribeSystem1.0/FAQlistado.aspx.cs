@@ -24,7 +24,7 @@ namespace SurfTribeSystem1._0
             try
             {
                 faq.Tag = "LISTADO";
-                resultado = new FaqLogica().Listado(faq);
+                resultado = new FaqLogica().Acciones(faq);
                 if (resultado.TipoResultado == "OK")
                 {
                     faqs = (List<Faq>)resultado.ObjetoResultado;
@@ -42,5 +42,6 @@ namespace SurfTribeSystem1._0
                 Response.Write("< script > alert('Error: " + ex + " \n Lo sentimos') </ script >");
             }
         }
+
     }
 }

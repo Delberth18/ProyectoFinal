@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="PreciosListado.aspx.cs" Inherits="SurfTribeSystem1._0.PreciosListado" %>
+﻿<%@  Page Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="PreciosListado.aspx.cs" Inherits="SurfTribeSystem1._0.PreciosListado" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
@@ -42,18 +42,18 @@
                 </div>
             </div>
 
-            <div class="row" style="margin: 4px 4px 4px 4px; border: solid 1px #000000; border-top-left-radius: 27px; border-top-right-radius: 27px; border-bottom-left-radius: 27px; border-bottom-right-radius: 28px;">
-
-                <div class="col-sm-6 col-xs-12 accordionsTransparent" style="width: 100%">
-                    <div class="solidBgTitle">
-                        <div class="panel-group" id="accordionSolid">
+           
+               
+                        <div class="col-xs-12">
+                            <div class="media packagesList hotelsList">
 
                             <asp:ListView runat="server" ID="preguntasLst">
                                 <ItemTemplate>
 
                                     <div class="media-body">
+
                                         <div class="bodyLeft">
-                                            <h4 class="media-heading"><a href="single-package-right-sidebar.html">Suspendisse Tour</a></h4>
+                                            <h4 class="media-heading"><a href="single-package-right-sidebar.html"><%# Eval("Tipo") %></a></h4>
                                             <div class="countryRating">
                                                 <span>Asia</span>
                                                 <ul class="list-inline rating">
@@ -64,34 +64,31 @@
                                                     <li><i class="fa fa-star" aria-hidden="true"></i></li>
                                                 </ul>
                                             </div>
-                                            <p>Integer purus ex, dictum nec elementum eu, tristique vel lectus. Donec rutrum lectus et pharetra egestas.</p>
+                                            <p><%# Eval("Descripcion") %></p>
                                             <ul class="list-inline detailsBtn">
                                                 <li><span class="textInfo"><i class="fa fa-calendar" aria-hidden="true"></i>27 jan, 2016</span></li>
                                                 <li><span class="textInfo"><i class="fa fa-clock-o" aria-hidden="true"></i>5 days</span></li>
                                             </ul>
                                         </div>
+
                                         <div class="bodyRight">
                                             <div class="bookingDetails">
-                                                <h2>$499</h2>
-                                                <p>Per Person</p>
+                                                <h2>₡<%# Eval("PrecioD") %></h2>
+                                                <p>Por persona</p>
                                                 <a href="single-package-right-sidebar.html" class="btn buttonTransparent clearfix">Details</a>
                                                 <a data-toggle="modal" data-target="#inquiryModal" href="#" class="btn buttonTransparent">Inquiry</a>
                                             </div>
                                         </div>
                                     </div>
-
+                                    <br />
                                 </ItemTemplate>
                             </asp:ListView>
+                                </div>
                         </div>
-                    </div>
-                </div>
 
-            </div>
+            
         </div>
     </section>
 
 
 </asp:Content>
-
-
-

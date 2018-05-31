@@ -9,13 +9,13 @@ using System.Web.UI.WebControls;
 
 namespace SurfTribeSystem1._0
 {
-    public partial class PreciosListado : System.Web.UI.Page
-    {
-        Faq faq = new Faq();
-        List<Faq> faqs = new List<Faq>();
+	public partial class PreciosListado : System.Web.UI.Page
+	{
+        Precio precio = new Precio();
+        List<Precio> faqs = new List<Precio>();
 
         protected void Page_Load(object sender, EventArgs e)
-        {
+		{
             ObtenerListado();
         }
 
@@ -24,11 +24,11 @@ namespace SurfTribeSystem1._0
             Resultado resultado = new Resultado();
             try
             {
-                faq.Tag = "LISTADO";
-                resultado = new FaqLogica().Listado(faq);
+                precio.Tag = "LISTADO";
+                resultado = new PrecioLogica().Acciones(precio);
                 if (resultado.TipoResultado == "OK")
                 {
-                    faqs = (List<Faq>)resultado.ObjetoResultado;
+                    faqs = (List<Precio>)resultado.ObjetoResultado;
                     preguntasLst.DataSource = faqs;
                     preguntasLst.DataBind();
                 }
@@ -43,5 +43,6 @@ namespace SurfTribeSystem1._0
                 Response.Write("< script > alert('Error: " + ex + " \n Lo sentimos') </ script >");
             }
         }
+
     }
 }

@@ -8,14 +8,15 @@ using System.Threading.Tasks;
 
 namespace SurfTribeSystem_LogicaNegocio
 {
-    public class FaqLogica
+    public class PrecioLogica
     {
-        public Resultado Acciones(Faq faq)
+
+        public Resultado Acciones(Precio precio)
         {
             Resultado resultado = new Resultado();
             try
             {
-                resultado = new FaqDatos().Acciones(faq);
+                resultado = new PrecioDatos().Acciones(precio);
 
                 return resultado;
             }
@@ -25,5 +26,6 @@ namespace SurfTribeSystem_LogicaNegocio
                 throw;
             }
         }
+
     }
 }
