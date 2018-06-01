@@ -25,13 +25,13 @@
     <!-- PAGE CONTENT -->
 
     <!--principal-->
-    <section class="mainContentSection">
+    <section class="mainContentSection" style="background-color:#f5f5f5;">
         <div class="container">
             <div class="row">
                 <div class="col-xs-12">
                     <div class="sectionTitle">
                         <h2>
-                            <asp:Label runat="server" ID="tituloLabel" Text="Mantenimiento"></asp:Label></h2>
+                            <asp:Label runat="server" ID="tituloLabel" Text="Mantenimiento" style="background-color:#f5f5f5;"></asp:Label></h2>
 
                     </div>
                     <h4>

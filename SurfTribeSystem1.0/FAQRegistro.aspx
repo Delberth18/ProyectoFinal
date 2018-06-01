@@ -30,14 +30,14 @@
 
     <!-- WHITE SECTION FILTER-->
 
-    <section class="mainContentSection" >
+    <section class="mainContentSection" style="background-color:#f5f5f5;" >
 
-         <form  method="POST"  role="form" class="form" id="form1" >
+         <form  method="POST"  role="form" class="form" id="form1"  >
 
         <center><font size="14"><b FACE="arial" size="30%">Preguntas frecuentes</b></font></center>
         <br />
-             <center>
-                 <asp:Label ID="errorLabel" class="alert alert-danger alert-dismissible" runat="server" Visible="false"></asp:Label>  
+             <center >
+                 <asp:Label ID="errorLabel" class="alert alert-danger alert-dismissible" runat="server" Visible="false" ></asp:Label>  
                  <asp:Label ID="confirmaLabel" class="alert alert-success alert-dismissible" runat="server" Visible="false"></asp:Label>  
 
              </center>
@@ -58,7 +58,7 @@
                             border-top-left-radius:27px;
                             border-top-right-radius:27px;
                             border-bottom-left-radius:27px;
-                            border-bottom-right-radius:28px;  padding:15px 15px 15px 15px; width: 100%;">
+                            border-bottom-right-radius:28px;  padding:15px 15px 15px 15px; width: 100%; background-color:white" >
                    
                       
                     <asp:TextBox class="form-control  bg-ashh"  id="preguntaText" runat="server" placeholder="Escriba la pregunta" /><br />

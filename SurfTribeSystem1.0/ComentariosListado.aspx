@@ -25,7 +25,7 @@
     <!-- PAGE CONTENT -->
 
     <!--principal-->
-    <section class="mainContentSection">
+    <section class="mainContentSection" style="background-color:#f5f5f5;">
         <div class="container">
             
             <div class="row" style="margin: 4px 4px 4px 4px; border: solid 1px #000000; border-top-left-radius: 27px; border-top-right-radius: 27px; border-bottom-left-radius: 27px; border-bottom-right-radius: 28px;">
