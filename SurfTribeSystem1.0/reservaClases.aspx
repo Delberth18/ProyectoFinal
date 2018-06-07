@@ -28,10 +28,9 @@
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12">
-                        <div class="sectionTitle">
-                            <h2><span class="lightBg">Our Top Deals</span></h2>
-                            <p>Quisque lacus augue, blandit non est a, dictum malesuada odio.</p>
-                        </div>
+                        <br />
+                            <center><font size="5"><b FACE="arial">Seleccione su destino</b></font></center><br />
+                        
                     </div>
                 </div>
                 <div class="row">
@@ -44,30 +43,20 @@
                                     <h4>50% <span>OFF</span>
                                     </h4>
                                 </div>
-                                <ul class="list-inline rating homePage">
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                </ul>
+                                
                                 <ul class="list-inline duration">
-                                    <li>7 days</li>
-                                    <li>15 hrs</li>
-                                    <li>15 min</li>
+                                    
+                                    
                                 </ul>
                             </div>
                             <div class="caption">
                                 
                                 <center><font size="5"><b FACE="arial">Guanacaste</b></font></center><br />
-                                <p>Integer purus ex, dictum nec elementum eu, tristique vel lectus. Donec rutrum lectus et pharetra egestas.</p>
+                                <p><b>Ubicación:</b> es la provincia localizada en el extremo noroeste del país, limite al sur con Puntarenas y al oeste con el océano Pacífico.</p>
                                 <div class="detailsInfo">
-                                    <h5>
-                                        <span>Start From</span>
-                                        $299
-                                    </h5>
+                                    
                                     <ul class="list-inline detailsBtn">
-                                        <li><a href='ccss/star-1-3/Static HTML/booking-1.html' class="btn buttonTransparent">Book now</a></li>
+                                        <li><a href='ccss/star-1-3/Static HTML/booking-1.html' class="btn buttonTransparent">Ir a escuelas</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -82,30 +71,19 @@
                                     <h4>Free <span>Gift</span>
                                     </h4>
                                 </div>
-                                <ul class="list-inline rating homePage">
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                </ul>
+                                
                                 <ul class="list-inline duration">
-                                    <li>12 days</li>
-                                    <li>3 hrs</li>
-                                    <li>12 min</li>
+                                    
                                 </ul>
                             </div>
                             <div class="caption">
                                 
                                 <center><font size="5"><b FACE="arial">Puntarenas</b></font></center><br />
-                                <p>Proin convallis magna vel libero accumsan sollicitudin. Quisque dapibus vitae turpis eu magna sagittis.</p>
+                                <p><b>Ubicación:</b> Provincia localizada en la zona occidental del país y abarcando la mayor parte de la costa Pacífica del país.</p>
                                 <div class="detailsInfo">
-                                    <h5>
-                                        <span>Start From</span>
-                                        $499
-                                    </h5>
+                                    
                                     <ul class="list-inline detailsBtn">
-                                        <li><a data-toggle="modal" data-target="#inquiryModal" href="#" class="btn buttonTransparent">Inquiry</a></li>
+                                        <li><a data-toggle="modal" data-target="#inquiryModal" href="#" class="btn buttonTransparent">Ir a escuelas</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -120,42 +98,25 @@
                                     <h4>25% <span>OFF</span>
                                     </h4>
                                 </div>
-                                <ul class="list-inline rating homePage">
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                </ul>
+                               
                                 <ul class="list-inline duration">
-                                    <li>17 days</li>
-                                    <li>13 hrs</li>
-                                    <li>18 min</li>
+                                    
                                 </ul>
                             </div>
                             <div class="caption">
                                  <center><font size="5"><b FACE="arial">Limón</b></font></center><br />
-                                <p>Vivamus eu mattis nibh. Quisque eget ipsum at odio fringilla consequat vel id erat. Suspendisse non feugiat mi.</p>
+                                <p><b>Ubicación:</b> Esta localizada en el extremo oriental del país, límita al noreste con el Mar Caribe y al suroeste con Puntarenas.</p>
                                 <div class="detailsInfo">
-                                    <h5>
-                                        <span>Start From</span>
-                                        $399
-                                    </h5>
+                                   
                                     <ul class="list-inline detailsBtn">
-                                        <li><a href='ccss/star-1-3/Static HTML/booking-1.html' class="btn buttonTransparent">Book now</a></li>
+                                        <li><a href='#Nivel' data-toggle="tab" class="reserva btn buttonTransparent  progress-wizard-dot">Ir a escuelas</a></li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-xs-12">
-                        <div class="btnArea">
-                            <a href="ccss/star-1-3/Static HTML/packages-grid.html" class="btn buttonTransparent">view all</a>
-                        </div>
-                    </div>
-                </div>
+               
             </div>
         
         </div>

@@ -102,6 +102,9 @@ div.de1 {
 
  width: 31%;
 }
+div.de2 {
+    width: 25%;
+}
 
 * {
     outline: 0;
