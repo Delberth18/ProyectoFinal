@@ -10,15 +10,6 @@
 namespace SurfTribeSystem1._0 {
     
     
-    public partial class defaultConLogeo {
-        
-        /// <summary>
-        /// Control option_color.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlLink option_color;
+    public partial class reservaHorario {
     }
 }

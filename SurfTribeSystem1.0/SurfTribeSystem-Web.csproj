@@ -3486,6 +3486,8 @@
     <Content Include="registrarse.aspx" />
     <Content Include="reservaClases.aspx" />
     <Content Include="reservaEscuelas.aspx" />
+    <Content Include="reservaHorario.aspx" />
+    <Content Include="reservaNivel.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -3583,6 +3585,20 @@
     </Compile>
     <Compile Include="reservaEscuelas.aspx.designer.cs">
       <DependentUpon>reservaEscuelas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="reservaHorario.aspx.cs">
+      <DependentUpon>reservaHorario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="reservaHorario.aspx.designer.cs">
+      <DependentUpon>reservaHorario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="reservaNivel.aspx.cs">
+      <DependentUpon>reservaNivel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="reservaNivel.aspx.designer.cs">
+      <DependentUpon>reservaNivel.aspx</DependentUpon>
     </Compile>
     <Compile Include="Site1.Master.cs">
       <DependentUpon>Site1.Master</DependentUpon>

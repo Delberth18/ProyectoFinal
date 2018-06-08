@@ -52,14 +52,16 @@
                             </div>
                             <div class="caption">
                                 
-                                <center><font size="4"><b FACE="arial">Guanacaste</b></font></center><br />
-                                <p><b>Playa:</b> es la provincia loc</p>
+                                
+                                <center><font size="4"><b FACE="arial"><asp:Label runat="server" ID="nombre" Text=<%#Eval("NOMBRE")%>></asp:Label></b></font></center><br />
+                                <p><b>Playa:</b> <asp:Label runat="server" ID="playa" Text=<%#Eval("PLAYA_CONCURRIDA")%>></asp:Label></p>
                                 <div class="detailsInfo">
                                     
                                     <ul class="list-inline detailsBtn">
                                         <li><a href='ccss/star-1-3/Static HTML/booking-1.html' class="btn buttonTransparent">Ir a escuelas</a></li>
                                     </ul>
                                 </div>
+                               
                             </div>
                         </div>
                     </div>
