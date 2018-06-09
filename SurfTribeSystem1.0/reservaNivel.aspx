@@ -1,8 +1,9 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site2.Master" AutoEventWireup="true" CodeBehind="reservaClases.aspx.cs" Inherits="SurfTribeSystem1._0.reservaClases" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site2.Master" AutoEventWireup="true" CodeBehind="reservaNivel.aspx.cs" Inherits="SurfTribeSystem1._0.reservaNivel" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
+   
     <section class="bookingTypeSection">
   <div class="container">
     <div class="row">
@@ -29,34 +30,30 @@
                 <div class="row">
                     <div class="col-xs-12">
                         <br />
-                            <center><font size="5"><b FACE="arial">Seleccione su destino</b></font></center><br />
-                        
+                            <font size="5"><b FACE="arial">Seleccione el nivel</b></font><br />
+                        <br /> 
                     </div>
-                </div>
-                <div class="row">
+                </div>  <asp:label runat="server" text="Escuela: "></asp:label>
+                <div class="row"><br />
                     <div class="de1 col-xs-12">
                         <div class="thumbnail deals">
                             <img src="ccss/star-1-3/Static HTML/img/home/deal/deal-02.jpg" alt="deal-image">
                             <a href="ccss/star-1-3/Static HTML/single-package-right-sidebar.html" class="pageLink"></a>
                             <div class="discountInfo">
-                                <div class="discountOffer">
-                                    <h4>50% <span>OFF</span>
-                                    </h4>
-                                </div>
+                                
                                 
                                 <ul class="list-inline duration">
                                     
                                     
                                 </ul>
                             </div>
-                            <div class="caption">
+                            <div style="padding: 9px;  margin-bottom: 39px;">
                                 
-                                <center><font size="5"><b FACE="arial">Guanacaste</b></font></center><br />
-                                <p><b>Ubicación:</b> es la provincia localizada en el extremo noroeste del país, limite al sur con Puntarenas y al oeste con el océano Pacífico.</p>
                                 <div class="detailsInfo">
                                     
                                     <ul class="list-inline detailsBtn">
-                                        <li><a href='ccss/star-1-3/Static HTML/booking-1.html' class="btn buttonTransparent">Ir a escuelas</a></li>
+                                        <li><a href='ccss/star-1-3/Static HTML/booking-1.html' class="btn buttonTransparent">Elegir</a></li>
+                                        
                                     </ul>
                                 </div>
                             </div>
@@ -67,23 +64,19 @@
                             <img src="ccss/star-1-3/Static HTML/img/home/deal/deal-02.jpg" alt="deal-image">
                             <a href="ccss/star-1-3/Static HTML/single-package-fullwidth.html" class="pageLink"></a>
                             <div class="discountInfo">
-                                <div class="discountOffer">
-                                    <h4>Free <span>Gift</span>
-                                    </h4>
-                                </div>
+                               
                                 
                                 <ul class="list-inline duration">
                                     
                                 </ul>
                             </div>
-                            <div class="caption">
+                            <div style="padding: 9px;  margin-bottom: 39px;">
                                 
-                                <center><font size="5"><b FACE="arial">Puntarenas</b></font></center><br />
-                                <p><b>Ubicación:</b> Provincia localizada en la zona occidental del país y abarcando la mayor parte de la costa Pacífica del país.</p>
+                                
                                 <div class="detailsInfo">
                                     
                                     <ul class="list-inline detailsBtn">
-                                        <li><a data-toggle="modal" data-target="#inquiryModal" href="#" class="btn buttonTransparent">Ir a escuelas</a></li>
+                                        <li><a data-toggle="modal" data-target="#inquiryModal" href="#" class="btn buttonTransparent">Elegir</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -94,22 +87,18 @@
                             <img src="ccss/star-1-3/Static HTML/img/home/deal/deal-02.jpg" alt="deal-image">
                             <a href="ccss/star-1-3/Static HTML/single-package-left-sidebar.html" class="pageLink"></a>
                             <div class="discountInfo">
-                                <div class="discountOffer">
-                                    <h4>25% <span>OFF</span>
-                                    </h4>
-                                </div>
+                                
                                
                                 <ul class="list-inline duration">
                                     
                                 </ul>
                             </div>
-                            <div class="caption">
-                                 <center><font size="5"><b FACE="arial">Limón</b></font></center><br />
-                                <p><b>Ubicación:</b> Esta localizada en el extremo oriental del país, límita al noreste con el Mar Caribe y al suroeste con Puntarenas.</p>
+                            <div style="padding: 9px;  margin-bottom: 39px;">
+                                 
                                 <div class="detailsInfo">
                                    
                                     <ul class="list-inline detailsBtn">
-                                        <li><a href='#Nivel' data-toggle="tab" class="reserva btn buttonTransparent  progress-wizard-dot">Ir a escuelas</a></li>
+                                        <li><a href='#Nivel' data-toggle="tab" class="reserva btn buttonTransparent  progress-wizard-dot">Elegir</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -327,6 +316,8 @@
     </div>
   </div>
 </section>
+
+
 
 
 

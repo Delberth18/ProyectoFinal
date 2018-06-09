@@ -102,6 +102,13 @@ div.de1 {
 
  width: 31%;
 }
+div.de2 {
+    width: 23%;
+}
+
+th.prueba {
+    text-align: center;
+}
 
 * {
     outline: 0;
