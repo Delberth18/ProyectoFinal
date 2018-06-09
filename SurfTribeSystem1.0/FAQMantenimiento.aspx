@@ -66,10 +66,10 @@
 
                                                     <p><%# Eval("Respuesta").ToString() %></p>
                                                     <!--No puedo hacer que se vean varias lineas-->
-                                                    <a href="#" aria-label="Editar" >
-                                                        <span aria-hidden="true">Editar</span>&nbsp &nbsp
+                                                    <a  aria-label="Editar" >
+                                                        <span aria-hidden="true">Editar</span>
                                                     </a>
-                                                    <a href="#" aria-label="Borrar" >
+                                                    <a  aria-label="Borrar" style="margin-left:15px">
                                                         <span aria-hidden="true">Borrar</span>
                                                     </a>
                                                 </div>
