@@ -1805,12 +1805,16 @@
     <Content Include="ccss\star-1-3\Static HTML\hotels-list-left-sidebar.html" />
     <Content Include="ccss\star-1-3\Static HTML\hotels-list-right-sidebar.html" />
     <Content Include="ccss\star-1-3\Static HTML\hotels-list.html" />
+    <Content Include="ccss\star-1-3\Static HTML\img\4097.gif" />
+    <Content Include="ccss\star-1-3\Static HTML\img\40977.gif" />
     <Content Include="ccss\star-1-3\Static HTML\img\about-us\about-big.jpg" />
     <Content Include="ccss\star-1-3\Static HTML\img\about-us\team-01.jpg" />
     <Content Include="ccss\star-1-3\Static HTML\img\about-us\team-02.jpg" />
     <Content Include="ccss\star-1-3\Static HTML\img\about-us\team-03.jpg" />
     <Content Include="ccss\star-1-3\Static HTML\img\bg2.jpg" />
     <Content Include="ccss\star-1-3\Static HTML\img\bg7.png" />
+    <Content Include="ccss\star-1-3\Static HTML\img\bgbg.jpg" />
+    <Content Include="ccss\star-1-3\Static HTML\img\bgSeleccionar.jpg" />
     <Content Include="ccss\star-1-3\Static HTML\img\blog\blog-01.jpg" />
     <Content Include="ccss\star-1-3\Static HTML\img\blog\blog-02.jpg" />
     <Content Include="ccss\star-1-3\Static HTML\img\blog\blog-03.jpg" />
@@ -1865,6 +1869,8 @@
     <Content Include="ccss\star-1-3\Static HTML\img\gallery\gallery-single-thumb-01.jpg" />
     <Content Include="ccss\star-1-3\Static HTML\img\gallery\gallery-single-thumb-02.jpg" />
     <Content Include="ccss\star-1-3\Static HTML\img\gallery\gallery-single-thumb-03.jpg" />
+    <Content Include="ccss\star-1-3\Static HTML\img\guanacaste prueba %282%29.png" />
+    <Content Include="ccss\star-1-3\Static HTML\img\guanacaste.png" />
     <Content Include="ccss\star-1-3\Static HTML\img\holets\hotel-list-01.jpg" />
     <Content Include="ccss\star-1-3\Static HTML\img\holets\hotel-list-02.jpg" />
     <Content Include="ccss\star-1-3\Static HTML\img\holets\hotel-list-03.jpg" />
@@ -1967,6 +1973,7 @@
     <Content Include="ccss\star-1-3\Static HTML\img\logo-dark.png" />
     <Content Include="ccss\star-1-3\Static HTML\img\logo-icon.png" />
     <Content Include="ccss\star-1-3\Static HTML\img\logo.png" />
+    <Content Include="ccss\star-1-3\Static HTML\img\mapa 2.gif" />
     <Content Include="ccss\star-1-3\Static HTML\img\not-found\not-found-bg.jpg" />
     <Content Include="ccss\star-1-3\Static HTML\img\not-found\not-found.png" />
     <Content Include="ccss\star-1-3\Static HTML\img\packages\double-room-img1.jpg" />
@@ -2035,6 +2042,7 @@
     <Content Include="ccss\star-1-3\Static HTML\img\price\price-02.jpg" />
     <Content Include="ccss\star-1-3\Static HTML\img\price\price-03.jpg" />
     <Content Include="ccss\star-1-3\Static HTML\img\price\price-04.jpg" />
+    <Content Include="ccss\star-1-3\Static HTML\img\puntarenas 2.png" />
     <Content Include="ccss\star-1-3\Static HTML\img\toggle\toggle-01.jpg" />
     <Content Include="ccss\star-1-3\Static HTML\img\toggle\toggle-02.jpg" />
     <Content Include="ccss\star-1-3\Static HTML\index-v2.html" />

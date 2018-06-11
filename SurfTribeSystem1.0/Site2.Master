@@ -55,14 +55,14 @@
 
 <!-- HEADER -->
 
-<body class="body-wrapper changeHeader ">
+<body class="body-wrapper ">
 
     <form id="f1" runat="server">
         <div class="main-wrapper">
-
+            
             <!-- HEADER -->
             <header>
-                <nav class="navbar navbar-default navbar-main   lightHeader " role="navigation">
+                 <nav  class="navbar navbar-default navbar-main navbar-fixed-top lightHeader" role="navigation">
                     <div class="container">
 
                         <!-- Brand and toggle get grouped for better mobile display -->

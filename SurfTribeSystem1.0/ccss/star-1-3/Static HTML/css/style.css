@@ -92,6 +92,23 @@ a.reserva {
     color: #ff891e;
     
 }
+b.blanco {
+    color: white;
+    
+}
+
+label.blanco2 {
+    color: white;
+    padding: 9px;
+}
+
+div.reservadatos {
+    border-radius: 10px;
+    width: 90%;
+    background-color: #ff891e;
+    
+    
+}
 
 div.de {
     margin-right: 20px;
@@ -109,6 +126,96 @@ div.de2 {
 th.prueba {
     text-align: center;
 }
+
+
+.li {
+    position: relative;
+    display:  inline-block;
+    margin: 1%;
+    text-align: left;
+    font-size: 12px;
+}
+
+
+li .link i {
+    z-index: -1;
+    position: absolute;
+    opacity: 0;
+    left: 50%;
+    bottom: 0%;
+    margin: 0px 0px -290px -750px;
+    width: 302px;
+    height: 306px;
+    background: url('../img/guanacaste prueba (2).png') no-repeat center center;
+    background-size: cover;
+}
+
+li .link u {
+    z-index: -1;
+    position: absolute;
+    opacity: 0;
+    left: 50%;
+    bottom: 0%;
+    margin: 0px 0px -290px -750px;
+    width: 282px;
+    height: 286px;
+    background: url('../img/puntarenas 2.png') no-repeat center center;
+    background-size: cover;
+}
+
+li .link  s {
+    z-index: -1;
+    position: absolute;
+    opacity: 0;
+    left: 50%;
+    bottom: 0%;
+    margin: 0px 0px -290px -750px;
+    width: 282px;
+    height: 286px;
+    background: url('../img/puntarenas 2.png') no-repeat center center;
+    background-size: cover;
+}
+
+li.link img {
+    width: 100%;
+    transition: all 0.20s ease-out;
+    margin-top: 2%;
+    margin-bottom: -15%;
+}
+
+
+li:hover .link i {
+    opacity: 1;
+    bottom: 50%;
+    
+}
+
+li:hover .link u {
+    opacity: 1;
+    bottom: 50%;
+}
+
+li:hover .link s {
+    opacity: 1;
+    bottom: 50%;
+}
+
+li:hover .link img {
+    transform: rotate(0deg) xscale(1.03);
+   
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 * {
     outline: 0;
@@ -11279,6 +11386,13 @@ header {
     background-color: #f5f5f5;
    
 }
+
+.bg-ashs {
+    background-color: #fff;
+    text-align: center;
+    background: transparent;
+}
+
 
 .bg-ashh {
     background-color: #f5f5f5;
