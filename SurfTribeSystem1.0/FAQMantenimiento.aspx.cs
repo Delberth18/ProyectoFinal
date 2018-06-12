@@ -16,6 +16,12 @@ namespace SurfTribeSystem1._0
 
         protected void Page_Load(object sender, EventArgs e)
         {
+
+        }
+
+        protected override void OnLoad(EventArgs e)
+        {
+            base.OnLoad(e);
             ObtenerListado();
         }
 
@@ -28,19 +34,83 @@ namespace SurfTribeSystem1._0
                 resultado = new FaqLogica().Acciones(faq);
                 if (resultado.TipoResultado == "OK")
                 {
+                    faqs = new List<Faq>();
                     faqs = (List<Faq>)resultado.ObjetoResultado;
                     preguntasLst.DataSource = faqs;
                     preguntasLst.DataBind();
                 }
                 else
                 {
-                    Response.Write("< script > alert('Error: " + resultado.Mensaje + " \n Lo sentimos') </ script >");
+                    if (resultado.CodigoMensaje=="1")
+                    {
+                        string script = "swal('Lo sentimos,', '" + resultado.Mensaje + "', 'info'); ";
+                        ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
+                    }
+                    else
+                    {
+                        string script = "swal('Lo sentimos, ha ocurrido un error', '" + resultado.Mensaje + "', 'error'); ";
+                        ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
+                    }
+                    
                 }
             }
             catch (Exception ex)
             {
+                string script = "swal('Error', '" + ex + "', 'error'); ";
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
+            }
+        }
 
-                Response.Write("< script > alert('Error: " + ex + " \n Lo sentimos') </ script >");
+        protected void editarBtn_Click(object sender, EventArgs e)
+        {
+            LinkButton link = new LinkButton();
+            link = (LinkButton)sender;
+            faq.Pregunta = link.CommandName;
+
+            foreach (Faq item in faqs)
+            {
+                if (item.Pregunta == link.CommandName)
+                {
+                    faq.Respuesta = item.Respuesta;
+                    break;
+                }
+            }
+            Response.Redirect("FAQRegistro.aspx?valor1=" + faq.Pregunta + "&valor2=" + faq.Respuesta);
+
+        }
+
+        protected void borrarBtn_Click(object sender, EventArgs e)
+        {
+            Resultado resultado = new Resultado();
+            try
+            {
+                LinkButton link = new LinkButton();
+                link = (LinkButton)sender;
+                faq.Tag = "BORRAR";
+                faq.Pregunta = link.CommandName;
+                resultado = new FaqLogica().Acciones(faq);
+                
+                
+                if (resultado.TipoResultado == "OK")
+                {
+                    
+                    string script = "swal('Excelente', 'Éxito en el borrado', 'success'); ";
+                    ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
+                    preguntasLst.DataSource = null;
+                    preguntasLst.DataBind();
+                    ObtenerListado();
+                }
+                else
+                {
+                    string script = "swal('Lo sentimos, ha ocurrido un error', '"+resultado.Mensaje+"', 'error'); ";
+                    ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
+                }
+               
+            }
+            catch (Exception ex)
+            {
+                string script = "swal('Error', '" + ex + "', 'error'); ";
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
             }
         }
     }

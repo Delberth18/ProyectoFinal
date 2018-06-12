@@ -14,7 +14,10 @@ namespace SurfTribeSystem1._0
         Faq faq = new Faq();
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            
+                preguntaText.Text = Request.QueryString["valor1"];
+                respuestaText.Text = Request.QueryString["valor2"];
+            
         }
 
         protected void Guardar_Click(object sender, EventArgs e)
@@ -26,35 +29,38 @@ namespace SurfTribeSystem1._0
                 faq.Tag = "INSER_ACTUA";
                 if (preguntaText.Text=="")
                 {
-                    errorLabel.Visible = true;
-                    errorLabel.Text="*Debe ingresar una pregunta";
+                    string script = "swal('Lo sentimos, ha ocurrido un error', '*Debe ingresar una pregunta', 'error'); ";
+                    ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
                     return;
                 }
                 if (respuestaText.Text == "")
                 {
-                    errorLabel.Visible = true;
-                    errorLabel.Text = "*Debe ingresar una respuesta a la pregunta";
+                    string script = "swal('Lo sentimos, ha ocurrido un error', '*Debe ingresar una respuesta a la pregunta', 'error'); ";
+                    ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
                     return;
                 }
                 faq.Pregunta = preguntaText.Text;
                 faq.Respuesta = respuestaText.Text;
 
+                faq.Pregunta = faq.Pregunta.Replace('¿', ' ');
+                faq.Pregunta = faq.Pregunta.Replace('?', ' ');
+
                 resultado = new FaqLogica().Acciones(faq);
                 if (resultado.TipoResultado == "OK")
                 {
-                    errorLabel.Visible = false;
-                    confirmaLabel.Visible = true;
-                    confirmaLabel.Text = "Se registro la pregunta con éxito";
+                    string script = "swal('Excelente', 'Se registró la pregunta con éxito', 'success'); ";
+                    ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
                 }
-                else
+                 else
                 {
-                    Response.Write("< script > alert('Error: " + resultado.Mensaje + " \n Lo sentimos') </ script >");
+                    string script = "swal('Lo sentimos, ha ocurrido un error', '" + resultado.Mensaje + "', 'error'); ";
+                    ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
                 }
             }
             catch (Exception ex)
             {
-
-                Response.Write("< script > alert('Error: " + ex + " \n Lo sentimos') </ script >");
+                string script = "swal('Error', '" + ex + "', 'error'); ";
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
             }
         }
     }

@@ -9,7 +9,7 @@
 
     <!-- PAGE TITLE -->
     <section class="pageTitle" style="background-image: url(ccss/star-1-3/Static%20HTML/img/pages/page-title-bg7.jpg);">
-        <div class="container">
+        <div class="container" >
             <div class="row">
                 <div class="col-xs-12">
                     <div class="titleTable">
@@ -18,7 +18,7 @@
                                 <br />
                                 <br />
                                 <br />
-                                <h1>Resgistro de preguntas</h1>
+                                <h1>Registro de preguntas</h1>
                                 <div class="under-border"></div>
                             </div>
                         </div>
@@ -32,29 +32,28 @@
 
     <section class="mainContentSection" style="background-color:#f5f5f5;" >
 
-         <form  method="POST"  role="form" class="form" id="form1"  >
+         <form  method="POST"  role="form" class="form" id="form1" >
 
-        <center><font size="14"><b FACE="arial" size="30%">Preguntas frecuentes</b></font></center>
-        <br />
-             <center >
-                 <asp:Label ID="errorLabel" class="alert alert-danger alert-dismissible" runat="server" Visible="false" ></asp:Label>  
-                 <asp:Label ID="confirmaLabel" class="alert alert-success alert-dismissible" runat="server" Visible="false"></asp:Label>  
+                  <a aria-label="VerListado" href="FAQMantenimiento.aspx" style="border: solid; border-color: #ff891e; border-radius: 8px; border-width: thin; margin-left:11%" >
+                        <span aria-hidden="true" style="margin: 2px 2px 2px 2px">Ver Listado o Mantenimiento</span>
 
-             </center>
+
+                  </a>
+        <asp:button class="btn btn-default" OnClick="Guardar_Click" runat="server" style="padding:15px; background-color:darkorange; color:white;  font-family:Arial; text-transform: none; font-size:large; margin-left:52%" Text=" Guardar pregunta " ></asp:button>
+
              <br />
-             <br />
+              <br />
+            
        
         <div class="container">
 
             <div class="row">
-                <center>
           
-            
-            <div class="bookingForm">
+         
              <form  method="POST" role="form" class="form">
                 <div class="row"">
                   <div class="form-group" style=" 
-                            border: solid 1px #000000;
+                            border: solid 0.4px #000000;
                             border-top-left-radius:27px;
                             border-top-right-radius:27px;
                             border-bottom-left-radius:27px;
@@ -64,14 +63,13 @@
                     <asp:TextBox class="form-control  bg-ashh"  id="preguntaText" runat="server" placeholder="Escriba la pregunta" /><br />
                  
                    
-                    <asp:TextBox Rows="14" class="form-control bg-ashh" TextMode="MultiLine" id="respuestaText" runat="server" placeholder="Escriba la respuesta"/><br />
+                    <asp:TextBox Rows="7" class="form-control bg-ashh" TextMode="MultiLine" id="respuestaText" runat="server" placeholder="Escriba la respuesta"/><br />
 
                   </div>
                  
                   
                   <div >
                       <br />
-                     <asp:button class="btn btn-default" OnClick="Guardar_Click" runat="server" style="padding:15px; background-color:darkorange; color:white;  font-family:Arial; text-transform: none; font-size:large;" Text=" Guardar pregunta " ></asp:button>
                   </div>
                 </div>
                      <div class="modal fade signupLoging" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -107,7 +105,9 @@
         </div>
 
 
-             </form> </div></div>
+             </form> 
+
+            </div>
         </div>
               </form>
            

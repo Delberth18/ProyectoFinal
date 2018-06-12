@@ -87,6 +87,12 @@ namespace SurfTribeSystem_Datos
                             });
                         }
                     }
+                    else if(faq.Tag == "LISTADO")
+                    {
+                        resultado.TipoResultado = "ERROR";
+                        resultado.CodigoMensaje = "1";
+                        resultado.Mensaje = "En estos momentos no existe ninguna pregunta.";
+                    }
                     resultado.ObjetoResultado = faqs;
 
                 }

@@ -3,10 +3,9 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-
     <!-- PAGE TITLE -->
     <section class="pageTitle" style="background-image: url(ccss/star-1-3/Static%20HTML/img/pages/page-title-bg6.jpg);">
-        <div class="container">
+        <div class="container" >
             <div class="row">
                 <div class="col-xs-12">
                     <div class="titleTable">
@@ -25,24 +24,26 @@
     <!-- PAGE CONTENT -->
 
     <!--principal-->
-    <section class="mainContentSection" style="background-color:#f5f5f5;">
-        <div class="container">
+    <section class="mainContentSection">
+        <div class="container  recentActivityContent bg-ash" style="border-radius: 7px">
             <div class="row">
+
+
                 <div class="col-xs-12">
-                    <div class="sectionTitle">
+
+                    <div class="sectionTitle" style="margin-top: 8px;">
                         <h2>
-                            <asp:Label runat="server" ID="tituloLabel" Text="Mantenimiento" style="background-color:#f5f5f5;"></asp:Label></h2>
+                            <asp:Label runat="server" ID="tituloLabel" Text="Mantenimiento" Style="background-color: #f5f5f5"></asp:Label></h2>
 
                     </div>
-                    <h4>
-                        <asp:Label runat="server" ID="info1" Text="Todos nos han hecho llegar sus dudas, aquí les mostramos las más comunes"></asp:Label></h4>
-                    <p>
-                        <asp:Label runat="server" ID="info2" Text="Esperamos haber aclarado estas dudas. Si tienen alguna otra no la pueden hacer llegar por medio de la página de consultas, al correo o cuando nos visiten."></asp:Label>
-                    </p>
+                 
+                    <a aria-label="NuevaPreguntado" href="FAQRegistro.aspx" style="border: solid; border-color: #ff891e; border-radius: 8px; border-width: thin">
+                        <span aria-hidden="true" style="margin: 2px 2px 2px 2px">Nueva pregunta</span>
+                    </a>
                 </div>
             </div>
 
-            <div class="row" style="margin: 4px 4px 4px 4px; border: solid 1px #000000; border-top-left-radius: 27px; border-top-right-radius: 27px; border-bottom-left-radius: 27px; border-bottom-right-radius: 28px;">
+            <div class="row" style="margin: 4px 4px 4px 4px;">
 
                 <div class="col-sm-6 col-xs-12 accordionsTransparent" style="width: 100%">
                     <div class="solidBgTitle">
@@ -55,7 +56,7 @@
                                         <a class="panel-heading accordion-toggle" data-toggle="collapse"
                                             data-parent="#accordionSolid" href='<%# "#"+ Eval("Pregunta").ToString().Replace(' ','_') %>'>
 
-                                            <span>¿<asp:Label runat="server" ID="preguntaLabel" Text='<%# Eval("Pregunta") %>'></asp:Label>?</span>
+                                            <span>¿<asp:Label ID="preguntaLabel" Text='<%# Eval("Pregunta") %>' runat="server"></asp:Label>?</span>
 
                                             <i class="indicator fa fa-plus  pull-right"></i>
 
@@ -65,19 +66,16 @@
                                                 <div class="media" style="overflow-wrap: break-word">
 
                                                     <p><%# Eval("Respuesta").ToString() %></p>
-                                                    <!--No puedo hacer que se vean varias lineas-->
-                                                    <a  aria-label="Editar" >
-                                                        <span aria-hidden="true">Editar</span>
+                                                    <a aria-label="Editar" style="border: solid; border-color: #ff891e; border-radius: 8px; border-width: thin">
+                                                        <asp:LinkButton id="editarBtn" CommandName='<%# Eval("Pregunta") %>' Text="Editar" runat="server"  aria-hidden="true" style="margin: 2px 2px 2px 2px" OnClick="editarBtn_Click"/>
                                                     </a>
-                                                    <a  aria-label="Borrar" style="margin-left:15px">
-                                                        <span aria-hidden="true">Borrar</span>
+                                                    <a aria-label="Borrar" style="margin-left: 15px; border: solid; border-color: #ff891e; border-radius: 8px; border-width: thin">
+                                                        <asp:LinkButton ID="borrarBtn" CommandName='<%# Eval("Pregunta") %>' Text="Borrar" runat="server"  aria-hidden="true" style="margin: 2px 2px 2px 2px" OnClick="borrarBtn_Click"/>
                                                     </a>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-
-
                                 </ItemTemplate>
                             </asp:ListView>
                         </div>
@@ -85,6 +83,7 @@
                 </div>
 
             </div>
+
         </div>
     </section>
 
