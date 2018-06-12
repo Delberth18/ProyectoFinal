@@ -38,7 +38,7 @@
                    
   
  
-                 <img src="ccss/star-1-3/Static%20HTML/img/mapa 2.gif"  usemap="#image-map"  >
+                 <img src="ccss/star-1-3/Static%20HTML/img/mapaCR.gif"  usemap="#image-map"  >
 
 <map name="image-map">
    

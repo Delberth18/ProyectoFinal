@@ -156,23 +156,24 @@ li .link u {
     opacity: 0;
     left: 50%;
     bottom: 0%;
-    margin: 0px 0px -290px -750px;
-    width: 282px;
+    margin: 0px 0px -330px -650px;
+    width: 392px;
     height: 286px;
-    background: url('../img/puntarenas 2.png') no-repeat center center;
+    background: url('../img/puntarenas con titulo.png') no-repeat center center;
     background-size: cover;
 }
 
-li .link  s {
+li .link s {
     z-index: -1;
     position: absolute;
     opacity: 0;
     left: 50%;
     bottom: 0%;
-    margin: 0px 0px -290px -750px;
-    width: 282px;
+    margin: 0px 0px -340px -750px;
+    width: 382px;
     height: 286px;
-    background: url('../img/puntarenas 2.png') no-repeat center center;
+    background: url('../img/Limon con titulo.png') no-repeat center center;
+  
     background-size: cover;
 }
 
