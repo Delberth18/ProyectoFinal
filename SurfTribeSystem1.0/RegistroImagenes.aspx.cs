@@ -87,13 +87,15 @@ namespace SurfTribeSystem1._0
                 img.Fecha = Convert.ToDateTime(txtFecha.Text);
                 img.Descripcion = txtDescripcion.Text;
                 img.Tag = "INSERTAR";
-                img.Imagen2 = FileUpload.FileBytes;
+                
+                string base64ImageRepresentation = Convert.ToBase64String(FileUpload.FileBytes);
+                img.Imgs = base64ImageRepresentation;
 
                 resultado = new ImagenLogica().Acciones(img);
 
                 if (resultado.TipoResultado == "OK")
                 {
-                    string script = "swal('Excelente', 'Éxito en el borrado', 'success'); ";
+                    string script = "swal('Excelente', 'Éxito en la insersión', 'success'); ";
                     ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
                     borrar();
                     panelMostrar.Visible = true;
@@ -127,7 +129,6 @@ namespace SurfTribeSystem1._0
                     lista = (List<Imagen>)resultado.ObjetoResultado;
                     gridListado.DataSource = lista;
                     gridListado.DataBind();
-                    Session["IMAGEN"] = lista;
                 }
                 
             }

@@ -82,8 +82,7 @@
                                     <asp:BoundField DataField="Fecha" HeaderText="Fecha Registro" DataFormatString="{0:d}" />
                                     <asp:TemplateField HeaderText="Imagen">
                                         <ItemTemplate>
-                                            <asp:Image ID="Imagen" runat="server" ImageUrl='<%# Eval("codigo", "Manejador.ashx?codigo={0}") %>'
-                                                Width="50px" Height="50px" />
+                                            <img src='data:image/jpg;base64,<%# Eval("Imgs") %>' width="15%" />
                                         </ItemTemplate>
                                     </asp:TemplateField>
                                 </Columns>

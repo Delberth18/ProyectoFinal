@@ -3,6 +3,8 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -44,17 +46,19 @@ namespace SurfTribeSystem_Datos
                 parametros.Add(param);
 
                 param = new SqlParameter();
-                if (img.Imagen2 == null)
+                if (img.Imgs == null)
                 {
-                    param.Value = DBNull.Value;
+                    param.Value = 0;
                 }
                 else
                 {
-                    param.Value = img.Imagen2;
+                    param.Value = img.Imgs;
                 }
                 param.ParameterName = "@IMAGEN";
                 parametros.Add(param);
 
+                
+               
 
 
                 param = new SqlParameter();
@@ -116,19 +120,30 @@ namespace SurfTribeSystem_Datos
                     {
                         foreach (DataRow row in datos.Tables[1].Rows)
                         {
+                            string imageBase64 = "data:image/gif;base64,"+ row["IMAGEN"].ToString();
+                            string base64 = imageBase64.Substring(imageBase64.IndexOf(',') + 1);
+                            base64 = base64.Trim('\0');
+                            byte[] bytes = Convert.FromBase64String(base64);
+                            Image image;
+                            using (MemoryStream ms = new MemoryStream(bytes))
+                            {
+                                image = Image.FromStream(ms);
+                            }
+
                             lista.Add(new Imagen
                             {
-                                Codigo = row["CODIGO"] is DBNull ? 0 : Convert.ToInt32(row["PREGUNTA"].ToString()),
+                                Codigo = row["CODIGO"] is DBNull ? 0 : Convert.ToInt32(row["CODIGO"].ToString()),
                                 Descripcion = row["DESCRIPCION"] is DBNull ? null : row["DESCRIPCION"].ToString(),
-                                Fecha = row["DESCRIPCION"] is DBNull ? Convert.ToDateTime(null) : Convert.ToDateTime(row["DESCRIPCION"].ToString()),
-                                Imagen1 = row["IMAGEN"] is DBNull ? null : row,
+                                Fecha = row["FECHA"] is DBNull ? Convert.ToDateTime(null) : Convert.ToDateTime(row["FECHA"].ToString()),
+                                Imgs = row["IMAGEN"] is DBNull ? null : row["IMAGEN"].ToString(),
+                                Imagen1=image,
                                 Pertenece = row["PERTENECE"] is DBNull ? null : row["PERTENECE"].ToString(),
-
                             });
+                            
                         }
                     }
-
-
+                    resultado.ObjetoResultado = lista;
+                    
                 }
 
 
