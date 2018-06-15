@@ -120,7 +120,7 @@ div.de1 {
  width: 31%;
 }
 div.de2 {
-    width: 23%;
+    width: 22%;
 }
 
 div.de3 {
@@ -129,6 +129,10 @@ div.de3 {
     margin-top: 30px;
 }
 
+div.de4 {
+    width: 23%;
+    left: 25px;
+}
 th.prueba {
     text-align: center;
 }
@@ -294,7 +298,12 @@ a.hjk {
 
 
 
-
+.marco3 {
+    padding: 8px 8px 20px 8px;
+    background-color: #ffffff;
+    width: 200px;
+    border: 1px solid #999999;
+} 
 
 
 
