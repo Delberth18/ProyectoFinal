@@ -52,7 +52,7 @@
                             <div class="col-lg-4 col-sm-6 col-xs-12 " >
                                 <div class="thumbnail deals packagesPage">
                                     <%--<img src="img/home/deal/deal-01.jpg" alt="deal-image">--%>
-                                    <a href="single-package-right-sidebar.html" class="pageLink"></a>
+                                    <a  class="pageLink"></a>
                                     <%--<div class="discountInfo">
                     <div class="discountOffer">
                       <h4>
@@ -73,7 +73,7 @@
                     </ul>
                   </div>--%>
                                     <div class="caption">
-                                        <h4><a href="single-package-left-sidebar.html" class="captionTitle"><%# Eval("Tipo") %></a></h4>
+                                        <h4><a  class="captionTitle"><%# Eval("Tipo") %></a></h4>
                                         <p><%# Eval("Descripcion") %></p>
                                         <div class="detailsInfo">
                                             <h5>

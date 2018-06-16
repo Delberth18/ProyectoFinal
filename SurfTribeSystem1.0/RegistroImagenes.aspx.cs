@@ -23,8 +23,8 @@ namespace SurfTribeSystem1._0
         }
         private void borrar()
         {
-            txtDescripcion.Text = "";
-            txtFecha.Text = "";
+            //txtDescripcion.Text = "";
+           // txtFecha.Text = "";
         }
         private Boolean ValidarExtension(string sExtension)
         {
@@ -51,7 +51,7 @@ namespace SurfTribeSystem1._0
                 string Extension = string.Empty;
                 string Nombre = string.Empty;
 
-                if (txtDescripcion.Text != "" && txtFecha.Text != "" && FileUpload.HasFile)
+                if (txtDescripcion.Text != "" && FileUpload.HasFile)
                 {
                     Nombre = FileUpload.FileName;
                     Extension = Path.GetExtension(Nombre);
@@ -84,10 +84,9 @@ namespace SurfTribeSystem1._0
             Resultado resultado = new Resultado();
             try
             {
-                img.Fecha = Convert.ToDateTime(txtFecha.Text);
                 img.Descripcion = txtDescripcion.Text;
                 img.Tag = "INSERTAR";
-                
+
                 string base64ImageRepresentation = Convert.ToBase64String(FileUpload.FileBytes);
                 img.Imgs = base64ImageRepresentation;
 
@@ -97,9 +96,6 @@ namespace SurfTribeSystem1._0
                 {
                     string script = "swal('Excelente', 'Éxito en la insersión', 'success'); ";
                     ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
-                    borrar();
-                    panelMostrar.Visible = true;
-                    panelRegistrar.Visible = false;
                     ListarRegistro();
                 }
                 else
@@ -127,8 +123,11 @@ namespace SurfTribeSystem1._0
                 {
                     lista = new List<Imagen>();
                     lista = (List<Imagen>)resultado.ObjetoResultado;
-                    gridListado.DataSource = lista;
-                    gridListado.DataBind();
+                    imagenesList.DataSource = lista;
+                    imagenesList.DataBind();
+
+                    //imagenesList.DataSource = lista;
+                    //imagenesList.DataBind();
                 }
                 
             }
@@ -140,21 +139,21 @@ namespace SurfTribeSystem1._0
         }
         protected void btnNuevo_Click(object sender, EventArgs e)
         {
-            panelRegistrar.Visible = true;
-            panelMostrar.Visible = false;
+            //panelRegistrar.Visible = true;
+            //panelMostrar.Visible = false;
         }
-        protected void gridListado_PageIndexChanging(object sender, GridViewPageEventArgs e)
-        {
-            try
-            {
-                gridListado.PageIndex = e.NewPageIndex;
-                gridListado.DataBind();
-                ListarRegistro();
-            }
-            catch (Exception)
-            {
-                throw;
-            }
-        }
+        //protected void imagenesList_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        //{
+        //    try
+        //    {
+        //        imagenesList.PageIndex = e.NewPageIndex;
+        //        imagenesList.DataBind();
+        //        ListarRegistro();
+        //    }
+        //    catch (Exception)
+        //    {
+        //        throw;
+        //    }
+        //}
     }
 }

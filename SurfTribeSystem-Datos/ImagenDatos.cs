@@ -57,21 +57,7 @@ namespace SurfTribeSystem_Datos
                 param.ParameterName = "@IMAGEN";
                 parametros.Add(param);
 
-                
-               
-
-
-                param = new SqlParameter();
-                if (img.Fecha == DateTime.MinValue)
-                {
-                    param.Value = DBNull.Value;
-                }
-                else
-                {
-                    param.Value = img.Fecha;
-                }
-                param.ParameterName = "@FECHA";
-                parametros.Add(param);
+              
 
                 param = new SqlParameter();
                 if (img.Pertenece == null)
@@ -134,7 +120,6 @@ namespace SurfTribeSystem_Datos
                             {
                                 Codigo = row["CODIGO"] is DBNull ? 0 : Convert.ToInt32(row["CODIGO"].ToString()),
                                 Descripcion = row["DESCRIPCION"] is DBNull ? null : row["DESCRIPCION"].ToString(),
-                                Fecha = row["FECHA"] is DBNull ? Convert.ToDateTime(null) : Convert.ToDateTime(row["FECHA"].ToString()),
                                 Imgs = row["IMAGEN"] is DBNull ? null : row["IMAGEN"].ToString(),
                                 Imagen1=image,
                                 Pertenece = row["PERTENECE"] is DBNull ? null : row["PERTENECE"].ToString(),

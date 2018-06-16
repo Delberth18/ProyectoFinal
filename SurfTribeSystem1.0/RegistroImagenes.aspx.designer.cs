@@ -13,13 +13,13 @@ namespace SurfTribeSystem1._0 {
     public partial class RegistroImagenes {
         
         /// <summary>
-        /// panelRegistrar control.
+        /// info1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel panelRegistrar;
+        protected global::System.Web.UI.WebControls.Label info1;
         
         /// <summary>
         /// txtDescripcion control.
@@ -29,15 +29,6 @@ namespace SurfTribeSystem1._0 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtDescripcion;
-        
-        /// <summary>
-        /// txtFecha control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtFecha;
         
         /// <summary>
         /// FileUpload control.
@@ -58,40 +49,13 @@ namespace SurfTribeSystem1._0 {
         protected global::System.Web.UI.WebControls.Button btnGuardar;
         
         /// <summary>
-        /// lblMensaje control.
+        /// imagenesList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblMensaje;
-        
-        /// <summary>
-        /// panelMostrar control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel panelMostrar;
-        
-        /// <summary>
-        /// btnNuevo control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnNuevo;
-        
-        /// <summary>
-        /// gridListado control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gridListado;
+        protected global::System.Web.UI.WebControls.Repeater imagenesList;
         
         /// <summary>
         /// Master property.
