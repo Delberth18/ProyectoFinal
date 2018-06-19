@@ -2050,8 +2050,10 @@
     <Content Include="ccss\star-1-3\Static HTML\img\price\price-02.jpg" />
     <Content Include="ccss\star-1-3\Static HTML\img\price\price-03.jpg" />
     <Content Include="ccss\star-1-3\Static HTML\img\price\price-04.jpg" />
+    <Content Include="ccss\star-1-3\Static HTML\img\prueba1.png" />
     <Content Include="ccss\star-1-3\Static HTML\img\puntarenas 2.png" />
     <Content Include="ccss\star-1-3\Static HTML\img\puntarenas con titulo.png" />
+    <Content Include="ccss\star-1-3\Static HTML\img\reservaTabla.png" />
     <Content Include="ccss\star-1-3\Static HTML\img\ShortBoard.png" />
     <Content Include="ccss\star-1-3\Static HTML\img\toggle\toggle-01.jpg" />
     <Content Include="ccss\star-1-3\Static HTML\img\toggle\toggle-02.jpg" />
