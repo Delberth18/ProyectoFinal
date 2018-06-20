@@ -75,31 +75,21 @@
                    <div class="container">
   <center>
   
-    <div style="width: 430px;" class="panel panel-default">
-      <div class="panel-heading">
-        <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Martes 12 de junio 2018</a>
+    <div style="width: 390px; background: url('ccss/star-1-3/Static%20HTML/img/prueba1.png') no-repeat ; background-size: 100%; 
+     border-color: transparent; margin-left: -600px;" class="panel panel-default"  >
+      <div  style="height: 115px; background:  transparent;"  class="panel-heading">
+        <h4 style="margin-top: 35px;" class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion"  href="#collapse1">Martes 12 de junio 2018</a>
         </h4>
       </div>
       <div id="collapse1" class="panel-collapse collapse in">
-        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        <div class="panel-body" style=" background-color: lightgoldenrodyellow;">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
         sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
         quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
       </div>
     </div>
     
-    <div style="width: 430px;" class="panel panel-default">
-      <div class="panel-heading">
-        <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Collapsible Group 3</a>
-        </h4>
-      </div>
-      <div id="collapse3" class="panel-collapse collapse">
-        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
-      </div>
-    </div>
+    
  </center>
 </div>
 
