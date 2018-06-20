@@ -45,7 +45,7 @@ namespace SurfTribeSystem1._0
            
 
             btn.Visible = true;
-           // lbl.Visible = true;
+            // lbl.Visible = true;
             btn.ID = Convert.ToString(cuenta);
 
         }
