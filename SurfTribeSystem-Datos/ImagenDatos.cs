@@ -57,7 +57,7 @@ namespace SurfTribeSystem_Datos
                 param.ParameterName = "@IMAGEN";
                 parametros.Add(param);
 
-              
+
 
                 param = new SqlParameter();
                 if (img.Pertenece == null)
@@ -70,7 +70,48 @@ namespace SurfTribeSystem_Datos
                 }
                 param.ParameterName = "@PERTENECE";
                 parametros.Add(param);
-                
+
+                param = new SqlParameter();
+                if (img.Titulo == null)
+                {
+                    param.Value = DBNull.Value;
+                }
+                else
+                {
+                    param.Value = img.Titulo;
+                }
+                param.ParameterName = "@TITULO";
+                parametros.Add(param);
+
+                param = new SqlParameter();
+                if (img.Leyenda == null)
+                {
+                    param.Value = DBNull.Value;
+                }
+                else
+                {
+                    param.Value = img.Leyenda;
+                }
+                param.ParameterName = "@LEYENDA";
+                parametros.Add(param);
+
+                param = new SqlParameter();
+                if (img.Dueño == null)
+                {
+                    param.Value = DBNull.Value;
+                }
+                else
+                {
+                    param.Value = img.Dueño;
+                }
+                param.ParameterName = "@DUEÑO";
+                parametros.Add(param);
+
+                param = new SqlParameter();
+                param.Value = img.Aprobado;
+                param.ParameterName = "@APROBADO";
+                parametros.Add(param);
+
 
                 param = new SqlParameter();
                 if (img.Tag == null)
@@ -102,11 +143,13 @@ namespace SurfTribeSystem_Datos
                 {
                     resultado.TipoResultado = "OK";
                     List<Imagen> lista = new List<Imagen>();
-                    if (img.Tag == "LISTADO" && datos.Tables[1] != null && datos.Tables[1].Rows.Count != 0)
+                    if ((img.Tag == "LISTADO" && datos.Tables[1] != null && datos.Tables[1].Rows.Count != 0) ||
+                        (img.Tag == "LISTADOESPECIFICO" && datos.Tables[1] != null && datos.Tables[1].Rows.Count != 0))
                     {
+                        int cant = 1;
                         foreach (DataRow row in datos.Tables[1].Rows)
                         {
-                            string imageBase64 = "data:image/gif;base64,"+ row["IMAGEN"].ToString();
+                            string imageBase64 = "data:image/gif;base64," + row["IMAGEN"].ToString();
                             string base64 = imageBase64.Substring(imageBase64.IndexOf(',') + 1);
                             base64 = base64.Trim('\0');
                             byte[] bytes = Convert.FromBase64String(base64);
@@ -116,19 +159,26 @@ namespace SurfTribeSystem_Datos
                                 image = Image.FromStream(ms);
                             }
 
+
                             lista.Add(new Imagen
                             {
                                 Codigo = row["CODIGO"] is DBNull ? 0 : Convert.ToInt32(row["CODIGO"].ToString()),
                                 Descripcion = row["DESCRIPCION"] is DBNull ? null : row["DESCRIPCION"].ToString(),
                                 Imgs = row["IMAGEN"] is DBNull ? null : row["IMAGEN"].ToString(),
-                                Imagen1=image,
+                                Imagen1 = image,
                                 Pertenece = row["PERTENECE"] is DBNull ? null : row["PERTENECE"].ToString(),
+                                Titulo = row["TITULO"] is DBNull ? null : row["TITULO"].ToString(),
+                                Leyenda = row["LEYENDA"] is DBNull ? null : row["LEYENDA"].ToString(),
+                                Dueño = row["DUEÑO"] is DBNull ? null : row["DUEÑO"].ToString(),
+                                Aprobado = row["APROBADO"] is DBNull ? false : Convert.ToBoolean(row["APROBADO"].ToString()),
+                                Num = cant.ToString()
                             });
-                            
+                            cant++;
+
                         }
                     }
                     resultado.ObjetoResultado = lista;
-                    
+
                 }
 
 
