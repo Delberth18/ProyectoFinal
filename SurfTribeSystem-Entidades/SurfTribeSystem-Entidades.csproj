@@ -45,6 +45,7 @@
     <Compile Include="Credencial.cs" />
     <Compile Include="Faq.cs" />
     <Compile Include="Imagen.cs" />
+    <Compile Include="Pantalla.cs" />
     <Compile Include="Precio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Resultado.cs" />

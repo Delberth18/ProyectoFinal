@@ -3503,6 +3503,12 @@
     <Content Include="FAQRegistro.aspx" />
     <Content Include="galeria.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="Imagenes\20170423_095213.jpg" />
+    <Content Include="Imagenes\20171222_161839.jpg" />
+    <Content Include="Imagenes\20180603_160427.jpg" />
+    <Content Include="Imagenes\20180610_081948.jpg" />
+    <Content Include="Imagenes\20180610_135820.jpg" />
+    <Content Include="Imagenes\20180610_194048.jpg" />
     <Content Include="InformaciónGeneral.aspx" />
     <Content Include="PreciosListado.aspx" />
     <Content Include="registrarse.aspx" />

@@ -6046,13 +6046,13 @@ header {
 
 /*=== 6.2 PROMOTION ===*/
 .promotionWrapper {
-  background-image: url("../img/home/promotion/promotion-1.jpg");
-  background-attachment: fixed;
-  width: 100%;
-  background-size: cover;
-  background-position: center;
-  color: #ffffff;
-  height: 403px;
+    background-image: url('../../../../Imagenes/20171222_161839.jpg');
+    background-attachment: fixed;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    height: 403px;
 }
 
 .promotionWrapper .promotionTable {

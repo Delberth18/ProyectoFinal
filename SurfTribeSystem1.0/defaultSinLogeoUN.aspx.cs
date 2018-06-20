@@ -1,5 +1,6 @@
 ﻿using SurfTribeSystem_Entidades;
 using SurfTribeSystem_LogicaDeNegocios;
+using SurfTribeSystem_LogicaNegocio;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,7 +15,7 @@ namespace SurfTribeSystem1._0
 
         protected void Page_Load(object sender, EventArgs e)
         {
-           
+            ListarRegistro();
         }
 
         protected void ingresoButton_Click(object sender, EventArgs e)
@@ -22,6 +23,8 @@ namespace SurfTribeSystem1._0
             Resultado resultado = new Resultado();
             try
             {
+                
+
                 Credencial credencial = new Credencial()
                 {
                     ClaveUsuario = claveText.Text,
@@ -45,5 +48,35 @@ namespace SurfTribeSystem1._0
             }
             
         }
+
+        private void ListarRegistro()
+        {
+            Resultado resultado = new Resultado();
+            Imagen img = new Imagen();
+            List<Imagen> lista = new List<Imagen>();
+            try
+            {
+                img.Tag = "LISTADOESPECIFICO";
+                img.Pertenece = "PaginaPrincipal";
+                resultado = new ImagenLogica().Acciones(img);
+                if (resultado.TipoResultado == "OK")
+                {
+                    lista = new List<Imagen>();
+                    lista = (List<Imagen>)resultado.ObjetoResultado;
+                    galeria.DataSource = lista;
+                    galeria.DataBind();
+
+                    //imagenesList.DataSource = lista;
+                    //imagenesList.DataBind();
+                }
+
+            }
+            catch (Exception ex)
+            {
+                string script = "swal('Error', '" + ex + "', 'error'); ";
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
+            }
+        }
+
     }
 }
