@@ -335,7 +335,7 @@
                         <div class="col-xs-12">
                             <div class="media destinations">
                                 <a class="media-left" href="ccss/star-1-3/Static HTML/destination-cities.html">
-                                    <img  class="media-object" src="Imagenes/20180610_081948.jpg"  alt="Destination">
+                                    <img  class="media-object" src="Imagenes/20180610_081948.jpg"  alt="Destination"/>
                                 </a>
                                 <div class="media-body">
                                     <h3 class="media-heading">Escoga
@@ -349,6 +349,7 @@
                                             <li><a href="ccss/star-1-3/Static HTML/destination-single-city.html"><i class="fa fa-square" aria-hidden="true"></i>Etiam</a></li>
                                             <li><a href="ccss/star-1-3/Static HTML/destination-single-city.html"><i class="fa fa-square" aria-hidden="true"></i>Donec</a></li>
                                         </ul>
+
                                         <ul class="list-unstyled">
                                             <li><i class="fa fa-minus" aria-hidden="true"></i>Puntarenas</li>
                                             <li><a href="destination-single-city.html"><i class="fa fa-square" aria-hidden="true"></i>Maecenas</a></li>
