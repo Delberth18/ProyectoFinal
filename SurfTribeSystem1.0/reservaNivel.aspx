@@ -120,7 +120,8 @@
                                 <div class="detailsInfo">
                                    
                                     <ul class="list-inline detailsBtn">
-                                        <li style="background: darkorange;"><a style="color:white;" href='#Nivel' data-toggle="tab" class="reserva btn buttonTransparent  progress-wizard-dot">Avanzado</a></li>
+                                        
+                                        <li style="background: darkorange;"><a style="color:white;" href='reservaHorario.aspx'  class="reserva btn buttonTransparent  progress-wizard-dot">Avanzado</a></li>
                                     </ul>
                                 </div>
                             </div>

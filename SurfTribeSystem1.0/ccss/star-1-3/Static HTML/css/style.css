@@ -133,6 +133,12 @@ div.de4 {
     width: 23%;
     left: 25px;
 }
+
+div.de5 {
+    width: 40%;
+    left: 25px;
+}
+
 th.prueba {
     text-align: center;
 }
