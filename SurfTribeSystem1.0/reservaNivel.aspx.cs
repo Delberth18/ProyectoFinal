@@ -9,9 +9,12 @@ namespace SurfTribeSystem1._0
 {
     public partial class reservaNivel : System.Web.UI.Page
     {
+        
+
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            Session["numero"] = 0;
+            Session["asigando"] = 0;
         }
     }
 }

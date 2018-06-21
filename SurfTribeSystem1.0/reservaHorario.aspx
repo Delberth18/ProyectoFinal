@@ -110,7 +110,7 @@ box-shadow: 14px 28px 38px -16px rgba(0,0,0,0.75); background: url('ccss/star-1-
              <font size="3"><b>Instructor:</b></font>&nbsp;&nbsp;<asp:Label ID="Label6" runat="server" Text="Carlos Alvarado Sanchez"></asp:Label><br /><br />
 
         <!--<asp:Button runat="server"  CommandArgument='<%#Eval("NOMBRE")%>' style="border-radius: 12px; background: #008CBA; color: white;"  ID="btnRegistrar" Text="  Reservar  "  Visible="true" OnClick="btnRegistrar_Click"/>-->
-             <asp:Button runat="server" style="border-radius: 12px; background: #008CBA;  color: white;" CommandName="btnDesselecionar" CommandArgument='<%#Eval("NOMBRE")%>'  ID="btnDesselecionar" Text="  Reservar  "  Visible="false" />
+             <asp:Button runat="server" style="border-radius: 12px; background: #008CBA;  color: white;" CommandName='<%#Eval("NOMBRE")%>' CommandArgument='<%#Eval("NOMBRE")%>'  ID="btnDesselecionar" Text="  Reservar  "  Visible="false" />
 
         </div>
       </div><br /><br />

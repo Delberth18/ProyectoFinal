@@ -12,6 +12,7 @@ namespace SurfTribeSystem1._0
     public partial class reservaHorario : System.Web.UI.Page
     {
         int cuenta = 1;
+        int numero = 0;
         protected void Page_Load(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection("Data Source=laptop-r7vb3im9\\mssqlserver01;Initial Catalog=SURF_TRIBE;Integrated Security=True");
@@ -53,18 +54,55 @@ namespace SurfTribeSystem1._0
         protected void repeater1_ItemCommand(object source, RepeaterCommandEventArgs e)
         {
 
-
+            int numeroposible = 0;
+            numeroposible= (int)Session[numero]+1;
+            Session[numero] = numeroposible;
 
 
             Image lbl = e.Item.FindControl("ss") as Image;
             Button btn = e.Item.FindControl("1") as Button;
 
+            if ((int)Session["asigando"] == 0) {
+
+                Session["nombreBoton"] = btn.CommandName;
+
+            }
 
 
-            btn.Text = "Desseleccionar";
-            lbl.Visible = true;
+            if ((String)Session["nombreBoton"] == btn.CommandName)
+            {
+               
 
-           
+                if (numeroposible % 2 == 0)
+                {
+                    btn.Text = "  Reservar  ";
+                    lbl.Visible = false;
+                    Session["asigando"] = 0;
+
+                }
+                else
+                {
+
+                    btn.Text = "Desseleccionar";
+                    lbl.Visible = true;
+                    Session["asigando"] = +1;
+
+                }
+            }
+            else
+            {
+                btn.Text = "Desseleccionar";
+                lbl.Visible = true;
+                Session["asigando"] = +1;
+
+
+            }
+
+           // if ((int)Session["asigando"] == 1)
+            //{
+              //  btn.Text = "Desseleccionar";
+               // lbl.Visible = true;
+           // }
 
 
             //  btn2.OnClientClick=" <script>";
