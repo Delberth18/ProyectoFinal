@@ -31,6 +31,33 @@ namespace SurfTribeSystem1._0 {
         protected global::System.Web.UI.HtmlControls.HtmlForm f1;
         
         /// <summary>
+        /// GuanaRepeat control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater GuanaRepeat;
+        
+        /// <summary>
+        /// PuertoRepeat control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater PuertoRepeat;
+        
+        /// <summary>
+        /// LimonRepeat control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater LimonRepeat;
+        
+        /// <summary>
         /// galeria control.
         /// </summary>
         /// <remarks>
@@ -38,6 +65,33 @@ namespace SurfTribeSystem1._0 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Repeater galeria;
+        
+        /// <summary>
+        /// GuanaRepeat2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater GuanaRepeat2;
+        
+        /// <summary>
+        /// PuertoRepeat2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater PuertoRepeat2;
+        
+        /// <summary>
+        /// LimonRepeat2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater LimonRepeat2;
         
         /// <summary>
         /// correoText control.

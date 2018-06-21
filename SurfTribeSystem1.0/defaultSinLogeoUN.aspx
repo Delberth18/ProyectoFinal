@@ -80,25 +80,46 @@
                                         <li class="col-sm-4 col-xs-12">
                                             <ul class="list-unstyled">
                                                 <li>Guanacaste</li>
-                                                <li class=""><a href="packages-grid-left-sidebar.html">Escuela de Surf Calof</a></li>
-                                                <li class=""><a href="packages-grid-right-sidebar.html">Surf's Day</a></li>
-                                                <li class=""><a href="packages-grid.html">Escuela para Surfeadores Las olas</a></li>
+                                                <asp:Repeater ID="GuanaRepeat" runat="server">
+                                                    <ItemTemplate>
+                                                        <li class="">
+                                                        <a  href='paginaEscuela.aspx?idEscuela=<%# Eval("Nombre") %>' >
+                                                                <asp:Label runat="server" Text='<%# Eval("Nombre") %>'></asp:Label>
+                                                            </a>
+
+                                                        </li>
+                                                    </ItemTemplate>
+                                                </asp:Repeater>
                                             </ul>
                                         </li>
                                         <li class="col-sm-4 col-xs-12">
                                             <ul class="list-unstyled">
                                                 <li>Puntarenas</li>
-                                                <li class=""><a href="packages-list-left-sidebar.html">Escuela de Surf Calof</a></li>
-                                                <li class=""><a href="packages-list-right-sidebar.html">Surf's Day</a></li>
-                                                <li class=""><a href="packages-list.html">Escuela para Surfeadores Las olas</a></li>
+                                                <asp:Repeater ID="PuertoRepeat" runat="server">
+                                                    <ItemTemplate>
+                                                        <li class="">
+                                                        <a  href='paginaEscuela.aspx?idEscuela=<%# Eval("Nombre") %>' >
+                                                                <asp:Label runat="server" Text='<%# Eval("Nombre") %>'></asp:Label>
+                                                            </a>
+
+                                                        </li>
+                                                    </ItemTemplate>
+                                                </asp:Repeater>
                                             </ul>
                                         </li>
                                         <li class="col-sm-4 col-xs-12">
                                             <ul class="list-unstyled">
                                                 <li>Limón</li>
-                                                <li class=""><a href="single-package-left-sidebar.html">Escuela de Surf Calof</a></li>
-                                                <li class=""><a href="single-package-right-sidebar.html">Surf's Day</a></li>
-                                                <li class=""><a href="single-package-fullwidth.html">Escuela para Surfeadores Las olas</a></li>
+                                                <asp:Repeater ID="LimonRepeat" runat="server">
+                                                    <ItemTemplate>
+                                                        <li class="">
+                                                            <a href='paginaEscuela.aspx?idEscuela=<%# Eval("Nombre") %>'>
+                                                                <asp:Label runat="server" Text='<%# Eval("Nombre") %>'></asp:Label>
+                                                            </a>
+
+                                                        </li>
+                                                    </ItemTemplate>
+                                                </asp:Repeater>
                                             </ul>
                                         </li>
                                     </ul>
@@ -334,9 +355,9 @@
                     <div class="row">
                         <div class="col-xs-12">
                             <div class="media destinations">
-                                <a class="media-left" href="ccss/star-1-3/Static HTML/destination-cities.html">
-                                    <img  class="media-object" src="Imagenes/20180610_081948.jpg"  alt="Destination"/>
-                                </a>
+                               <%-- <a class="media-left" href="ccss/star-1-3/Static HTML/destination-cities.html">
+                                    <img class="media-object" src="Imagenes/PIC_20160827_140254.JPG" alt="Destination" />
+                                </a>--%>
                                 <div class="media-body">
                                     <h3 class="media-heading">Escoga
                                         <br />
@@ -345,26 +366,47 @@
                                     <div class="clearfix">
                                         <ul class="list-unstyled">
                                             <li><i class="fa fa-minus" aria-hidden="true"></i>Guanacaste</li>
-                                            <li><a href="ccss/star-1-3/Static HTML/destination-single-city.html"><i class="fa fa-square" aria-hidden="true"></i>Aenean</a></li>
-                                            <li><a href="ccss/star-1-3/Static HTML/destination-single-city.html"><i class="fa fa-square" aria-hidden="true"></i>Etiam</a></li>
-                                            <li><a href="ccss/star-1-3/Static HTML/destination-single-city.html"><i class="fa fa-square" aria-hidden="true"></i>Donec</a></li>
+                                            <asp:Repeater ID="GuanaRepeat2" runat="server">
+                                                <ItemTemplate>
+                                                    <li class="">
+                                                        <a  href='paginaEscuela.aspx?idEscuela=<%# Eval("Nombre") %>' >
+                                                            <asp:Label runat="server" Text='<%# Eval("Nombre") %>'></asp:Label>
+                                                        </a>
+
+                                                    </li>
+                                                </ItemTemplate>
+                                            </asp:Repeater>
                                         </ul>
 
                                         <ul class="list-unstyled">
                                             <li><i class="fa fa-minus" aria-hidden="true"></i>Puntarenas</li>
-                                            <li><a href="destination-single-city.html"><i class="fa fa-square" aria-hidden="true"></i>Maecenas</a></li>
-                                            <li><a href="destination-single-city.html"><i class="fa fa-square" aria-hidden="true"></i>Cras Sagittis</a></li>
-                                            <li><a href="destination-single-city.html"><i class="fa fa-square" aria-hidden="true"></i>Vestibulum</a></li>
+                                            <asp:Repeater ID="PuertoRepeat2" runat="server">
+                                                <ItemTemplate>
+                                                    <li class="">
+                                                        <a  href='paginaEscuela.aspx?idEscuela=<%# Eval("Nombre") %>' >
+                                                            <asp:Label runat="server" Text='<%# Eval("Nombre") %>'></asp:Label>
+                                                        </a>
+
+                                                    </li>
+                                                </ItemTemplate>
+                                            </asp:Repeater>
                                         </ul>
                                         <ul class="list-unstyled">
                                             <li><i class="fa fa-minus" aria-hidden="true"></i>Limón</li>
-                                            <li><a href="destination-single-city.html"><i class="fa fa-square" aria-hidden="true"></i>Morbi Sed</a></li>
-                                            <li><a href="destination-single-city.html"><i class="fa fa-square" aria-hidden="true"></i>Pellentesque</a></li>
-                                            <li><a href="destination-single-city.html"><i class="fa fa-square" aria-hidden="true"></i>Proin</a></li>
+                                            <asp:Repeater ID="LimonRepeat2" runat="server">
+                                                <ItemTemplate>
+                                                    <li class="">
+                                                        <a  href='paginaEscuela.aspx?idEscuela=<%# Eval("Nombre") %>' >
+                                                            <asp:Label runat="server" Text='<%# Eval("Nombre") %>'></asp:Label>
+                                                        </a>
+
+                                                    </li>
+                                                </ItemTemplate>
+                                            </asp:Repeater>
                                         </ul>
-                                       
+
                                     </div>
-                                    
+
                                 </div>
                             </div>
                         </div>

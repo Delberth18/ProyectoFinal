@@ -16,6 +16,9 @@ namespace SurfTribeSystem1._0
         protected void Page_Load(object sender, EventArgs e)
         {
             ListarRegistro();
+            ListarGuana();
+            ListarLimon();
+            ListarPuerto();
         }
 
         protected void ingresoButton_Click(object sender, EventArgs e)
@@ -76,6 +79,95 @@ namespace SurfTribeSystem1._0
                 string script = "swal('Error', '" + ex + "', 'error'); ";
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
             }
+        }
+
+        private void ListarGuana()
+        {
+            Resultado resultado = new Resultado();
+            Escuela escuela = new Escuela();
+            List<Escuela> lista = new List<Escuela>();
+            try
+            {
+                escuela.Tag = "GUANACASTE";
+                resultado = new EscuelaLogica().Acciones(escuela);
+                if (resultado.TipoResultado == "OK")
+                {
+                    lista = new List<Escuela>();
+                    lista = (List<Escuela>)resultado.ObjetoResultado;
+                    GuanaRepeat.DataSource = lista;
+                    GuanaRepeat.DataBind();
+
+                    GuanaRepeat2.DataSource = lista;
+                    GuanaRepeat2.DataBind();
+                }
+
+            }
+            catch (Exception ex)
+            {
+                string script = "swal('Error', '" + ex + "', 'error'); ";
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
+            }
+        }
+
+        private void ListarPuerto()
+        {
+            Resultado resultado = new Resultado();
+            Escuela escuela = new Escuela();
+            List<Escuela> lista = new List<Escuela>();
+            try
+            {
+                escuela.Tag = "PUNTARENAS";
+                resultado = new EscuelaLogica().Acciones(escuela);
+                if (resultado.TipoResultado == "OK")
+                {
+                    lista = new List<Escuela>();
+                    lista = (List<Escuela>)resultado.ObjetoResultado;
+                    PuertoRepeat.DataSource = lista;
+                    PuertoRepeat.DataBind();
+
+                    PuertoRepeat2.DataSource = lista;
+                    PuertoRepeat2.DataBind();
+                }
+
+            }
+            catch (Exception ex)
+            {
+                string script = "swal('Error', '" + ex + "', 'error'); ";
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
+            }
+        }
+
+        private void ListarLimon()
+        {
+            Resultado resultado = new Resultado();
+            Escuela escuela = new Escuela();
+            List<Escuela> lista = new List<Escuela>();
+            try
+            {
+                escuela.Tag = "LIMON";
+                resultado = new EscuelaLogica().Acciones(escuela);
+                if (resultado.TipoResultado == "OK")
+                {
+                    lista = new List<Escuela>();
+                    lista = (List<Escuela>)resultado.ObjetoResultado;
+                    LimonRepeat.DataSource = lista;
+                    LimonRepeat.DataBind();
+
+                    LimonRepeat2.DataSource = lista;
+                    LimonRepeat2.DataBind();
+                }
+
+            }
+            catch (Exception ex)
+            {
+                string script = "swal('Error', '" + ex + "', 'error'); ";
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
+            }
+        }
+
+        protected void irAEscuela()
+        {
+            Response.Redirect("paginaEscuela.aspx");
         }
 
     }

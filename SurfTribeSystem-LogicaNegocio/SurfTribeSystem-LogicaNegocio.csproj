@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ComentarioLogica.cs" />
+    <Compile Include="EscuelaLogica.cs" />
     <Compile Include="FaqLogica.cs" />
     <Compile Include="PantallaLogica.cs" />
     <Compile Include="PrecioLogica.cs" />
