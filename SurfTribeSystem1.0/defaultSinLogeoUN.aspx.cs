@@ -165,10 +165,7 @@ namespace SurfTribeSystem1._0
             }
         }
 
-        protected void irAEscuela()
-        {
-            Response.Redirect("paginaEscuela.aspx");
-        }
+       
 
     }
 }

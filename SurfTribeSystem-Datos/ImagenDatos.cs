@@ -143,8 +143,7 @@ namespace SurfTribeSystem_Datos
                 {
                     resultado.TipoResultado = "OK";
                     List<Imagen> lista = new List<Imagen>();
-                    if ((img.Tag == "LISTADO" && datos.Tables[1] != null && datos.Tables[1].Rows.Count != 0) ||
-                        (img.Tag == "LISTADOESPECIFICO" && datos.Tables[1] != null && datos.Tables[1].Rows.Count != 0))
+                    if ((img.Tag == "LISTADO" || img.Tag == "LISTADOESPECIFICO" || img.Tag == "LISTADOESCUELA" )&& datos.Tables[1] != null && datos.Tables[1].Rows.Count != 0)
                     {
                         int cant = 1;
                         foreach (DataRow row in datos.Tables[1].Rows)

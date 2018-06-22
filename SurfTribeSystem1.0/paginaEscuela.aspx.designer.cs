@@ -13,12 +13,33 @@ namespace SurfTribeSystem1._0 {
     public partial class paginaEscuela {
         
         /// <summary>
-        /// option_color control.
+        /// banerImg control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlLink option_color;
+        protected global::System.Web.UI.WebControls.Repeater banerImg;
+        
+        /// <summary>
+        /// galeria control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater galeria;
+        
+        /// <summary>
+        /// Master property.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated property.
+        /// </remarks>
+        public new SurfTribeSystem1._0.Site1 Master {
+            get {
+                return ((SurfTribeSystem1._0.Site1)(base.Master));
+            }
+        }
     }
 }
