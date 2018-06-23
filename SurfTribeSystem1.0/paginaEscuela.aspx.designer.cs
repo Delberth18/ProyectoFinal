@@ -31,6 +31,24 @@ namespace SurfTribeSystem1._0 {
         protected global::System.Web.UI.WebControls.Repeater galeria;
         
         /// <summary>
+        /// info control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater info;
+        
+        /// <summary>
+        /// infoSencilla control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater infoSencilla;
+        
+        /// <summary>
         /// Master property.
         /// </summary>
         /// <remarks>

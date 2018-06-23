@@ -16,6 +16,8 @@ namespace SurfTribeSystem_Entidades
         string playa_concurrida;
         string correo;
         string zona;
+        string descripcion;
+        string imgs;
 
         string tag;
 
@@ -28,5 +30,7 @@ namespace SurfTribeSystem_Entidades
         public string Correo { get => correo; set => correo = value; }
         public string Zona { get => zona; set => zona = value; }
         public string Tag { get => tag; set => tag = value; }
+        public string Descripcion { get => descripcion; set => descripcion = value; }
+        public string Imgs { get => imgs; set => imgs = value; }
     }
 }

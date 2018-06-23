@@ -1,5 +1,6 @@
 ﻿using SurfTribeSystem_Datos;
 using SurfTribeSystem_Entidades;
+using SurfTribeSystem_LogicaNegocio;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -32,10 +33,15 @@ namespace SurfTribeSystem1._0
             switch (sExtension)
             {
                 case ".jpg":
+                case ".JPG":
                 case ".jpeg":
+                case ".JPEG":
                 case ".png":
+                case ".PNG":
                 case ".gif":
+                case ".GIF":
                 case ".bmp":
+                case ".BMP":
                     verif = true;
                     break;
                 default:

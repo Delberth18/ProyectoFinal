@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace SurfTribeSystem_Datos
 {
-    public class ImagenLogica
+    public class ImagenDatos
     {
         public Resultado Acciones(Imagen img)
         {

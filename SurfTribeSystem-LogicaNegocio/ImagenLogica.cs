@@ -18,7 +18,7 @@ namespace SurfTribeSystem_LogicaNegocio
             Resultado resultado = new Resultado();
             try
             {
-                resultado = new SurfTribeSystem_Datos.ImagenLogica().Acciones(img);
+                resultado = new ImagenDatos().Acciones(img);
 
                 return resultado;
             }

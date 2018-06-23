@@ -122,6 +122,18 @@ namespace SurfTribeSystem_Datos
                 parametros.Add(param);
 
                 param = new SqlParameter();
+                if (escuela.Descripcion == null)
+                {
+                    param.Value = DBNull.Value;
+                }
+                else
+                {
+                    param.Value = escuela.Descripcion;
+                }
+                param.ParameterName = "@DESCRIPCION";
+                parametros.Add(param);
+
+                param = new SqlParameter();
                 if (escuela.Tag == null)
                 {
                     param.Value = DBNull.Value;
@@ -151,7 +163,7 @@ namespace SurfTribeSystem_Datos
                 {
                     resultado.TipoResultado = "OK";
                     List<Escuela> lista = new List<Escuela>();
-                    if ((escuela.Tag == "LIMON" || escuela.Tag == "PUNTARENAS" || escuela.Tag == "GUANACASTE") && datos.Tables[1] != null && datos.Tables[1].Rows.Count != 0)
+                    if ((escuela.Tag == "LIMON" || escuela.Tag == "PUNTARENAS" || escuela.Tag == "GUANACASTE" || escuela.Tag == "LISTADO_POR_NOMBRE") && datos.Tables[1] != null && datos.Tables[1].Rows.Count != 0)
                     {
                         foreach (DataRow row in datos.Tables[1].Rows)
                         {
@@ -166,10 +178,38 @@ namespace SurfTribeSystem_Datos
                                 Anio_fundacion = row["ANIO_FUNDACION"] is DBNull ? null : row["ANIO_FUNDACION"].ToString(),
                                 Playa_concurrida = row["PLAYA_CONCURRIDA"] is DBNull ? null : row["PLAYA_CONCURRIDA"].ToString(),
                                 Correo = row["CORREO"] is DBNull ? null : row["CORREO"].ToString(),
+                                Descripcion = row["DESCRIPCION"] is DBNull ? null : row["DESCRIPCION"].ToString(),
                                 Zona = row["ZONA"] is DBNull ? null : row["ZONA"].ToString()
                             });
 
                         }
+                    }
+                    else if (escuela.Tag == "LISTADO_SENCILLO_IMAGEN" && datos.Tables[1] != null && datos.Tables[1].Rows.Count != 0)
+                    {
+                        foreach (DataRow row in datos.Tables[1].Rows)
+                        {
+
+
+                            lista.Add(new Escuela
+                            {
+                                Nombre = row["NOMBRE"] is DBNull ? null : row["NOMBRE"].ToString(),
+                                Ubicacion = row["UBICACION"] is DBNull ? null : row["UBICACION"].ToString(),
+                                Telefono = row["TELEFONO"] is DBNull ? null : row["TELEFONO"].ToString(),
+                                Telefono2 = row["TELEFONO2"] is DBNull ? null : row["TELEFONO2"].ToString(),
+                                Imgs= row["IMAGEN"] is DBNull ? null : row["IMAGEN"].ToString(),
+                                Anio_fundacion = row["ANIO_FUNDACION"] is DBNull ? null : row["ANIO_FUNDACION"].ToString(),
+                                Playa_concurrida = row["PLAYA_CONCURRIDA"] is DBNull ? null : row["PLAYA_CONCURRIDA"].ToString(),
+                                Correo = row["CORREO"] is DBNull ? null : row["CORREO"].ToString(),
+                                Descripcion = row["DESCRIPCION"] is DBNull ? null : row["DESCRIPCION"].ToString(),
+                                Zona = row["ZONA"] is DBNull ? null : row["ZONA"].ToString()
+                            });
+
+                        }
+                    }
+                    else
+                    {
+                        resultado.TipoResultado = "ERROR";
+                        resultado.Mensaje = "No existe ningún elemento";
                     }
                     resultado.ObjetoResultado = lista;
 
