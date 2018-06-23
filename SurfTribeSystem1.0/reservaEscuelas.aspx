@@ -53,8 +53,8 @@
                         <br /><br />
                             <center><font size="5"><b FACE="arial" style="margin-left: -70px;" >Seleccione su escuela</b></font></center><br />
                         
-                    </div<br /><br /><br />
-                </div>
+                    </div>
+                </div><br /><br /><br />
                 <div class="row">
 
                     <asp:Repeater ID="repeater1" runat="server">
