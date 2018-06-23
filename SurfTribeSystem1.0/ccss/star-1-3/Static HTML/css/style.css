@@ -139,6 +139,11 @@ div.de5 {
     left: 25px;
 }
 
+div.de6 {
+    margin-right: 20px;
+    margin-left: -90px;
+}
+
 th.prueba {
     text-align: center;
 }

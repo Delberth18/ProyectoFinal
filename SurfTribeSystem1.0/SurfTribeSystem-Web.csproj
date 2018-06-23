@@ -1811,10 +1811,13 @@
     <Content Include="ccss\star-1-3\Static HTML\img\about-us\team-01.jpg" />
     <Content Include="ccss\star-1-3\Static HTML\img\about-us\team-02.jpg" />
     <Content Include="ccss\star-1-3\Static HTML\img\about-us\team-03.jpg" />
+    <Content Include="ccss\star-1-3\Static HTML\img\atras.png" />
     <Content Include="ccss\star-1-3\Static HTML\img\bg-menuReserva.jpg" />
     <Content Include="ccss\star-1-3\Static HTML\img\bg-menuReserva2.jpg" />
     <Content Include="ccss\star-1-3\Static HTML\img\bg-menuReserva3.jpg" />
     <Content Include="ccss\star-1-3\Static HTML\img\bg-menuReserva4.jpg" />
+    <Content Include="ccss\star-1-3\Static HTML\img\bg-menuReserva5.jpg" />
+    <Content Include="ccss\star-1-3\Static HTML\img\bg-menuReserva6.jpg" />
     <Content Include="ccss\star-1-3\Static HTML\img\bg-reserva.jpg" />
     <Content Include="ccss\star-1-3\Static HTML\img\bg2.jpg" />
     <Content Include="ccss\star-1-3\Static HTML\img\bg7.png" />
@@ -3507,6 +3510,7 @@
     <Content Include="Imagenes\20171222_161839.jpg" />
     <Content Include="Imagenes\20180603_160427.jpg" />
     <Content Include="Imagenes\20180610_081948.jpg" />
+    <Content Include="Imagenes\20180610_135703.jpg" />
     <Content Include="Imagenes\20180610_135820.jpg" />
     <Content Include="Imagenes\20180610_194048.jpg" />
     <Content Include="Imagenes\PIC_20160827_140254.JPG" />
@@ -3516,8 +3520,10 @@
     <Content Include="registrarse.aspx" />
     <Content Include="RegistroImagenes.aspx" />
     <Content Include="reservaClases.aspx" />
+    <Content Include="reservaConfirmar.aspx" />
     <Content Include="reservaEscuelas.aspx" />
     <Content Include="reservaHorario.aspx" />
+    <Content Include="reservaIndumentaria.aspx" />
     <Content Include="reservaNivel.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -3627,6 +3633,13 @@
     <Compile Include="reservaClases.aspx.designer.cs">
       <DependentUpon>reservaClases.aspx</DependentUpon>
     </Compile>
+    <Compile Include="reservaConfirmar.aspx.cs">
+      <DependentUpon>reservaConfirmar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="reservaConfirmar.aspx.designer.cs">
+      <DependentUpon>reservaConfirmar.aspx</DependentUpon>
+    </Compile>
     <Compile Include="reservaEscuelas.aspx.cs">
       <DependentUpon>reservaEscuelas.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -3640,6 +3653,13 @@
     </Compile>
     <Compile Include="reservaHorario.aspx.designer.cs">
       <DependentUpon>reservaHorario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="reservaIndumentaria.aspx.cs">
+      <DependentUpon>reservaIndumentaria.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="reservaIndumentaria.aspx.designer.cs">
+      <DependentUpon>reservaIndumentaria.aspx</DependentUpon>
     </Compile>
     <Compile Include="reservaNivel.aspx.cs">
       <DependentUpon>reservaNivel.aspx</DependentUpon>
