@@ -31,7 +31,8 @@
             <a style="cursor: auto;"   class="btn btn-blue-grey btn-circle-2 waves-effect mr-0"  title="Nivel"><i class="fa fa-star" ></i></a>
         </div>
         <div class="steps-step-2">
-            <a style="cursor: auto;"   class="btn btn-blue-grey btn-circle-2 waves-effect mr-0" title="Horario"><i class="fa fa-calendar-check-o" ></i></a>
+            <a style="cursor: auto; background-color: #6E81AD !important; color: white !important;"
+                class="btn btn-blue-grey btn-circle-2 waves-effect mr-0" title="Horario"><i class="fa fa-calendar-check-o"></i></a>
         </div>
          <div class="steps-step-2">
             <a  style="cursor: auto;"  class="btn btn-blue-grey btn-circle-2 waves-effect"  title="indumentaria"><i class="fa fa-suitcase" ></i></a>
@@ -71,7 +72,7 @@
                         <br />
                     </div>
 
-                </div>  <br /><br /><br />
+                </div>  <br /><br />
                  <div class="row"><br />
                
 
@@ -86,7 +87,7 @@
                              <ItemTemplate>
                                  <div class="de5 col-xs-12">
   <center>
-  <
+  
     <div style=" width: 290px; height: 270px; -webkit-box-shadow: 14px 28px 38px -16px rgba(0,0,0,0.75);
 -moz-box-shadow: 14px 28px 38px -16px rgba(0,0,0,0.75);
 box-shadow: 14px 28px 38px -16px rgba(0,0,0,0.75); background: url('ccss/star-1-3/Static%20HTML/img/reservaCalendario.png') no-repeat ; background-size: 100%; 
@@ -120,18 +121,22 @@ box-shadow: 14px 28px 38px -16px rgba(0,0,0,0.75); background: url('ccss/star-1-
     </div>
     
     
- </center></div>
-                                 </ItemTemplate>
+ </center>
+                                 </div>
+                             </ItemTemplate>
 
-                    </asp:Repeater>
-</div>
+                        </asp:Repeater>
+                       </div>
+                       <asp:Button ID="Button1" runat="server" OnClick="btnRegistrar_Click" Style="margin-right: -600px;  text-decoration: none; padding: 10px 24px; font-family: arial; font-weight: 300; font-size: 25px; font-style: italic; color: white; background-color: #ff891e; border-radius: 1px; border: 3px double white; box-shadow: -11px 9px 45px 2px rgba(0,0,0,0.75);"
+                           Text="Continuar" />
 
-                    </div></div>
-               
+                   </div>
+               </div>
+
+                 </div>
+
             </div>
-        
         </div>
-			</div>
 		</div></div>
 	</div>
 </section>

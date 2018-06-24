@@ -21,5 +21,12 @@ namespace SurfTribeSystem1._0
             repeater1.DataBind();   
 
         }
+
+        protected void btnRegistrar_Click(object sender, EventArgs e)
+        {
+
+            Response.Redirect("ccss/star-1-3/Static HTML/single-package-right-sidebar.html");
+
+        }
     }
 }

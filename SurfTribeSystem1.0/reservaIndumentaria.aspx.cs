@@ -20,5 +20,10 @@ namespace SurfTribeSystem1._0
             repeater1.DataSource = dt;
             repeater1.DataBind();
         }
+
+        protected void btnOmitir_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("reservaConfirmar.aspx");
+        }
     }
 }

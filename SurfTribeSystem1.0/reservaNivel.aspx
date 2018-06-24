@@ -21,7 +21,8 @@
             <a style="cursor: auto;"   class="btn btn-blue-grey btn-circle-2 waves-effect"  title="Escuela"><i class="fa fa-home" ></i></a>
         </div>
         <div class="steps-step-2">
-            <a style="cursor: auto;"   class="btn btn-blue-grey btn-circle-2 waves-effect mr-0"  title="Nivel"><i class="fa fa-star" ></i></a>
+            <a style="cursor: auto; background-color: #6E81AD !important; color: white !important;"
+                class="btn btn-blue-grey btn-circle-2 waves-effect mr-0" title="Nivel"><i class="fa fa-star"></i></a>
         </div>
         <div class="steps-step-2">
             <a style="cursor: auto;"   class="btn btn-blue-grey btn-circle-2 waves-effect mr-0" title="Horario"><i class="fa fa-calendar-check-o" ></i></a>
@@ -51,10 +52,14 @@
                 <div class="row">
                     <div class="col-xs-12">
                         <br />
-                            <font size="5"><b FACE="arial">Seleccione el nivel</b></font><br />
+                            <font size="5"><b FACE="arial" style="margin-left: -70px;">Seleccione el nivel</b></font><br />
                         <br /> 
+                         <font size="4" style="margin-left: -100px;"><b FACE="arial">1.<u> Ubicación:</u>&nbsp;&nbsp;</b></font>
+                        <asp:Label runat="server" ID="Label2" Text="Guanacaste"></asp:Label>
+                        <font size="4" style="margin-left: 120px;"><b FACE="arial">2. <u>Escuela:</u>&nbsp;&nbsp;</b></font>
+                        <asp:Label runat="server" ID="nombreEscuela" Text="Caribean'ss"></asp:Label>
                     </div>
-                </div>  <asp:label runat="server" text="Escuela: "></asp:label>
+                </div> 
                 <div class="row"><br />
                     <div class="de1 col-xs-12">
                         <div style="margin-left: 40px; background: transparent;" class="thumbnail deals">

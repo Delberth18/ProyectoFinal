@@ -13,5 +13,13 @@ namespace SurfTribeSystem1._0
         {
 
         }
+
+     
+
+        protected void btnOmitir_Click(object sender, EventArgs e)
+        {
+           
+
+        }
     }
 }

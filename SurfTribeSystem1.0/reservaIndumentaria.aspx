@@ -26,8 +26,9 @@
         <div class="steps-step-2">
             <a style="cursor: auto;"   class="btn btn-blue-grey btn-circle-2 waves-effect mr-0" title="Horario"><i class="fa fa-calendar-check-o" ></i></a>
         </div>
-         <div class="steps-step-2">
-            <a  style="cursor: auto;"  class="btn btn-blue-grey btn-circle-2 waves-effect"  title="indumentaria"><i class="fa fa-suitcase" ></i></a>
+        <div class="steps-step-2">
+            <a style="cursor: auto; background-color: #6E81AD !important; color: white !important;"
+                class="btn btn-blue-grey btn-circle-2 waves-effect" title="indumentaria"><i class="fa fa-suitcase"></i></a>
         </div>
          <div class="steps-step-2">
             <a  style="cursor: auto;"  class="btn btn-blue-grey btn-circle-2 waves-effect mr-0"  title="Confirmar"><i class="fa fa-check" ></i></a>
@@ -91,7 +92,7 @@
                  
                    
                 </div>
-                <asp:Button ID="Button1" runat="server" Style="margin-right: -850px; text-decoration: none; padding: 10px 24px; font-family: arial; font-weight: 300; font-size: 25px; font-style: italic; color: white; background-color: #ff891e; border-radius: 1px; border: 3px double white; box-shadow: -11px 9px 45px 2px rgba(0,0,0,0.75);"
+                <asp:Button ID="btnOmitir" OnClick="btnOmitir_Click" runat="server" Style="margin-right: -850px; text-decoration: none; padding: 10px 24px; font-family: arial; font-weight: 300; font-size: 25px; font-style: italic; color: white; background-color: #ff891e; border-radius: 1px; border: 3px double white; box-shadow: -11px 9px 45px 2px rgba(0,0,0,0.75);"
                     Text="Omitir" />
                
             </div>

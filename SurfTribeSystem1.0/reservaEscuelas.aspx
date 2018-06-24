@@ -18,7 +18,8 @@
             <a style="cursor: auto;" class="btn btn-amber btn-circle-2 waves-effect ml-0"  title="Destino"><i class="fa fa-map-marker"></i></a>
         </div>
         <div class="steps-step-2">
-            <a style="cursor: auto;"   class="btn btn-blue-grey btn-circle-2 waves-effect"  title="Escuela"><i class="fa fa-home" ></i></a>
+            <a style="cursor: auto; background-color: #6E81AD !important; color: white !important;"
+                class="btn btn-blue-grey btn-circle-2 waves-effect" title="Escuela"><i class="fa fa-home"></i></a>
         </div>
         <div class="steps-step-2">
             <a style="cursor: auto;"   class="btn btn-blue-grey btn-circle-2 waves-effect mr-0"  title="Nivel"><i class="fa fa-star" ></i></a>
@@ -35,7 +36,7 @@
     </div>
 </div><br /><br />
 
-            <div style=" background-image: url('ccss/star-1-3/Static%20HTML/img/bg-menuReserva3.jpg'); position:relative; z-index:1;
+            <div style=" background-image: url('ccss/star-1-3/Static%20HTML/img/bg-menuReserva7.jpg'); position:relative; z-index:1;
           -webkit-box-shadow: -11px 9px 45px 2px rgba(0,0,0,0.75); -moz-box-shadow: -11px 9px 45px 2px rgba(0,0,0,0.75); box-shadow: -11px 9px 45px 2px rgba(0,0,0,0.75); border-radius: 12px;">
 
             <div class="tab-content" >
@@ -50,33 +51,37 @@
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12">
-                        <br /><br />
-                            <center><font size="5"><b FACE="arial" style="margin-left: -70px;" >Seleccione su escuela</b></font></center><br />
+                        <br />
+                            <center><font size="5"><b FACE="arial" style="margin-left: -70px;" >Seleccione su escuela</b></font></center><br /><br />
+                         <font size="4" style="margin-left: -70px;"><b FACE="arial">1.<u> Ubicación:</u>&nbsp;&nbsp;</b></font>
+                        <asp:Label runat="server" ID="Label2" Text="Guanacaste"></asp:Label>
                         
                     </div>
-                </div><br /><br /><br />
+                </div><br /><br />
                 <div class="row">
 
                     <asp:Repeater ID="repeater1" runat="server">
                         <ItemTemplate>
-                        <div class="de4 col-xs-12">
-                        <div  style="box-shadow: -11px 9px 45px 2px rgba(0,0,0,0.75);     margin-left: 7px;" class="thumbnail deals">
-                            
-                            <div  class="marco3"> 
-<img src="ccss/star-1-3/Static HTML/img/home/deal/deal-02.jpg" width="200" height="150" alt=""> 
-                                <div >
-                                
-                                
-                                <center><font size="4"><b FACE="arial"><asp:Label runat="server" ID="nombre" Text=<%#Eval("NOMBRE")%>></asp:Label></b></font></center><br />
-                                <p><b>Playa:</b> <asp:Label runat="server" ID="playa" Text=<%#Eval("PLAYA_CONCURRIDA")%>></asp:Label></p>
-                                
-                               
-                            </div>
-</div>
-                            <a href="ccss/star-1-3/Static HTML/single-package-right-sidebar.html" class="pageLink"></a>
-                           
-                            
-                        </div>
+                            <div class="de4 col-xs-12">
+                                <div style="box-shadow: -11px 9px 45px 2px rgba(0,0,0,0.75); margin-left: 7px;" class="thumbnail deals">
+
+                                    <div class="marco3">
+                                        <img src="ccss/star-1-3/Static HTML/img/home/deal/deal-02.jpg" width="200" height="150" alt="">
+                                        <div>
+
+
+                                            <center><font size="4"><b FACE="arial"><asp:Label runat="server" ID="nombre" Text=<%#Eval("NOMBRE")%>></asp:Label></b></font></center>
+                                            <br />
+                                            <p><b>Playa:</b>
+                                                <asp:Label runat="server" ID="playa" Text='<%#Eval("PLAYA_CONCURRIDA")%>'></asp:Label></p>
+
+
+                                        </div>
+                                    </div>
+                                    <a href="reservaNivel.aspx" class="pageLink"></a>
+
+
+                                </div>
                     </div>
 
 
