@@ -19,10 +19,10 @@ namespace SurfTribeSystem_LogicaNegocio
 
                 return resultado;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
-                throw;
+                throw ex;
             }
         }
     }

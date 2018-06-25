@@ -33,18 +33,7 @@ namespace SurfTribeSystem_Datos
 
 
 
-                param = new SqlParameter();
-                if (img.Descripcion == null)
-                {
-                    param.Value = DBNull.Value;
-                }
-                else
-                {
-                    param.Value = img.Descripcion;
-                }
-                param.ParameterName = "@DESCRIPCION";
-                parametros.Add(param);
-
+                
                 param = new SqlParameter();
                 if (img.Imgs == null)
                 {
@@ -143,7 +132,7 @@ namespace SurfTribeSystem_Datos
                 {
                     resultado.TipoResultado = "OK";
                     List<Imagen> lista = new List<Imagen>();
-                    if ((img.Tag == "LISTADO" || img.Tag == "LISTADOESPECIFICO" || img.Tag == "LISTADOESCUELA" )&& datos.Tables[1] != null && datos.Tables[1].Rows.Count != 0)
+                    if ((img.Tag == "LISTADO" || img.Tag == "LISTADOESPECIFICO" || img.Tag == "LISTADOESCUELA") && datos.Tables[1] != null && datos.Tables[1].Rows.Count != 0)
                     {
                         int cant = 1;
                         foreach (DataRow row in datos.Tables[1].Rows)
@@ -162,7 +151,6 @@ namespace SurfTribeSystem_Datos
                             lista.Add(new Imagen
                             {
                                 Codigo = row["CODIGO"] is DBNull ? 0 : Convert.ToInt32(row["CODIGO"].ToString()),
-                                Descripcion = row["DESCRIPCION"] is DBNull ? null : row["DESCRIPCION"].ToString(),
                                 Imgs = row["IMAGEN"] is DBNull ? null : row["IMAGEN"].ToString(),
                                 Imagen1 = image,
                                 Pertenece = row["PERTENECE"] is DBNull ? null : row["PERTENECE"].ToString(),
@@ -183,6 +171,45 @@ namespace SurfTribeSystem_Datos
 
                 return resultado;
 
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public Resultado ObtenerPertenencia()
+        {
+            Resultado resultado = new Resultado();
+            DataSet datos = new DataSet();
+            try
+            {
+                
+                datos = new Conexion().EjecutarProcedure("SPR_OBTENER_RPERTENENCIA_IMAGEN");
+
+                resultado.TipoResultado = "OK";
+                List<string> lista = new List<string>();
+                List<string> lista2 = new List<string>();
+                foreach (DataRow row in datos.Tables[0].Rows)
+                {
+                    
+                    lista.Add( row["PERTENECE"] is DBNull ? null : row["PERTENECE"].ToString());
+                 
+                }
+
+                foreach (DataRow row in datos.Tables[1].Rows)
+                {
+
+                    lista2.Add(row["NOMBRE"] is DBNull ? null : row["NOMBRE"].ToString());
+
+                }
+                List<object> lista3 = new List<object>();
+                lista3.Add(lista);
+                lista3.Add(lista2);
+                resultado.ObjetoResultado = lista3;
+
+                return resultado;
 
             }
             catch (Exception ex)

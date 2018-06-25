@@ -25,6 +25,18 @@ namespace SurfTribeSystem_Datos
                 #region parametros
 
                 param = new SqlParameter();
+                if (escuela.Id == null)
+                {
+                    param.Value = DBNull.Value;
+                }
+                else
+                {
+                    param.Value = escuela.Id;
+                }
+                param.ParameterName = "@ID";
+                parametros.Add(param);
+
+                param = new SqlParameter();
                 if (escuela.Nombre == null)
                 {
                     param.Value = DBNull.Value;
@@ -134,6 +146,11 @@ namespace SurfTribeSystem_Datos
                 parametros.Add(param);
 
                 param = new SqlParameter();
+                    param.Value = escuela.Activa;
+                param.ParameterName = "@ACTIVA";
+                parametros.Add(param);
+
+                param = new SqlParameter();
                 if (escuela.Tag == null)
                 {
                     param.Value = DBNull.Value;
@@ -205,6 +222,10 @@ namespace SurfTribeSystem_Datos
                             });
 
                         }
+                    }
+                    else if (escuela.Tag== "INSER_ACTUA" || escuela.Tag=="VALIDA")
+                    {
+                        resultado.TipoResultado = "OK";
                     }
                     else
                     {

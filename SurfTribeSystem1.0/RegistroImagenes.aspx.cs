@@ -21,6 +21,7 @@ namespace SurfTribeSystem1._0
         protected void Page_Load(object sender, EventArgs e)
         {
             ListarRegistro();
+            ListarPertenencia();
         }
         private void borrar()
         {
@@ -57,7 +58,7 @@ namespace SurfTribeSystem1._0
                 string Extension = string.Empty;
                 string Nombre = string.Empty;
 
-                if (txtDescripcion.Text != "" && FileUpload.HasFile)
+                if (FileUpload.HasFile)
                 {
                     Nombre = FileUpload.FileName;
                     Extension = Path.GetExtension(Nombre);
@@ -75,7 +76,7 @@ namespace SurfTribeSystem1._0
                 }
                 else
                 {
-                    string script = "swal('Error', ' No puede faltar nigún dato ', 'error'); ";
+                    string script = "swal('Error', ' No puede faltar la imagen ', 'error'); ";
                     ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
                 }
             }
@@ -90,8 +91,12 @@ namespace SurfTribeSystem1._0
             Resultado resultado = new Resultado();
             try
             {
-                img.Descripcion = txtDescripcion.Text;
                 img.Tag = "INSERTAR";
+                img.Aprobado = true;
+                img.Titulo = txtTitulo.Text;
+                img.Leyenda = txtLeyenda.Text;
+                img.Pertenece = pertenece.Text;
+                img.Dueño = duenos.Text;
 
                 string base64ImageRepresentation = Convert.ToBase64String(FileUpload.FileBytes);
                 img.Imgs = base64ImageRepresentation;
@@ -142,6 +147,41 @@ namespace SurfTribeSystem1._0
                 string script = "swal('Error', '" + ex + "', 'error'); ";
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
             }
+        }
+
+        private void ListarPertenencia()
+        {
+            Resultado resultado = new Resultado();
+            try
+            {
+                List<string> lista1 = new List<string>();
+                List<string> lista2 = new List<string>(); 
+                List<object> lista3 = new List<object>();
+                resultado = new ImagenLogica().ObtenerPertenencia();
+                if (resultado.TipoResultado == "OK")
+                {
+                    lista3= (List<object>)resultado.ObjetoResultado;
+                    lista1 = (List<string>)lista3[0];
+                    lista2 = (List<string>)lista3[1];
+                    pertenece.DataSource = lista1;
+                    pertenece.DataBind();
+
+                    duenos.DataSource = lista2;
+                    duenos.DataBind();
+                }
+
+            }
+            catch (Exception ex)
+            {
+                string script = "swal('Error', '" + ex + "', 'error'); ";
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
+            }
+        }
+
+        protected void imgClick(object sender, EventArgs e)
+        {
+            string script = "swal({ title: 'Are you sure?', text: 'Once deleted, you will not be able to recover this imaginary file!',  icon: 'warning', buttons: true, dangerMode: true, }); ";
+            ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
         }
         protected void btnNuevo_Click(object sender, EventArgs e)
         {

@@ -1,6 +1,6 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="paginaEscuela.aspx.cs" Inherits="SurfTribeSystem1._0.paginaEscuela" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/Site2.Master" AutoEventWireup="true" CodeBehind="paginaEscuela.aspx.cs" Inherits="SurfTribeSystem1._0.paginaEscuela" %>
 
-<%@ MasterType VirtualPath="~/Site1.master" %>
+<%@ MasterType VirtualPath="~/Site2.master" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
@@ -10,7 +10,7 @@
     <!-- PAGE TITLE -->
     <asp:Repeater runat="server" ID="banerImg">
         <ItemTemplate>
-            <section class="pageTitle" style="background-image: url('data:image/jpg;base64,<%# Eval("Imgs") %>');">
+            <section class="pageTitle" style="background-image: url('data:image/jpg;base64,<%# Eval("Imgs") %>');margin-top:96px">
                 <div class="container">
                     <div class="row">
                         <div class="col-xs-12">
@@ -187,7 +187,7 @@
                                         </p>
                                         <div class="detailsInfo">
                                             <ul class="list-inline detailsBtn">
-                                                <li><a href='booking-1.html' class="btn buttonTransparent">Ir ahora</a></li>
+                                                <li><a href="paginaEscuela.aspx?idEscuela=<%# Eval("Playa_concurrida") %>" class="btn buttonTransparent">Ir ahora</a></li>
                                             </ul>
                                         </div>
                                     </div>

@@ -43,7 +43,7 @@ namespace SurfTribeSystem1._0
             try
             {
                 img.Tag = "LISTADOESCUELA";
-                img.Pertenece = "GaleriaEscuela";
+                img.Pertenece = "Galeria Escuela";
                 img.Dueño = nombreEscuela;
 
                 resultado = new ImagenLogica().Acciones(img);
@@ -71,7 +71,7 @@ namespace SurfTribeSystem1._0
             try
             {
                 img.Tag = "LISTADOESCUELA";
-                img.Pertenece = "BanerEscuela";
+                img.Pertenece = "Baner Escuela";
                 img.Dueño = nombreEscuela;
 
                 resultado = new ImagenLogica().Acciones(img);

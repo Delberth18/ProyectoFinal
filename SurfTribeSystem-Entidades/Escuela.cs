@@ -8,6 +8,7 @@ namespace SurfTribeSystem_Entidades
 {
     public class Escuela
     {
+        string id;
         string nombre;
         string ubicacion;
         string telefono;
@@ -18,6 +19,7 @@ namespace SurfTribeSystem_Entidades
         string zona;
         string descripcion;
         string imgs;
+        bool activa;
 
         string tag;
 
@@ -32,5 +34,7 @@ namespace SurfTribeSystem_Entidades
         public string Tag { get => tag; set => tag = value; }
         public string Descripcion { get => descripcion; set => descripcion = value; }
         public string Imgs { get => imgs; set => imgs = value; }
+        public bool Activa { get => activa; set => activa = value; }
+        public string Id { get => id; set => id = value; }
     }
 }

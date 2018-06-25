@@ -11,7 +11,6 @@ namespace SurfTribeSystem_Entidades
     public class Imagen
     {
         int codigo;
-        string descripcion;
         Image imagen;
         string imgs;
         string pertenece;
@@ -23,7 +22,6 @@ namespace SurfTribeSystem_Entidades
         string num;
 
         public int Codigo { get => codigo; set => codigo = value; }
-        public string Descripcion { get => descripcion; set => descripcion = value; }
         public Image Imagen1 { get => imagen; set => imagen = value; }
         public string Pertenece { get => pertenece; set => pertenece = value; }
         public string Tag { get => tag; set => tag = value; }

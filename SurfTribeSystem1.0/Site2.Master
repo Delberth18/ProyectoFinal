@@ -30,6 +30,11 @@
     <!-- GOOGLE FONT -->
     <link href='https://fonts.googleapis.com/css?family=Montserrat:400,600,700' rel='stylesheet' type='text/css'>
 
+     <!--esto es para los popup-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+
     <!-- CUSTOM CSS -->
     <link href="ccss/star-1-3/Static HTML/css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="ccss/star-1-3/Static HTML/css/colors/default.css" id="option_color">
@@ -47,20 +52,15 @@
 </head>
 
 
-
-
-<asp:contentplaceholder id="head" runat="server">
+    <asp:contentplaceholder id="head" runat="server">
     </asp:contentplaceholder>
-
 
 <!-- HEADER -->
 
 <body class="body-wrapper ">
 
     <form id="f1" runat="server">
-        <div class="main-wrapper">
-            
-            <!-- HEADER -->
+         <!-- HEADER -->
             <header>
                  <nav  class="navbar navbar-default navbar-main navbar-fixed-top lightHeader" role="navigation">
                     <div class="container">
@@ -86,33 +86,51 @@
                                 <li class="dropdown megaDropMenu ">
                                     <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="300" data-close-others="true" aria-expanded="false">Escuelas</a>
                                     <ul class="row dropdown-menu">
-
                                         <li class="col-sm-4 col-xs-12">
                                             <ul class="list-unstyled">
                                                 <li>Guanacaste</li>
-                                                <li class=""><a href="packages-grid-left-sidebar.html">Escuela de Surf Calof</a></li>
-                                                <li class=""><a href="packages-grid-right-sidebar.html">Surf's Day</a></li>
-                                                <li class=""><a href="packages-grid.html">Escuela para Surfeadores Las olas</a></li>
+                                                <asp:Repeater ID="GuanaRepeat" runat="server">
+                                                    <ItemTemplate>
+                                                        <li class="">
+                                                        <a  href='paginaEscuela.aspx?idEscuela=<%# Eval("Nombre") %>' >
+                                                                <asp:Label runat="server" Text='<%# Eval("Nombre") %>'></asp:Label>
+                                                            </a>
+
+                                                        </li>
+                                                    </ItemTemplate>
+                                                </asp:Repeater>
                                             </ul>
                                         </li>
                                         <li class="col-sm-4 col-xs-12">
                                             <ul class="list-unstyled">
                                                 <li>Puntarenas</li>
-                                                <li class=""><a href="packages-list-left-sidebar.html">Escuela de Surf Calof</a></li>
-                                                <li class=""><a href="packages-list-right-sidebar.html">Surf's Day</a></li>
-                                                <li class=""><a href="packages-list.html">Escuela para Surfeadores Las olas</a></li>
+                                                <asp:Repeater ID="PuertoRepeat" runat="server">
+                                                    <ItemTemplate>
+                                                        <li class="">
+                                                        <a  href='paginaEscuela.aspx?idEscuela=<%# Eval("Nombre") %>' >
+                                                                <asp:Label runat="server" Text='<%# Eval("Nombre") %>'></asp:Label>
+                                                            </a>
+
+                                                        </li>
+                                                    </ItemTemplate>
+                                                </asp:Repeater>
                                             </ul>
                                         </li>
                                         <li class="col-sm-4 col-xs-12">
                                             <ul class="list-unstyled">
                                                 <li>Limón</li>
-                                                <li class=""><a href="single-package-left-sidebar.html">Escuela de Surf Calof</a></li>
-                                                <li class=""><a href="single-package-right-sidebar.html">Surf's Day</a></li>
-                                                <li class=""><a href="single-package-fullwidth.html">Escuela para Surfeadores Las olas</a></li>
+                                                <asp:Repeater ID="LimonRepeat" runat="server">
+                                                    <ItemTemplate>
+                                                        <li class="">
+                                                            <a href='paginaEscuela.aspx?idEscuela=<%# Eval("Nombre") %>'>
+                                                                <asp:Label runat="server" Text='<%# Eval("Nombre") %>'></asp:Label>
+                                                            </a>
+
+                                                        </li>
+                                                    </ItemTemplate>
+                                                </asp:Repeater>
                                             </ul>
                                         </li>
-
-
                                     </ul>
                                 </li>
                                 <li class="dropdown megaDropMenu ">
@@ -202,9 +220,12 @@
                     </div>
                 </nav>
             </header>
+        <div class="main-wrapper" >
+            
+           
 
 
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server" >
             </asp:ContentPlaceHolder>
 
         </div>

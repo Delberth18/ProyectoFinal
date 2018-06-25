@@ -22,10 +22,26 @@ namespace SurfTribeSystem_LogicaNegocio
 
                 return resultado;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
-                throw;
+                throw ex;
+            }
+        }
+
+        public Resultado ObtenerPertenencia()
+        {
+            Resultado resultado = new Resultado();
+            try
+            {
+                resultado = new ImagenDatos().ObtenerPertenencia();
+
+                return resultado;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
             }
         }
     }

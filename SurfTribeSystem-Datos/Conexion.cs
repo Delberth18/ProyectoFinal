@@ -21,25 +21,31 @@ namespace SurfTribeSystem_Datos
             //return @"Data Source = laptop-r7vb3im9\mssqlserver01; Initial Catalog = SURF_TRIBE; Integrated Security = True";//Eduardo No BORRAR.....que pasa si lo borro, mm? jaja;
         }
 
-        public void EjecutarProcedure(string NombreProcedimiento, List<SqlParameter> Parametros)
+        public DataSet EjecutarProcedure(string NombreProcedimiento)
         {
             try
             {
 
+                DataSet oResult = new DataSet();
+
                 using (SqlConnection oCnn = new SqlConnection(CadenaConexion()))
                 {
-                    oCnn.Open();
-
-                    SqlCommand oCommand = oCnn.CreateCommand();
-                    oCommand.CommandType = CommandType.StoredProcedure;
-                    oCommand.CommandText = NombreProcedimiento;
-
-                    foreach (SqlParameter oParam in Parametros)
+                    using (SqlCommand oCmd = new SqlCommand(NombreProcedimiento, oCnn))
                     {
-                        oCommand.Parameters.Add(oParam);
+                        oCmd.CommandType = CommandType.StoredProcedure;
+
+                       
+
+                        oCnn.Open();
+
+                        using (SqlDataAdapter oAdp = new SqlDataAdapter(oCmd))
+                        {
+                            oAdp.Fill(oResult);
+                        }
+
                     }
 
-                    oCommand.ExecuteNonQuery();
+                    return oResult;
                 }
 
             }

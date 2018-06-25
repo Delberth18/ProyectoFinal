@@ -54,9 +54,9 @@ namespace SurfTribeSystem1._0 {
         /// <remarks>
         /// Auto-generated property.
         /// </remarks>
-        public new SurfTribeSystem1._0.Site1 Master {
+        public new SurfTribeSystem1._0.Site2 Master {
             get {
-                return ((SurfTribeSystem1._0.Site1)(base.Master));
+                return ((SurfTribeSystem1._0.Site2)(base.Master));
             }
         }
     }
