@@ -13,13 +13,13 @@ namespace SurfTribeSystem1._0 {
     public partial class reservaHorario {
         
         /// <summary>
-        /// Control Label2.
+        /// Control Ubicacion.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label2;
+        protected global::System.Web.UI.WebControls.Label Ubicacion;
         
         /// <summary>
         /// Control nombreEscuela.
@@ -31,13 +31,13 @@ namespace SurfTribeSystem1._0 {
         protected global::System.Web.UI.WebControls.Label nombreEscuela;
         
         /// <summary>
-        /// Control Label1.
+        /// Control nivel.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.Label nivel;
         
         /// <summary>
         /// Control repeater1.
@@ -49,12 +49,12 @@ namespace SurfTribeSystem1._0 {
         protected global::System.Web.UI.WebControls.Repeater repeater1;
         
         /// <summary>
-        /// Control Button1.
+        /// Control btnContinuar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.Button btnContinuar;
     }
 }

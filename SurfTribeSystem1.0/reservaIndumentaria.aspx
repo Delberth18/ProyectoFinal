@@ -62,29 +62,33 @@
 
                     <asp:Repeater ID="repeater1" runat="server">
                         <ItemTemplate>
-                        <div class="de4 col-xs-12">
-                        <div  style="box-shadow: -11px 9px 45px 2px rgba(0,0,0,0.75);     margin-left: 7px;" class="thumbnail deals">
-                            
-                            <div  class="marco3"> 
-<img src="Imagenes/20180610_135703.jpg" width="200" height="150" style="height: 300px;" alt=""> 
-                                <div >
-                                    
-                                <br>
-                              
-                                <p><b>Tabla:</b> <asp:Label runat="server" ID="playa" Text=<%#Eval("PLAYA_CONCURRIDA")%>></asp:Label></p>
-                                
-                               
+                            <div class="de4 col-xs-12">
+                                <div style="box-shadow: -11px 9px 45px 2px rgba(0,0,0,0.75); margin-left: 7px;" class="thumbnail deals">
+
+                                    <div class="marco3">
+                                        <img src="Imagenes/20180610_135703.jpg" width="200" height="150" style="height: 300px;" alt="">
+                                        <div>
+
+                                            <br>
+
+                                            <p><b>Tabla:</b>
+                                                <asp:Label runat="server" ID="playa" Text='<%#Eval("PLAYA_CONCURRIDA")%>'></asp:Label></p>
+
+                                             <p><b>Precio:</b>
+                                                <asp:Label runat="server" ID="Label1" Text="₡15,000"></asp:Label></p>
+
+
+                                        </div>
+                                    </div>
+                                    <a href="reservaConfirmar.aspx" class="pageLink" ></a>
+
+
+                                </div>
                             </div>
-</div>
-                            <a href="ccss/star-1-3/Static HTML/single-package-right-sidebar.html" class="pageLink"></a>
-                           
-                            
-                        </div>
-                    </div>
 
 
 
-                            </ItemTemplate>
+                        </ItemTemplate>
 
                     </asp:Repeater>
 

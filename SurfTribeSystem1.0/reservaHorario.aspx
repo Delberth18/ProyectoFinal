@@ -63,11 +63,11 @@
                             <font size="5" style="margin-left: -60px"><b FACE="arial">Seleccione el horario</b></font><br />
                         <br /> <br />
                         <font size="4" style="margin-left: -100px;"><b FACE="arial">1.<u> Ubicación:</u>&nbsp;&nbsp;</b></font>
-                        <asp:Label runat="server" ID="Label2" Text="Guanacaste"></asp:Label>
+                        <asp:Label runat="server" ID="Ubicacion" Text="Guanacaste"></asp:Label>
                         <font size="4" style="margin-left: 120px;"><b FACE="arial">2. <u>Escuela:</u>&nbsp;&nbsp;</b></font>
                         <asp:Label runat="server" ID="nombreEscuela" Text="Caribean'ss"></asp:Label>
                         <font size="4" style="margin-left: 120px;"><b FACE="arial">3. <u>Nivel:</u>&nbsp;&nbsp;</b></font>
-                        <asp:Label runat="server" ID="Label1" Text="Experto"></asp:Label>
+                        <asp:Label runat="server" ID="nivel" Text="Experto"></asp:Label>
 
                         <br />
                     </div>
@@ -126,9 +126,9 @@ box-shadow: 14px 28px 38px -16px rgba(0,0,0,0.75); background: url('ccss/star-1-
                              </ItemTemplate>
 
                         </asp:Repeater>
-                       </div>
-                       <asp:Button ID="Button1" runat="server" OnClick="btnRegistrar_Click" Style="margin-right: -600px;  text-decoration: none; padding: 10px 24px; font-family: arial; font-weight: 300; font-size: 25px; font-style: italic; color: white; background-color: #ff891e; border-radius: 1px; border: 3px double white; box-shadow: -11px 9px 45px 2px rgba(0,0,0,0.75);"
-                           Text="Continuar" />
+                       </div><br />
+                       <asp:Button ID="btnContinuar" runat="server" OnClick="btnRegistrar_Click" Style="margin-right: -600px;  text-decoration: none; padding: 10px 24px; font-family: arial; font-weight: 300; font-size: 25px; font-style: italic; color: white; background-color: #ff891e; border-radius: 1px; border: 3px double white; box-shadow: -11px 9px 45px 2px rgba(0,0,0,0.75);"
+                           Text="Continuar"  Visible="false" />
 
                    </div>
                </div>

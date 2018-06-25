@@ -58,27 +58,27 @@
                             <center><font size="5"><b FACE="arial" style="margin-left: -10px;" >Detalles de Reserva</b></font></center><br />
                         
                     </div>
-                </div><br />
+                </div><br /><br />
              
-                <div class="row">
+                <div class="row"><left>
 
                     
                          <b FACE="arial">
                           <asp:Label ID="Label1" runat="server" Text="Escuela: "  style="font-size: 18px; margin-left:-437px; " ></asp:Label>
 
                          </b>&nbsp; 
-                    <asp:Label ID="Label2" runat="server" Text="Caribean´s"  Style="font-size: 18px;"></asp:Label>
+                    <asp:Label ID="lblEscuela" runat="server" Text=""  Style="font-size: 18px;"></asp:Label>
                     <br /><br />
                     
                     <b FACE="arial">
                           <asp:Label ID="Label3" runat="server" Text="Nivel: "  style="font-size: 18px; margin-left:-494px; " ></asp:Label>
 
                          </b>&nbsp; 
-                    <asp:Label ID="Label4" runat="server" Text="Experto"  Style="font-size: 18px;"></asp:Label>
+                    <asp:Label ID="lblNivel" runat="server" Text="Experto"  Style="font-size: 18px;"></asp:Label></left>
                     <br /><br />
 
                     <b FACE="arial">
-                          <asp:Label ID="Label13" runat="server" Text="Dia de las clases: "  style="font-size: 18px; margin-left:-317px; " ></asp:Label>
+                          <asp:Label ID="lblDia" runat="server" Text="Dia de las clases: "  style="font-size: 18px; margin-left:-317px; " ></asp:Label>
 
                          </b>&nbsp; 
                     <asp:Label ID="Label14" runat="server" Text="12 de Junio 2018"  Style="font-size: 18px;"></asp:Label>
