@@ -11,33 +11,35 @@
         <div class="bookingType bg-ashs"><br /><br /><br />
 
                    <!-- Stepper -->
-<div style="
-    background-image: url(ccss/star-1-3/Static%20HTML/img/bg-menuReserva.jpg); border-radius: 14px;" class="steps-form-2">
-    <div class="steps-row-2 setup-panel-2 d-flex justify-content-between">
-        <div class="steps-step-2">
-            <a style="cursor: auto;" class="btn btn-amber btn-circle-2 waves-effect ml-0"  title="Destino"><i class="fa fa-map-marker"></i></a>
-        </div>
-        <div class="steps-step-2">
-            <a style="cursor: auto;"   class="btn btn-blue-grey btn-circle-2 waves-effect"  title="Escuela"><i class="fa fa-home" ></i></a>
-        </div>
-        <div class="steps-step-2">
-            <a style="cursor: auto; background-color: #6E81AD !important; color: white !important;"
-                class="btn btn-blue-grey btn-circle-2 waves-effect mr-0" title="Nivel"><i class="fa fa-star"></i></a>
-        </div>
-        <div class="steps-step-2">
-            <a style="cursor: auto;"   class="btn btn-blue-grey btn-circle-2 waves-effect mr-0" title="Horario"><i class="fa fa-calendar-check-o" ></i></a>
-        </div>
-         <div class="steps-step-2">
-            <a  style="cursor: auto;"  class="btn btn-blue-grey btn-circle-2 waves-effect"  title="indumentaria"><i class="fa fa-suitcase" ></i></a>
-        </div>
-         <div class="steps-step-2">
-            <a  style="cursor: auto;"  class="btn btn-blue-grey btn-circle-2 waves-effect mr-0"  title="Confirmar"><i class="fa fa-check" ></i></a>
-        </div>
-    </div>
-</div><br /><br />
+            <div style="background-image: url(ccss/star-1-3/Static%20HTML/img/bg-menuReserva.jpg); border-radius: 14px;"
+                class="steps-form-2">
+                <div class="steps-row-2 setup-panel-2 d-flex justify-content-between">
+                    <div class="steps-step-2">
+                        <a style="cursor: auto;" class="btn btn-amber btn-circle-2 waves-effect ml-0" title="Destino"><i class="fa fa-map-marker"></i></a>
+                    </div>
+                    <div class="steps-step-2">
+                        <a style="cursor: auto;" class="btn btn-blue-grey btn-circle-2 waves-effect" title="Escuela"><i class="fa fa-home"></i></a>
+                    </div>
+                    <div class="steps-step-2">
+                        <a style="cursor: auto; background-color: #6E81AD !important; color: white !important;"
+                            class="btn btn-blue-grey btn-circle-2 waves-effect mr-0" title="Nivel"><i class="fa fa-star"></i></a>
+                    </div>
+                    <div class="steps-step-2">
+                        <a style="cursor: auto;" class="btn btn-blue-grey btn-circle-2 waves-effect mr-0" title="Horario"><i class="fa fa-calendar-check-o"></i></a>
+                    </div>
+                    <div class="steps-step-2">
+                        <a style="cursor: auto;" class="btn btn-blue-grey btn-circle-2 waves-effect" title="indumentaria"><i class="fa fa-suitcase"></i></a>
+                    </div>
+                    <div class="steps-step-2">
+                        <a style="cursor: auto;" class="btn btn-blue-grey btn-circle-2 waves-effect mr-0" title="Confirmar"><i class="fa fa-check"></i></a>
+                    </div>
+                </div>
+            </div>
+            <br />
+            <br />
 
 
-             <div style=" background-image: url('ccss/star-1-3/Static%20HTML/img/bg-menuReserva3.jpg'); position:relative; z-index:1;
+            <div style=" background-image: url('ccss/star-1-3/Static%20HTML/img/bg-menuReserva3.jpg'); position:relative; z-index:1;
           -webkit-box-shadow: -11px 9px 45px 2px rgba(0,0,0,0.75); -moz-box-shadow: -11px 9px 45px 2px rgba(0,0,0,0.75); box-shadow: -11px 9px 45px 2px rgba(0,0,0,0.75); border-radius: 12px;">
             <div class="tab-content" >
             <div id="Lugar" class="tab-pane fade in active">
@@ -55,7 +57,7 @@
                             <font size="5"><b FACE="arial" style="margin-left: -70px;">Seleccione el nivel</b></font><br />
                         <br /> 
                          <font size="4" style="margin-left: -100px;"><b FACE="arial">1.<u> Ubicación:</u>&nbsp;&nbsp;</b></font>
-                        <asp:Label runat="server" ID="Label2" Text="Guanacaste"></asp:Label>
+                        <asp:Label runat="server" ID="nombreUbicacíon" Text="Guanacaste"></asp:Label>
                         <font size="4" style="margin-left: 120px;"><b FACE="arial">2. <u>Escuela:</u>&nbsp;&nbsp;</b></font>
                         <asp:Label runat="server" ID="nombreEscuela" Text="Caribean'ss"></asp:Label>
                     </div>
@@ -78,7 +80,7 @@
                                 <div class="detailsInfo">
                                     
                                     <ul class="list-inline detailsBtn">
-                                        <li style="background:  darkorange;"><a style="color:white;" href='ccss/star-1-3/Static HTML/booking-1.html' class="btn buttonTransparent">Principiante</a></li>
+                                         <asp:Button ID="btnPrincipiante" runat="server" Text="Principiante" style="color:white; background: darkorange;" href='reservaHorario.aspx'  class="reserva btn buttonTransparent  progress-wizard-dot" OnClick="btnPrincipiante_Click" />
                                         
                                     </ul>
                                 </div>
@@ -102,8 +104,7 @@
                                 <div class="detailsInfo">
                                     
                                     <ul class="list-inline detailsBtn">
-                                        <li style="background: darkorange;">
-                                            <a data-toggle="modal" data-target="#inquiryModal" href="#" style="color:white;" class="btn buttonTransparent">Intermedio</a></li>
+                                           <asp:Button ID="btnIntermedio" runat="server" Text="Intermedio" style="color:white; background: darkorange;" href='reservaHorario.aspx'  class="reserva btn buttonTransparent  progress-wizard-dot" OnClick="btnIntermedio_Click" />
                                     </ul>
                                 </div>
                             </div>
@@ -125,8 +126,8 @@
                                 <div class="detailsInfo">
                                    
                                     <ul class="list-inline detailsBtn">
-                                        
-                                        <li style="background: darkorange;"><a style="color:white;" href='reservaHorario.aspx'  class="reserva btn buttonTransparent  progress-wizard-dot">Avanzado</a></li>
+                                        <asp:Button ID="btnAvanzado" runat="server" Text="Avanzado" style="color:white; background: darkorange;" href='reservaHorario.aspx'  class="reserva btn buttonTransparent  progress-wizard-dot" OnClick="btnAvanzado_Click" />
+                                       <!-- <li style="background: darkorange;"><a style="color:white;" href='reservaHorario.aspx'  class="reserva btn buttonTransparent  progress-wizard-dot">Avanzado</a></li>-->
                                     </ul>
                                 </div>
                             </div>

@@ -13,13 +13,13 @@ namespace SurfTribeSystem1._0 {
     public partial class reservaEscuelas {
         
         /// <summary>
-        /// Control Label2.
+        /// Control idUbicación.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label2;
+        protected global::System.Web.UI.WebControls.Label idUbicación;
         
         /// <summary>
         /// Control repeater1.

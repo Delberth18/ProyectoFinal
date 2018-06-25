@@ -54,13 +54,13 @@
                         <br />
                             <center><font size="5"><b FACE="arial" style="margin-left: -70px;" >Seleccione su escuela</b></font></center><br /><br />
                          <font size="4" style="margin-left: -70px;"><b FACE="arial">1.<u> Ubicación:</u>&nbsp;&nbsp;</b></font>
-                        <asp:Label runat="server" ID="Label2" Text="Guanacaste"></asp:Label>
+                        <asp:Label runat="server" ID="idUbicación" Text="Guanacaste"></asp:Label>
                         
                     </div>
                 </div><br /><br />
                 <div class="row">
 
-                    <asp:Repeater ID="repeater1" runat="server">
+                    <asp:Repeater ID="repeater1" runat="server" OnItemDataBound="repeater1_ItemDataBound">
                         <ItemTemplate>
                             <div class="de4 col-xs-12">
                                 <div style="box-shadow: -11px 9px 45px 2px rgba(0,0,0,0.75); margin-left: 7px;" class="thumbnail deals">
@@ -68,31 +68,34 @@
                                     <div class="marco3">
                                         <img src="ccss/star-1-3/Static HTML/img/home/deal/deal-02.jpg" width="200" height="150" alt="">
                                         <div>
-
+                                            <br />
 
                                             <center><font size="4"><b FACE="arial"><asp:Label runat="server" ID="nombre" Text=<%#Eval("NOMBRE")%>></asp:Label></b></font></center>
                                             <br />
-                                            <p><b>Playa:</b>
-                                                <asp:Label runat="server" ID="playa" Text='<%#Eval("PLAYA_CONCURRIDA")%>'></asp:Label></p>
+                                            <p>
+                                                <b>Playa:</b>
+                                                <asp:Label runat="server" ID="playa" Text='<%#Eval("PLAYA_CONCURRIDA")%>'></asp:Label>
+                                            </p>
 
 
                                         </div>
                                     </div>
-                                    <a href="reservaNivel.aspx" class="pageLink"></a>
+                                  <!-- <a href="reservaNivel.aspx?escuela=<%#Eval("NOMBRE")%>" class="pageLink"></a>-->
+                                  <asp:HyperLink ID="hpvReservaNivel" runat="server" class="pageLink"  NavigateUrl="reservaNivel.aspx"></asp:HyperLink>
 
 
                                 </div>
-                    </div>
+                            </div>
 
 
 
-                            </ItemTemplate>
+                        </ItemTemplate>
 
                     </asp:Repeater>
 
-                    
-                 
-                   
+
+
+
                 </div>
                
             </div>

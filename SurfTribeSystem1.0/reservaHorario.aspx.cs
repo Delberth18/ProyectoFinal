@@ -15,8 +15,16 @@ namespace SurfTribeSystem1._0
         int numero = 0;
         protected void Page_Load(object sender, EventArgs e)
         {
+
+            Ubicacion.Text = Session["Ubicación"].ToString();
+            nombreEscuela.Text= Session["escuela"].ToString();
+            nivel.Text= Session["Nivel"].ToString();
+
+
+
+
             SqlConnection con = new SqlConnection("Data Source=laptop-r7vb3im9\\mssqlserver01;Initial Catalog=SURF_TRIBE;Integrated Security=True");
-            SqlDataAdapter sda = new SqlDataAdapter("select * from ESCUELA", con);
+            SqlDataAdapter sda = new SqlDataAdapter("select * from usuario", con);
             DataTable dt = new DataTable();
             sda.Fill(dt);
             repeater1.DataSource = dt;
@@ -27,6 +35,8 @@ namespace SurfTribeSystem1._0
 
         protected void btnRegistrar_Click(object sender, EventArgs e)
         {
+
+
             Response.Redirect("reservaIndumentaria.aspx");
             
         }
@@ -55,12 +65,13 @@ namespace SurfTribeSystem1._0
         {
 
             int numeroposible = 0;
-            numeroposible= (int)Session[numero]+1;
-            Session[numero] = numeroposible;
+            numeroposible= (int) Session["numero"]+1;
+            Session["numero"] = numeroposible;
 
 
             Image lbl = e.Item.FindControl("ss") as Image;
             Button btn = e.Item.FindControl("1") as Button;
+            
 
             if ((int)Session["asigando"] == 0) {
 
@@ -78,6 +89,8 @@ namespace SurfTribeSystem1._0
                     btn.Text = "  Reservar  ";
                     lbl.Visible = false;
                     Session["asigando"] = 0;
+                    btnContinuar.Visible = false;
+                    
 
                 }
                 else
@@ -86,7 +99,7 @@ namespace SurfTribeSystem1._0
                     btn.Text = "Desseleccionar";
                     lbl.Visible = true;
                     Session["asigando"] = +1;
-
+                    btnContinuar.Visible = true;
                 }
             }
             else
@@ -94,6 +107,7 @@ namespace SurfTribeSystem1._0
                 btn.Text = "Desseleccionar";
                 lbl.Visible = true;
                 Session["asigando"] = +1;
+                btnContinuar.Visible = true;
 
 
             }
