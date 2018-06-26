@@ -67,7 +67,18 @@ namespace SurfTribeSystem1._0
 
         protected void idEditar_Click(object sender, EventArgs e)
         {
-          
+            try
+            {
+                GridViewRow row = grvEstado.SelectedRow;
+              
+                String correo  = (row.Cells[2].Text);//esta es la ubicacion del id en el grid para guardar
+
+                Response.Redirect("registrarse.aspx");
+            }
+            catch
+            {
+                alert.Text = "Lo sentimos no existe ninguna residencia";
+            }
         }
     }
 }
