@@ -186,6 +186,7 @@ namespace SurfTribeSystem_Datos
                         {
 
 
+
                             lista.Add(new Escuela
                             {
                                 Nombre = row["NOMBRE"] is DBNull ? null : row["NOMBRE"].ToString(),
@@ -196,7 +197,8 @@ namespace SurfTribeSystem_Datos
                                 Playa_concurrida = row["PLAYA_CONCURRIDA"] is DBNull ? null : row["PLAYA_CONCURRIDA"].ToString(),
                                 Correo = row["CORREO"] is DBNull ? null : row["CORREO"].ToString(),
                                 Descripcion = row["DESCRIPCION"] is DBNull ? null : row["DESCRIPCION"].ToString(),
-                                Zona = row["ZONA"] is DBNull ? null : row["ZONA"].ToString()
+                                Zona = row["ZONA"] is DBNull ? null : row["ZONA"].ToString(),
+                                Imgs = row["IMAGEN"] is DBNull ? null : row["IMAGEN"].ToString()
                             });
 
                         }

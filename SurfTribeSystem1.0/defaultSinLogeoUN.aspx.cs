@@ -60,7 +60,7 @@ namespace SurfTribeSystem1._0
             try
             {
                 img.Tag = "LISTADOESPECIFICO";
-                img.Pertenece = "PaginaPrincipal";
+                img.Pertenece = "Pagina Principal";
                 resultado = new ImagenLogica().Acciones(img);
                 if (resultado.TipoResultado == "OK")
                 {

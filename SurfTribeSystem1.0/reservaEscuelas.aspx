@@ -66,7 +66,8 @@
                                 <div style="box-shadow: -11px 9px 45px 2px rgba(0,0,0,0.75); margin-left: 7px;" class="thumbnail deals">
 
                                     <div class="marco3">
-                                        <img src="ccss/star-1-3/Static HTML/img/home/deal/deal-02.jpg" width="200" height="150" alt="">
+                                       <!-- <img src="ccss/star-1-3/Static HTML/img/home/deal/deal-02.jpg" >-->
+                                           <img src='data:image/jpg;base64,<%#Eval("Imgs") %>' width="200" height="150" alt=""/>
                                         <div>
                                             <br />
 

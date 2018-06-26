@@ -20,7 +20,8 @@ namespace SurfTribeSystem1._0
             try
             {
                 nombreEscuela = Request.QueryString["idEscuela"].ToString();
-                
+                nombreEscuela = nombreEscuela.Trim().ToUpper();
+
                 MostrarBaner();
                 CargarGaleria();
                 CargarInfo();
