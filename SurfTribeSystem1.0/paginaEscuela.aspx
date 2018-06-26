@@ -187,7 +187,7 @@
                                         </p>
                                         <div class="detailsInfo">
                                             <ul class="list-inline detailsBtn">
-                                                <li><a href="paginaEscuela.aspx?idEscuela=<%# Eval("Playa_concurrida") %>" class="btn buttonTransparent">Ir ahora</a></li>
+                                                <li><a href="paginaEscuela.aspx?idEscuela=<%# Eval("Nombre") %>" class="btn buttonTransparent">Ir ahora</a></li>
                                             </ul>
                                         </div>
                                     </div>
