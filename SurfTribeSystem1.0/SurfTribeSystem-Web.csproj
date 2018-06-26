@@ -3518,6 +3518,7 @@
     <Content Include="Imagenes\IMG-20171029-WA0010.jpeg" />
     <Content Include="Imagenes\PIC_20160827_140254.JPG" />
     <Content Include="InformaciónGeneral.aspx" />
+    <Content Include="mantUsuarios.aspx" />
     <Content Include="paginaEscuela.aspx" />
     <Content Include="PreciosListado.aspx" />
     <Content Include="registrarse.aspx" />
@@ -3600,6 +3601,13 @@
     </Compile>
     <Compile Include="InformaciónGeneral.aspx.designer.cs">
       <DependentUpon>InformaciónGeneral.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="mantUsuarios.aspx.cs">
+      <DependentUpon>mantUsuarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="mantUsuarios.aspx.designer.cs">
+      <DependentUpon>mantUsuarios.aspx</DependentUpon>
     </Compile>
     <Compile Include="paginaEscuela.aspx.cs">
       <DependentUpon>paginaEscuela.aspx</DependentUpon>

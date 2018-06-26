@@ -59,7 +59,7 @@
 
 <body class="body-wrapper ">
 
-    <form id="f1" runat="server">
+    <form id="f1" runat="server"><asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
          <!-- HEADER -->
             <header>
                  <nav  class="navbar navbar-default navbar-main navbar-fixed-top lightHeader" role="navigation">
