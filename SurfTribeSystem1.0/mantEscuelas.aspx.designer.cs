@@ -10,7 +10,7 @@
 namespace SurfTribeSystem1._0 {
     
     
-    public partial class mantUsuarios {
+    public partial class mantEscuelas {
         
         /// <summary>
         /// UpdatePanel1 control.
@@ -22,40 +22,22 @@ namespace SurfTribeSystem1._0 {
         protected global::System.Web.UI.UpdatePanel UpdatePanel1;
         
         /// <summary>
-        /// Label1 control.
+        /// ddlEscuelas control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.DropDownList ddlEscuelas;
         
         /// <summary>
-        /// txtCed control.
+        /// idSeleccionar control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCed;
-        
-        /// <summary>
-        /// idBuscar control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button idBuscar;
-        
-        /// <summary>
-        /// lblexito control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblexito;
+        protected global::System.Web.UI.WebControls.Button idSeleccionar;
         
         /// <summary>
         /// grvEstado control.
@@ -65,15 +47,6 @@ namespace SurfTribeSystem1._0 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView grvEstado;
-        
-        /// <summary>
-        /// alert control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label alert;
         
         /// <summary>
         /// idEditar control.
