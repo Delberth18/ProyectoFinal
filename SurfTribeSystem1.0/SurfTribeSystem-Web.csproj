@@ -3502,6 +3502,7 @@
     <Content Include="Configuración.aspx" />
     <Content Include="defaultConLogeoUN.aspx" />
     <Content Include="defaultSinLogeoUN.aspx" />
+    <Content Include="editarUsuarios.aspx" />
     <Content Include="FAQlistado.aspx" />
     <Content Include="FAQMantenimiento.aspx" />
     <Content Include="FAQRegistro.aspx" />
@@ -3514,6 +3515,7 @@
     <Content Include="Imagenes\20180610_135703.jpg" />
     <Content Include="Imagenes\20180610_135820.jpg" />
     <Content Include="Imagenes\20180610_194048.jpg" />
+    <Content Include="Imagenes\IMG-20150830-WA0006.jpg" />
     <Content Include="Imagenes\IMG-20170915-WA0002-01.jpeg" />
     <Content Include="Imagenes\IMG-20171029-WA0010.jpeg" />
     <Content Include="Imagenes\PIC_20160827_140254.JPG" />
@@ -3563,6 +3565,13 @@
     </Compile>
     <Compile Include="defaultSinLogeoUN.aspx.designer.cs">
       <DependentUpon>defaultSinLogeoUN.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="editarUsuarios.aspx.cs">
+      <DependentUpon>editarUsuarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="editarUsuarios.aspx.designer.cs">
+      <DependentUpon>editarUsuarios.aspx</DependentUpon>
     </Compile>
     <Compile Include="FAQlistado.aspx.cs">
       <DependentUpon>FAQlistado.aspx</DependentUpon>

@@ -71,9 +71,9 @@ namespace SurfTribeSystem1._0
             {
                 GridViewRow row = grvEstado.SelectedRow;
               
-                String correo  = (row.Cells[2].Text);//esta es la ubicacion del id en el grid para guardar
+                Session["idEditar"]  = (row.Cells[2].Text);//esta es la ubicacion del id en el grid para guardar
 
-                Response.Redirect("registrarse.aspx");
+                Response.Redirect("editarUsuarios.aspx");
             }
             catch
             {

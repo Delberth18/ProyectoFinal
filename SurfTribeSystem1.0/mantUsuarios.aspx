@@ -5,10 +5,10 @@
 
 
     
-     <section class="bookingTypeSection">
+     <section class="bookingTypeSection" style="background-image: url(Imagenes/IMG-20150830-WA0006.jpg);     background-size: 1355px;">
           <asp:UpdatePanel ID="UpdatePanel1" runat="server">
         <ContentTemplate>
-  <div class="container">
+  <div class="container" >
     <div class="row">
       <div class="col-xs-12">
         <div class="bookingType bg-ashs"><br /><br /><br />
