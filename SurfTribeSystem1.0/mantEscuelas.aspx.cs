@@ -28,7 +28,7 @@ namespace SurfTribeSystem1._0
 
         private void ListarEscuelas()
         {
-            SqlConnection con = new SqlConnection(@"Data Source=localhost\SQLEXPRESS;Initial Catalog=SURF_TRIBE; Integrated Security=true;Connection Timeout=45;");
+            SqlConnection con = new SqlConnection(@"Data Source=localhost\SQLEXPRESS;Initial Catalog=SURF_TRIBE; Integrated Security=true;Connection Timeout=45;");//Delberth
             SqlDataAdapter sda = new SqlDataAdapter("select * from ESCUELA", con);
             DataTable dt = new DataTable();
             sda.Fill(dt);

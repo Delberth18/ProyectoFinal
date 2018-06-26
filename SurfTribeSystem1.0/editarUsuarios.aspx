@@ -54,7 +54,7 @@
                             <div class="form-group" style="color:black; font-size:20px; margin-left:40px;">
                               <label class="col-lg-2 control-label" for="focusedInput">Correo</label>
                                 <div class="col-lg-10 txtnormal">
-                                    <asp:TextBox id="txtCorreo"  runat="server" style="width:400px;" class="form-control"></asp:TextBox>
+                                    <asp:TextBox id="txtCorreo"  runat="server" ReadOnly="true" style="width:400px;" class="form-control"></asp:TextBox>
                                 </div>
                             </div><br /><br />
                              
@@ -75,13 +75,14 @@
                             <div class="form-group" style="color:black; font-size:20px; margin-left:40px;">
                               <label class="col-lg-2 control-label" for="focusedInput">Clave</label>
                                 <div class="col-lg-10 txtPequeño">
-                                    <asp:TextBox id="txtClave"   runat="server" class="form-control" style="width:400px;"></asp:TextBox>
+                                    <asp:TextBox id="txtClave" TextMode="Password"   runat="server" class="form-control" style="width:400px;"></asp:TextBox>
+                                     <asp:TextBox id="txtUsu" runat="server" Visible="false" ></asp:TextBox>
                                 </div>
                             </div><br /><br />
                             
                               
                                 
-                                  <asp:Button ID="idGuardar" style="margin-left: -40px;" Text="Guardar" class="btn btn-success btn-lg" runat="server"  />&nbsp;&nbsp;&nbsp;
+                                  <asp:Button ID="idGuardar" style="margin-left: -40px;" Text="Guardar" class="btn btn-success btn-lg" runat="server"  OnClick="idGuardar_Click" />&nbsp;&nbsp;&nbsp;
                                    <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" class="btn btn-primary" CausesValidation="false" OnClick="btnCancelar_Click" />
                               
                          
