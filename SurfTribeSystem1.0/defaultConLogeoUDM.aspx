@@ -1,4 +1,5 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="defaultSinLogeoUN.aspx.cs" Inherits="SurfTribeSystem1._0.defaultSinLogeo" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="defaultConLogeoUDM.aspx.cs" Inherits="SurfTribeSystem1._0.defaultConLogeoUDM" %>
+
 
 <!DOCTYPE html>
 
@@ -71,7 +72,7 @@
                         <div class="collapse navbar-collapse navbar-ex1-collapse">
                             <ul class="nav navbar-nav navbar-right">
                                 <li class="dropdown singleDrop active">
-                                    <a href="defaultSinLogeoUN.aspx">Inicio </a>
+                                    <a href="defaultConLogeoUDM.aspx">Inicio </a>
 
                                 </li>
                                 <li class="dropdown megaDropMenu ">
@@ -143,6 +144,15 @@
                                     <a href="InformaciónGeneral.aspx">Acerca de</a>
 
                                 </li>
+                                 <li class="dropdown singleDrop ">
+                                    <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Mantenimiento</a>
+                                    <ul class="dropdown-menu dropdown-menu-right">
+
+                                        <li class=""><a href="mantUsuarios.aspx">Usuarios</a></li>
+                                        <li class=""><a href="">Escuela</a></li>
+
+                                    </ul>
+                                </li>
                                 <li class="dropdown searchBox">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="searchIcon"><i class="fa fa-search" aria-hidden="true"></i></span></a>
                                     <ul class="dropdown-menu dropdown-menu-right">
@@ -154,21 +164,22 @@
                                         </li>
                                     </ul>
                                 </li>
+                                <li class="dropdown singleDrop">
 
-                                <li>
-                                    <br />
-                                    <div class="headerTopNav">
-                                        <ul class="headerTopNavbar">
-
-                                            <li class="active"><a href="#"><i class="fa " aria-hidden="true"></i></a></li>
-                                        </ul>
-                                        <ul class="headerTopNavbar navbar-right">
-                                            <li class="active"><a id="tiro" data-toggle="modal" data-target="#login"><i class="fa fa-user" aria-hidden="true">&nbsp;</i>Iniciar Sesión </a></li>
-
-                                        </ul>
-                                    </div>
-
-                                </li>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                    <img class="avatar" src="ccss\star-1-3\Static HTML\img\dashboard\dash-user.jpg" alt="">&nbsp;&nbsp;<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                <ul class="dropdown-menu dropdownMenu">
+                                    <center><h5><b>Marcela Castro Rojas</b></h5></center>
+                                    <li><a href="profile.html">
+                                        <h5>Perfil</h5>
+                                    </a></li>
+                                    <li><a href="setting.html">
+                                        <h5>Configuración</h5>
+                                    </a></li>
+                                    <li><a href="#">
+                                        <h5>Cerrar Sesión</h5>
+                                    </a></li>
+                              </ul></li>
 
 
                             </ul>
@@ -510,7 +521,7 @@
                             <asp:TextBox TextMode="Password" ID="claveText" runat="server" class="form-control bg-ash" placeholder="Clave" />
                         </div>
                         <div class="checkbox">
-                            <asp:Label ID="lblError" runat="server" Visible="false"></asp:Label>
+
                             <a class="forgotPass clerfix">Olvido su contraseña?</a><br />
                         </div>
                         <asp:Button ID="ingresarButton" class="btn btn-default" runat="server" Text="Ingresar" OnClick="ingresoButton_Click" />

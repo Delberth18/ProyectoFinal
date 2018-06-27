@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site2.Master" AutoEventWireup="true" CodeBehind="mantUsuarios.aspx.cs" Inherits="SurfTribeSystem1._0.mantUsuarios" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site3.Master" AutoEventWireup="true" CodeBehind="mantUsuarios.aspx.cs" Inherits="SurfTribeSystem1._0.mantUsuarios" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -34,7 +34,7 @@
                
                       
    
-                    <center class="titulo" style="    width: 1100px;
+                    <center class="titulo" style="    width: 94%;
     background: darkorange;
     margin-left: -10px;">
                             
