@@ -5,7 +5,7 @@
 
 
     
-     <section class="bookingTypeSection" style="background-image: url(Imagenes/IMG-20150830-WA0006.jpg);     background-size: 1355px; background-repeat:no-repeat; background-size:cover">
+     <section class="bookingTypeSection" style="background-image: url(Imagenes/IMG-20150830-WA0006.jpg); background-repeat:no-repeat; background-size:cover">
           <asp:UpdatePanel ID="UpdatePanel1" runat="server">
         <ContentTemplate>
   <div class="container" >
@@ -16,7 +16,7 @@
 
 
             <div style=" background-image: url('ccss/star-1-3/Static%20HTML/img/bg-menuReserva.jpg'); position:relative; z-index:1;
-          -webkit-box-shadow: -11px 9px 45px 2px rgba(0,0,0,0.75); -moz-box-shadow: -11px 9px 45px 2px rgba(0,0,0,0.75); box-shadow: -11px 9px 45px 2px rgba(0,0,0,0.75); border-radius: 12px; ">
+          -webkit-box-shadow: -11px 9px 45px 2px rgba(0,0,0,0.75); -moz-box-shadow: -11px 9px 45px 2px rgba(0,0,0,0.75); box-shadow: -11px 9px 45px 2px rgba(0,0,0,0.75); border-radius: 12px;">
 
             <div class="tab-content" >
             <div id="Lugar" class="tab-pane fade in active">
@@ -34,7 +34,12 @@
                
                       
    
-     <center class="titulo"><asp:Label ID="Label1" runat="server" Text="Mantenimiento Usuarios" font-size="20" style="margin-left:-50px" ></asp:Label></center> 
+                    <center class="titulo" style="    width: 1100px;
+    background: darkorange;
+    margin-left: -10px;">
+                            
+                        <center><font size="7"><b style="    background-color: darkorange; color: black; border-radius: 484px;  margin-left: 37px;  opacity: 0.8;" FACE="arial">Mantenimiento Usuarios</b></font></center>
+                      </center>
     <br /><br /> 
     
    <center>
@@ -46,10 +51,10 @@
             
   
      <asp:Button ID="idBuscar" Text="  Buscar  " class="btn btn-primary"  style="margin-left:-50px" runat="server" OnClick="idBuscar_Click"  ></asp:Button>
-
+       <br /><br />
    </center>
     <br />  <div class="Alineado eti"  style="margin-left: -40px;"> <asp:Label ID="lblexito" runat="server" Text=""  Font-Size="Medium" Font-Bold="true"></asp:Label></div>
-                    <div style="margin-left: 342px;">
+                    <div style="margin-left: 260px;">
     <asp:GridView  ID="grvEstado" runat="server"  AutoGenerateColumns="False" HorizontalAlign="Center" BackColor="White" BorderColor="#CCCCCC" 
         BorderStyle="None" BorderWidth="1px" CellPadding="3" 
          SelectedIndex="0"
@@ -80,7 +85,10 @@
         <SortedDescendingCellStyle BackColor="#CAC9C9"></SortedDescendingCellStyle>
 
         <SortedDescendingHeaderStyle BackColor="#00547E"></SortedDescendingHeaderStyle>
-    </asp:GridView></div>
+    </asp:GridView>
+ <asp:Button ID="idEditar"  Style=" margin-top: -69px; margin-left: 120px;" Text="Editar Usuario" class="btn btn-success btn-lg" runat="server" OnClick="idEditar_Click" visible="false" />
+
+                    </div>
 
     <br /><br />
     <center>
@@ -88,7 +96,7 @@
         <br />
 
        
-        <asp:Button ID="idEditar" Text="Editar Usuario" class="btn btn-success btn-lg" runat="server" OnClick="idEditar_Click" visible="false" />
+       
         
     
 

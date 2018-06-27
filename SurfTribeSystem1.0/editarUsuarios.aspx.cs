@@ -1,4 +1,5 @@
 ﻿using SurfTribeSystem_Entidades;
+using SurfTribeSystem_LogicaNegocio;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -12,38 +13,101 @@ namespace SurfTribeSystem1._0
 {
     public partial class editarUsu : System.Web.UI.Page
     {
+        Usuario usuario = new Usuario();
+        List<Usuario> usu = new List<Usuario>();
         protected void Page_Load(object sender, EventArgs e)
         {
             String correo = Session["idEditar"].ToString();
-            SqlConnection con = new SqlConnection("Data Source=laptop-r7vb3im9\\mssqlserver01;Initial Catalog=SURF_TRIBE;Integrated Security=True");
-            SqlDataAdapter sda = new SqlDataAdapter("select * from USUARIO where CORREO='" + correo+ "'", con);
-            DataTable dt = new DataTable();
-            sda.Fill(dt);
+            if (!IsPostBack)
+            {
+                SqlConnection con = new SqlConnection("Data Source=laptop-r7vb3im9\\mssqlserver01;Initial Catalog=SURF_TRIBE;Integrated Security=True");
+                SqlDataAdapter sda = new SqlDataAdapter("select * from USUARIO where CORREO='" + correo + "'", con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
 
-            DataRow row = dt.Rows[0];
-            txtCorreo.Text = Convert.ToString(row["CORREO"]);
-
-         
-            txtClave.Text = Convert.ToString(row["CLAVE"]);
-
-           
-            txtNombre.Text = Convert.ToString(row["NOMBRE"]);
-
-            
-            txtApellidos.Text = Convert.ToString(row["APELLIDOS"]);
-
-            
-            txtNumero.Text = Convert.ToString(row["TELEFONO"]);
-
-            
-            txtPaís.Text = Convert.ToString(row["PAIS"]);
+                DataRow row = dt.Rows[0];
+                txtCorreo.Text = Convert.ToString(row["CORREO"]);
 
 
+                txtClave.Text = Convert.ToString(row["CLAVE"]);
+
+
+                txtNombre.Text = Convert.ToString(row["NOMBRE"]);
+
+
+                txtApellidos.Text = Convert.ToString(row["APELLIDOS"]);
+
+
+                txtNumero.Text = Convert.ToString(row["TELEFONO"]);
+
+
+                txtPaís.Text = Convert.ToString(row["PAIS"]);
+
+                txtUsu.Text = Convert.ToString(row["ID_TIPO_USU"]);
+
+            }
         }
 
         protected void btnCancelar_Click(object sender, EventArgs e)
         {
             Response.Redirect("mantUsuarios.aspx");
+        }
+
+        protected void idGuardar_Click(object sender, EventArgs e)
+        {
+           
+           
+
+
+            if (txtClave.Text != "") {
+
+                try
+                {
+                  //  SqlConnection con = new SqlConnection("Data Source=laptop-r7vb3im9\\mssqlserver01;Initial Catalog=SURF_TRIBE;Integrated Security=True");
+                    //SqlDataAdapter sda = new SqlDataAdapter("UPDATE [dbo].[USUARIO] SET CLAVE = '" + txtClave.Text + "',NOMBRE = '" + txtNombre.Text + "',APELLIDOS ='" + txtApellidos.Text + "', TELEFONO ='" + txtNumero.Text + "' WHERE USUARIO.CORREO = '" + txtCorreo.Text + "'", con);
+                    Resultado resultado = new Resultado();
+                    usuario.Tag = "ACTUALIZAR";
+                    usuario.Nombre = txtNombre.Text;
+                    usuario.Apellidos = txtApellidos.Text;
+                    usuario.Correo = txtCorreo.Text;
+                    usuario.Telefono = txtNumero.Text;
+                    usuario.Clave = txtClave.Text;
+                    usuario.Pais = txtPaís.Text;
+                    usuario.Tipo_usu = txtUsu.Text;
+
+
+                    resultado = new UsuarioLogica().Acciones(usuario);
+
+                    if (resultado.TipoResultado == "OK")
+                    {
+                        Session["Exito"] = 1;
+                        Response.Redirect("mantUsuarios.aspx");
+                    }
+                    else
+                    {
+                        if (resultado.CodigoMensaje == "1")
+                        {
+                            string script = "swal('Lo sentimos,', '" + resultado.Mensaje + "', 'info'); ";
+                            ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
+                        }
+                        else
+                        {
+                            string script = "swal('Lo sentimos, ha ocurrido un error', '" + resultado.Mensaje + "', 'error'); ";
+                            ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
+                        }
+
+                    }
+
+
+
+                }
+                catch {
+                    string script = "swal('Lo sentimos, ha ocurrido un error', '*Debe ingresar una pregunta', 'error'); ";
+                    ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
+
+                }
+
+                }
         }
     }
 }

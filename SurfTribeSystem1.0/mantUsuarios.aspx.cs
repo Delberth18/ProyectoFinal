@@ -13,7 +13,13 @@ namespace SurfTribeSystem1._0
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["Exito"]!= null) {
 
+                string script = "swal('Excelente', 'Guardado con éxito', 'success'); ";
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
+                Session["Exito"] = null;
+            
+            }
         }
 
         protected void grvEstado_RowDataBound(object sender, GridViewRowEventArgs e)
@@ -30,7 +36,7 @@ namespace SurfTribeSystem1._0
             
                 try
                 {
-                SqlConnection con = new SqlConnection("Data Source=laptop-r7vb3im9\\mssqlserver01;Initial Catalog=SURF_TRIBE;Integrated Security=True");
+                SqlConnection con = new SqlConnection("Data Source=laptop-r7vb3im9\\mssqlserver01;Initial Catalog=SURF_TRIBE;Integrated Security=True");//Eduardo
                 SqlDataAdapter sda = new SqlDataAdapter("select * from USUARIO where CORREO='"+txtCed.Text+"'",con);
                 DataTable dt = new DataTable();
                 sda.Fill(dt);
@@ -45,12 +51,15 @@ namespace SurfTribeSystem1._0
                     grvEstado.DataSource = dt;
                     grvEstado.DataBind();
                     idEditar.Visible = true;
+                    lblexito.Text = "";
 
                 }
                 else {
 
                     lblexito.Text = "Usuario no encontrado";
                     idEditar.Visible = false;
+                    grvEstado.DataBind();
+                    
 
 
                 }
@@ -60,8 +69,9 @@ namespace SurfTribeSystem1._0
                 {
                     lblexito.Text = "Usuario no encontrado";
                     idEditar.Visible = false;
+                    grvEstado.DataBind();
 
-                }
+            }
             
         }
 
