@@ -5,7 +5,7 @@
 
 
     
-     <section class="bookingTypeSection" style="background-image: url(Imagenes/IMG-20150830-WA0006.jpg);     background-size: 1355px;">
+     <section class="bookingTypeSection" style="background-image: url(Imagenes/IMG-20150830-WA0006.jpg);     background-size: 1355px; background-repeat:no-repeat; background-size:cover">
           <asp:UpdatePanel ID="UpdatePanel1" runat="server">
         <ContentTemplate>
   <div class="container" >
@@ -16,7 +16,7 @@
 
 
             <div style=" background-image: url('ccss/star-1-3/Static%20HTML/img/bg-menuReserva.jpg'); position:relative; z-index:1;
-          -webkit-box-shadow: -11px 9px 45px 2px rgba(0,0,0,0.75); -moz-box-shadow: -11px 9px 45px 2px rgba(0,0,0,0.75); box-shadow: -11px 9px 45px 2px rgba(0,0,0,0.75); border-radius: 12px;">
+          -webkit-box-shadow: -11px 9px 45px 2px rgba(0,0,0,0.75); -moz-box-shadow: -11px 9px 45px 2px rgba(0,0,0,0.75); box-shadow: -11px 9px 45px 2px rgba(0,0,0,0.75); border-radius: 12px; ">
 
             <div class="tab-content" >
             <div id="Lugar" class="tab-pane fade in active">
