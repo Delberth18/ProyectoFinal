@@ -15,10 +15,23 @@ namespace SurfTribeSystem1._0
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            ListarRegistro();
-            ListarGuana();
-            ListarLimon();
-            ListarPuerto();
+
+            if (Session["InicioSesion"].ToString() == "1")
+            {
+
+                ListarRegistro();
+                ListarGuana();
+                ListarLimon();
+                ListarPuerto();
+                lblNombre.Text = Session["InicioNombre"].ToString();
+
+            }
+            else
+            {
+
+                Response.Redirect("defaultSinLogeoUN.aspx");
+
+            }
         }
 
         protected void ingresoButton_Click(object sender, EventArgs e)
@@ -164,6 +177,15 @@ namespace SurfTribeSystem1._0
                 string script = "swal('Error', '" + ex + "', 'error'); ";
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
             }
+        }
+
+        protected void Sesion_Click(object sender, EventArgs e)
+        {
+
+            Session["InicioSesion"] = null;
+
+            Response.Redirect("defaultSinLogeoUN.aspx");
+
         }
     }
 }

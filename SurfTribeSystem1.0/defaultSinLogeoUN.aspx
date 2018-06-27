@@ -2,7 +2,7 @@
 
 <!DOCTYPE html>
 
-<html lang="en-us" xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en-us" >
 
 
 <head runat="server">
@@ -32,8 +32,8 @@
 
       <!--esto es para los popup-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css" />
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
 
     <!-- CUSTOM CSS -->
     <link href="ccss/star-1-3/Static HTML/css/style.css" rel="stylesheet" />
@@ -162,10 +162,10 @@
 
                                 <li>
                                     <br />
-                                    <div class="headerTopNav">
+                                    <div class="headerTopNav" style="cursor: pointer;">
                                         <ul class="headerTopNavbar">
 
-                                            <li class="active"><a href="#"><i class="fa " aria-hidden="true"></i></a></li>
+                                            <li class="active" ><a href="#"><i class="fa " aria-hidden="true"></i></a></li>
                                         </ul>
                                         <ul class="headerTopNavbar navbar-right">
                                             <li class="active"><a id="tiro" data-toggle="modal" data-target="#login"><i class="fa fa-user" aria-hidden="true">&nbsp;</i>Iniciar Sesión </a></li>

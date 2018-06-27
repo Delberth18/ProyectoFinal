@@ -17,17 +17,7 @@ namespace SurfTribeSystem1._0
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["badLogin"] != null)
-            {
-
-
-                string script = "$('#tiro').trigger('click');";
-
-                Page.ClientScript.RegisterClientScriptBlock(this.GetType(), "cambiarTab", script, true);
-
-                Session["badLogin"] = null;
-
-            }
+           
 
 
             ListarRegistro();
@@ -57,14 +47,18 @@ namespace SurfTribeSystem1._0
 
                 if (resultado.TipoResultado=="OK")
                 {
-                    Response.Redirect("defaultConLogeoUN.aspx");
+
+                    Session["InicioSesion"] = 1;
+                    Response.Redirect("defaultConLogeoUDM.aspx");
                 }
                 else
                 {
                     lblError.Text = "Usuario no encontrado";
                     lblError.Visible = true;
 
-                    Session["badLogin"] = 1;
+                    string script = "swal('Error', 'usuario no encontrado', 'error'); ";
+                    ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
+                    
                    
 
                 }
@@ -74,8 +68,10 @@ namespace SurfTribeSystem1._0
 
                 lblError.Text = "Usuario no encontrado";
                 lblError.Visible = true;
+                string script = "swal('Error', '" + ex + "', 'error'); ";
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
 
-                Session["badLogin"] = 1;
+                
                
 
 

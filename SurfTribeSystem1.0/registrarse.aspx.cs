@@ -76,28 +76,35 @@ namespace SurfTribeSystem1._0
                 contrasenaText.Focus();
                 return;
             }
-            if (nombreText.Text == "")
+            if (nombreText.Text == "" || nombreText.Text.Length <= 2)
             {
                 errorLabel.Visible = true;
                 errorLabel.Text = "*Debe ingresar su nombre";
                 nombreText.Focus();
                 return;
             }
-            if (apellidosText.Text == "")
+            if (apellidosText.Text == "" || apellidosText.Text.Length <= 2)
             {
                 errorLabel.Visible = true;
                 errorLabel.Text = "*Debe ingresar sus apellidos";
                 apellidosText.Focus();
                 return;
             }
-            if (telefonoText.Text == "")
+            if (telefonoText.Text == "" || telefonoText.Text.Length < 8)
             {
                 errorLabel.Visible = true;
                 errorLabel.Text = "*Debe ingresar su número de teléfono";
                 telefonoText.Focus();
                 return;
             }
-            errorLabel.Visible = false;
+            if (chkboxLeido.Checked==false)
+            {
+                errorLabel.Visible = true;
+                errorLabel.Text = "*Debe Aceptar los términos y condiciones";
+                telefonoText.Focus();
+                return;
+            }
+            errorLabel.Visible = false; 
 
             Resultado resultado = new Resultado();
             try
@@ -119,11 +126,16 @@ namespace SurfTribeSystem1._0
                 {
                     confirmaLabel.Visible = true;
                     confirmaLabel.Text = "El registro se realizó con éxito";
+
+                    Session["InicioSesion"] = 1;
+                    Session["InicioNombre"] = nombreText.Text + " " + apellidosText.Text;
+
+                    Response.Redirect("defaultConLogeoUN.aspx");
                 }
                 else
                 {
-                    errorLabel.Visible = true;
-                    errorLabel.Text = "ERROR"+ resultado.Mensaje+" - "+resultado.CodigoMensaje;
+                    string script = "swal('Error', 'Correo ya utilizado', 'error'); ";
+                    ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
                 }
             }
             catch (Exception ex)

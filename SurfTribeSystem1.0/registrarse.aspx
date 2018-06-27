@@ -18,7 +18,7 @@
                                 <br />
                                 <br />
                                 <br />
-                                <h1>Bienvenido</h1>
+                              <center><font size="14"><b FACE="arial" size="30%">Registrese</b></font></center>
                                 <div class="under-border"></div>
                             </div>
                         </div>
@@ -30,19 +30,19 @@
 
     <!-- WHITE SECTION FILTER-->
 
-    <section class="mainContentSection">
+    <section class="mainContentSection " style="
+    padding: 42px 0 20px 0;
+" >
 
          <form  method="POST"  role="form" class="form" id="form1" >
 
-        <center><font size="14"><b FACE="arial" size="30%">Registrese</b></font></center>
-        <br />
              <center>
                  <asp:Label ID="errorLabel" class="alert alert-danger alert-dismissible" runat="server" Visible="false"></asp:Label>  
                  <asp:Label ID="confirmaLabel" class="alert alert-success alert-dismissible" runat="server" Visible="false"></asp:Label>  
 
              </center>
              <br />
-             <br />
+        
        
         <div class="container">
 
@@ -58,7 +58,7 @@
                             border-top-left-radius:27px;
                             border-top-right-radius:27px;
                             border-bottom-left-radius:27px;
-                            border-bottom-right-radius:28px;  padding:15px 15px 15px 15px; width: 650px;">
+                            border-bottom-right-radius:28px;  padding:15px 15px 15px 15px; width: 650px; background-color: cadetblue;">
                    
                       
                     <asp:TextBox class="form-control  bg-ashh"  TextMode="Email" id="correoText" runat="server" placeholder="Correo electrónico" /><br />
@@ -250,11 +250,14 @@
                     </asp:DropDownList>
 
                   </div>
-                 
+                
                   
                 
                     <label>
-                      <input type="checkbox"> He leído y aceptado los <a href="#">términos y condiciones.</a>  
+                     
+                  <asp:CheckBox ID="chkboxLeido" runat="server" text="  &nbsp; He leído y aceptado los <a href='#'> términos y condiciones.</a>"></asp:CheckBox>
+
+
                     </label>
                   
                   <div >
@@ -297,7 +300,8 @@
         </div>
 
 
-             </form> </div></div>
+             </form> </div>
+            </div>
         </div>
               </form></center>
            

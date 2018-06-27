@@ -176,9 +176,10 @@
                                     <li><a href="setting.html">
                                         <h5>Configuración</h5>
                                     </a></li>
-                                    <li><a href="#">
+                                    <li>
+                                        <asp:LinkButton ID="Sesion" runat="server"  OnClick="Sesion_Click">
                                         <h5>Cerrar Sesión</h5>
-                                    </a></li>
+                                    </asp:LinkButton></li>
                               </ul></li>
 
 
