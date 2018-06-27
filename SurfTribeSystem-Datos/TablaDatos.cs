@@ -72,16 +72,7 @@ namespace SurfTribeSystem_Datos
                 }
                 param.ParameterName = "@TIPO";
                 parametros.Add(param);
-
-                param = new SqlParameter();
-                param.Value = tabla.Cantidad_Habilitadas;
-                param.ParameterName = "@CANT_HABILITADAS";
-                parametros.Add(param);
-
-                param = new SqlParameter();
-                param.Value = tabla.Cantidad_Reservadas;
-                param.ParameterName = "@CANT_RESERVADAS";
-                parametros.Add(param);
+                
 
                 param = new SqlParameter();
                 if (tabla.Estado == null)
@@ -170,9 +161,7 @@ namespace SurfTribeSystem_Datos
                             {
                                 Id = row["ID"] is DBNull ? null : row["ID"].ToString(),
                                 Tipo = row["TIPO"] is DBNull ? null : row["TIPO"].ToString(),
-                                Cantidad_Habilitadas = row["CANT_HABILITADAS"] is DBNull ? 0 :Convert.ToInt32( row["CANT_HABILITADAS"].ToString()),
                                 Estado = row["ESTADO"] is DBNull ? null : row["ESTADO"].ToString(),
-                                Cantidad_Reservadas = row["CANT_RESERVADAS"] is DBNull ? 0 : Convert.ToInt32(row["CANT_RESERVADAS"].ToString()),
                                 Id_Esciela = row["ID_ESCUELA"] is DBNull ? null : row["ID_ESCUELA"].ToString(),
                                 Imagen = row["IMAGEN"] is DBNull ? null : row["IMAGEN"].ToString(),
                                 Dificultad = row["DIFICULTAD"] is DBNull ? null : row["DIFICULTAD"].ToString(),

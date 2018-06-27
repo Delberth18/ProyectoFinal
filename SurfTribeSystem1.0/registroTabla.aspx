@@ -89,11 +89,7 @@
 
                             </asp:DropDownList>
                         </li>
-                        <li>
-                            <label style="color: darkorange; font-size: x-large">Cantidad Disponibles:</label>
-
-                            <asp:TextBox ID="txtCantHabilitadas" Text="1" runat="server" class="form-control  bg-ashh" Width="40%" TextMode="Number" min="1" ></asp:TextBox>
-                        </li>
+                        
                     </ul>
                 </div>
                 <div class="col-xs-12 col-sm-4">
@@ -111,7 +107,7 @@
                         <li>
                             <label style="color: darkorange; font-size: x-large">Imagen:</label>
 
-                            <asp:FileUpload ID="FileUpload" runat="server" class="form-control  bg-ashh" />
+                            <asp:FileUpload ID="FileUpload" runat="server" class="form-control  bg-ashh" Text="aaa"/>
                         </li>
                         <li>
                             <br />

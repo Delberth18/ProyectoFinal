@@ -69,10 +69,8 @@ namespace SurfTribeSystem1._0
                 tabla.Marca = txtMarca.Text;
                 tabla.Tamanio = txtPies.Text + "-" + txtPulgadas.Text;
                 tabla.Tipo = txtTipo.Text;
-                tabla.Cantidad_Habilitadas = Convert.ToInt32(txtCantHabilitadas.Text);
                 tabla.Estado = estado.SelectedValue;
                 tabla.Id_Esciela = escuela.SelectedValue;
-                tabla.Id = tabla.Marca.ToUpper() + tabla.Tamanio + tabla.Tipo.ToUpper();
 
                 string base64ImageRepresentation = Convert.ToBase64String(FileUpload.FileBytes);
 
@@ -101,6 +99,7 @@ namespace SurfTribeSystem1._0
                         string script = "swal('Excelente', 'Éxito en la insersión', 'success'); ";
                         ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
                         Limpiar();
+                        ListarRegistro();
                     }
                     else
                     {
@@ -109,7 +108,7 @@ namespace SurfTribeSystem1._0
                     }
                 }
             }
-            catch (Exception ex)
+            catch (Exception )
             {
                 string script = "swal('Error', 'Lo sentimos por lo sucedido', 'error'); ";
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);

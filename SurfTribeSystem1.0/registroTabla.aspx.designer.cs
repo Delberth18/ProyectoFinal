@@ -76,15 +76,6 @@ namespace SurfTribeSystem1._0 {
         protected global::System.Web.UI.WebControls.DropDownList escuela;
         
         /// <summary>
-        /// txtCantHabilitadas control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCantHabilitadas;
-        
-        /// <summary>
         /// dificultad control.
         /// </summary>
         /// <remarks>
