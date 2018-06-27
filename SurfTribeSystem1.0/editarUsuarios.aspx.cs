@@ -20,7 +20,8 @@ namespace SurfTribeSystem1._0
             String correo = Session["idEditar"].ToString();
             if (!IsPostBack)
             {
-                SqlConnection con = new SqlConnection("Data Source=laptop-r7vb3im9\\mssqlserver01;Initial Catalog=SURF_TRIBE;Integrated Security=True");
+                SqlConnection con = new SqlConnection(@"Data Source=localhost\SQLEXPRESS;Initial Catalog=SURF_TRIBE; Integrated Security=true;Connection Timeout=45;");//delberth
+               // SqlConnection con = new SqlConnection("Data Source=laptop-r7vb3im9\\mssqlserver01;Initial Catalog=SURF_TRIBE;Integrated Security=True");//eduardo
                 SqlDataAdapter sda = new SqlDataAdapter("select * from USUARIO where CORREO='" + correo + "'", con);
                 DataTable dt = new DataTable();
                 sda.Fill(dt);
@@ -240,7 +241,7 @@ namespace SurfTribeSystem1._0
             }
             catch
             {
-                string script = "swal('Lo sentimos, ha ocurrido un error', '*Debe ingresar una pregunta', 'error'); ";
+                string script = "swal('Lo sentimos, ha ocurrido un error', 'No podemos procesar la información', 'error'); ";
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
 
             }

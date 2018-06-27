@@ -48,7 +48,8 @@ namespace SurfTribeSystem1._0
             
                 try
                 {
-                SqlConnection con = new SqlConnection("Data Source=laptop-r7vb3im9\\mssqlserver01;Initial Catalog=SURF_TRIBE;Integrated Security=True");//Eduardo
+                SqlConnection con = new SqlConnection(@"Data Source=localhost\SQLEXPRESS;Initial Catalog=SURF_TRIBE; Integrated Security=true;Connection Timeout=45;");//delberth
+                //SqlConnection con = new SqlConnection("Data Source=laptop-r7vb3im9\\mssqlserver01;Initial Catalog=SURF_TRIBE;Integrated Security=True");//Eduardo
                 SqlDataAdapter sda = new SqlDataAdapter("select * from USUARIO where CORREO='"+txtCed.Text+"'",con);
                 DataTable dt = new DataTable();
                 sda.Fill(dt);
@@ -99,7 +100,7 @@ namespace SurfTribeSystem1._0
             }
             catch
             {
-                alert.Text = "Lo sentimos no existe ninguna residencia";
+                alert.Text = "Lo sentimos no existe ningún usuario";
             }
         }
     }

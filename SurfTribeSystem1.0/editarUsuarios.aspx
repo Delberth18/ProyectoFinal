@@ -6,7 +6,7 @@
 
     
     
- <section class="bookingTypeSection" style="background-image: url(Imagenes/IMG-20150830-WA0006.jpg);     background-size: 1355px;">
+ <section class="bookingTypeSection" style="background-image: url(Imagenes/IMG-20150830-WA0006.jpg);    background-repeat:no-repeat; background-size:cover">
         
   <div class="container">
     <div class="row">
