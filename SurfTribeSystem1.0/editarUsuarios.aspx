@@ -30,11 +30,11 @@
             <div class="container">
                
                 <div class="row">
-
+                    <asp:Label ID="errorLabel" class="alert alert-danger alert-dismissible" runat="server" Visible="false" Style="margin-left: -20px;"></asp:Label>  
 
   
            <asp:Table ID="tabGeneral" runat="server" class="container" style=" background: orange;
-    opacity: 0.8;
+    opacity: 0.9;
     width: 709px;
     margin-left: -10px;" >
                     <asp:TableRow>
@@ -60,7 +60,7 @@
                              
                            
                                   <div class="form-group" style="color:black; font-size:20px; margin-left:40px;">
-                              <label class="col-lg-2 control-label" for="inputEmail">Número teléfonico</label>
+                              <label class="col-lg-2 control-label" for="inputEmail">Teléfono</label>
                                 <div class=" col-lg-10 txtnormal">
                                     <asp:TextBox id="txtNumero"  runat="server" class="form-control" style="width:400px;" ></asp:TextBox>
                                 </div>
@@ -72,27 +72,47 @@
                                 </div>
                             </div><br /><br />
                                   
-                            <div class="form-group" style="color:black; font-size:20px; margin-left:40px;">
-                              <label class="col-lg-2 control-label" for="focusedInput">Clave</label>
+                            <div class="form-group" style="color:black; font-size:20px; margin-left: 135px;">
+                             
                                 <div class="col-lg-10 txtPequeño">
-                                    <asp:TextBox id="txtClave" TextMode="Password"   runat="server" class="form-control" style="width:400px;"></asp:TextBox>
+                                  
                                      <asp:TextBox id="txtUsu" runat="server" Visible="false" ></asp:TextBox>
+                                    <asp:TextBox id="txtauxClave" runat="server" Visible="false" ></asp:TextBox>
+
+                                    <div class="container" style="margin-left: 2px; width: 430px;">
+                                        <div class="panel-group">
+                                            <div class="panel panel-default">
+                                                <div class="panel-heading">
+                                                    <h4 class="panel-title">
+                                                        <a data-toggle="collapse" href="#collapse1">Cambiar Contraseña</a>
+                                                    </h4>
+                                                </div>
+                                                <div id="collapse1" class="panel-collapse collapse">
+                                                    <div class="panel-body" ><asp:TextBox id="txtClave" TextMode="Password"   runat="server" class="form-control" style="width:200px;"></asp:TextBox></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
                                 </div>
-                            </div><br /><br />
+                            </div><br /><br /><br /><br />
                             
                               
-                                
-                                  <asp:Button ID="idGuardar" style="margin-left: -40px;" Text="Guardar" class="btn btn-success btn-lg" runat="server"  OnClick="idGuardar_Click" />&nbsp;&nbsp;&nbsp;
-                                   <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" class="btn btn-primary" CausesValidation="false" OnClick="btnCancelar_Click" />
                               
                          
                         </asp:TableCell>
                     </asp:TableRow>
-             </asp:Table>
-     
-        
-    
 
+             </asp:Table><div  style=" background: orange; opacity: 0.9;
+    width: 709px;
+    margin-left: -10px;">
+     
+         <asp:Button ID="btnEliminar" style="margin-left:-35px;" Text="Eliminar" onclientclick="return confirm('¿Desea Eliminar este usuario?');" class="btn btn-danger" CausesValidation="false"  OnClick="btnEliminar_Click" runat="server" />
+                                
+                                  <asp:Button ID="idGuardar" style="margin-left: 257px;" Text="Guardar" class="btn btn-success btn-lg" CausesValidation="false"  runat="server"  OnClick="idGuardar_Click" />&nbsp;&nbsp;&nbsp;
+                                   <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" class="btn btn-primary" CausesValidation="false" OnClick="btnCancelar_Click" />
+    
+                    </div>
 
 
                 </div>

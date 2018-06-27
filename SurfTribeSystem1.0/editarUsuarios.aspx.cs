@@ -45,6 +45,8 @@ namespace SurfTribeSystem1._0
 
                 txtUsu.Text = Convert.ToString(row["ID_TIPO_USU"]);
 
+                txtauxClave.Text= Convert.ToString(row["CLAVE"]);
+
             }
         }
 
@@ -55,15 +57,54 @@ namespace SurfTribeSystem1._0
 
         protected void idGuardar_Click(object sender, EventArgs e)
         {
+
+            if (txtNombre.Text == "" || txtNombre.Text.Length < 2)
+            {
+                errorLabel.Visible = true;
+                errorLabel.Text = "*Debe ingresar un nombre ";
+                txtNombre.Focus();
+                return;
+            }
+            if (txtApellidos.Text == "" || txtApellidos.Text.Length < 2)
+            {
+                errorLabel.Visible = true;
+                errorLabel.Text = "*Debe ingresar los Apellidos";
+                txtApellidos.Focus();
+                return;
+            }
+            if (txtNumero.Text.Length > 8)
+            {
+                errorLabel.Visible = true;
+                errorLabel.Text = "*Digite un numero de télefono correcto";
+                txtNumero.Focus();
+                return;
+            }
+            if (txtPaís.Text == "" || txtPaís.Text.Length < 2)
+            {
+                errorLabel.Visible = true;
+                errorLabel.Text = "*Debe colocar un país correcto";
+                txtPaís.Focus();
+                return;
+            }
            
-           
+            errorLabel.Visible = false;
 
 
-            if (txtClave.Text != "") {
+            //Validaciones
+
+
+
+
+
+
+
+
+            if (txtClave.Text != "")
+            {
 
                 try
                 {
-                  //  SqlConnection con = new SqlConnection("Data Source=laptop-r7vb3im9\\mssqlserver01;Initial Catalog=SURF_TRIBE;Integrated Security=True");
+                    //  SqlConnection con = new SqlConnection("Data Source=laptop-r7vb3im9\\mssqlserver01;Initial Catalog=SURF_TRIBE;Integrated Security=True");
                     //SqlDataAdapter sda = new SqlDataAdapter("UPDATE [dbo].[USUARIO] SET CLAVE = '" + txtClave.Text + "',NOMBRE = '" + txtNombre.Text + "',APELLIDOS ='" + txtApellidos.Text + "', TELEFONO ='" + txtNumero.Text + "' WHERE USUARIO.CORREO = '" + txtCorreo.Text + "'", con);
                     Resultado resultado = new Resultado();
                     usuario.Tag = "ACTUALIZAR";
@@ -101,13 +142,108 @@ namespace SurfTribeSystem1._0
 
 
                 }
-                catch {
+                catch
+                {
                     string script = "swal('Lo sentimos, ha ocurrido un error', '*Debe ingresar una pregunta', 'error'); ";
                     ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
 
                 }
 
+            }
+            else {
+
+                try
+                {
+                    //  SqlConnection con = new SqlConnection("Data Source=laptop-r7vb3im9\\mssqlserver01;Initial Catalog=SURF_TRIBE;Integrated Security=True");
+                    //SqlDataAdapter sda = new SqlDataAdapter("UPDATE [dbo].[USUARIO] SET CLAVE = '" + txtClave.Text + "',NOMBRE = '" + txtNombre.Text + "',APELLIDOS ='" + txtApellidos.Text + "', TELEFONO ='" + txtNumero.Text + "' WHERE USUARIO.CORREO = '" + txtCorreo.Text + "'", con);
+                    Resultado resultado = new Resultado();
+                    usuario.Tag = "ACTUALIZAR";
+                    usuario.Nombre = txtNombre.Text;
+                    usuario.Apellidos = txtApellidos.Text;
+                    usuario.Correo = txtCorreo.Text;
+                    usuario.Telefono = txtNumero.Text;
+                    usuario.Clave = txtauxClave.Text;
+                    usuario.Pais = txtPaís.Text;
+                    usuario.Tipo_usu = txtUsu.Text;
+
+
+                    resultado = new UsuarioLogica().Acciones(usuario);
+
+                    if (resultado.TipoResultado == "OK")
+                    {
+                        Session["Exito"] = 1;
+                        Response.Redirect("mantUsuarios.aspx");
+                    }
+                    else
+                    {
+                        if (resultado.CodigoMensaje == "1")
+                        {
+                            string script = "swal('Lo sentimos,', '" + resultado.Mensaje + "', 'info'); ";
+                            ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
+                        }
+                        else
+                        {
+                            string script = "swal('Lo sentimos, ha ocurrido un error', '" + resultado.Mensaje + "', 'error'); ";
+                            ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
+                        }
+
+                    }
+
+
+
                 }
+                catch
+                {
+                    string script = "swal('Lo sentimos, ha ocurrido un error', '*Debe ingresar una pregunta', 'error'); ";
+                    ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
+
+                }
+
+                
+
+            }
+        }
+
+        protected void btnEliminar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+               
+                Resultado resultado = new Resultado();
+                usuario.Tag = "BORRAR";
+                usuario.Correo= txtCorreo.Text;
+
+                resultado = new UsuarioLogica().Acciones(usuario);
+
+                if (resultado.TipoResultado == "OK")
+                {
+                    Session["exiBorrar"] = 1;
+                    Response.Redirect("mantUsuarios.aspx");
+                }
+                else
+                {
+                    if (resultado.CodigoMensaje == "1")
+                    {
+                        string script = "swal('Lo sentimos,', '" + resultado.Mensaje + "', 'info'); ";
+                        ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
+                    }
+                    else
+                    {
+                        string script = "swal('Lo sentimos, ha ocurrido un error', '" + resultado.Mensaje + "', 'error'); ";
+                        ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
+                    }
+
+                }
+
+
+
+            }
+            catch
+            {
+                string script = "swal('Lo sentimos, ha ocurrido un error', '*Debe ingresar una pregunta', 'error'); ";
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
+
+            }
         }
     }
 }
