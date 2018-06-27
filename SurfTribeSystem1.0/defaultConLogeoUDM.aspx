@@ -169,7 +169,7 @@
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                                     <img class="avatar" src="ccss\star-1-3\Static HTML\img\dashboard\dash-user.jpg" alt="">&nbsp;&nbsp;<i class="fa fa-angle-down" aria-hidden="true"></i></a>
                                 <ul class="dropdown-menu dropdownMenu">
-                                    <center><h5><b>Marcela Castro Rojas</b></h5></center>
+                                    <center><h5><b>Marielos Valverde Rojas</b></h5></center>
                                     <li><a href="profile.html">
                                         <h5>Perfil</h5>
                                     </a></li>

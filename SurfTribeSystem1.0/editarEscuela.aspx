@@ -40,25 +40,25 @@
                                                                         <asp:TableCell>
                                                                             <div class="form-group" style="color: black; font-size: 20px; margin-left: 40px;">
                                                                                 <br />
-                                                                                <label class="col-lg-4 control-label" for="focusedInput">Nombre</label>
+                                                                                <label class="col-lg-2 control-label" for="focusedInput">Nombre</label>
                                                                                 <div class="col-lg-10 txtnormal">
-                                                                                    <asp:TextBox ID="txtNombre" runat="server" Style="width: 400px;" class="form-control"></asp:TextBox>
+                                                                                    <asp:TextBox ID="txtNombre" runat="server" Style="width: 400px; margin-left:30px;" class="form-control"></asp:TextBox>
                                                                                 </div>
                                                                             </div>
                                                                             <br />
                                                                             <br />
                                                                             <div class="form-group" style="color: black; font-size: 20px; margin-left: 40px;">
-                                                                                <label class="col-lg-4 control-label" for="focusedInput">Ubicación</label>
+                                                                                <label class="col-lg-2 control-label" for="focusedInput">Ubicación</label>
                                                                                 <div class="col-lg-10 txtnormal">
-                                                                                    <asp:TextBox ID="txtUbicacion" runat="server" Style="width: 400px;" class="form-control"></asp:TextBox>
+                                                                                    <asp:TextBox ID="txtUbicacion" runat="server" Style="width: 400px; margin-left:30px;" class="form-control"></asp:TextBox>
                                                                                 </div>
                                                                             </div>
                                                                             <br />
                                                                             <br />
                                                                             <div class="form-group" style="color: black; font-size: 20px; margin-left: 40px;">
-                                                                                <label class="col-lg-4 control-label" for="focusedInput">Teléfono-1</label>
+                                                                                <label class="col-lg-2 control-label" for="focusedInput">Teléfono-1</label>
                                                                                 <div class="col-lg-10 txtnormal">
-                                                                                    <asp:TextBox ID="txtTelefono1" runat="server" ReadOnly="true" Style="width: 400px;" class="form-control"></asp:TextBox>
+                                                                                    <asp:TextBox ID="txtTelefono1" runat="server" ReadOnly="true" Style="width: 400px; margin-left:30px;" class="form-control"></asp:TextBox>
                                                                                 </div>
                                                                             </div>
                                                                             <br />
@@ -66,26 +66,27 @@
 
 
                                                                             <div class="form-group" style="color: black; font-size: 20px; margin-left: 40px;">
-                                                                                <label class="col-lg-4 control-label" for="inputEmail">Teléfono-2</label>
+                                                                                <label class="col-lg-2 control-label" for="inputEmail">Teléfono-2</label>
                                                                                 <div class=" col-lg-10 txtnormal">
-                                                                                    <asp:TextBox ID="txtTelefono2" runat="server" class="form-control" Style="width: 400px;"></asp:TextBox>
+                                                                                    <asp:TextBox ID="txtTelefono2" runat="server" class="form-control" Style="width: 400px; margin-left:30px;"></asp:TextBox>
                                                                                 </div>
                                                                             </div>
                                                                             <br />
                                                                             <br />
                                                                             <div class="form-group" style="color: black; font-size: 20px; margin-left: 40px;">
-                                                                                <label class="col-lg-4 control-label" for="focusedInput">Playa Concurrida</label>
+                                                                                <label class="col-lg-2 control-label" for="focusedInput">Playa Concurrida</label>
                                                                                 <div class="col-lg-10 txtPequeño">
-                                                                                    <asp:TextBox ID="txtPlaya" runat="server" class="form-control" Style="width: 400px;"></asp:TextBox>
+                                                                                    <asp:TextBox ID="txtPlaya" runat="server" class="form-control" Style="width: 400px; margin-left:30px;"></asp:TextBox>
                                                                                 </div>
                                                                             </div>
                                                                             <br />
                                                                             <br />
 
                                                                             <div class="form-group" style="color: black; font-size: 20px; margin-left: 40px;">
-                                                                                <label class="col-lg-4 control-label" for="focusedInput">Año de fundación</label>
-                                                                                <div class="col-lg-10 txtPequeño">
-                                                                                    <asp:DropDownList ID="ddlZona" runat="server" CssClass="form-control" Width="400px">
+                                                                                <label class="col-lg-2 control-label" for="focusedInput">Año de fundación</label>
+                                                                                
+                                                                                <div class="col-lg-10 txtPequeño">  
+                                                                                    <asp:DropDownList ID="ddlZona" runat="server" CssClass="form-control" style="margin-left: 29px;" Width="400px" >
                                                                                         <asp:ListItem Value="LIMON">LIMON</asp:ListItem>
                                                                                         <asp:ListItem Value="GUANACASTE">GUANACASTE</asp:ListItem>
                                                                                         <asp:ListItem Value="PUNTARENAS">PUNTARENAS</asp:ListItem>
@@ -97,38 +98,38 @@
 
 
                                                                             <div class="form-group" style="color: black; font-size: 20px; margin-left: 40px;">
-                                                                                <label class="col-lg-4 control-label" for="focusedInput">Correo</label>
+                                                                                <label class="col-lg-2 control-label" for="focusedInput">Correo</label>
                                                                                 <div class="col-lg-10 txtPequeño">
-                                                                                    <asp:TextBox ID="txtCorreo" runat="server" class="form-control" Style="width: 400px;" TextMode="Email"></asp:TextBox>
+                                                                                    <asp:TextBox ID="txtCorreo" runat="server" class="form-control" Style="width: 400px; margin-left: 30px;" TextMode="Email"></asp:TextBox>
                                                                                 </div>
                                                                             </div>
                                                                             <br />
                                                                             <br />
 
                                                                             <div class="form-group" style="color: black; font-size: 20px; margin-left: 40px;">
-                                                                                <label class="col-lg-4 control-label" for="focusedInput">Descripción</label>
+                                                                                <label class="col-lg-2 control-label" for="focusedInput">Descripción</label>
                                                                                 <div class="col-lg-10 txtPequeño">
-                                                                                    <asp:TextBox ID="txtDescripcion" runat="server" class="form-control" Style="width: 400px;" TextMode="MultiLine"></asp:TextBox>
+                                                                                    <asp:TextBox ID="txtDescripcion" runat="server" class="form-control" Style="width: 400px; margin-left: 30px;" TextMode="MultiLine"></asp:TextBox>
+                                                                                </div>
+                                                                            </div>
+                                                                            <br />
+                                                                            <br /><br />
+
+                                                                            <div class="form-group" style="color: black; font-size: 20px; margin-left: 40px;">
+                                                                                <label class="col-lg-2 control-label" for="focusedInput">Año de fundación</label>
+                                                                                <div class="col-lg-10 txtPequeño">
+                                                                                    <asp:TextBox ID="txtAnio" runat="server" class="form-control" Style="width: 400px; margin-left:30px;"></asp:TextBox>
                                                                                 </div>
                                                                             </div>
                                                                             <br />
                                                                             <br />
 
                                                                             <div class="form-group" style="color: black; font-size: 20px; margin-left: 40px;">
-                                                                                <label class="col-lg-4 control-label" for="focusedInput">Año de fundación</label>
+                                                                                <label class="col-lg-2 control-label" for="focusedInput">Se encuentra activa?</label>
                                                                                 <div class="col-lg-10 txtPequeño">
-                                                                                    <asp:TextBox ID="txtAnio" runat="server" class="form-control" Style="width: 400px;"></asp:TextBox>
-                                                                                </div>
-                                                                            </div>
-                                                                            <br />
-                                                                            <br />
-
-                                                                            <div class="form-group" style="color: black; font-size: 20px; margin-left: 40px;">
-                                                                                <label class="col-lg-4 control-label" for="focusedInput">Se encuentra activa?</label>
-                                                                                <div class="col-lg-10 txtPequeño">
-                                                                                    <asp:DropDownList ID="ddlActiva" runat="server" CssClass="form-control" Width="80px">
+                                                                                    <asp:DropDownList ID="ddlActiva" runat="server" CssClass="form-control" Width="80px" style="margin-left: 30px;">
                                                                                         <asp:ListItem Value="true">Si</asp:ListItem>
-                                                                                        <asp:ListItem Value="false">NO</asp:ListItem>
+                                                                                        <asp:ListItem Value="false">No</asp:ListItem>
                                                                                     </asp:DropDownList>
                                                                                 </div>
                                                                             </div>
