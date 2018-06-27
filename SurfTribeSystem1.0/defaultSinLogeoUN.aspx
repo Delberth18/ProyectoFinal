@@ -30,6 +30,11 @@
     <!-- GOOGLE FONT -->
     <link href='https://fonts.googleapis.com/css?family=Montserrat:400,600,700' rel='stylesheet' type='text/css' />
 
+      <!--esto es para los popup-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+
     <!-- CUSTOM CSS -->
     <link href="ccss/star-1-3/Static HTML/css/style.css" rel="stylesheet" />
     <link rel="stylesheet" href="ccss/star-1-3/Static%20HTML/css/colors/default.css" id="option_color" />

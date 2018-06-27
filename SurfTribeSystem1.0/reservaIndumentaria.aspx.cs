@@ -13,7 +13,8 @@ namespace SurfTribeSystem1._0
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection("Data Source=laptop-r7vb3im9\\mssqlserver01;Initial Catalog=SURF_TRIBE;Integrated Security=True");
+            SqlConnection con = new SqlConnection(@"Data Source=localhost\SQLEXPRESS;Initial Catalog=SURF_TRIBE; Integrated Security=true;Connection Timeout=45;");//delberth
+            //SqlConnection con = new SqlConnection("Data Source=laptop-r7vb3im9\\mssqlserver01;Initial Catalog=SURF_TRIBE;Integrated Security=True");
             SqlDataAdapter sda = new SqlDataAdapter("select * from ESCUELA", con);
             DataTable dt = new DataTable();
             sda.Fill(dt);

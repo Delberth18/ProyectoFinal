@@ -10,114 +10,114 @@
 namespace SurfTribeSystem1._0 {
     
     
-    public partial class defaultSinLogeo {
+    public partial class registroTabla {
         
         /// <summary>
-        /// option_color control.
+        /// info1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlLink option_color;
+        protected global::System.Web.UI.WebControls.Label info1;
         
         /// <summary>
-        /// f1 control.
+        /// txtMarca control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm f1;
+        protected global::System.Web.UI.WebControls.TextBox txtMarca;
         
         /// <summary>
-        /// GuanaRepeat control.
+        /// txtTipo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater GuanaRepeat;
+        protected global::System.Web.UI.WebControls.TextBox txtTipo;
         
         /// <summary>
-        /// PuertoRepeat control.
+        /// txtPies control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater PuertoRepeat;
+        protected global::System.Web.UI.WebControls.TextBox txtPies;
         
         /// <summary>
-        /// LimonRepeat control.
+        /// txtPulgadas control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater LimonRepeat;
+        protected global::System.Web.UI.WebControls.TextBox txtPulgadas;
         
         /// <summary>
-        /// galeria control.
+        /// estado control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater galeria;
+        protected global::System.Web.UI.WebControls.DropDownList estado;
         
         /// <summary>
-        /// GuanaRepeat2 control.
+        /// escuela control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater GuanaRepeat2;
+        protected global::System.Web.UI.WebControls.DropDownList escuela;
         
         /// <summary>
-        /// PuertoRepeat2 control.
+        /// txtCantHabilitadas control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater PuertoRepeat2;
+        protected global::System.Web.UI.WebControls.TextBox txtCantHabilitadas;
         
         /// <summary>
-        /// LimonRepeat2 control.
+        /// dificultad control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater LimonRepeat2;
+        protected global::System.Web.UI.WebControls.DropDownList dificultad;
         
         /// <summary>
-        /// correoText control.
+        /// FileUpload control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox correoText;
+        protected global::System.Web.UI.WebControls.FileUpload FileUpload;
         
         /// <summary>
-        /// claveText control.
+        /// btnGuardar control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox claveText;
+        protected global::System.Web.UI.WebControls.Button btnGuardar;
         
         /// <summary>
-        /// ingresarButton control.
+        /// imagenesList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ingresarButton;
+        protected global::System.Web.UI.WebControls.Repeater imagenesList;
     }
 }
