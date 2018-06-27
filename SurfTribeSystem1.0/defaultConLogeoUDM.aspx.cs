@@ -10,43 +10,22 @@ using System.Web.UI.WebControls;
 
 namespace SurfTribeSystem1._0
 {
-    public partial class defaultSinLogeo : System.Web.UI.Page
+    public partial class defaultConLogeoUDM : System.Web.UI.Page
     {
-
-        
-
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["badLogin"] != null)
-            {
-
-
-                string script = "$('#tiro').trigger('click');";
-
-                Page.ClientScript.RegisterClientScriptBlock(this.GetType(), "cambiarTab", script, true);
-
-                Session["badLogin"] = null;
-
-            }
-
-
             ListarRegistro();
             ListarGuana();
             ListarLimon();
             ListarPuerto();
-
-          
-
         }
-
-       
 
         protected void ingresoButton_Click(object sender, EventArgs e)
         {
             Resultado resultado = new Resultado();
             try
             {
-                
+
 
                 Credencial credencial = new Credencial()
                 {
@@ -55,32 +34,21 @@ namespace SurfTribeSystem1._0
                 };
                 resultado = new SeguridadLogica().ValidarUsuario(credencial);
 
-                if (resultado.TipoResultado=="OK")
+                if (resultado.TipoResultado == "OK")
                 {
                     Response.Redirect("defaultConLogeoUN.aspx");
                 }
                 else
                 {
-                    lblError.Text = "Usuario no encontrado";
-                    lblError.Visible = true;
-
-                    Session["badLogin"] = 1;
-                   
-
+                    Response.Write("< script > alert('Error: " + resultado.Mensaje + " \n Lo sentimos') </ script >");
                 }
             }
             catch (Exception ex)
             {
 
-                lblError.Text = "Usuario no encontrado";
-                lblError.Visible = true;
-
-                Session["badLogin"] = 1;
-               
-
-
+                Response.Write("< script > alert('Error: " + ex + " \n Lo sentimos') </ script >");
             }
-            
+
         }
 
         private void ListarRegistro()
@@ -99,6 +67,7 @@ namespace SurfTribeSystem1._0
                     lista = (List<Imagen>)resultado.ObjetoResultado;
                     galeria.DataSource = lista;
                     galeria.DataBind();
+
 
                     //imagenesList.DataSource = lista;
                     //imagenesList.DataBind();
@@ -195,8 +164,5 @@ namespace SurfTribeSystem1._0
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
             }
         }
-
-       
-
     }
 }
