@@ -53,7 +53,7 @@
      <asp:Button ID="idBuscar" Text="  Buscar  " class="btn btn-primary"  style="margin-left:-50px" runat="server" OnClick="idBuscar_Click"  ></asp:Button>
        <br /><br />
    </center>
-    <br />  <div class="Alineado eti"  style="margin-left: -40px;"> <asp:Label ID="lblexito" runat="server" Text=""  Font-Size="Medium" Font-Bold="true"></asp:Label></div>
+    <br />  <div class="Alineado eti"  style="margin-left: -40px; color: black;"> <asp:Label ID="lblexito" runat="server" Text=""  Font-Size="Medium" Font-Bold="true"></asp:Label></div>
                     <div style="margin-left: 260px;">
     <asp:GridView  ID="grvEstado" runat="server"  AutoGenerateColumns="False" HorizontalAlign="Center" BackColor="White" BorderColor="#CCCCCC" 
         BorderStyle="None" BorderWidth="1px" CellPadding="3" 

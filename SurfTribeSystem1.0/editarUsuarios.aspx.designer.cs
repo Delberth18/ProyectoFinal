@@ -13,6 +13,15 @@ namespace SurfTribeSystem1._0 {
     public partial class editarUsu {
         
         /// <summary>
+        /// Control errorLabel.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label errorLabel;
+        
+        /// <summary>
         /// Control tabGeneral.
         /// </summary>
         /// <remarks>
@@ -67,6 +76,24 @@ namespace SurfTribeSystem1._0 {
         protected global::System.Web.UI.WebControls.TextBox txtPaís;
         
         /// <summary>
+        /// Control txtUsu.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtUsu;
+        
+        /// <summary>
+        /// Control txtauxClave.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtauxClave;
+        
+        /// <summary>
         /// Control txtClave.
         /// </summary>
         /// <remarks>
@@ -76,13 +103,13 @@ namespace SurfTribeSystem1._0 {
         protected global::System.Web.UI.WebControls.TextBox txtClave;
         
         /// <summary>
-        /// Control txtUsu.
+        /// Control btnEliminar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtUsu;
+        protected global::System.Web.UI.WebControls.Button btnEliminar;
         
         /// <summary>
         /// Control idGuardar.

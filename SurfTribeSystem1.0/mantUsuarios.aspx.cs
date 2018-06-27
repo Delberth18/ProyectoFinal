@@ -20,6 +20,18 @@ namespace SurfTribeSystem1._0
                 Session["Exito"] = null;
             
             }
+
+            
+
+            if (Session["exiBorrar"] != null)
+            {
+
+                string script = "swal('Excelente', 'Eliminado con éxito', 'success'); ";
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
+                Session["exiBorrar"] = null;
+
+            }
+
         }
 
         protected void grvEstado_RowDataBound(object sender, GridViewRowEventArgs e)
