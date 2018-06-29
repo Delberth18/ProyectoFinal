@@ -13,80 +13,88 @@
                 <div class="row">
                     <div class="col-xs-12 ">
 
-                                                            <div class="row" style="margin: 5px 9px 5px 9px">
-                                                                <div class="col-sm-12">
-                                                                    <ul>
-                                                                        <li>
-                                                                            <br />
-                                                                            <center class="titulo" style="width: 100%; background: darkorange;">
+                        <div class="row" style="margin: 5px 9px 5px 9px">
+                            <div class="col-sm-12">
+                                <ul>
+                                    <li>
+                                        <br />
+                                        <center class="titulo" style="width: 100%; background: darkorange;">
                                                                              <center>
                                                                                  <font size="7">
-                                                                                     <b style="    background-color: darkorange; color: black; border-radius: 484px; opacity: 0.8;" FACE="arial">Mantenimiento Tablas</b>
+                                                                                     <b style="    background-color: darkorange; color: black; border-radius: 484px; opacity: 0.8;" face="arial">Mantenimiento Tablas</b>
                                                                                  </font>
 
                                                                              </center>
 
                                                                       </center>
 
-                                                                            
-                                                                        </li>
-                                                                        <li>
-                                                                            <br />
-                                                                            <center>
-                                                                            <asp:DropDownList ID="ddlEscuelas" runat="server" CssClass="bg-ashh" Style="width: 30%" >
-                                                                            </asp:DropDownList>
-                                                                            <br />
-                                                                            <br />
-                                                                                <asp:Button ID="idSeleccionar" Text="Seleccionar" class="btn btn-primary" OnClick="idSeleccionar_Click" runat="server" ></asp:Button>
-                                                                            </center>
-                                                                            <br />
-                                                                            <br />
-                                                                        </li>
-                                                                    </ul>
-                                                                </div>
-                                                                </div>
 
-                    <asp:Repeater ID="imagenesList" runat="server" Visible="false" OnItemDataBound="imagenesList_ItemDataBound">
-                        <ItemTemplate>
-                            <div class="item col-md-3" >
-                                <ul>
-                                    <li>
-                                        <div class="thumbnail deals packagesPage isotopeSelector">
-                                    <img src='data:image/jpg;base64,<%# Eval("Imagen") %>' alt="deal-image" />
-
-
-                                    <h4><%# Eval("Marca") %></h4>
-                                            <h3>Estado: <%# Eval("Estado") %></h3>
-
-                                </div>
                                     </li>
                                     <li>
-                                         <div class="panel-group">
-                                            <div class="panel panel-default">
-                                                <div class="panel-heading">
-                                                    <h4 class="panel-title">
-                                                        <a data-toggle="collapse" href="#collapse1">Cambiar Estado</a>
-                                                    </h4>
-                                                </div>
-                                                <div id="collapse1" class="panel-collapse collapse">
-                                                    <div class="panel-body" >
-                                                        <asp:DropDownList ID="estadoList" runat="server" OnSelectedIndexChanged="estadoList_SelectedIndexChanged" CssClass="bg-ashh" Width="100%">
-                                
-                                                        </asp:DropDownList>
+                                        <br />
+                                        <center>
+                                        <asp:DropDownList ID="ddlEscuelas" runat="server" CssClass="bg-ashh" Style="width: 30%" >
+                                        </asp:DropDownList>
 
-                                                    </div>
-                                                </div>
+                                        <br />
+                                        <br />
+                                            <div class="col-sm-3">
+                                                <a aria-label="NuevaPreguntado" href="registroTabla.aspx" >
+                                                    <span aria-hidden="true" style="margin: 2px 2px 2px 2px; font-size:x-large; "><b>Nueva tabla>></b></span>
+                                                </a>
                                             </div>
-                                        </div>
+                                                                                
+                                            <asp:Button ID="idSeleccionar" Text="Seleccionar" class="btn btn-primary" OnClick="idSeleccionar_Click" runat="server" ></asp:Button>
+                                        </center>
+                                        <br />
+                                        <br />
                                     </li>
                                 </ul>
                             </div>
-                        </ItemTemplate>
-                    </asp:Repeater>
+                        </div>
 
+
+
+                        <asp:Repeater ID="imagenesList" runat="server" Visible="false" OnItemDataBound="imagenesList_ItemDataBound">
+                            <ItemTemplate>
+                                <div class="item col-md-3">
+                                    <ul>
+                                        <li>
+                                            <div class="thumbnail deals packagesPage isotopeSelector">
+                                                <img src='data:image/jpg;base64,<%# Eval("Imagen") %>' alt="deal-image" />
+
+
+                                                <h4><%# Eval("Marca") %></h4>
+                                                <h3>Estado: <%# Eval("Estado") %></h3>
+
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="panel-group">
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading">
+                                                        <h4 class="panel-title">
+                                                            <a data-toggle="collapse" href="#collapse1">Cambiar Estado</a>
+                                                        </h4>
+                                                    </div>
+                                                    <div id="collapse1" class="panel-collapse collapse">
+                                                        <div class="panel-body">
+                                                            <asp:DropDownList ID="estadoList" runat="server" OnSelectedIndexChanged="estadoList_SelectedIndexChanged" AutoPostBack="True" CssClass="bg-ashh" Width="100%">
+                                                            </asp:DropDownList>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </ItemTemplate>
+                        </asp:Repeater>
+
+                    </div>
                 </div>
             </div>
-        </div>
     </section>
 
 </asp:Content>

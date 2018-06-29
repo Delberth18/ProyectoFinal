@@ -70,7 +70,7 @@ namespace SurfTribeSystem1._0
                 tabla.Tamanio = txtPies.Text + "-" + txtPulgadas.Text;
                 tabla.Tipo = txtTipo.Text;
                 tabla.Estado = estado.SelectedValue;
-                tabla.Id_Esciela = escuela.SelectedValue;
+                tabla.Id_Escuela = escuela.SelectedValue;
 
                 string base64ImageRepresentation = Convert.ToBase64String(FileUpload.FileBytes);
 

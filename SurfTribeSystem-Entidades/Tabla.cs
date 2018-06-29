@@ -22,7 +22,7 @@ namespace SurfTribeSystem_Entidades
         public string Tamanio { get => tamanio; set => tamanio = value; }
         public string Tipo { get => tipo; set => tipo = value; }
         public string Estado { get => estado; set => estado = value; }
-        public string Id_Esciela { get => id_Esciela; set => id_Esciela = value; }
+        public string Id_Escuela { get => id_Esciela; set => id_Esciela = value; }
         public string Imagen { get => imagen; set => imagen = value; }
         public string Id { get => id; set => id = value; }
         public string Dificultad { get => dificultad; set => dificultad = value; }
