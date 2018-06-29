@@ -87,13 +87,13 @@ namespace SurfTribeSystem_Datos
                 parametros.Add(param);
 
                 param = new SqlParameter();
-                if (tabla.Id_Esciela == null)
+                if (tabla.Id_Escuela == null)
                 {
                     param.Value = DBNull.Value;
                 }
                 else
                 {
-                    param.Value = tabla.Id_Esciela;
+                    param.Value = tabla.Id_Escuela;
                 }
                 param.ParameterName = "@ID_ESCUELA";
                 parametros.Add(param);
@@ -162,7 +162,7 @@ namespace SurfTribeSystem_Datos
                                 Id = row["ID"] is DBNull ? null : row["ID"].ToString(),
                                 Tipo = row["TIPO"] is DBNull ? null : row["TIPO"].ToString(),
                                 Estado = row["ESTADO"] is DBNull ? null : row["ESTADO"].ToString(),
-                                Id_Esciela = row["ID_ESCUELA"] is DBNull ? null : row["ID_ESCUELA"].ToString(),
+                                Id_Escuela = row["ID_ESCUELA"] is DBNull ? null : row["ID_ESCUELA"].ToString(),
                                 Imagen = row["IMAGEN"] is DBNull ? null : row["IMAGEN"].ToString(),
                                 Dificultad = row["DIFICULTAD"] is DBNull ? null : row["DIFICULTAD"].ToString(),
                                 Tamanio = row["TAMANIO"] is DBNull ? null : row["TAMANIO"].ToString(),

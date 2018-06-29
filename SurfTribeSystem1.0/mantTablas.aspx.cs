@@ -13,6 +13,7 @@ namespace SurfTribeSystem1._0
 {
     public partial class mantTablas : System.Web.UI.Page
     {
+        public static string idEscuela = "";
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -92,7 +93,7 @@ namespace SurfTribeSystem1._0
             SqlDataAdapter sda = new SqlDataAdapter("select * from TABLASURF where ID_ESCUELA='" + ddlEscuelas.SelectedValue + "'", con);
             DataTable dt = new DataTable();
             sda.Fill(dt);
-
+            idEscuela = ddlEscuelas.SelectedValue;
             imagenesList.DataSource = dt;
             imagenesList.DataBind();
 
@@ -119,7 +120,11 @@ namespace SurfTribeSystem1._0
         {
             SqlConnection con = new SqlConnection(@"Data Source=localhost\SQLEXPRESS;Initial Catalog=SURF_TRIBE; Integrated Security=true;Connection Timeout=45;");//Delberth
             //SqlConnection con = new SqlConnection("Data Source=laptop-r7vb3im9\\mssqlserver01;Initial Catalog=SURF_TRIBE;Integrated Security=True");//Eduardo
-            SqlDataAdapter sda = new SqlDataAdapter("update TABLASURF set ESTADO='" +((DropDownList) sender).SelectedValue + "' where ID_ESCUELA='"+ ddlEscuelas.SelectedValue+"' and ID='1'", con);
+            SqlDataAdapter sda = new SqlDataAdapter("update TABLASURF set ESTADO='" +((DropDownList) sender).SelectedValue + "' where ID_ESCUELA='"+ idEscuela + "' and ID='1'", con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+
+            selecion();
         }
     }
 }
