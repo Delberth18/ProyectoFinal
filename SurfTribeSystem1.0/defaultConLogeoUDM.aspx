@@ -149,7 +149,7 @@
                                     <ul class="dropdown-menu dropdown-menu-right">
 
                                         <li class=""><a href="mantUsuarios.aspx">Usuarios</a></li>
-                                        <li class=""><a href="">Escuela</a></li>
+                                        <li class=""><a href="mantEscuelas.aspx">Escuela</a></li>
 
                                     </ul>
                                 </li>
