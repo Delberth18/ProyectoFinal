@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="defaultConLogeoUDM.aspx.cs" Inherits="SurfTribeSystem1._0.defaultConLogeoUDM" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="defaultConLogeoUINST.aspx.cs" Inherits="SurfTribeSystem1._0.defaultConLogeoUINST" %>
 
 
 <!DOCTYPE html>

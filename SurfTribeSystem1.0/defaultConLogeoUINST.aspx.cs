@@ -1,4 +1,5 @@
-﻿using SurfTribeSystem_Entidades;
+﻿
+using SurfTribeSystem_Entidades;
 using SurfTribeSystem_LogicaDeNegocios;
 using SurfTribeSystem_LogicaNegocio;
 using System;
@@ -10,29 +11,33 @@ using System.Web.UI.WebControls;
 
 namespace SurfTribeSystem1._0
 {
-    public partial class defaultSinLogeo : System.Web.UI.Page
+    public partial class defaultConLogeoUINST : System.Web.UI.Page
     {
-
-        
-
         protected void Page_Load(object sender, EventArgs e)
         {
-           
-            ListarRegistro();
-            ListarGuana();
-            ListarLimon();
-            ListarPuerto();
+            if (Session["InicioSesion"] != null)
+            {
 
+                ListarRegistro();
+                ListarGuana();
+                ListarLimon();
+                ListarPuerto();
+
+            }
+            else
+            {
+
+                Response.Redirect("defaultSinLogeoUN.aspx");
+
+            }
         }
-
-       
 
         protected void ingresoButton_Click(object sender, EventArgs e)
         {
             Resultado resultado = new Resultado();
             try
             {
-                
+
 
                 Credencial credencial = new Credencial()
                 {
@@ -41,70 +46,21 @@ namespace SurfTribeSystem1._0
                 };
                 resultado = new SeguridadLogica().ValidarUsuario(credencial);
 
-                if (resultado.TipoResultado=="OK")
+                if (resultado.TipoResultado == "OK")
                 {
-                    
-
-                    List<Usuario> usu2 = new List<Usuario>();
-
-                    usu2 = (List<Usuario>)resultado.ObjetoResultado;
-
-                    
-                        Session["InicioNombre"] = usu2[0].Nombre.ToString() + " " + usu2[0].Apellidos.ToString();
-
-                        Session["InicioSesion"] = 1;
-
-                    String idUsu = usu2[0].Tipo_usu.ToString();
-
-                    if (idUsu == "ADM")
-                    {
-
-                        Response.Redirect("defaultConLogeoUADM.aspx");
-
-                    }
-                    else {
-
-                        if (idUsu == "REG")
-                        {
-
-                            Response.Redirect("defaultConLogeoUN.aspx");
-
-                        }
-
-
-                    }
-                    
-
-
-
-                    
+                    Response.Redirect("defaultConLogeoUN.aspx");
                 }
                 else
                 {
-                    lblError.Text = "Usuario no encontrado";
-                    lblError.Visible = true;
-
-                    string script = "swal('Error', 'usuario no encontrado', 'error'); ";
-                    ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
-                    
-                   
-
+                    Response.Write("< script > alert('Error: " + resultado.Mensaje + " \n Lo sentimos') </ script >");
                 }
             }
             catch (Exception ex)
             {
 
-                lblError.Text = "Usuario no encontrado";
-                lblError.Visible = true;
-                string script = "swal('Error', '" + ex + "', 'error'); ";
-                ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
-
-                
-               
-
-
+                Response.Write("< script > alert('Error: " + ex + " \n Lo sentimos') </ script >");
             }
-            
+
         }
 
         private void ListarRegistro()
@@ -123,6 +79,7 @@ namespace SurfTribeSystem1._0
                     lista = (List<Imagen>)resultado.ObjetoResultado;
                     galeria.DataSource = lista;
                     galeria.DataBind();
+
 
                     //imagenesList.DataSource = lista;
                     //imagenesList.DataBind();
@@ -220,7 +177,15 @@ namespace SurfTribeSystem1._0
             }
         }
 
-       
+        protected void Sesion_Click(object sender, EventArgs e)
+        {
 
+            Session["InicioSesion"] = null;
+
+            Response.Redirect("defaultSinLogeoUN.aspx");
+
+            Session["InicioNombre"] = null;
+
+        }
     }
 }

@@ -9,7 +9,15 @@ namespace SurfTribeSystem_Entidades
     {
         string correoUsuario;
         string claveUsuario;
+
+       
+       
+
         public string CorreoUsuario { get => correoUsuario; set => correoUsuario = value; }
         public string ClaveUsuario { get => claveUsuario; set => claveUsuario = value; }
+        
+     
+
+
     }
 }

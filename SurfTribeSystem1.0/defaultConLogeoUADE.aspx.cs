@@ -1,4 +1,5 @@
-﻿using SurfTribeSystem_Entidades;
+﻿
+using SurfTribeSystem_Entidades;
 using SurfTribeSystem_LogicaDeNegocios;
 using SurfTribeSystem_LogicaNegocio;
 using System;
@@ -10,7 +11,7 @@ using System.Web.UI.WebControls;
 
 namespace SurfTribeSystem1._0
 {
-    public partial class defaultConLogeoUDM : System.Web.UI.Page
+    public partial class defaultConLogeoUADE : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -23,7 +24,8 @@ namespace SurfTribeSystem1._0
                 ListarPuerto();
 
             }
-            else {
+            else
+            {
 
                 Response.Redirect("defaultSinLogeoUN.aspx");
 

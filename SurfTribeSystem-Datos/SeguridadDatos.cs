@@ -50,7 +50,8 @@ namespace SurfTribeSystem_LogicaDeNegocios
                 }
                 param.ParameterName = "@IDUSUARIO";
                 parametros.Add(param);
-               
+
+
                 #endregion
 
 
@@ -67,9 +68,30 @@ namespace SurfTribeSystem_LogicaDeNegocios
                 }
                 else
                 {
-                    resultado.TipoResultado = "OK";
-                    
+                    if (datos.Tables[1] != null && datos.Tables[1].Rows.Count != 0)
+                    {
+                        resultado.TipoResultado = "OK";
 
+                        List<Usuario> lista = new List<Usuario>();
+
+                        foreach (DataRow row in datos.Tables[1].Rows)
+                        {
+
+
+                            lista.Add(new Usuario
+                            {
+                                Nombre = row["NOMBRE"] is DBNull ? null : row["NOMBRE"].ToString(),
+                                Apellidos = row["APELLIDOS"] is DBNull ? null : row["APELLIDOS"].ToString(),
+                                Clave = row["CLAVE"] is DBNull ? null : row["CLAVE"].ToString(),
+                                Pais = row["PAIS"] is DBNull ? null : row["PAIS"].ToString(),
+                                Tipo_usu = row["ID_TIPO_USU"] is DBNull ? null : row["ID_TIPO_USU"].ToString(),
+                                Correo = row["CORREO"] is DBNull ? null : row["CORREO"].ToString()
+
+                            });
+                        }
+
+                        resultado.ObjetoResultado = lista;
+                    }
                 }
 
 

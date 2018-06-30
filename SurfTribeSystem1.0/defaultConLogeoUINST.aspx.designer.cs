@@ -10,90 +10,123 @@
 namespace SurfTribeSystem1._0 {
     
     
-    public partial class RegistroImagenes {
+    public partial class defaultConLogeoUINST {
         
         /// <summary>
-        /// Control info1.
+        /// Control option_color.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label info1;
+        protected global::System.Web.UI.HtmlControls.HtmlLink option_color;
         
         /// <summary>
-        /// Control txtTitulo.
+        /// Control f1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTitulo;
+        protected global::System.Web.UI.HtmlControls.HtmlForm f1;
         
         /// <summary>
-        /// Control txtLeyenda.
+        /// Control GuanaRepeat.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtLeyenda;
+        protected global::System.Web.UI.WebControls.Repeater GuanaRepeat;
         
         /// <summary>
-        /// Control pertenece.
+        /// Control PuertoRepeat.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList pertenece;
+        protected global::System.Web.UI.WebControls.Repeater PuertoRepeat;
         
         /// <summary>
-        /// Control duenos.
+        /// Control LimonRepeat.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList duenos;
+        protected global::System.Web.UI.WebControls.Repeater LimonRepeat;
         
         /// <summary>
-        /// Control FileUpload.
+        /// Control Sesion.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload FileUpload;
+        protected global::System.Web.UI.WebControls.LinkButton Sesion;
         
         /// <summary>
-        /// Control btnGuardar.
+        /// Control galeria.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnGuardar;
+        protected global::System.Web.UI.WebControls.Repeater galeria;
         
         /// <summary>
-        /// Control imagenesList.
+        /// Control GuanaRepeat2.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater imagenesList;
+        protected global::System.Web.UI.WebControls.Repeater GuanaRepeat2;
         
         /// <summary>
-        /// Propiedad Master.
+        /// Control PuertoRepeat2.
         /// </summary>
         /// <remarks>
-        /// Propiedad generada automáticamente.
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        public new SurfTribeSystem1._0.Site2 Master {
-            get {
-                return ((SurfTribeSystem1._0.Site2)(base.Master));
-            }
-        }
+        protected global::System.Web.UI.WebControls.Repeater PuertoRepeat2;
+        
+        /// <summary>
+        /// Control LimonRepeat2.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater LimonRepeat2;
+        
+        /// <summary>
+        /// Control correoText.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox correoText;
+        
+        /// <summary>
+        /// Control claveText.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox claveText;
+        
+        /// <summary>
+        /// Control ingresarButton.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ingresarButton;
     }
 }
