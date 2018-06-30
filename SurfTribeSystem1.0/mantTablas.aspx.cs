@@ -14,6 +14,7 @@ namespace SurfTribeSystem1._0
     public partial class mantTablas : System.Web.UI.Page
     {
         public static string idEscuela = "";
+        public static string idTabla = "";
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -90,7 +91,7 @@ namespace SurfTribeSystem1._0
         {
             SqlConnection con = new SqlConnection(@"Data Source=localhost\SQLEXPRESS;Initial Catalog=SURF_TRIBE; Integrated Security=true;Connection Timeout=45;");//Delberth
             //SqlConnection con = new SqlConnection("Data Source=laptop-r7vb3im9\\mssqlserver01;Initial Catalog=SURF_TRIBE;Integrated Security=True");//Eduardo
-            SqlDataAdapter sda = new SqlDataAdapter("select * from TABLASURF where ID_ESCUELA='" + ddlEscuelas.SelectedValue + "'", con);
+            SqlDataAdapter sda = new SqlDataAdapter("select * from TABLASURF where ID_ESCUELA='" + ddlEscuelas.SelectedValue + "' and ESTADO<>'VENDIDA'", con);
             DataTable dt = new DataTable();
             sda.Fill(dt);
             idEscuela = ddlEscuelas.SelectedValue;
@@ -98,11 +99,13 @@ namespace SurfTribeSystem1._0
             imagenesList.DataBind();
 
             imagenesList.Visible = true;
+           
         }
 
         protected void imagenesList_ItemDataBound(object sender, RepeaterItemEventArgs e)
         {
             DropDownList ddl = e.Item.FindControl("estadoList") as DropDownList;
+            Label lbl= e.Item.FindControl("idTable") as Label;
 
             SqlConnection con = new SqlConnection(@"Data Source=localhost\SQLEXPRESS;Initial Catalog=SURF_TRIBE; Integrated Security=true;Connection Timeout=45;");//Delberth
             //SqlConnection con = new SqlConnection("Data Source=laptop-r7vb3im9\\mssqlserver01;Initial Catalog=SURF_TRIBE;Integrated Security=True");//Eduardo
@@ -114,13 +117,15 @@ namespace SurfTribeSystem1._0
             ddl.DataTextField = "DESCRIPCION";
             ddl.DataValueField = "DESCRIPCION";
             ddl.DataBind();
+
+            idTabla = lbl.Text;
         }
 
         protected void estadoList_SelectedIndexChanged(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection(@"Data Source=localhost\SQLEXPRESS;Initial Catalog=SURF_TRIBE; Integrated Security=true;Connection Timeout=45;");//Delberth
             //SqlConnection con = new SqlConnection("Data Source=laptop-r7vb3im9\\mssqlserver01;Initial Catalog=SURF_TRIBE;Integrated Security=True");//Eduardo
-            SqlDataAdapter sda = new SqlDataAdapter("update TABLASURF set ESTADO='" +((DropDownList) sender).SelectedValue + "' where ID_ESCUELA='"+ idEscuela + "' and ID='1'", con);
+            SqlDataAdapter sda = new SqlDataAdapter("update TABLASURF set ESTADO='" +((DropDownList) sender).SelectedValue + "' where ID_ESCUELA='"+ idEscuela + "' and ID='" + idTabla + "'", con);
             DataTable dt = new DataTable();
             sda.Fill(dt);
 
