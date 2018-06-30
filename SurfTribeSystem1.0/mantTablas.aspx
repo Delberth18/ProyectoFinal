@@ -66,7 +66,7 @@
 
                                                 <h4><%# Eval("Marca") %></h4>
                                                 <h3>Estado: <%# Eval("Estado") %></h3>
-
+                                                <asp:Label runat="server" ID="idTable" Text='<%# Eval("Id") %>' Visible="false"></asp:Label>
                                             </div>
                                         </li>
                                         <li>
