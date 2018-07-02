@@ -168,7 +168,7 @@
                                             <li class="active" ><a href="#"><i class="fa " aria-hidden="true"></i></a></li>
                                         </ul>
                                         <ul class="headerTopNavbar navbar-right">
-                                            <li class="active"><a id="tiro" data-toggle="modal" data-target="#login"><i class="fa fa-user" aria-hidden="true">&nbsp;</i>Iniciar Sesión </a></li>
+                                            <li class="active"><a id="tiro" data-toggle="modal" data-target="#login"><i class="fa fa-user" aria-hidden="true">&nbsp;&nbsp;</i>Iniciar Sesión </a></li>
 
                                         </ul>
                                     </div>

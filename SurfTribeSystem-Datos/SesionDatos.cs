@@ -51,17 +51,17 @@ namespace SurfTribeSystem_Datos
                 parametros.Add(param);
 
 
-                //param = new SqlParameter();
-                //if (sesion.Activa.ToString() == null)
-                //{
-                  //  param.Value = DBNull.Value;
-                //}
-                //else
-                //{
-                  //  param.Value = sesion.Activa;
-                //}
-                //param.ParameterName = "@ACTIVA";// activa
-                //parametros.Add(param);
+                param = new SqlParameter();
+                if (sesion.Id_instructor == null)
+                {
+                    param.Value = DBNull.Value;
+                }
+                else
+                {
+                    param.Value = sesion.Id_instructor;
+                }
+                param.ParameterName = "@ID_INSTRUCTOR";//instructor
+                parametros.Add(param);
 
                
                 param = new SqlParameter();
@@ -78,9 +78,9 @@ namespace SurfTribeSystem_Datos
 
 
                 param = new SqlParameter();
-                if (sesion.HraInicio1== Compara)
+                if (sesion.HraInicio1 == null)
                 {
-                    param.Value = DateTime.Now;
+                    param.Value = DBNull.Value;
                 }
                 else
                 {
@@ -90,9 +90,9 @@ namespace SurfTribeSystem_Datos
                 parametros.Add(param);
 
                 param = new SqlParameter();
-                if (sesion.HraFinal1== Compara)
+                if (sesion.HraFinal1 == null)
                 {
-                    param.Value = DateTime.Now;
+                    param.Value = DBNull.Value;
                 }
                 else
                 {
@@ -184,10 +184,16 @@ namespace SurfTribeSystem_Datos
                                 Fecha =  row["FECHA"] is DBNull ? DateTime.MinValue : Convert.ToDateTime(row["FECHA"]), 
                                 Habilitadas= row["HABILITADAS"] is DBNull ? 0 : Convert.ToInt32(row["HABILITADAS"]),
                                 Reservadas = row["RESERVADAS"] is DBNull ? 0 : Convert.ToInt32(row["RESERVADAS"]),
-                                HraInicio1 = row["HORA_INICIO"] is DBNull ? DateTime.MinValue : Convert.ToDateTime(row["HORA_INICIO"]),
-                                HraFinal1 = row["HORA_FINAL"] is DBNull ? DateTime.MinValue : Convert.ToDateTime(row["HORA_FINAL"]),
-                                IdEscuela = row["ID_ESCUELA"] is DBNull ? null : row["ID_ESCUELA"].ToString()
-                                
+                                HraInicio1 = row["HORA_INICIO"] is DBNull ? null : row["HORA_INICIO"].ToString(),
+                                HraFinal1 = row["HORA_FINAL"] is DBNull ? null : row["HORA_FINAL"].ToString(),
+                                IdEscuela = row["ID_ESCUELA"] is DBNull ? null : row["ID_ESCUELA"].ToString(),
+                                Id_instructor= row["ID_INSTRUCTOR"] is DBNull ? null : row["ID_INSTRUCTOR"].ToString(),
+                                Nombre= row["NOMBRE"] is DBNull ? null : row["NOMBRE"].ToString(),
+                                Apellidos = row["APELLIDOS"] is DBNull ? null : row["APELLIDOS"].ToString(),
+                                Mes = row["MES"] is DBNull ? null : row["MES"].ToString(),
+                                Dia = row["DIA"] is DBNull ? null : row["DIA"].ToString()
+
+
 
 
                             });
