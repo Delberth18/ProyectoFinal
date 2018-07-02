@@ -13,6 +13,15 @@ namespace SurfTribeSystem1._0 {
     public partial class mantTablas {
         
         /// <summary>
+        /// UpdatePanel1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel UpdatePanel1;
+        
+        /// <summary>
         /// ddlEscuelas control.
         /// </summary>
         /// <remarks>
@@ -20,15 +29,6 @@ namespace SurfTribeSystem1._0 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlEscuelas;
-        
-        /// <summary>
-        /// idSeleccionar control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button idSeleccionar;
         
         /// <summary>
         /// imagenesList control.

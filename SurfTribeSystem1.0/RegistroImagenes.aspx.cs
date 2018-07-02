@@ -183,23 +183,6 @@ namespace SurfTribeSystem1._0
             string script = "swal({ title: 'Are you sure?', text: 'Once deleted, you will not be able to recover this imaginary file!',  icon: 'warning', buttons: true, dangerMode: true, }); ";
             ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
         }
-        protected void btnNuevo_Click(object sender, EventArgs e)
-        {
-            //panelRegistrar.Visible = true;
-            //panelMostrar.Visible = false;
-        }
-        //protected void imagenesList_PageIndexChanging(object sender, GridViewPageEventArgs e)
-        //{
-        //    try
-        //    {
-        //        imagenesList.PageIndex = e.NewPageIndex;
-        //        imagenesList.DataBind();
-        //        ListarRegistro();
-        //    }
-        //    catch (Exception)
-        //    {
-        //        throw;
-        //    }
-        //}
+       
     }
 }

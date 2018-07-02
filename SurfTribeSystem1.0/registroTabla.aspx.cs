@@ -53,8 +53,9 @@ namespace SurfTribeSystem1._0
 
             string Extension = string.Empty;
             string Nombre = string.Empty;
+            
 
-            if (!FileUpload.HasFile)
+            if (FileUpload.HasFile==false)
             {
                 string script = "swal('Error', ' No puede faltar la imagen ', 'error'); ";
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
@@ -143,29 +144,42 @@ namespace SurfTribeSystem1._0
 
         private void ListarEscuelas()
         {
-            SqlConnection con = new SqlConnection(@"Data Source=localhost\SQLEXPRESS;Initial Catalog=SURF_TRIBE; Integrated Security=true;Connection Timeout=45;");//Delberth
-            //SqlConnection con = new SqlConnection("Data Source=laptop-r7vb3im9\\mssqlserver01;Initial Catalog=SURF_TRIBE;Integrated Security=True");//Eduardo
-            SqlDataAdapter sda = new SqlDataAdapter("select * from ESCUELA", con);
-            DataTable dt = new DataTable();
-            sda.Fill(dt);
+            Resultado resultado = new Resultado();
+            try
+            {
+                List<Escuela> lista = new List<Escuela>();
 
-            escuela.DataSource = dt;
-            escuela.DataTextField = "NOMBRE";
-            escuela.DataValueField = "ID";
-            escuela.DataBind();
+                Escuela esc = new Escuela();
+
+                esc.Tag = "LISTA_PRINCIPAL";
+                resultado = new EscuelaLogica().Acciones(esc);
+
+                lista = (List<Escuela>)resultado.ObjetoResultado;
+
+                escuela.DataSource = lista;
+                escuela.DataTextField = "NOMBRE";
+                escuela.DataValueField = "ID";
+                escuela.DataBind();
+                
+
+            }
+            catch (Exception ex)
+            {
+                string script = "swal('Error', '" + ex + "', 'error'); ";
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
+            }
         }
 
         private void ListarEstados()
         {
-            SqlConnection con = new SqlConnection(@"Data Source=localhost\SQLEXPRESS;Initial Catalog=SURF_TRIBE; Integrated Security=true;Connection Timeout=45;");//Delberth
-            //SqlConnection con = new SqlConnection("Data Source=laptop-r7vb3im9\\mssqlserver01;Initial Catalog=SURF_TRIBE;Integrated Security=True");//Eduardo
-            SqlDataAdapter sda = new SqlDataAdapter("select * from ESTADO_TABLA", con);
-            DataTable dt = new DataTable();
-            sda.Fill(dt);
+            Resultado resultado = new Resultado();
+            resultado = new TablaLogica().Estados();
 
-            estado.DataSource = dt;
-            estado.DataTextField = "DESCRIPCION";
-            estado.DataValueField = "DESCRIPCION";
+            List<Estado> lista = (List<Estado>)resultado.ObjetoResultado;
+
+            estado.DataSource = lista;
+            estado.DataTextField = "Descripcion";
+            estado.DataValueField = "Descripcion";
             estado.DataBind();
         }
 
@@ -184,9 +198,6 @@ namespace SurfTribeSystem1._0
                     lista = (List<Tabla>)resultado.ObjetoResultado;
                     imagenesList.DataSource = lista;
                     imagenesList.DataBind();
-
-                    //imagenesList.DataSource = lista;
-                    //imagenesList.DataBind();
                 }
 
             }

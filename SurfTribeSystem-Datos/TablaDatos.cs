@@ -72,7 +72,7 @@ namespace SurfTribeSystem_Datos
                 }
                 param.ParameterName = "@TIPO";
                 parametros.Add(param);
-                
+
 
                 param = new SqlParameter();
                 if (tabla.Estado == null)
@@ -167,12 +167,31 @@ namespace SurfTribeSystem_Datos
                                 Dificultad = row["DIFICULTAD"] is DBNull ? null : row["DIFICULTAD"].ToString(),
                                 Tamanio = row["TAMANIO"] is DBNull ? null : row["TAMANIO"].ToString(),
                                 Marca = row["MARCA"] is DBNull ? null : row["MARCA"].ToString(),
-                                NombreEscuela= row["NOMBRE"] is DBNull ? null : row["NOMBRE"].ToString()
+                                NombreEscuela = row["NOMBRE"] is DBNull ? null : row["NOMBRE"].ToString()
                             });
 
                         }
                     }
-                    else if (tabla.Tag == "INSER_ACTUA")
+                    else if (tabla.Tag == "LISTADO_ESCUELA_NO_VENTA" && datos.Tables[1] != null && datos.Tables[1].Rows.Count != 0)
+                    {
+                        foreach (DataRow row in datos.Tables[1].Rows)
+                        {
+
+                            lista.Add(new Tabla
+                            {
+                                Id = row["ID"] is DBNull ? null : row["ID"].ToString(),
+                                Tipo = row["TIPO"] is DBNull ? null : row["TIPO"].ToString(),
+                                Estado = row["ESTADO"] is DBNull ? null : row["ESTADO"].ToString(),
+                                Id_Escuela = row["ID_ESCUELA"] is DBNull ? null : row["ID_ESCUELA"].ToString(),
+                                Imagen = row["IMAGEN"] is DBNull ? null : row["IMAGEN"].ToString(),
+                                Dificultad = row["DIFICULTAD"] is DBNull ? null : row["DIFICULTAD"].ToString(),
+                                Tamanio = row["TAMANIO"] is DBNull ? null : row["TAMANIO"].ToString(),
+                                Marca = row["MARCA"] is DBNull ? null : row["MARCA"].ToString()
+                            });
+
+                        }
+                    }
+                    else if (tabla.Tag == "INSER_ACTUA" || tabla.Tag=="CAMBIA_ESTADO")
                     {
                         resultado.TipoResultado = "OK";
                     }
@@ -195,5 +214,36 @@ namespace SurfTribeSystem_Datos
                 throw ex;
             }
         }
+
+        public Resultado Estados()
+        {
+            Resultado resultado = new Resultado();
+            DataSet datos = new DataSet();
+
+            try
+            {
+                datos = new Conexion()
+                    .EjecutarConsultaSimple("select * from Estado_Tabla");
+
+                List<Estado> lista = new List<Estado>();
+
+                foreach (DataRow row in datos.Tables[0].Rows)
+                {
+
+                    lista.Add(new Estado { Descripcion = row["DESCRIPCION"].ToString() });
+
+                }
+                
+
+                resultado.ObjetoResultado = lista;
+
+                return resultado;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
     }
 }

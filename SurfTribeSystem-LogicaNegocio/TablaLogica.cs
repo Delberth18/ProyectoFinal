@@ -24,5 +24,20 @@ namespace SurfTribeSystem_LogicaNegocio
                 throw ex;
             }
         }
+
+        public Resultado Estados()
+        {
+            Resultado resultado = new Resultado();
+            try
+            {
+                resultado = new SurfTribeSystem_Datos.TablaDatos().Estados();
+
+                return resultado;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

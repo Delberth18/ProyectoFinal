@@ -201,7 +201,7 @@ namespace SurfTribeSystem_Datos
 
                         }
                     }
-                    else if (escuela.Tag == "LISTADO_POR_NOMBRE" && datos.Tables[1] != null && datos.Tables[1].Rows.Count != 0)
+                    else if ((escuela.Tag == "LISTADO_POR_NOMBRE" || escuela.Tag == "LISTADO_POR_ID") && datos.Tables[1] != null && datos.Tables[1].Rows.Count != 0)
                     {
 
                         foreach (DataRow row in datos.Tables[1].Rows)
@@ -240,6 +240,20 @@ namespace SurfTribeSystem_Datos
                                 Correo = row["CORREO"] is DBNull ? null : row["CORREO"].ToString(),
                                 Descripcion = row["DESCRIPCION"] is DBNull ? null : row["DESCRIPCION"].ToString(),
                                 Zona = row["ZONA"] is DBNull ? null : row["ZONA"].ToString()
+                            });
+
+                        }
+                    }
+                    else if (escuela.Tag == "LISTA_PRINCIPAL")
+                    {
+                        foreach (DataRow row in datos.Tables[1].Rows)
+                        {
+
+
+                            lista.Add(new Escuela
+                            {
+                                Nombre = row["NOMBRE"] is DBNull ? null : row["NOMBRE"].ToString(),
+                                Id = row["ID"] is DBNull ? null : row["ID"].ToString()
                             });
 
                         }
