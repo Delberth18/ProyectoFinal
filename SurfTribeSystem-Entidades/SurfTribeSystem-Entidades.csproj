@@ -50,6 +50,7 @@
     <Compile Include="Precio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Resultado.cs" />
+    <Compile Include="Sesion.cs" />
     <Compile Include="Tabla.cs" />
     <Compile Include="Usuario.cs" />
   </ItemGroup>

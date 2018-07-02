@@ -50,6 +50,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SeguridadDatos.cs" />
     <Compile Include="ImagenDatos.cs" />
+    <Compile Include="SesionDatos.cs" />
     <Compile Include="TablaDatos.cs" />
     <Compile Include="UsuarioDatos.cs" />
   </ItemGroup>
