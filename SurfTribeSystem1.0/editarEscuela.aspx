@@ -169,13 +169,14 @@
                                                 </div>
                                             </div>
                                         </div>
+                                         </section>
                                         </ContentTemplate>
 
             <Triggers>
                 <asp:AsyncPostBackTrigger ControlID="idGuardar" EventName="" />
             </Triggers>
         </asp:UpdatePanel>
-                                    </section>
+                                   
 
                                 </div>
 
