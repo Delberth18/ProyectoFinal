@@ -1,4 +1,6 @@
-﻿using System;
+﻿using SurfTribeSystem_Entidades;
+using SurfTribeSystem_LogicaNegocio;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -13,6 +15,8 @@ namespace SurfTribeSystem1._0
     {
         int cuenta = 1;
         int numero = 0;
+        Sesion sesion = new Sesion();
+        List<Sesion> sesiones = new List<Sesion>();
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -23,14 +27,51 @@ namespace SurfTribeSystem1._0
 
 
 
-            SqlConnection con = new SqlConnection("Data Source=laptop-r7vb3im9\\mssqlserver01;Initial Catalog=SURF_TRIBE;Integrated Security=True");
-            SqlDataAdapter sda = new SqlDataAdapter("select * from usuario", con);
-            DataTable dt = new DataTable();
-            sda.Fill(dt);
-            repeater1.DataSource = dt;
-            repeater1.DataBind();
+            // SqlConnection con = new SqlConnection("Data Source=laptop-r7vb3im9\\mssqlserver01;Initial Catalog=SURF_TRIBE;Integrated Security=True");
+            //SqlDataAdapter sda = new SqlDataAdapter("select * from usuario", con);
+            //DataTable dt = new DataTable();
+            //sda.Fill(dt);
+            //repeater1.DataSource = dt;
+            //repeater1.DataBind();
+
+            ObtenerListado();
             
 
+        }
+        private void ObtenerListado()
+        {
+            Resultado resultado = new Resultado();
+            try
+            {
+                string nivel= Session["Nivel"].ToString().ToUpper();
+                String escuela = Session["escuela"].ToString();
+                
+                sesion.Tag = "PRINCIPAL";
+                sesion.Activa = true;
+                sesion.IdEscuela = escuela;
+                sesion.Dificultad = nivel;
+
+                resultado = new SesionLogica().Acciones(sesion);
+
+                if (resultado.TipoResultado == "OK")
+                {
+                    
+
+                    sesiones = (List<Sesion>)resultado.ObjetoResultado;
+
+                    repeater1.DataSource = sesiones;
+                    repeater1.DataBind();
+                }
+                else
+                {
+                    Response.Write("< script > alert('Error: " + resultado.Mensaje + " \n Lo sentimos') </ script >");
+                }
+            }
+            catch (Exception ex)
+            {
+
+                Response.Write("< script > alert('Error: " + ex + " \n Lo sentimos') </ script >");
+            }
         }
 
         protected void btnRegistrar_Click(object sender, EventArgs e)

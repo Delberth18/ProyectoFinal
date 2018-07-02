@@ -95,29 +95,31 @@ box-shadow: 14px 28px 38px -16px rgba(0,0,0,0.75); background: url('ccss/star-1-
 
       <div  style="height: 90px; background:  transparent; border-color: transparent;"  class="panel-heading">
         <h4 style="margin-top: 45px; color: beige;" class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion"  href="#<%#Eval("NOMBRE")%>"><asp:Label runat="server" ID="fecha" Text="Detalles"></asp:Label></a>
+          <a data-toggle="collapse" data-parent="#accordion"  href="#<%#Eval("ID")%>"><asp:Label runat="server" ID="fecha" Text="Detalles"></asp:Label></a>
         </h4>
-          <asp:Image ID="ss" runat="server" CommandArgument='<%#Eval("NOMBRE")%>'  style="margin-left: 223px;  margin-top: 40px;"  Visible="false" ImageUrl="ccss/star-1-3/Static%20HTML/img/booking/alert-check.png" ></asp:Image>
+          <asp:Image ID="ss" runat="server" CommandArgument='<%#Eval("ID")%>'  style="margin-left: 223px;  margin-top: 40px;"  Visible="false" ImageUrl="ccss/star-1-3/Static%20HTML/img/booking/alert-check.png" ></asp:Image>
       </div>
        
        
         
      
-      <div id="<%#Eval("NOMBRE")%>" style="    position: absolute;
+      <div id="<%#Eval("ID")%>" style="    position: absolute;
     width: 288px;" class="panel-collapse collapse">
         <div class="panel-body" style=" background-color: lightgoldenrodyellow;"><br />
-            <font size="3" text-align="left"><b>Hora de Inicio:</b></font>&nbsp;&nbsp;<asp:Label ID="hInicio" runat="server" Text="9:00 am"></asp:Label><br />
-            <font size="3"><b>Hora de Finalización:</b></font>&nbsp;&nbsp;<asp:Label ID="Label5" runat="server" Text="11:00 am"></asp:Label><br />
-             <font size="3"><b>Instructor:</b></font>&nbsp;&nbsp;<asp:Label ID="Label6" runat="server" Text="Carlos Alvarado Sanchez"></asp:Label><br /><br />
+            <font size="3" text-align="left"><b>Hora de Inicio:</b></font>&nbsp;&nbsp;<asp:Label ID="hInicio" runat="server" Text='<%#Eval("HRAINICIO1")%>'></asp:Label><br />
+            <font size="3"><b>Hora de Finalización:</b></font>&nbsp;&nbsp;<asp:Label ID="Label5" runat="server" Text='<%#Eval("HRAFINAL1")%>'></asp:Label><br />
+             <font size="3"><b>Instructor:</b></font>&nbsp;&nbsp;<asp:Label ID="Label6" runat="server" Text='<%#Eval("NOMBRE")%>'></asp:Label>&nbsp;
+            <asp:Label ID="Label1" runat="server" Text='<%#Eval("APELLIDOS")%>'></asp:Label>
+            <br /><br />
 
-        <!--<asp:Button runat="server"  CommandArgument='<%#Eval("NOMBRE")%>' style="border-radius: 12px; background: #008CBA; color: white;"  ID="btnRegistrar" Text="  Reservar  "  Visible="true" OnClick="btnRegistrar_Click"/>-->
-             <asp:Button runat="server" style="border-radius: 12px; background: #008CBA;  color: white;" CommandName='<%#Eval("NOMBRE")%>' CommandArgument='<%#Eval("NOMBRE")%>'  ID="btnDesselecionar" Text="  Reservar  "  Visible="false" />
+        <!--<asp:Button runat="server"  CommandArgument='<%#Eval("ID")%>' style="border-radius: 12px; background: #008CBA; color: white;"  ID="btnRegistrar" Text="  Reservar  "  Visible="true" OnClick="btnRegistrar_Click"/>-->
+             <asp:Button runat="server" style="border-radius: 12px; background: #008CBA;  color: white;" CommandName='<%#Eval("ID")%>' CommandArgument='<%#Eval("ID")%>'  ID="btnDesselecionar" Text="  Reservar  "  Visible="false" />
 
         </div>
       </div><br /><br />
         
-         <asp:Label style="margin-top: 80px; color: black;" runat="server" ID="Label3" Font-Size="60px" Text="25"></asp:Label><br /><br />
-         <asp:Label style="margin-top: 80px; color: black;" runat="server" ID="Label4" Font-Size="40px" Text="julio"></asp:Label>
+         <asp:Label style="margin-top: 80px; color: black;" runat="server" ID="Label3" Font-Size="60px" Text='<%#Eval("DIA")%>'></asp:Label><br /><br />
+         <asp:Label style="margin-top: 80px; color: black;" runat="server" ID="Label4" Font-Size="40px" Text='<%#Eval("MES")%>'></asp:Label>
     </div>
     
     

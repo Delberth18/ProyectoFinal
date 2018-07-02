@@ -52,7 +52,7 @@
                 <div class="row">
                     <div class="col-xs-12">
                         <br />
-                            <center><font size="5"><b FACE="arial" style="margin-left: -70px;" >Seleccione su escuela</b></font></center><br /><br />
+                            <center><font size="5"><b FACE="arial" style="margin-left: -8%;" >Seleccione su escuela</b></font></center><br /><br />
                          <font size="4" style="margin-left: -70px;"><b FACE="arial">1.<u> Ubicación:</u>&nbsp;&nbsp;</b></font>
                         <asp:Label runat="server" ID="idUbicación" Text="Guanacaste"></asp:Label>
                         
