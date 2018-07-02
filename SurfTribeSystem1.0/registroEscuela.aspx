@@ -9,7 +9,7 @@
 
 
     <!-- PAGE TITLE -->
-    <section class="pageTitle" style="background-image: url(Imagenes/IMG-20171029-WA0010.jpeg); margin-top: 96px;">
+<%--    <section class="pageTitle" style="background-image: url(Imagenes/IMG-20171029-WA0010.jpeg); margin-top: 96px;">
         <div class="container">
             <div class="row">
                 <div class="col-xs-12">
@@ -27,10 +27,21 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section>--%>
 
     <!--Contenido principal-->
-    <section class="mainContentSection packagesSection" style="background-color: white">
+    <section class="mainContentSection packagesSection" style="background-image: url(Imagenes/IMG-20150830-WA0006.jpg); background-repeat: no-repeat; background-size: cover">
+        <br/>
+        <center class="titulo" >
+            <center>
+                <font size="7">
+                    <b style="  color: black; border-radius: 484px; opacity: 0.8;" FACE="arial">Registro de Escuelas</b>
+                </font>
+
+            </center>
+
+    </center>
+        <br/>
         <div class="container" style="background-image: url('ccss/star-1-3/Static%20HTML/img/bg-menuReserva.jpg'); position: relative; z-index: 1; -webkit-box-shadow: -11px 9px 45px 2px rgba(0,0,0,0.75); -moz-box-shadow: -11px 9px 45px 2px rgba(0,0,0,0.75); box-shadow: -11px 9px 45px 2px rgba(0,0,0,0.75); border-radius: 12px; padding: 12px;">
             <div class="row">
                 <div class="col-xs-12 col-sm-4">

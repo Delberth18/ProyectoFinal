@@ -41,13 +41,16 @@
                                                                         <li>
                                                                             <br />
                                                                             <center>
-                                                                            <asp:DropDownList ID="ddlEscuelas" runat="server" CssClass="bg-ashh" Style="width: 30%" >
+                                                                            <asp:DropDownList ID="ddlEscuelas" AutoPostBack="True" runat="server" OnSelectedIndexChanged="Seleccionar" CssClass="bg-ashh" Style="width: 30%" >
                                                                             </asp:DropDownList>
                                                                             <br />
+                                                                             </center>
                                                                             <br />
-                                                                                <asp:Button ID="idSeleccionar" Text="Seleccionar" class="btn btn-primary" runat="server" OnClick="Seleccionar"></asp:Button>
-                                                                            </center>
-                                                                            <br />
+                                                                            <div class="col-sm-3">
+                                                                                <a aria-label="NuevaPreguntado" href="registroEscuela.aspx" >
+                                                                                    <span aria-hidden="true" style="margin: 2px 2px 2px 2px; font-size:x-large; "><b>Nueva Escuela>></b></span>
+                                                                                </a>
+                                                                            </div>
                                                                             <br />
                                                                         </li>
                                                                     </ul>
@@ -58,7 +61,7 @@
                                                                 <div class="col-sm-12">
                                                                     <ul>
                                                                         <li>
-                                                                            <asp:GridView ID="grvEstado" runat="server" AutoGenerateColumns="False" HorizontalAlign="Center" BackColor="White" BorderColor="#CCCCCC"
+                                                                            <asp:GridView ID="grvEstado" Width="100%" runat="server" AutoGenerateColumns="False" HorizontalAlign="Center" BackColor="White" BorderColor="#CCCCCC"
                                                                                 BorderStyle="None" CellPadding="3" CssClass="gv1"
                                                                                 SelectedIndex="0"
                                                                                 OnSelectedIndexChanged="grvEstado_SelectedIndexChanged"
@@ -74,7 +77,6 @@
                                                                                     <asp:BoundField DataField="CORREO" HeaderText="Correo"></asp:BoundField>
                                                                                     <asp:BoundField DataField="ZONA" HeaderText="Zona"></asp:BoundField>
                                                                                     <asp:BoundField DataField="DESCRIPCION" HeaderText="Descripcion" ItemStyle-Width="30%"></asp:BoundField>
-                                                                                    <asp:BoundField DataField="ACTIVA" HeaderText="Activa?"></asp:BoundField>
                                                                                 </Columns>
 
 
@@ -99,7 +101,7 @@
                                                                         </li>
                                                                         <li>
                                                                             <br />
-                                                                            <asp:Button ID="idEditar" Text="Editar Escuela" class="btn btn-success btn-lg" runat="server" OnClick="idEditar_Click" Visible="false" />
+                                                                            <asp:Button ID="idEditar" Text="Editar Escuela" class="btn btn-default btn-circle-2" BackColor="darkorange"  ForeColor="White" runat="server" OnClick="idEditar_Click" Visible="false" />
                                                                         </li>
                                                                     </ul>
 
@@ -121,7 +123,7 @@
 
             <Triggers>
                 <asp:AsyncPostBackTrigger ControlID="grvEstado" EventName="" />
-                <asp:AsyncPostBackTrigger ControlID="idSeleccionar" EventName="Click" />
+                <asp:AsyncPostBackTrigger ControlID="ddlEscuelas" EventName="SelectedIndexChanged" />
             </Triggers>
         </asp:UpdatePanel>
     </section>

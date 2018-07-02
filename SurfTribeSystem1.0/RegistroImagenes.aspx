@@ -84,6 +84,7 @@
                             <asp:FileUpload ID="FileUpload" runat="server" class="form-control  bg-ashh" />
                         </li>
                         <li>
+                            <br />
                             <asp:Button ID="btnGuardar" class="btn btn-default btn-circle-2 " BackColor="darkorange" ForeColor="White" runat="server" Text="Guardar" OnClick="btnGuardar_Click" Width="150px" />
                         </li>
                     </ul>
@@ -101,9 +102,9 @@
 
                     <asp:Repeater ID="imagenesList" runat="server" >
                         <ItemTemplate>
-                            <div class="item col-md-4" >
-                                <div class="thumbnail deals packagesPage isotopeSelector">
-                                    <img src='data:image/jpg;base64,<%# Eval("Imgs") %>' alt="deal-image"/>
+                            <div class="col-md-4" >
+                                <div class="thumbnail deals packagesPage isotopeSelector" style="height:250px; background:none" >
+                                    <img src='data:image/jpg;base64,<%# Eval("Imgs") %>' alt="deal-image" />
                                     
                     
                                     <h4><%# Eval("Pertenece") %></h4>
