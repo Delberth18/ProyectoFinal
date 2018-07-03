@@ -6,21 +6,25 @@
 
 
 
-    <section class="bookingTypeSection" style="background-image: url(Imagenes/IMG-20150830-WA0006.jpg); background-repeat: no-repeat; background-size: cover">
+    <section class="mainContentSection packagesSection" style="background-image: url(Imagenes/IMG-20150830-WA0006.jpg); background-repeat: no-repeat; background-size: cover">
         <asp:UpdatePanel ID="UpdatePanel1" runat="server">
             <ContentTemplate>
+                <br />
+          <div class="row">
+                <div class="col-xs-12">
+                    <div class="sectionTitle">
+                        <h2>
+                            <asp:Label runat="server" ID="tituloLabel" Text="mantenimiento de usuarios" BackColor="#f5f5f5" Font-Size="XX-Large"></asp:Label></h2>
+
+                    </div>
+                    
+                </div>
+            </div>
+                                <br />
                 <div class="container">
-                    <div class="row">
                         <div class="col-xs-12">
-                            <div class="bookingType bg-ashs">
-                                <br />
-                                <br />
-                                <br />
-
-
-
-                                <div style="background-image: url('ccss/star-1-3/Static%20HTML/img/bg-menuReserva.jpg'); position: relative; z-index: 1; -webkit-box-shadow: -11px 9px 45px 2px rgba(0,0,0,0.75); -moz-box-shadow: -11px 9px 45px 2px rgba(0,0,0,0.75); box-shadow: -11px 9px 45px 2px rgba(0,0,0,0.75); border-radius: 12px;">
-
+                                
+                                <div style="background-image: url('ccss/star-1-3/Static%20HTML/img/bg-menuReserva.jpg'); position: relative; z-index: 1; -webkit-box-shadow: -11px 9px 45px 2px rgba(0,0,0,0.75); -moz-box-shadow: -11px 9px 45px 2px rgba(0,0,0,0.75); box-shadow: -11px 9px 45px 2px rgba(0,0,0,0.75); border-radius: 12px; margin-top: 3%">
                                     <div class="tab-content">
                                         <div id="Lugar" class="tab-pane fade in active">
 
@@ -34,20 +38,6 @@
 
                                                                     <div class="row">
 
-
-
-
-                                                                        <center class="titulo" style="width: 1100px; background: darkorange; margin-left: -10px;">
-                                                                             <center>
-                                                                                 <font size="7">
-                                                                                     <b style="    background-color: darkorange; color: black; border-radius: 484px;  margin-left: 37px;  opacity: 0.8;" FACE="arial">Mantenimiento Usuarios</b>
-                                                                                 </font>
-
-                                                                             </center>
-                                                                      </center>
-                                                                        <br />
-                                                                        <br />
-
                                                                         <center>
        <div class="form-group txtPequeño">
        
@@ -56,7 +46,7 @@
         </div>
             
   
-     <asp:Button ID="idBuscar" Text="  Buscar  " class="btn btn-primary"  style="margin-left:-50px" runat="server" OnClick="idBuscar_Click"  ></asp:Button>
+     <asp:Button ID="idBuscar" Text="  Buscar  " class="btn "  style="margin-left:-50px" runat="server" OnClick="idBuscar_Click" BackColor="SaddleBrown" ForeColor="White" ></asp:Button>
        <br /><br />
    </center>
                                                                         <br />
@@ -80,12 +70,12 @@
 
                                                                                 <FooterStyle BackColor="White" ForeColor="#000066"></FooterStyle>
 
-                                                                                <HeaderStyle BackColor="#006699" Font-Bold="True" ForeColor="White" CssClass="celdas-titulos"></HeaderStyle>
+                                                                                <HeaderStyle BackColor="DarkOrange" Font-Bold="True" ForeColor="White" CssClass="celdas-titulos"></HeaderStyle>
                                                                                 <PagerStyle HorizontalAlign="Left" BackColor="White" ForeColor="#000066"></PagerStyle>
 
-                                                                                <RowStyle ForeColor="#000066"></RowStyle>
+                                                                                <RowStyle ForeColor="#669999"></RowStyle>
 
-                                                                                <SelectedRowStyle BackColor="#669999" Font-Bold="True" ForeColor="White"></SelectedRowStyle>
+                                                                                <SelectedRowStyle BackColor="#262a2e" Font-Bold="True" ForeColor="White"></SelectedRowStyle>
 
                                                                                 <SortedAscendingCellStyle BackColor="#F1F1F1"></SortedAscendingCellStyle>
 
@@ -95,7 +85,7 @@
 
                                                                                 <SortedDescendingHeaderStyle BackColor="#00547E"></SortedDescendingHeaderStyle>
                                                                             </asp:GridView>
-                                                                            <asp:Button ID="idEditar" Style="margin-top: -69px; margin-left: 120px;" Text="Editar Usuario" class="btn btn-success btn-lg" runat="server" OnClick="idEditar_Click" Visible="false" />
+                                                                            <asp:Button ID="idEditar" Style="margin-top: -69px; margin-left: 120px;" Text="Editar Usuario" class="btn  btn-lg" BackColor="DarkOrange" ForeColor="White" runat="server" OnClick="idEditar_Click" Visible="false" />
 
                                                                         </div>
 
@@ -122,8 +112,6 @@
 
                             </div>
                         </div>
-                    </div>
-                </div>
             </ContentTemplate>
             <Triggers>
                 <asp:AsyncPostBackTrigger ControlID="grvEstado" EventName="" />

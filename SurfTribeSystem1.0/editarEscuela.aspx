@@ -4,7 +4,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-    <section class="bookingTypeSection" style="background-image: url(Imagenes/IMG-20150830-WA0006.jpg); background-repeat: no-repeat; background-size: cover">
+    <section class="mainContentSection packagesSection" style="background-image: url(Imagenes/IMG-20150830-WA0006.jpg); background-repeat: no-repeat; background-size: cover">
 
         <div class="container">
             <div class="row">
@@ -14,16 +14,16 @@
                         
                         <br />
                         <br />
+          <div class="row">
+                <div class="col-xs-12">
+                    <div class="sectionTitle">
+                        <h2>
+                            <asp:Label runat="server" ID="tituloLabel" Text="Edición Escuelas" BackColor="#f5f5f5" Font-Size="XX-Large"></asp:Label></h2>
 
-                        <center class="titulo" >
-                                                                             <center>
-                                                                                 <font size="7">
-                                                                                     <b style="  color: black; border-radius: 484px; opacity: 0.8;" FACE="arial">Edición Escuelas</b>
-                                                                                 </font>
-
-                                                                             </center>
-
-                                                                      </center>
+                    </div>
+                    
+                </div>
+            </div>
                         
                         <br />
 
@@ -37,36 +37,33 @@
                                         <ContentTemplate>
                                     <section class="recentActivitySection">
                                         <div class="container">
-                                            <div class="de">
-                                                <div class="col-xs-12 ">
-                                                    <div class="recentActivityContent bg-ashs">
-
-                                                        <div class="container">
+                                            
+                                                   
 
                                                             <div class="row">
-                                                                <asp:Table ID="tabGeneral" runat="server" class="container col-sm-12">
+                                                                <asp:Table ID="tabGeneral" runat="server" CssClass="col-xs-12 col-sm-12" >
                                                                     <asp:TableRow>
                                                                         <asp:TableCell>
-                                                                            <div class="form-group" style="color: black; font-size: 20px;">
+                                                                            <div class="form-group" style="color: saddlebrown; font-size: x-large;">
                                                                                 <br />
-                                                                                <label class="col-lg-3 control-label" for="focusedInput">Nombre</label>
-                                                                                <div class="col-lg-5 txtnormal">
+                                                                                <label class="col-lg-4 control-label" for="focusedInput">Nombre</label>
+                                                                                <div class="col-lg-5 ">
                                                                                     <asp:TextBox ID="txtNombre" runat="server"  class="form-control"></asp:TextBox>
                                                                                 </div>
                                                                             </div>
                                                                             <br />
                                                                             <br />
-                                                                            <div class="form-group" style="color: black; font-size: 20px;">
-                                                                                <label class="col-lg-3 control-label" for="focusedInput">Ubicación</label>
-                                                                                <div class="col-lg-5 txtnormal">
+                                                                            <div class="form-group" style="color: saddlebrown; font-size: x-large;">
+                                                                                <label class="col-lg-4 control-label" for="focusedInput">Ubicación</label>
+                                                                                <div class="col-lg-5 ">
                                                                                     <asp:TextBox ID="txtUbicacion" runat="server"  class="form-control"></asp:TextBox>
                                                                                 </div>
                                                                             </div>
                                                                             <br />
                                                                             <br />
-                                                                            <div class="form-group" style="color: black; font-size: 20px; ">
-                                                                                <label class="col-lg-3 control-label" for="focusedInput">Teléfono-1</label>
-                                                                                <div class="col-lg-5 txtnormal">
+                                                                            <div class="form-group" style="color: saddlebrown; font-size: x-large; ">
+                                                                                <label class="col-lg-4 control-label" for="focusedInput">Teléfono-1</label>
+                                                                                <div class="col-lg-5 ">
                                                                                     <asp:TextBox ID="txtTelefono1" runat="server" class="form-control"></asp:TextBox>
                                                                                 </div>
                                                                             </div>
@@ -74,27 +71,27 @@
                                                                             <br />
 
 
-                                                                            <div class="form-group" style="color: black; font-size: 20px; ">
-                                                                                <label class="col-lg-3 control-label" for="inputEmail">Teléfono-2</label>
-                                                                                <div class=" col-lg-5 txtnormal">
+                                                                            <div class="form-group" style="color: saddlebrown; font-size: x-large; ">
+                                                                                <label class="col-lg-4 control-label" for="inputEmail">Teléfono-2</label>
+                                                                                <div class=" col-lg-5 ">
                                                                                     <asp:TextBox ID="txtTelefono2" runat="server" class="form-control" ></asp:TextBox>
                                                                                 </div>
                                                                             </div>
                                                                             <br />
                                                                             <br />
-                                                                            <div class="form-group" style="color: black; font-size: 20px; ">
-                                                                                <label class="col-lg-3 control-label" for="focusedInput">Playa Concurrida</label>
-                                                                                <div class="col-lg-5 txtPequeño">
+                                                                            <div class="form-group" style="color: saddlebrown; font-size: x-large; ">
+                                                                                <label class="col-lg-4 control-label" for="focusedInput">Playa Concurrida</label>
+                                                                                <div class="col-lg-5 ">
                                                                                     <asp:TextBox ID="txtPlaya" runat="server" class="form-control" ></asp:TextBox>
                                                                                 </div>
                                                                             </div>
                                                                             <br />
                                                                             <br />
 
-                                                                            <div class="form-group" style="color: black; font-size: 20px; ">
-                                                                                <label class="col-lg-3 control-label" for="focusedInput">Año de fundación</label>
+                                                                            <div class="form-group" style="color: saddlebrown; font-size: x-large; ">
+                                                                                <label class="col-lg-4 control-label" for="focusedInput">Año de fundación</label>
                                                                                 
-                                                                                <div class="col-lg-5 txtPequeño">  
+                                                                                <div class="col-lg-5 ">  
                                                                                     <asp:DropDownList ID="ddlZona" runat="server" CssClass="form-control"  >
                                                                                         <asp:ListItem Value="LIMON">LIMON</asp:ListItem>
                                                                                         <asp:ListItem Value="GUANACASTE">GUANACASTE</asp:ListItem>
@@ -106,36 +103,36 @@
                                                                             <br />
 
 
-                                                                            <div class="form-group" style="color: black; font-size: 20px; ">
-                                                                                <label class="col-lg-3 control-label" for="focusedInput">Correo</label>
-                                                                                <div class="col-lg-5 txtPequeño">
+                                                                            <div class="form-group" style="color: saddlebrown; font-size: x-large; ">
+                                                                                <label class="col-lg-4 control-label" for="focusedInput">Correo</label>
+                                                                                <div class="col-lg-5 ">
                                                                                     <asp:TextBox ID="txtCorreo" runat="server" class="form-control" TextMode="Email"></asp:TextBox>
                                                                                 </div>
                                                                             </div>
                                                                             <br />
                                                                             <br />
 
-                                                                            <div class="form-group" style="color: black; font-size: 20px; ">
-                                                                                <label class="col-lg-3 control-label" for="focusedInput">Descripción</label>
-                                                                                <div class="col-lg-5 txtPequeño">
+                                                                            <div class="form-group" style="color: saddlebrown; font-size: x-large; ">
+                                                                                <label class="col-lg-4 control-label" for="focusedInput">Descripción</label>
+                                                                                <div class="col-lg-5 ">
                                                                                     <asp:TextBox ID="txtDescripcion" runat="server" class="form-control"  TextMode="MultiLine"></asp:TextBox>
                                                                                 </div>
                                                                             </div>
                                                                             <br />
                                                                             <br /><br />
 
-                                                                            <div class="form-group" style="color: black; font-size: 20px;">
-                                                                                <label class="col-lg-3 control-label" for="focusedInput">Año de fundación</label>
-                                                                                <div class="col-lg-5 txtPequeño">
+                                                                            <div class="form-group" style="color: saddlebrown; font-size: x-large;">
+                                                                                <label class="col-lg-4 control-label" for="focusedInput">Año de fundación</label>
+                                                                                <div class="col-lg-5 ">
                                                                                     <asp:TextBox ID="txtAnio" runat="server" class="form-control" ></asp:TextBox>
                                                                                 </div>
                                                                             </div>
                                                                             <br />
                                                                             <br />
 
-                                                                            <div class="form-group" style="color: black; font-size: 20px;">
-                                                                                <label class="col-lg-3 control-label" for="focusedInput">Se encuentra activa?</label>
-                                                                                <div class="col-lg-1 txtPequeño">
+                                                                            <div class="form-group" style="color: saddlebrown; font-size: x-large;">
+                                                                                <label class="col-lg-4 control-label" for="focusedInput">Se encuentra activa?</label>
+                                                                                <div class="col-lg-1 ">
                                                                                     <asp:DropDownList ID="ddlActiva" runat="server" CssClass="form-control">
                                                                                         <asp:ListItem Value="true">Si</asp:ListItem>
                                                                                         <asp:ListItem Value="false">No</asp:ListItem>
@@ -144,30 +141,21 @@
                                                                             </div>
                                                                             <br />
                                                                             <br />
-
-                                                                            <br />
-
-
-
-
                                                                         </asp:TableCell>
                                                                     </asp:TableRow>
 
                                                                 </asp:Table>
                                                                 <div >
-                                                                    <asp:Button ID="idGuardar" Style="margin-left: 257px;" Text="Guardar" class="btn btn-success btn-lg" BackColor="SaddleBrown" OnClick="idGuardar_Click" CausesValidation="false" runat="server" />&nbsp;&nbsp;&nbsp;
-                                                <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" class="btn btn-primary" BackColor="Red" OnClick="btnCancelar_Click" CausesValidation="false" />
-
+                                                                    <asp:Button ID="idGuardar" Width="25%" Text="Guardar" class="btn btn-circle-2" BackColor="SaddleBrown" ForeColor="White" OnClick="idGuardar_Click" CausesValidation="false" runat="server" />&nbsp;&nbsp;&nbsp;
+                                                <asp:Button ID="btnCancelar" runat="server"  Width="25%" Text="Cancelar" class="btn btn-circle-2" BackColor="Red" ForeColor="White" OnClick="btnCancelar_Click" CausesValidation="false" />
+                                                                    
                                                                 </div>
 
-
+                                                                <br />
                                                             </div>
 
-                                                        </div>
-
-                                                    </div>
-                                                </div>
-                                            </div>
+                                                       
+                                               
                                         </div>
                                          </section>
                                         </ContentTemplate>

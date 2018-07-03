@@ -246,7 +246,7 @@
                                             data-color="#fff"
                                             data-visibility="['on','on','off','off']"
                                             style="z-index: 1;">
-                                            <asp:Label Text='<%# Eval("Leyenda") %>' runat="server"></asp:Label>
+                                            <asp:Label Text='<%# Eval("Leyenda") %>' Width="85%" runat="server"></asp:Label>
 
                                         </div>
 

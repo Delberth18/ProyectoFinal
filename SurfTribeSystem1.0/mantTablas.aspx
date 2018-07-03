@@ -9,6 +9,19 @@
     <section class="mainContentSection packagesSection" style="background-image: url(Imagenes/IMG-20150830-WA0006.jpg); background-repeat: no-repeat; background-size: cover">
         <asp:UpdatePanel ID="UpdatePanel1" runat="server">
             <ContentTemplate>
+
+                 <br />
+          <div class="row">
+                <div class="col-xs-12">
+                    <div class="sectionTitle">
+                        <h2>
+                            <asp:Label runat="server" ID="tituloLabel" Text="mantenimiento de tablas de surf" BackColor="#f5f5f5" Font-Size="XX-Large"></asp:Label></h2>
+
+                    </div>
+                    
+                </div>
+            </div>
+                <br />
                 <div class="container" style="background-image: url('ccss/star-1-3/Static%20HTML/img/bg-menuReserva.jpg'); position: relative; z-index: 1; -webkit-box-shadow: -11px 9px 45px 2px rgba(0,0,0,0.75); -moz-box-shadow: -11px 9px 45px 2px rgba(0,0,0,0.75); box-shadow: -11px 9px 45px 2px rgba(0,0,0,0.75); border-radius: 12px; padding: 12px;">
 
                     <div class="col-sm-9 col-xs-12" style="width: 100%">
@@ -20,20 +33,6 @@
                                         <ul>
                                             <li>
                                                 <br />
-                                                <center class="titulo" style="width: 100%; background: darkorange;">
-                                                                             <center>
-                                                                                 <font size="7">
-                                                                                     <b style="    background-color: darkorange; color: black; border-radius: 484px; opacity: 0.8;" face="arial">Mantenimiento Tablas</b>
-                                                                                 </font>
-
-                                                                             </center>
-
-                                                                      </center>
-
-
-                                            </li>
-                                            <li>
-                                                <br />
                                                 <center>
                                         <asp:DropDownList ID="ddlEscuelas" runat="server" AutoPostBack="True" OnSelectedIndexChanged="idSeleccionar_Click" CssClass="bg-ashh" Style="width: 30%" >
                                         </asp:DropDownList>
@@ -42,7 +41,7 @@
                                         <br />
                                             <div class="col-sm-3">
                                                 <a aria-label="NuevaPreguntado" href="registroTabla.aspx" >
-                                                    <span aria-hidden="true" style="margin: 2px 2px 2px 2px; font-size:x-large; "><b>Nueva tabla>></b></span>
+                                                    <span aria-hidden="true" style="margin: 2px 2px 2px 2px; font-size:x-large; color:saddlebrown"><b>Nueva tabla>></b></span>
                                                 </a>
                                             </div>
                                         </center>

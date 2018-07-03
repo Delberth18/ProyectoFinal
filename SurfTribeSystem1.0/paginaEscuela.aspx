@@ -57,7 +57,7 @@
                             <asp:Repeater runat="server" ID="info">
                                 <ItemTemplate>
                                     <div class="sectionTitle2">
-                                        <h1 style="color: darkorange;">Descripción</h1>
+                                        <h1 style="color: saddlebrown;">Descripción</h1>
                                         <p style="color: white; font-size: x-large"><%# Eval("Descripcion") %> </p>
                                     </div>
                                     <div class="row">
@@ -91,7 +91,7 @@
                                                         <h2>Nos pueden contactar por:</h2>
                                                     </div>
                                                 </li>
-                                                <li style="color: darkorange; font-size: x-large; font-weight: bold;"><i class="fa fa-dot-circle-o" aria-hidden="true"></i><a href='mailto:<%# Eval("Correo") %>'><%# Eval("Correo") %></a></li>
+                                                <li style="color: saddlebrown; font-size: x-large; font-weight: bold;"><i class="fa fa-dot-circle-o" aria-hidden="true"></i><a href='mailto:<%# Eval("Correo") %>' style="color: saddlebrown;"><%# Eval("Correo") %></a></li>
                                                 <li style="color: white; font-size: x-large"><i class="fa fa-dot-circle-o" aria-hidden="true"></i><%# Eval("Telefono") %>          <%# Eval("Telefono2") %></li>
 
                                                 <br />
@@ -143,7 +143,7 @@
                     <div class="col-xs-12 col-sm-6">
                         <div class="review-aria">
                             <div class="sectionTitle2">
-                                <h1 style="color: darkorange;"><a href="#">Opiniones >>></a></h1>
+                                <h1 style="color: saddlebrown;"><a href="#" style="color: saddlebrown;">Opiniones >>></a></h1>
                             </div>
                         </div>
                     </div>
@@ -151,7 +151,7 @@
                     <div class="col-xs-12 col-sm-6">
                         <div class="review-aria">
                             <div class="sectionTitle2">
-                                <h1 style="color: darkorange;"><a href="#">Precios >>></a></h1>
+                                <h1 style="color: saddlebrown;"><a href="#" style="color: saddlebrown;">Precios >>></a></h1>
                             </div>
                         </div>
                     </div>
