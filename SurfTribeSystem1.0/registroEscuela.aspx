@@ -47,7 +47,7 @@
                 <div class="col-xs-12 col-sm-4">
                     <ul>
                         <li>
-                            <label style="color: darkorange; font-size: x-large">Nombre:</label>
+                            <label style="color: SaddleBrown; font-size: x-large">Nombre:</label>
 
                             <asp:TextBox ID="txtNombre" OnTextChanged="txtNombre_TextChanged" runat="server" class="form-control  bg-ashh"></asp:TextBox>
                         </li>
@@ -62,7 +62,7 @@
                 <div class="col-xs-12 col-sm-4">
                     <ul>
                         <li>
-                            <label style="color: darkorange; font-size: x-large">Ubicación:</label>
+                            <label style="color: SaddleBrown; font-size: x-large">Ubicación:</label>
 
                             <asp:TextBox ID="txtUbicacion" runat="server" class="form-control  bg-ashh"></asp:TextBox>
                         </li>
@@ -75,7 +75,7 @@
                 <div class="col-xs-12 col-sm-4">
                     <ul>
                         <li>
-                            <label style="color: darkorange; font-size: x-large">Zona:</label>
+                            <label style="color: SaddleBrown; font-size: x-large">Zona:</label>
                             <br />
                             <asp:DropDownList ID="ddlZona" runat="server" CssClass="bg-ashh" Width="100%">
                                 <asp:ListItem>LIMON</asp:ListItem>
@@ -96,7 +96,7 @@
                 <div class="col-xs-12 col-sm-4">
                     <ul>
                         <li>
-                            <label style="color: darkorange; font-size: x-large">Playa concurrida:</label>
+                            <label style="color: SaddleBrown; font-size: x-large">Playa concurrida:</label>
 
                             <asp:TextBox ID="txtPlaya" runat="server" class="form-control  bg-ashh"></asp:TextBox>
                         </li>
@@ -105,7 +105,7 @@
                 <div class="col-xs-12 col-sm-8">
                     <ul>
                         <li>
-                            <label style="color: darkorange; font-size: x-large">Descripción:</label>
+                            <label style="color: SaddleBrown; font-size: x-large">Descripción:</label>
 
                             <asp:TextBox ID="txtDescripcion" runat="server" class="form-control  bg-ashh" TextMode="MultiLine"></asp:TextBox>
                         </li>
@@ -119,26 +119,26 @@
                     <ul>
                         <li>
                             <br />
-                            <label style="color: darkorange; font-size: x-large">Año fundación:</label>
+                            <label style="color: SaddleBrown; font-size: x-large">Año fundación:</label>
 
                             <asp:TextBox ID="txtAnioFundacion" runat="server" class="form-control  bg-ashh" TextMode="number"></asp:TextBox>
                         </li>
                         <li>
                             <br />
-                            <label style="color: darkorange; font-size: x-large">Correo:</label>
+                            <label style="color: SaddleBrown; font-size: x-large">Correo:</label>
 
                             <asp:TextBox ID="txtCorreo" runat="server" class="form-control  bg-ashh" TextMode="Email"></asp:TextBox>
                         </li>
                         <li>
                             <br />
 
-                            <label style="color: darkorange; font-size: x-large">Telefono 1:</label>
+                            <label style="color: SaddleBrown; font-size: x-large">Telefono 1:</label>
 
                             <asp:TextBox ID="txtTelefono1" runat="server" class="form-control  bg-ashh"></asp:TextBox>
                         </li>
                         <li>
                             <br />
-                            <label style="color: darkorange; font-size: x-large">Telefono 2:</label>
+                            <label style="color: SaddleBrown; font-size: x-large">Telefono 2:</label>
 
                             <asp:TextBox ID="txtTelefono2" runat="server" class="form-control  bg-ashh"></asp:TextBox>
                         </li>
