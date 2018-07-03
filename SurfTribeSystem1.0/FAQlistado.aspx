@@ -1,44 +1,23 @@
-﻿<%@  Page Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="FAQlistado.aspx.cs" Inherits="SurfTribeSystem1._0.FAQlistado" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="FAQlistado.aspx.cs" Inherits="SurfTribeSystem1._0.FAQlistado" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-    <!-- PAGE TITLE -->
-    <section class="pageTitle" style="background-image: url(ccss/star-1-3/Static%20HTML/img/pages/page-title-bg6.jpg);">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12">
-                    <div class="titleTable">
-                        <div class="titleTableInner">
-                            <div class="pageTitleInfo">
-                                <h1>Preguntas frecuentes</h1>
-                                <div class="under-border"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- PAGE CONTENT -->
 
     <!--principal-->
-    <section class="mainContentSection">
+    <section class="mainContentSection packagesSection" style="background-image: url(Imagenes/IMG-20150830-WA0006.jpg); background-repeat: no-repeat; background-size: cover">
+
         <div class="container">
             <div class="row">
                 <div class="col-xs-12">
                     <div class="sectionTitle">
                         <h2>
-                            <asp:Label runat="server" ID="tituloLabel" Text="Sus dudas"></asp:Label></h2>
+                            <asp:Label runat="server" ID="tituloLabel" Font-Size="xX-Large" Text="Preguntas frecuentes"></asp:Label></h2>
 
                     </div>
                     <h4>
                         <asp:Label runat="server" ID="info1" Text="Todos nos han hecho llegar sus dudas, aquí les mostramos las más comunes"></asp:Label></h4>
-                    <p>
-                        <asp:Label runat="server" ID="info2" Text="Esperamos haber aclarado estas dudas. Si tienen alguna otra no la pueden hacer llegar por medio de la página de consultas, al correo o cuando nos visiten."></asp:Label>
-                    </p>
                 </div>
             </div>
 
@@ -51,8 +30,8 @@
                             <asp:ListView runat="server" ID="preguntasLst">
                                 <ItemTemplate>
 
-                                    <div class="panel panel-default" style="margin:10px 10px 10px 10px">
-                                        <a class="panel-heading accordion-toggle" data-toggle="collapse" 
+                                    <div class="panel panel-default" style="margin: 10px 10px 10px 10px">
+                                        <a class="panel-heading accordion-toggle" data-toggle="collapse"
                                             data-parent="#accordionSolid" href='<%# "#"+ Eval("Pregunta").ToString().Replace(' ','_') %>'>
 
                                             <span>¿<asp:Label runat="server" ID="preguntaLabel" Text='<%# Eval("Pregunta") %>'></asp:Label>?</span>
@@ -62,17 +41,17 @@
                                         </a>
                                         <div id='<%# Eval("Pregunta").ToString().Replace(' ','_') %>' class="panel-collapse collapse">
                                             <div class="panel-body">
-                                                <div class="media" style="overflow-wrap:break-word">
+                                                <div class="media" style="overflow-wrap: break-word">
 
-                                                        <p><%# Eval("Respuesta").ToString() %></p>
-                                                        <!--No puedo hacer que se vean varias lineas-->
-                                                  
+                                                    <p><%# Eval("Respuesta").ToString() %></p>
+                                                    <!--No puedo hacer que se vean varias lineas-->
+
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
 
-                                            
+
                                 </ItemTemplate>
                             </asp:ListView>
                         </div>

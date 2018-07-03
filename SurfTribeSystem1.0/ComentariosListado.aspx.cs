@@ -46,6 +46,12 @@ namespace SurfTribeSystem1._0
 
         private void Guardar()
         {
+            if (comentarioText.Text.Trim()=="")
+            {
+                string script = "swal('Lo sentimos, ha ocurrido un error', 'Debe ingresar algún comentario', 'error'); ";
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
+                return;
+            }
             Resultado resultado = new Resultado();
             try
             {
@@ -55,17 +61,20 @@ namespace SurfTribeSystem1._0
                 resultado = new ComentarioLogica().Acciones(comentario);
                 if (resultado.TipoResultado == "OK")
                 {
-                    ObtenerListado();//en lugar de esto mostrar un mensaje diciendo que se va a revisar el comentario
+                    string script = "swal('Éxito', 'El comentario será revisado lo más pronto posible, para su aprobación', 'success'); ";
+                    ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
                 }
                 else
                 {
-                    Response.Write("< script > alert('Error: " + resultado.Mensaje + " \n Lo sentimos') </ script >");
+                    string script = "swal('Lo sentimos, ha ocurrido un error', '" + resultado.Mensaje + "', 'error'); ";
+                    ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
                 }
             }
             catch (Exception ex)
             {
 
-                Response.Write("< script > alert('Error: " + ex + " \n Lo sentimos') </ script >");
+                string script = "swal('Lo sentimos, ha ocurrido un error', '', 'error'); ";
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
             }
         }
 

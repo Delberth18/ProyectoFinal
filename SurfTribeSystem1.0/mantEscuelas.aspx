@@ -4,15 +4,24 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-    <section class="bookingTypeSection" style="background-image: url(Imagenes/IMG-20150830-WA0006.jpg); background-repeat: no-repeat; background-size: cover">
+    <section class="mainContentSection packagesSection" style="background-image: url(Imagenes/IMG-20150830-WA0006.jpg); background-repeat: no-repeat; background-size: cover">
         <asp:UpdatePanel ID="UpdatePanel1" runat="server">
             <ContentTemplate>
+                <br />
+          <div class="row">
+                <div class="col-xs-12">
+                    <div class="sectionTitle">
+                        <h2>
+                            <asp:Label runat="server" ID="tituloLabel" Text="mantenimiento de escuelas" BackColor="#f5f5f5" Font-Size="XX-Large"></asp:Label></h2>
+
+                    </div>
+                    
+                </div>
+            </div>
+                                <br />
                 <div class="container">
-                    <div class="row">
                         <div class="col-xs-12">
-                            <div class="bookingType bg-ashs">
-                                <br />
-                                <br />
+                                
                                 <div style="background-image: url('ccss/star-1-3/Static%20HTML/img/bg-menuReserva.jpg'); position: relative; z-index: 1; -webkit-box-shadow: -11px 9px 45px 2px rgba(0,0,0,0.75); -moz-box-shadow: -11px 9px 45px 2px rgba(0,0,0,0.75); box-shadow: -11px 9px 45px 2px rgba(0,0,0,0.75); border-radius: 12px; margin-top: 3%">
                                     <div class="tab-content">
                                         <div id="Lugar" class="tab-pane fade in active">
@@ -26,20 +35,6 @@
                                                                     <ul>
                                                                         <li>
                                                                             <br />
-                                                                            <center class="titulo" style="width: 100%; background: darkorange;">
-                                                                             <center>
-                                                                                 <font size="7">
-                                                                                     <b style="    background-color: darkorange; color: black; border-radius: 484px; opacity: 0.8;" FACE="arial">Mantenimiento Escuelas</b>
-                                                                                 </font>
-
-                                                                             </center>
-
-                                                                      </center>
-
-                                                                            
-                                                                        </li>
-                                                                        <li>
-                                                                            <br />
                                                                             <center>
                                                                             <asp:DropDownList ID="ddlEscuelas" AutoPostBack="True" runat="server" OnSelectedIndexChanged="Seleccionar" CssClass="bg-ashh" Style="width: 30%" >
                                                                             </asp:DropDownList>
@@ -47,8 +42,8 @@
                                                                              </center>
                                                                             <br />
                                                                             <div class="col-sm-3">
-                                                                                <a aria-label="NuevaPreguntado" href="registroEscuela.aspx" >
-                                                                                    <span aria-hidden="true" style="margin: 2px 2px 2px 2px; font-size:x-large; "><b>Nueva Escuela>></b></span>
+                                                                                <a aria-label="NuevaPreguntado" href="registroEscuela.aspx">
+                                                                                    <span aria-hidden="true" style="margin: 2px 2px 2px 2px;color:saddlebrown; font-size: x-large;"><b>Nueva Escuela>></b></span>
                                                                                 </a>
                                                                             </div>
                                                                             <br />
@@ -86,7 +81,6 @@
                                                                                 <PagerStyle HorizontalAlign="Left" BackColor="White" ForeColor="#000066"></PagerStyle>
 
                                                                                 <RowStyle ForeColor="#669999"></RowStyle>
-                                                                                <RowStyle ForeColor="#669999"></RowStyle>
 
                                                                                 <SelectedRowStyle BackColor="#262a2e" Font-Bold="True" ForeColor="White"></SelectedRowStyle>
 
@@ -101,7 +95,7 @@
                                                                         </li>
                                                                         <li>
                                                                             <br />
-                                                                            <asp:Button ID="idEditar" Text="Editar Escuela" class="btn btn-default btn-circle-2" BackColor="darkorange"  ForeColor="White" runat="server" OnClick="idEditar_Click" Visible="false" />
+                                                                            <asp:Button ID="idEditar" Text="Editar Escuela" class="btn btn-default btn-circle-2 " Width="35%" BackColor="DarkOrange" ForeColor="White" runat="server" OnClick="idEditar_Click" Visible="false" />
                                                                         </li>
                                                                     </ul>
 
@@ -113,14 +107,13 @@
                                                 </div>
                                             </section>
                                         </div>
-                                    </div>
+                                    
                                 </div>
                             </div>
-                        </div>
+                        
                     </div>
                 </div>
             </ContentTemplate>
-
             <Triggers>
                 <asp:AsyncPostBackTrigger ControlID="grvEstado" EventName="" />
                 <asp:AsyncPostBackTrigger ControlID="ddlEscuelas" EventName="SelectedIndexChanged" />

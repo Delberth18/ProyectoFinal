@@ -6,8 +6,19 @@
 
     
     
- <section class="bookingTypeSection" style="background-image: url(Imagenes/IMG-20150830-WA0006.jpg);    background-repeat:no-repeat; background-size:cover">
-        
+<section class="mainContentSection packagesSection" style="background-image: url(Imagenes/IMG-20150830-WA0006.jpg); background-repeat: no-repeat; background-size: cover">
+      <br />
+          <div class="row">
+                <div class="col-xs-12">
+                    <div class="sectionTitle">
+                        <h2>
+                            <asp:Label runat="server" ID="tituloLabel" Text="Edición de usuario" BackColor="#f5f5f5" Font-Size="XX-Large"></asp:Label></h2>
+
+                    </div>
+                    
+                </div>
+            </div>
+                                <br />
   <div class="container">
     <div class="row">
       <div class="col-xs-12">

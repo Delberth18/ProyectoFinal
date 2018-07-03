@@ -4,29 +4,10 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-    <!-- PAGE TITLE -->
-    <section class="pageTitle" style="background-image: url(ccss/star-1-3/Static%20HTML/img/pages/page-title-bg6.jpg);">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12">
-                    <div class="titleTable">
-                        <div class="titleTableInner">
-                            <div class="pageTitleInfo">
-                                <h1>Nuestros Precios</h1>
-                                <div class="under-border"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- PAGE CONTENT -->
 
     <!--principal-->
-    <section class="mainContentSection packagesSection">
-        <div class="container">
+    <section class="mainContentSection packagesSection" style="background-image: url(Imagenes/IMG-20150830-WA0006.jpg); background-repeat: no-repeat; background-size: cover">
+       <div class="container">
             <div class="row">
                 <div class="col-xs-12">
                     <div class="sectionTitle">
@@ -51,27 +32,8 @@
                         <ItemTemplate>
                             <div class="col-lg-4 col-sm-6 col-xs-12 " >
                                 <div class="thumbnail deals packagesPage">
-                                    <%--<img src="img/home/deal/deal-01.jpg" alt="deal-image">--%>
                                     <a  class="pageLink"></a>
-                                    <%--<div class="discountInfo">
-                    <div class="discountOffer">
-                      <h4>
-                        50% <span>OFF</span>
-                      </h4>
-                    </div>
-                    <ul class="list-inline rating homePage">
-                      <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                      <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                      <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                      <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                      <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                    </ul>
-                    <ul class="list-inline duration">
-                      <li>7 days</li>
-                      <li>15 hrs</li>
-                      <li>15 min</li>
-                    </ul>
-                  </div>--%>
+                                  
                                     <div class="caption">
                                         <h4><a  class="captionTitle"><%# Eval("Tipo") %></a></h4>
                                         <p><%# Eval("Descripcion") %></p>
@@ -80,9 +42,6 @@
                                                 <span>Por persona</span>
                                                 <%# Eval("PrecioD") %> colones - imp incluidos
                                             </h5>
-                                            <%--<ul class="list-inline detailsBtn">
-                                                <li><a data-toggle="modal" data-target="#inquiryModal" href="#" class="btn buttonTransparent">Inquiry</a></li>
-                                            </ul>--%>
                                         </div>
                                     </div>
                                 </div>

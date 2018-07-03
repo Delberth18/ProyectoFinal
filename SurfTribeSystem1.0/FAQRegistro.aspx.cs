@@ -14,9 +14,12 @@ namespace SurfTribeSystem1._0
         Faq faq = new Faq();
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            if (!IsPostBack)
+            {
                 preguntaText.Text = Request.QueryString["valor1"];
                 respuestaText.Text = Request.QueryString["valor2"];
+            }
+                
             
         }
 
