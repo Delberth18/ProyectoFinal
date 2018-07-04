@@ -64,7 +64,7 @@ namespace SurfTribeSystem1._0
                 }
                 else
                 {
-                    Response.Write("< script > alert('Error: " + resultado.Mensaje + " \n Lo sentimos') </ script >");
+                    Response.Redirect("reservaSinCampo.aspx");
                 }
             }
             catch (Exception ex)
@@ -131,7 +131,7 @@ namespace SurfTribeSystem1._0
                     lbl.Visible = false;
                     Session["asigando"] = 0;
                     btnContinuar.Visible = false;
-                    
+                    Session["idReserva"] = "";
 
                 }
                 else
@@ -141,6 +141,7 @@ namespace SurfTribeSystem1._0
                     lbl.Visible = true;
                     Session["asigando"] = +1;
                     btnContinuar.Visible = true;
+                    Session["idReserva"] = btn.CommandName;
                 }
             }
             else
@@ -149,6 +150,7 @@ namespace SurfTribeSystem1._0
                 lbl.Visible = true;
                 Session["asigando"] = +1;
                 btnContinuar.Visible = true;
+                Session["idReserva"] = btn.CommandName;
 
 
             }

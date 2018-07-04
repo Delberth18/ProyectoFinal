@@ -11,7 +11,7 @@ namespace SurfTribeSystem1._0
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            lblEscuela.Text = Session["escuela"].ToString();
+            lblEscuela.Text = "Totem totem";//Session["escuela"].ToString();
             lblNivel.Text = Session["Nivel"].ToString();
             
         }
@@ -22,6 +22,11 @@ namespace SurfTribeSystem1._0
         {
            
 
+        }
+
+        protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+        {
+            Response.Redirect("reservaIndumentaria.aspx");
         }
     }
 }

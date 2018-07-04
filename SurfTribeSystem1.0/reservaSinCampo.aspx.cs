@@ -14,13 +14,10 @@ namespace SurfTribeSystem1._0
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            //Ubicacion.Text = Session["Ubicación"].ToString();
-            //nombreEscuela.Text = Session["escuela"].ToString();
-            //nivel.Text = Session["Nivel"].ToString();
 
-            Ubicacion.Text = "Prueba";
-            nombreEscuela.Text = "Prueba";
-            nivel.Text = "Prueba";
+            Ubicacion.Text = Session["Ubicación"].ToString();
+            nombreEscuela.Text = Session["escuela"].ToString();
+            nivel.Text = Session["Nivel"].ToString();
 
 
         }

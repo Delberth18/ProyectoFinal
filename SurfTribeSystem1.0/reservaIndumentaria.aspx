@@ -71,9 +71,13 @@
 
                                             <br>
 
-                                            <p><b>Tabla:</b>
+                                            <p><b>Marca:</b>
                                                 <asp:Label runat="server" ID="playa" Text='<%#Eval("PLAYA_CONCURRIDA")%>'></asp:Label></p>
-
+                                            <p><b>Tipo:</b>
+                                                <asp:Label runat="server" ID="Label3" Text='<%#Eval("PLAYA_CONCURRIDA")%>'></asp:Label></p>
+                                            <p><b>Tamaño:</b>
+                                                <asp:Label runat="server" ID="Label2" Text='<%#Eval("PLAYA_CONCURRIDA")%>'></asp:Label></p>
+                                            
                                              <p><b>Precio:</b>
                                                 <asp:Label runat="server" ID="Label1" Text="₡15,000"></asp:Label></p>
 
