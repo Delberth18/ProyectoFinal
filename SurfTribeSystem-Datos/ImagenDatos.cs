@@ -37,7 +37,7 @@ namespace SurfTribeSystem_Datos
                 param = new SqlParameter();
                 if (img.Imgs == null)
                 {
-                    param.Value = 0;
+                    param.Value = DBNull.Value;
                 }
                 else
                 {

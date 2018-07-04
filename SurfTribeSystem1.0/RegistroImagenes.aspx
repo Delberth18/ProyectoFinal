@@ -43,17 +43,32 @@
                             <label style="color: saddlebrown; font-size: x-large">Pertenecia:</label>
                         </li>
                         <li>
-                            <asp:DropDownList ID="pertenece" runat="server" CssClass="bg-ashh" Width="100%">
+                            <asp:UpdatePanel runat="server">
+                                <ContentTemplate>
+                                    <asp:DropDownList ID="pertenece" runat="server" CssClass="bg-ashh" Width="100%" OnSelectedIndexChanged="pertenece_Click" AutoPostBack="true" DataTextField="" DataValueField="">
 
                             </asp:DropDownList>
+                                </ContentTemplate>
+                                <Triggers>
+                                    <asp:AsyncPostBackTrigger ControlID="pertenece" EventName="" />
+                                </Triggers>
+                            </asp:UpdatePanel>
+                            
                         </li>
                         <li>
                             <label style="color: saddlebrown; font-size: x-large">Dueño:</label>
                         </li>
                         <li>
+                            <asp:UpdatePanel runat="server">
+                                <ContentTemplate>
                             <asp:DropDownList ID="duenos" runat="server" CssClass="bg-ashh" Width="100%">
 
-                            </asp:DropDownList>
+                             </asp:DropDownList>
+                                </ContentTemplate>
+                                <Triggers>
+                                    <asp:AsyncPostBackTrigger ControlID="duenos" EventName="" />
+                                </Triggers>
+                            </asp:UpdatePanel>
                         </li>
                     </ul>
                 </div>
@@ -67,6 +82,7 @@
                         <li>
                             <br />
                             <asp:Button ID="btnGuardar" class="btn btn-default btn-circle-2 " BackColor="darkorange" ForeColor="White" runat="server" Text="Guardar" OnClick="btnGuardar_Click" Width="150px" />
+                            
                         </li>
                     </ul>
 

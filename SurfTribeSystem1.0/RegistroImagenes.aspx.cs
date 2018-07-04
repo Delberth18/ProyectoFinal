@@ -18,10 +18,16 @@ namespace SurfTribeSystem1._0
     {
         Imagen img = new Imagen();
         List<Imagen> lista = new List<Imagen>();
+
+        string pert = "";
         protected void Page_Load(object sender, EventArgs e)
         {
-            ListarRegistro();
-            ListarPertenencia();
+            if (!IsPostBack)
+            {
+                ListarRegistro();
+                ListarPertenencia();
+            }
+            
         }
         private void borrar()
         {
@@ -95,8 +101,8 @@ namespace SurfTribeSystem1._0
                 img.Aprobado = true;
                 img.Titulo = txtTitulo.Text;
                 img.Leyenda = txtLeyenda.Text;
-                img.Pertenece = pertenece.Text;
-                img.Dueño = duenos.Text;
+                img.Pertenece = pertenece.SelectedValue;
+                img.Dueño = duenos.SelectedValue.ToUpper();
 
                 string base64ImageRepresentation = Convert.ToBase64String(FileUpload.FileBytes);
                 img.Imgs = base64ImageRepresentation;
@@ -105,9 +111,10 @@ namespace SurfTribeSystem1._0
 
                 if (resultado.TipoResultado == "OK")
                 {
+                    ListarRegistro();
                     string script = "swal('Excelente', 'Éxito en la insersión', 'success'); ";
                     ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
-                    ListarRegistro();
+                    
                 }
                 else
                 {
@@ -136,9 +143,7 @@ namespace SurfTribeSystem1._0
                     lista = (List<Imagen>)resultado.ObjetoResultado;
                     imagenesList.DataSource = lista;
                     imagenesList.DataBind();
-
-                    //imagenesList.DataSource = lista;
-                    //imagenesList.DataBind();
+                    
                 }
                 
             }
@@ -163,11 +168,16 @@ namespace SurfTribeSystem1._0
                     lista3= (List<object>)resultado.ObjetoResultado;
                     lista1 = (List<string>)lista3[0];
                     lista2 = (List<string>)lista3[1];
-                    pertenece.DataSource = lista1;
-                    pertenece.DataBind();
 
-                    duenos.DataSource = lista2;
-                    duenos.DataBind();
+                    foreach (string item in lista1)
+                    {
+                        pertenece.Items.Add(item);
+                    }
+
+                    foreach (string item in lista2)
+                    {
+                        duenos.Items.Add(item);
+                    }
                 }
 
             }
@@ -183,6 +193,13 @@ namespace SurfTribeSystem1._0
             string script = "swal({ title: 'Are you sure?', text: 'Once deleted, you will not be able to recover this imaginary file!',  icon: 'warning', buttons: true, dangerMode: true, }); ";
             ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
         }
-       
+
+        protected void pertenece_Click(object sender, EventArgs e)
+        {
+            pert = pertenece.SelectedValue;
+           // pertenece.SelectedValue = pert;
+        }
+
+
     }
 }
