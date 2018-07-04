@@ -52,88 +52,139 @@
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12">
-                      <asp:ImageButton ID="ImageButton1" runat="server" Style="margin-left: -980px;
-    width: 40px;" src="ccss/star-1-3/Static%20HTML/img/atras.png" />
+                      <asp:ImageButton ID="ImageButton1" OnClick="ImageButton1_Click" runat="server" Style="margin-left: -980px;  width: 40px;" src="ccss/star-1-3/Static%20HTML/img/atras.png" />
                         <br /><br />
                             <center><font size="5"><b FACE="arial" style="margin-left: -10px;" >Detalles de Reserva</b></font></center><br />
                         
                     </div>
                 </div><br /><br />
              
-                <div class="row"><left>
+                <div class="row">
 
+                    <Table style=" margin-left: 29%; border: dotted;" border="1" >
+                         
+                        <tr> 
+                            <td>
+                            <b FACE="arial">
+                          <asp:Label ID="Label1"  runat="server" Text="Escuela: "  style="font-size: 18px; " ></asp:Label></b>
+                            </td>
+                            <td>
+                               &nbsp; <asp:Label ID="lblEscuela" runat="server" Text=""  Style="font-size: 18px;"></asp:Label>
+                   
+                            </td>
+                           
+                        </tr>
+                        
+                          <tr>
+                              <td>
+                                  <b face="arial">
+                                      <asp:Label ID="Label3" runat="server" Text="Nivel: " Style="font-size: 18px;"></asp:Label></b>
+
+                              </td>
+                              <td>
+                                  <asp:Label ID="lblNivel" runat="server" Text="Experto"  Style="font-size: 18px;"></asp:Label>
+                              </td>
+
+                          </tr>   
+                       
+                        <tr>
+                            <td>
+                                  <b FACE="arial">
+                                <asp:Label ID="lblDia" runat="server" Text="Dia de las clases: "  style="font-size: 18px; " ></asp:Label></b>
+                            </td>
+                            <td>
+                                 <asp:Label ID="Label14" runat="server" Text="12 de Junio 2018"  Style="font-size: 18px;"></asp:Label>
                     
-                         <b FACE="arial">
-                          <asp:Label ID="Label1" runat="server" Text="Escuela: "  style="font-size: 18px; margin-left:-437px; " ></asp:Label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                  <b FACE="arial">
+                          <asp:Label ID="Label5" runat="server" Text="Hora: "  style="font-size: 18px;" ></asp:Label> </b> 
+                            </td>
+                            <td>
+                                 <asp:Label ID="Label6" runat="server" Text="9:00 am"  Style="font-size: 18px;"></asp:Label>
+                            </td>
+                        </tr>
 
-                         </b>&nbsp; 
-                    <asp:Label ID="lblEscuela" runat="server" Text=""  Style="font-size: 18px;"></asp:Label>
-                    <br /><br />
-                    
-                    <b FACE="arial">
-                          <asp:Label ID="Label3" runat="server" Text="Nivel: "  style="font-size: 18px; margin-left:-494px; " ></asp:Label>
+                        <tr>
+                            <td>
+                                 <b FACE="arial">
+                          <asp:Label ID="Label7" runat="server" Text="Instructor: "  style="font-size: 18px;  " ></asp:Label></b>
+                            </td>
+                            <td>
+                                 <asp:Label ID="Label8" runat="server" Text="Pedro Alejandro Gómez Alvarado"  Style="font-size: 18px;"></asp:Label>
+                            </td>
+                        </tr>
 
-                         </b>&nbsp; 
-                    <asp:Label ID="lblNivel" runat="server" Text="Experto"  Style="font-size: 18px;"></asp:Label></left>
-                    <br /><br />
+                        <tr>
+                            <td>
+                                   <b FACE="arial">
+                          <asp:Label ID="Label9" runat="server" Text="Indumentaria: "  style="font-size: 18px;" ></asp:Label></b>
+                            </td>
+                            <td>
+                                 <asp:Label ID="Label10" runat="server" Text="No alquilada"  Style="font-size: 18px;"></asp:Label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                 <b FACE="arial">
+                          <asp:Label ID="Label11" runat="server" Text="Ubicación: "  style="font-size: 18px;" ></asp:Label></b>            
 
-                    <b FACE="arial">
-                          <asp:Label ID="lblDia" runat="server" Text="Dia de las clases: "  style="font-size: 18px; margin-left:-317px; " ></asp:Label>
+                            </td>
+                            <td>
 
-                         </b>&nbsp; 
-                    <asp:Label ID="Label14" runat="server" Text="12 de Junio 2018"  Style="font-size: 18px;"></asp:Label>
-                    <br /><br />
-
-                     <b FACE="arial">
-                          <asp:Label ID="Label5" runat="server" Text="Hora: "  style="font-size: 18px; margin-left:-498px; " ></asp:Label>
-
-                         </b>&nbsp; 
-                    <asp:Label ID="Label6" runat="server" Text="9:00 am"  Style="font-size: 18px;"></asp:Label>
-                    <br /><br />
-                     <b FACE="arial">
-                          <asp:Label ID="Label7" runat="server" Text="Instructor: "  style="font-size: 18px; margin-left:-225px; " ></asp:Label>
-
-                         </b>&nbsp; 
-                    <asp:Label ID="Label8" runat="server" Text="Pedro Alejandro Gómez Alvarado"  Style="font-size: 18px;"></asp:Label>
-                    <br /><br />
-                     <b FACE="arial">
-                          <asp:Label ID="Label9" runat="server" Text="Indumentaria: "  style="font-size: 18px; margin-left:-376px; " ></asp:Label>
-
-                         </b>&nbsp; 
-                    <asp:Label ID="Label10" runat="server" Text="No alquilada"  Style="font-size: 18px;"></asp:Label>
-                    <br /><br />
-                  <b FACE="arial">
-                          <asp:Label ID="Label11" runat="server" Text="Ubicación: "  style="font-size: 18px; margin-left:-418px; " ></asp:Label>
-
-                         </b>&nbsp; 
                     <asp:Label ID="Label12" runat="server" Text="Guanacaste"  Style="font-size: 18px;"></asp:Label>
-                    <br /><br />
-                    <hr style="margin-left: 215px; border-top: 1px solid black; width: 700px;" />
+                  
+                            </td>
+                        </tr>
 
-                    <b FACE="arial">
-                          <asp:Label ID="Label15" runat="server" Text="Subtotal: "  style="font-size: 16px;
-    margin-left: 395px; " ></asp:Label>
 
-                         </b>&nbsp; 
-                    <asp:Label ID="Label16" runat="server" Text="$ 30.5"  Style="font-size: 16px;
-    margin-left: 20px;"></asp:Label>
-                    <br />
-                    <b FACE="arial">
-                          <asp:Label ID="Label19" runat="server" Text="Impuesto: "  style="    font-size: 16px;
-    margin-left: 380px;" ></asp:Label>
+                    </Table>
 
-                         </b>&nbsp; 
-                    <asp:Label ID="Label20" runat="server" Text="$ 3.5"  Style="font-size: 16px;
-    margin-left: 18px;"></asp:Label>
-                    <br />
-                    <b FACE="arial">
-                          <asp:Label ID="Label17" runat="server" Text="Total: "  style="font-size: 16px;
-    margin-left: 420px; " ></asp:Label>
 
-                         </b>&nbsp; 
-                    <asp:Label ID="Label18" runat="server" Text="$ 30.5"  Style="font-size: 16px;
-    margin-left: 28px;"></asp:Label>
-                    <br /><br />
+                    
+                 
+                    
+                 
+                    <hr style="margin-left: 18.5%; border-top: 1px solid black; width: 60.5%;" />
+
+
+                    <table  style="margin-left: 62%;">
+                        <tr>
+                           <td>
+                               <b FACE="arial">
+                          <asp:Label ID="Label15" runat="server" Text="Subtotal: "  style="font-size: 16px;" ></asp:Label></b>&nbsp;
+                           </td>
+                            <td>
+  
+                             &nbsp;  <asp:Label ID="Label16" runat="server" Text="₡ 10.000"  Style="font-size: 16px;"></asp:Label>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                 <b FACE="arial">
+                          <asp:Label ID="Label19" runat="server" Text="Impuesto: "  style="font-size: 16px;" ></asp:Label></b>&nbsp;
+                            </td>
+                            <td>
+                                <asp:Label ID="Label20" runat="server" Text="₡ 1.000"  Style="font-size: 16px;"></asp:Label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                 <b FACE="arial">
+                         <asp:Label ID="Label17" runat="server" Text="Total: "  style="font-size: 16px;" ></asp:Label></b>&nbsp; 
+                            </td>
+                            <td>&nbsp;
+                         <u><asp:Label ID="Label18" runat="server" Text="₡ 11.000"  Style="font-size: 16px;"></asp:Label></u> 
+                            </td>
+                        </tr>
+
+
+                    </table>
+
+                    <br /> 
 
                     <asp:Label ID="Label21" runat="server" Font-Size="Small" Style="    margin-left: -40px;" Text="Al aceptar los términos usted ha leído y esta de acuerdo con el uso de esta aplicación"></asp:Label>
                     <a>Términos  y Condiciones</a><br />

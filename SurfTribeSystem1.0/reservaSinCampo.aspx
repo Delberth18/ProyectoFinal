@@ -73,42 +73,36 @@
 
                 </div>  <br /><br />
                  <div class="row"><br />
-               
-
-              
-               
-               <div class="de1 col-xs-12" >
-                       
-                   <div class="container" style="background-color: chocolate;
-    width: 317%;">
-                       
-                          
-
-  <!-- PAGE CONTENT -->
-
-
-  
-   <img src="ccss/star-1-3/Static%20HTML/img/not-found/not-found.png"  style="      width: 26%;  margin-top: 3%;
-    margin-left: -12%;"/><br /><br />
-    <h4 class="col-lg-11" style="
-    background-color: chocolate;
-    font-size: 20px;
-    color:  white;
-">En este momento no hay reservas disponibles en esta escuela con el nivel seleccionado.</h4>
-   
-    <div class="input-group">
-    
-    </div>
- 
 
 
 
-                    
-                       <br />
-                      
 
-                   </div>
-               </div>
+                     <div class="de1 col-xs-12">
+
+                         <div class="container" style="background-color: chocolate; width: 317%; opacity: 0.9; border-radius: 84px;">
+
+
+
+                             <!-- PAGE CONTENT -->
+
+
+
+                             <img src="ccss/star-1-3/Static%20HTML/img/not-found/not-found.png" style="width: 26%; margin-top: 3%; margin-left: 4%;" /><br />
+                             <br />
+                             <h4 class="col-lg-12" style="font-size: 20px; color: white;">En este momento no hay reservas disponibles en esta escuela con el nivel seleccionado.</h4>
+
+                             <div class="input-group">
+                             </div>
+
+
+
+
+
+                             <br />
+
+
+                         </div>
+                     </div>
 
                  </div>
 
