@@ -29,16 +29,16 @@
     </asp:Repeater>
 
     <!-- PAGE CONTENT -->
-    <section class="mainContentSection singleHotel">
+    <section class="mainContentSection singlePackage">
         <div class="container">
-            <div class="row">
+             <div class="row galleryCarousel">
                 <div class="col-xs-12">
                     <div id="package-carousel" class="carousel slide" data-ride="carousel">
                         <div id="rev_slider_container" class="rev_slider custom_rev_slider " data-version="5.4.1">
-                            <ul>
+                            <ul >
                                 <asp:Repeater runat="server" ID="galeria">
                                     <ItemTemplate>
-                                        <li data-transition="parallaxvertical">
+                                        <li  class="item">
                                             <img src='data:image/jpg;base64,<%# Eval("Imgs") %>' alt="slidebg1">
                                         </li>
                                     </ItemTemplate>
