@@ -11,7 +11,7 @@ namespace SurfTribeSystem1._0
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            lblEscuela.Text = "Totem totem";//Session["escuela"].ToString();
+            lblEscuela.Text = Session["escuela"].ToString();
             lblNivel.Text = Session["Nivel"].ToString();
             
         }

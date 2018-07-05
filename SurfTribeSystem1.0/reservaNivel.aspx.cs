@@ -22,6 +22,7 @@ namespace SurfTribeSystem1._0
             EncriptarLogica encry = new EncriptarLogica();
             nombreEscuela.Text= encry.Desencripta(valor);
             Session["escuela"] = nombreEscuela.Text;
+            
         }
 
         protected void btnAvanzado_Click(object sender, EventArgs e)
@@ -41,6 +42,12 @@ namespace SurfTribeSystem1._0
         {
             Session["Nivel"] = "Principiante";
             Response.Redirect("reservaHorario.aspx");
+        }
+
+        protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+        {
+           
+            Response.Redirect(Session["devuelta"].ToString());
         }
     }
 }

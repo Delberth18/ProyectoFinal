@@ -3116,6 +3116,7 @@
     <Content Include="reservaIndumentaria.aspx" />
     <Content Include="reservaNivel.aspx" />
     <Content Include="reservaSinCampo.aspx" />
+    <Content Include="TérminosCondiciones.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -3357,6 +3358,20 @@
     <Compile Include="Site3.Master.designer.cs">
       <DependentUpon>Site3.Master</DependentUpon>
     </Compile>
+    <Compile Include="Site4.Master.cs">
+      <DependentUpon>Site4.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site4.Master.designer.cs">
+      <DependentUpon>Site4.Master</DependentUpon>
+    </Compile>
+    <Compile Include="TérminosCondiciones.aspx.cs">
+      <DependentUpon>TérminosCondiciones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TérminosCondiciones.aspx.designer.cs">
+      <DependentUpon>TérminosCondiciones.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="ccss\star-1-3\SCSS\css\colors\blue.css.map" />
@@ -3503,6 +3518,7 @@
     <Content Include="Site1.Master" />
     <Content Include="Site2.Master" />
     <Content Include="Site3.Master" />
+    <Content Include="Site4.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

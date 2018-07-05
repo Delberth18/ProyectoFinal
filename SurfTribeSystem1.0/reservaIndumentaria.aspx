@@ -43,7 +43,7 @@
             <div id="Lugar" class="tab-pane fade in active">
 
                 <section class="recentActivitySection">
-  <div class="container">
+      <div class="container">
 		<div class="de">
 			<div class="col-xs-12 ">
         <div class="recentActivityContent bg-ashs">
@@ -51,7 +51,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12">
-                        <br /><br />
+                         <asp:ImageButton ID="ImageButton1" OnClick="ImageButton1_Click" runat="server" Style="margin-left: -94%;  width: 40px;" src="ccss/star-1-3/Static%20HTML/img/atras.png" />
+                        
                             <center><font size="5"><b FACE="arial" style="margin-left: -70px;" >¿Desea alguna indumentaria?</b></font></center><br />
                         
                     </div>

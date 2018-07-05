@@ -50,13 +50,17 @@
             
             <div class="container">
                 <div class="row">
-                    <div class="col-xs-12">
-                        <br />
+                  
+                    <br />
+                    <div class="col-xs-12" style="z-index: -1;">
+                          
+                        
                             <center><font size="5"><b FACE="arial" style="margin-left: -8%;" >Seleccione su escuela</b></font></center><br /><br />
                          <font size="4" style="margin-left: -70px;"><b FACE="arial">1.<u> Ubicación:</u>&nbsp;&nbsp;</b></font>
                         <asp:Label runat="server" ID="idUbicación" Text="Guanacaste"></asp:Label>
                         
                     </div>
+                      <asp:ImageButton ID="ImageButton1" OnClick="ImageButton1_Click" runat="server" Style="margin-left: -193%;  width: 40px;" src="ccss/star-1-3/Static%20HTML/img/atras.png" />
                 </div><br /><br />
                 <div class="row">
 

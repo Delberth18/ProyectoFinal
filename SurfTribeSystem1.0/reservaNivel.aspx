@@ -52,7 +52,7 @@
             
             <div class="container">
                 <div class="row">
-                    <div class="col-xs-12">
+                    <div class="col-xs-12" style="z-index: -1;">
                         <br />
                             <font size="5"><b FACE="arial" style="margin-left: -70px;">Seleccione el nivel</b></font><br />
                         <br /> 
@@ -61,6 +61,7 @@
                         <font size="4" style="margin-left: 120px;"><b FACE="arial">2. <u>Escuela:</u>&nbsp;&nbsp;</b></font>
                         <asp:Label runat="server" ID="nombreEscuela" Text="Caribean'ss"></asp:Label>
                     </div>
+                     <asp:ImageButton ID="ImageButton1" OnClick="ImageButton1_Click" runat="server" Style="margin-left: -192%;  width: 40px;" src="ccss/star-1-3/Static%20HTML/img/atras.png" />
                 </div> 
                 <div class="row"><br />
                     <div class="de1 col-xs-12">

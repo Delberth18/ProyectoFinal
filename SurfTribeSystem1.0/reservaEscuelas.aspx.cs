@@ -47,7 +47,8 @@ namespace SurfTribeSystem1._0
             Session["Ubicación"] = idUbicación.Text;
 
             ObtenerListado();
-            
+            Session["devuelta"] = HttpContext.Current.Request.Url.AbsoluteUri;
+
 
         }
 
@@ -98,8 +99,9 @@ namespace SurfTribeSystem1._0
 
         }
 
-
-
-
+        protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+        {
+            Response.Redirect("reservaClases.aspx");
+        }
     }
 }
