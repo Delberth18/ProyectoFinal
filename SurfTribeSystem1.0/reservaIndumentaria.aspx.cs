@@ -20,11 +20,18 @@ namespace SurfTribeSystem1._0
             sda.Fill(dt);
             repeater1.DataSource = dt;
             repeater1.DataBind();
+            Session["asigando"] = 0;
+            Session["numero"] = 0;
         }
 
         protected void btnOmitir_Click(object sender, EventArgs e)
         {
             Response.Redirect("reservaConfirmar.aspx");
+        }
+
+        protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+        {
+            Response.Redirect("reservaHorario.aspx");
         }
     }
 }

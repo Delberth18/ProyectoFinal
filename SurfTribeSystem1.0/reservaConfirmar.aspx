@@ -187,7 +187,7 @@
                     <br /> 
 
                     <asp:Label ID="Label21" runat="server" Font-Size="Small" Style="    margin-left: -40px;" Text="Al aceptar los términos usted ha leído y esta de acuerdo con el uso de esta aplicación"></asp:Label>
-                    <a>Términos  y Condiciones</a><br />
+                    <a href="TérminosCondiciones.aspx" target="_blank">Términos  y Condiciones</a><br />
                     <asp:Label ID="Label22" runat="server" Font-Size="Small" Style="margin-left: -40px;" Text="Al reservar el administrador en un rango de 24 horas se pondrá en contacto contigo para darle las instrucciones"></asp:Label><br />
                       <asp:Label ID="Label23" runat="server" Font-Size="Small" Style="    margin-left: -67px;" Text="sobre el deposito de reserva, con el fin de que quede en pie la reserva."></asp:Label><br />
                     <br />
