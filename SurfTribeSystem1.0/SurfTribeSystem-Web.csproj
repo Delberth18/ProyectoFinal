@@ -3083,6 +3083,7 @@
     <Content Include="defaultSinLogeoUN.aspx" />
     <Content Include="editarEscuela.aspx" />
     <Content Include="editarUsuarios.aspx" />
+    <Content Include="EnvioCorreo.aspx" />
     <Content Include="FAQlistado.aspx" />
     <Content Include="FAQMantenimiento.aspx" />
     <Content Include="FAQRegistro.aspx" />
@@ -3120,9 +3121,7 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Clases\Manejador.ashx.cs">
-      <DependentUpon>Manejador.ashx</DependentUpon>
-    </Compile>
+    <Compile Include="Clases\Email.cs" />
     <Compile Include="ComentariosListado.aspx.cs">
       <DependentUpon>ComentariosListado.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -3185,6 +3184,13 @@
     </Compile>
     <Compile Include="editarUsuarios.aspx.designer.cs">
       <DependentUpon>editarUsuarios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EnvioCorreo.aspx.cs">
+      <DependentUpon>EnvioCorreo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EnvioCorreo.aspx.designer.cs">
+      <DependentUpon>EnvioCorreo.aspx</DependentUpon>
     </Compile>
     <Compile Include="FAQlistado.aspx.cs">
       <DependentUpon>FAQlistado.aspx</DependentUpon>
@@ -3513,7 +3519,6 @@
     <Content Include="ccss\star-1-3\Static HTML\plugins\slick\slick-theme.scss" />
     <Content Include="ccss\star-1-3\Static HTML\plugins\slick\slick.less" />
     <Content Include="ccss\star-1-3\Static HTML\plugins\slick\slick.scss" />
-    <Content Include="Clases\Manejador.ashx" />
     <None Include="packages.config" />
     <Content Include="Site1.Master" />
     <Content Include="Site2.Master" />

@@ -126,6 +126,19 @@ namespace SurfTribeSystem_Datos
                 param.ParameterName = "@TAG";
                 parametros.Add(param);
 
+                param = new SqlParameter();
+                if (usuario.IdEscuela == null)
+                {
+                    param.Value = DBNull.Value;
+                }
+                else
+                {
+                    param.Value = usuario.IdEscuela;
+                }
+                param.ParameterName = "@ID_ESCUELA";
+                parametros.Add(param);
+
+
                 #endregion
 
 
@@ -143,12 +156,17 @@ namespace SurfTribeSystem_Datos
                 else
                 {
                     resultado.TipoResultado = "OK";
-
-                    if (usuario.Tag=="LISTADO")
+                    List<string> lista = new List<string>();
+                    if (usuario.Tag=="CORREOS")
                     {
-
+                        foreach (DataRow row in datos.Tables[1].Rows)
+                        {
+                             lista.Add(row["CORREO"].ToString());
+                        }
+                        resultado.ObjetoResultado = lista;
                     }
 
+                    
 
                 }
 
