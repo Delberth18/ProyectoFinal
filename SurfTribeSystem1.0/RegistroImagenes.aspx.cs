@@ -60,18 +60,7 @@ namespace SurfTribeSystem1._0
         }
         protected void btnGuardar_Click(object sender, EventArgs e)
         {
-                string from = "surftcr@gmail.com";
-                string password = "tribe12345";
-                string to = "edu08am1@gmail.com";
-                string msn ="hahahaha ";
-            string subject = "Sorry";
-
-                new Email().enviarCorreos(from,subject, password, to, msn);
-
-            
-
-            new Email().enviarCorreos(from,subject, password, to, msn);
-
+                
             try
             {
                 string Extension = string.Empty;
@@ -213,6 +202,6 @@ namespace SurfTribeSystem1._0
            // pertenece.SelectedValue = pert;
         }
 
-
+        
     }
 }
