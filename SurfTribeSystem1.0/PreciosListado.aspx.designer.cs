@@ -13,6 +13,15 @@ namespace SurfTribeSystem1._0 {
     public partial class PreciosListado {
         
         /// <summary>
+        /// UpdatePanel1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel UpdatePanel1;
+        
+        /// <summary>
         /// tituloLabel control.
         /// </summary>
         /// <remarks>
@@ -31,12 +40,21 @@ namespace SurfTribeSystem1._0 {
         protected global::System.Web.UI.WebControls.Label info1;
         
         /// <summary>
-        /// preguntasLst control.
+        /// ddlEscuela control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ListView preguntasLst;
+        protected global::System.Web.UI.WebControls.DropDownList ddlEscuela;
+        
+        /// <summary>
+        /// preciosLst control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ListView preciosLst;
     }
 }

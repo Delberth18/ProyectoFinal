@@ -12,10 +12,12 @@ namespace SurfTribeSystem_Entidades
         string descripcion;
         double precioD;
         string tipo;
+        string idEscuela;
 
         public string Tag { get => tag; set => tag = value; }
         public string Descripcion { get => descripcion; set => descripcion = value; }
         public double PrecioD { get => precioD; set => precioD = value; }
         public string Tipo { get => tipo; set => tipo = value; }
+        public string IdEscuela { get => idEscuela; set => idEscuela = value; }
     }
 }
