@@ -13,9 +13,22 @@ namespace SurfTribeSystem1._0
     {
         Precio precio = new Precio();
         List<Precio> precios = new List<Precio>();
+        Usuario usu = new Usuario();
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
+            if (Session["InicioSesion"] != null)
+            {
+                usu = (Usuario)Session["InicioSesion"];
+
+                if(usu.Tipo_usu!="ADM"){
+                    Response.Redirect("defaultSinLogeoUN.aspx");
+                }
+            }
+            else
+            {
+                Response.Redirect("defaultSinLogeoUN.aspx");
+            }
+                if (!IsPostBack)
             {
                 ObtenerListado();
             }
@@ -28,7 +41,7 @@ namespace SurfTribeSystem1._0
             try
             {
                 precio.Tag = "LISTADO";
-                precio.IdEscuela = "HERMOSA RIDERS";//va el id de la escuela de la persona que este logueada
+                precio.IdEscuela = usu.IdEscuela;
                 resultado = new PrecioLogica().Acciones(precio);
                 if (resultado.TipoResultado == "OK")
                 {
@@ -87,7 +100,7 @@ namespace SurfTribeSystem1._0
                 preG.PrecioD = Convert.ToDouble(txtCostoPrincipiante.Text);
                 preG.Descripcion = txtDscPrincipiante.Text;
                 preG.Tipo = "PRINCIPIANTE";
-                preG.IdEscuela = "HERMOSA RIDERS";//idEscuela del adm logueado
+                preG.IdEscuela = usu.IdEscuela;
                 preG.Tag = "INSER_ACTUA";
                 resultado = new PrecioLogica().Acciones(preG);
 
@@ -120,7 +133,7 @@ namespace SurfTribeSystem1._0
                 preG.PrecioD = Convert.ToDouble(txtCostoIntermedio.Text);
                 preG.Descripcion = txtDscIntermedio.Text;
                 preG.Tipo = "INTERMEDIO";
-                preG.IdEscuela = "HERMOSA RIDERS";//idEscuela del adm logueado
+                preG.IdEscuela = usu.IdEscuela;
                 preG.Tag = "INSER_ACTUA";
                 resultado = new PrecioLogica().Acciones(preG);
 
@@ -153,7 +166,7 @@ namespace SurfTribeSystem1._0
                 preG.PrecioD = Convert.ToDouble(txtCostoAvanzado.Text);
                 preG.Descripcion = txtDscAvanzado.Text;
                 preG.Tipo = "AVANZADO";
-                preG.IdEscuela = "HERMOSA RIDERS";//idEscuela del adm logueado
+                preG.IdEscuela = usu.IdEscuela;
                 preG.Tag = "INSER_ACTUA";
                 resultado = new PrecioLogica().Acciones(preG);
 
@@ -186,7 +199,7 @@ namespace SurfTribeSystem1._0
                 preG.PrecioD = Convert.ToDouble(txtCostoShortBoard.Text);
                 preG.Descripcion = txtDscShortBoard.Text;
                 preG.Tipo = "SHORT";
-                preG.IdEscuela = "HERMOSA RIDERS";//idEscuela del adm logueado
+                preG.IdEscuela = usu.IdEscuela;
                 preG.Tag = "INSER_ACTUA";
                 resultado = new PrecioLogica().Acciones(preG);
 
@@ -219,7 +232,7 @@ namespace SurfTribeSystem1._0
                 preG.PrecioD = Convert.ToDouble(txtCostoLongBoard.Text);
                 preG.Descripcion = txtDscPrincipiante.Text;
                 preG.Tipo = "LONG";
-                preG.IdEscuela = "HERMOSA RIDERS";//idEscuela del adm logueado
+                preG.IdEscuela = usu.IdEscuela;
                 preG.Tag = "INSER_ACTUA";
                 resultado = new PrecioLogica().Acciones(preG);
 

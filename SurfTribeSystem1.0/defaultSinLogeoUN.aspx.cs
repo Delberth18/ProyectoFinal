@@ -22,7 +22,7 @@ namespace SurfTribeSystem1._0
             ListarGuana();
             ListarLimon();
             ListarPuerto();
-
+            Session["InicioNombre"] = null;
         }
 
        
@@ -52,7 +52,7 @@ namespace SurfTribeSystem1._0
                     
                         Session["InicioNombre"] = usu2[0].Nombre.ToString() + " " + usu2[0].Apellidos.ToString();
 
-                        Session["InicioSesion"] = 1;
+                        Session["InicioSesion"] = usu2[0];
 
                     String idUsu = usu2[0].Tipo_usu.ToString();
 

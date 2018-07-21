@@ -11,9 +11,22 @@ namespace SurfTribeSystem1._0
 {
     public partial class registroEscuela : System.Web.UI.Page
     {
+        Usuario usu = new Usuario();
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["InicioSesion"] != null)
+            {
+                usu = (Usuario)Session["InicioSesion"];
 
+                if (usu.Tipo_usu != "ADMG")
+                {
+                    Response.Redirect("defaultSinLogeoUN.aspx");
+                }
+            }
+            else
+            {
+                Response.Redirect("defaultSinLogeoUN.aspx");
+            }
         }
 
         protected void btnGuardar_Click(object sender, EventArgs e)
@@ -42,7 +55,7 @@ namespace SurfTribeSystem1._0
 
                     if (resultado.TipoResultado == "OK")
                     {
-                        string script = "swal('Excelente', 'Éxito en la insersión', 'success'); ";
+                        string script = "swal('Excelente', 'Éxito en la insersión, le recordamos que debe registrar imagenes también', 'success'); ";
                         ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
                         Limpiar();
                     }

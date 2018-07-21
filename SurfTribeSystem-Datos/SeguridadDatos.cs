@@ -85,8 +85,8 @@ namespace SurfTribeSystem_LogicaDeNegocios
                                 Clave = row["CLAVE"] is DBNull ? null : row["CLAVE"].ToString(),
                                 Pais = row["PAIS"] is DBNull ? null : row["PAIS"].ToString(),
                                 Tipo_usu = row["ID_TIPO_USU"] is DBNull ? null : row["ID_TIPO_USU"].ToString(),
-                                Correo = row["CORREO"] is DBNull ? null : row["CORREO"].ToString()
-
+                                Correo = row["CORREO"] is DBNull ? null : row["CORREO"].ToString(),
+                                IdEscuela= row["ID_ESCUELA"] is DBNull ? null : row["ID_ESCUELA"].ToString()
                             });
                         }
 

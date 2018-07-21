@@ -19,10 +19,24 @@ namespace SurfTribeSystem1._0
     {
         Imagen img = new Imagen();
         List<Imagen> lista = new List<Imagen>();
+        Usuario usu = new Usuario();
 
         string pert = "";
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["InicioSesion"] != null)
+            {
+                usu = (Usuario)Session["InicioSesion"];
+
+                if (usu.Tipo_usu != "ADMG")
+                {
+                    Response.Redirect("defaultSinLogeoUN.aspx");
+                }
+            }
+            else
+            {
+                Response.Redirect("defaultSinLogeoUN.aspx");
+            }
             if (!IsPostBack)
             {
                 ListarRegistro();

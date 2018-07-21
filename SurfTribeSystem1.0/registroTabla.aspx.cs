@@ -14,11 +14,24 @@ namespace SurfTribeSystem1._0
 {
     public partial class registroTabla : System.Web.UI.Page
     {
+        Usuario usu = new Usuario();
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["InicioSesion"] != null)
+            {
+                usu = (Usuario)Session["InicioSesion"];
+
+                if (usu.Tipo_usu != "ADM")
+                {
+                    Response.Redirect("defaultSinLogeoUN.aspx");
+                }
+            }
+            else
+            {
+                Response.Redirect("defaultSinLogeoUN.aspx");
+            }
             if (!IsPostBack)
             {
-                ListarEscuelas();
                 ListarEstados();
                 ListarRegistro();
             }
@@ -71,7 +84,16 @@ namespace SurfTribeSystem1._0
                 tabla.Tamanio = txtPies.Text + "-" + txtPulgadas.Text;
                 tabla.Tipo = txtTipo.Text;
                 tabla.Estado = estado.SelectedValue;
-                tabla.Id_Escuela = escuela.SelectedValue;
+                tabla.Id_Escuela =usu.IdEscuela;
+
+                if (Convert.ToInt32(txtPies.Text)>=9)
+                {
+                    tabla.Tipo_precio = "LONG";
+                }
+                else
+                {
+                    tabla.Tipo_precio = "SHORT";
+                }
 
                 string base64ImageRepresentation = Convert.ToBase64String(FileUpload.FileBytes);
 
@@ -140,34 +162,6 @@ namespace SurfTribeSystem1._0
         {
             txtMarca.Text = "";
             txtTipo.Text = "";
-        }
-
-        private void ListarEscuelas()
-        {
-            Resultado resultado = new Resultado();
-            try
-            {
-                List<Escuela> lista = new List<Escuela>();
-
-                Escuela esc = new Escuela();
-
-                esc.Tag = "LISTA_PRINCIPAL";
-                resultado = new EscuelaLogica().Acciones(esc);
-
-                lista = (List<Escuela>)resultado.ObjetoResultado;
-
-                escuela.DataSource = lista;
-                escuela.DataTextField = "NOMBRE";
-                escuela.DataValueField = "ID";
-                escuela.DataBind();
-                
-
-            }
-            catch (Exception ex)
-            {
-                string script = "swal('Error', '" + ex + "', 'error'); ";
-                ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
-            }
         }
 
         private void ListarEstados()

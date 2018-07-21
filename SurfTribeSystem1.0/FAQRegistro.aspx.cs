@@ -12,8 +12,22 @@ namespace SurfTribeSystem1._0
     public partial class FAQRegistro : System.Web.UI.Page
     {
         Faq faq = new Faq();
+        Usuario usu = new Usuario();
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["InicioSesion"] != null)
+            {
+                usu = (Usuario)Session["InicioSesion"];
+
+                if (usu.Tipo_usu != "ADMG")
+                {
+                    Response.Redirect("defaultSinLogeoUN.aspx");
+                }
+            }
+            else
+            {
+                Response.Redirect("defaultSinLogeoUN.aspx");
+            }
             if (!IsPostBack)
             {
                 preguntaText.Text = Request.QueryString["valor1"];

@@ -5,26 +5,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
 
-    <!-- PAGE TITLE -->
-  <%--  <section class="pageTitle" style="background-image: url(Imagenes/IMG-20170915-WA0002-01.jpeg); margin-top: 96px;">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12">
-                    <div class="titleTable">
-                        <div class="titleTableInner">
-                            <div class="pageTitleInfo">
-                                <br />
-                                <br />
-                                <br />
-                                <h1>Registro de Tablas</h1>
-                                <div class="under-border"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>--%>
+  
 
 
     <section class="mainContentSection packagesSection" style="background-image: url(Imagenes/IMG-20150830-WA0006.jpg); background-repeat: no-repeat; background-size: cover">
@@ -47,7 +28,7 @@
                         <div class="col-xs-12">
 
                             <h4>
-                                <asp:Label runat="server" ID="info1" Text="En este apartado puede realizar el ingreso de las tablas de surf para las diferentes escuelas"></asp:Label></h4>
+                                <asp:Label runat="server" ID="info1" Text="En este apartado puede realizar el ingreso de las tablas de surf de su escuela"></asp:Label></h4>
 
                         </div>
                     </div>
@@ -65,25 +46,7 @@
 
                                     <asp:TextBox ID="txtTipo" runat="server" class="form-control  bg-ashh"></asp:TextBox>
                                 </li>
-                                <li>
-                                    <label style="color: saddlebrown; font-size: x-large">Tamaño:</label>
-                                    <div class="row">
-                                        <div class="col-xs-12 col-sm-4">
-                                            <ul>
-                                                <li>
-                                                    <asp:TextBox ID="txtPies" Text="4" ToolTip="Ingrese el número de pies" runat="server" class="form-control  bg-ashh " TextMode="Number" min="4" max="47"></asp:TextBox>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-xs-12 col-sm-4">
-                                            <ul>
-                                                <li>
-                                                    <asp:TextBox ID="txtPulgadas" Text="1" ToolTip="Ingrese el número de pulgadas" runat="server" class="form-control  bg-ashh" TextMode="Number" min="1" max="11"></asp:TextBox>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </li>
+                                
                             </ul>
 
                         </div>
@@ -97,11 +60,23 @@
                                     </asp:DropDownList>
                                 </li>
                                 <li>
-                                    <label style="color: saddlebrown; font-size: x-large">Escuela:</label>
-                                </li>
-                                <li>
-                                    <asp:DropDownList ID="escuela" runat="server" CssClass="bg-ashh" Width="100%">
-                                    </asp:DropDownList>
+                                    <label style="color: saddlebrown; font-size: x-large">Tamaño:</label>
+                                    <div class="row">
+                                        <div class="col-xs-12 col-sm-3">
+                                            <ul>
+                                                <li>
+                                                    <asp:TextBox ID="txtPies" Text="4" ToolTip="Ingrese el número de pies" runat="server" class="form-control  bg-ashh " TextMode="Number" min="4" max="47"></asp:TextBox><p style="color:red">Pies</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-3">
+                                            <ul>
+                                                <li>
+                                                    <asp:TextBox ID="txtPulgadas" Text="1" ToolTip="Ingrese el número de pulgadas" runat="server" class="form-control  bg-ashh" TextMode="Number" min="1" max="11"></asp:TextBox><p style="color:red">Pulgadas</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </li>
 
                             </ul>

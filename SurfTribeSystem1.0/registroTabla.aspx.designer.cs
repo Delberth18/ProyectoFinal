@@ -49,6 +49,15 @@ namespace SurfTribeSystem1._0 {
         protected global::System.Web.UI.WebControls.TextBox txtTipo;
         
         /// <summary>
+        /// estado control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList estado;
+        
+        /// <summary>
         /// txtPies control.
         /// </summary>
         /// <remarks>
@@ -65,24 +74,6 @@ namespace SurfTribeSystem1._0 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtPulgadas;
-        
-        /// <summary>
-        /// estado control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList estado;
-        
-        /// <summary>
-        /// escuela control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList escuela;
         
         /// <summary>
         /// dificultad control.
