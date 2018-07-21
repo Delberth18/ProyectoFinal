@@ -123,6 +123,18 @@ namespace SurfTribeSystem_Datos
                 parametros.Add(param);
 
                 param = new SqlParameter();
+                if (tabla.Tipo_precio == null)
+                {
+                    param.Value = DBNull.Value;
+                }
+                else
+                {
+                    param.Value = tabla.Tipo_precio;
+                }
+                param.ParameterName = "@TIPO_PRECIO";
+                parametros.Add(param);
+
+                param = new SqlParameter();
                 if (tabla.Tag == null)
                 {
                     param.Value = DBNull.Value;

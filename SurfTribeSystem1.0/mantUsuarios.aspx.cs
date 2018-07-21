@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SurfTribeSystem_Entidades;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -11,8 +12,22 @@ namespace SurfTribeSystem1._0
 {
     public partial class mantUsuarios : System.Web.UI.Page
     {
+        Usuario usu = new Usuario();
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["InicioSesion"] != null)
+            {
+                usu = (Usuario)Session["InicioSesion"];
+
+                if (usu.Tipo_usu != "ADM")
+                {
+                    Response.Redirect("defaultSinLogeoUN.aspx");
+                }
+            }
+            else
+            {
+                Response.Redirect("defaultSinLogeoUN.aspx");
+            }
             if (Session["Exito"]!= null) {
 
                 string script = "swal('Excelente', 'Guardado con éxito', 'success'); ";

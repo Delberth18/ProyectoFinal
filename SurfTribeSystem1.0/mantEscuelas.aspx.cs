@@ -14,8 +14,23 @@ namespace SurfTribeSystem1._0
     public partial class mantEscuelas : System.Web.UI.Page
     {
         public static string id;
+        Usuario usu = new Usuario();
+
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["InicioSesion"] != null)
+            {
+                usu = (Usuario)Session["InicioSesion"];
+
+                if (usu.Tipo_usu != "ADM")
+                {
+                    Response.Redirect("defaultSinLogeoUN.aspx");
+                }
+            }
+            else
+            {
+                Response.Redirect("defaultSinLogeoUN.aspx");
+            }
             if (!IsPostBack)
             {
                 ListarEscuelas();

@@ -15,8 +15,22 @@ namespace SurfTribeSystem1._0
     {
         Usuario usuario = new Usuario();
         List<Usuario> usu = new List<Usuario>();
+        Usuario usu2 = new Usuario();
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["InicioSesion"] != null)
+            {
+                usu2 = (Usuario)Session["InicioSesion"];
+
+                if (usu2.Tipo_usu != "ADMG")
+                {
+                    Response.Redirect("defaultSinLogeoUN.aspx");
+                }
+            }
+            else
+            {
+                Response.Redirect("defaultSinLogeoUN.aspx");
+            }
             String correo = Session["idEditar"].ToString();
             if (!IsPostBack)
             {

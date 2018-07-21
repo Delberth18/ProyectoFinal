@@ -34,11 +34,7 @@
                                             <li>
                                                 <br />
                                                 <center>
-                                        <asp:DropDownList ID="ddlEscuelas" runat="server" AutoPostBack="True" OnSelectedIndexChanged="idSeleccionar_Click" CssClass="bg-ashh" Style="width: 30%" >
-                                        </asp:DropDownList>
-
-                                        <br />
-                                        <br />
+                                        
                                             <div class="col-sm-3">
                                                 <a aria-label="NuevaPreguntado" href="registroTabla.aspx" >
                                                     <span aria-hidden="true" style="margin: 2px 2px 2px 2px; font-size:x-large; color:saddlebrown"><b>Nueva tabla>></b></span>
@@ -96,7 +92,6 @@
                     </div>
             </ContentTemplate>
             <Triggers>
-                <asp:AsyncPostBackTrigger ControlID="ddlEscuelas" EventName="" />
                 <asp:AsyncPostBackTrigger ControlID="imagenesList" />
             </Triggers>
         </asp:UpdatePanel>

@@ -13,57 +13,31 @@ namespace SurfTribeSystem1._0
 {
     public partial class mantTablas : System.Web.UI.Page
     {
-        public static string idEscuela = "";
         public static string idTabla = "";
+        Usuario usu = new Usuario();
+
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["InicioSesion"] != null)
+            {
+                usu = (Usuario)Session["InicioSesion"];
+
+                if (usu.Tipo_usu != "ADM")
+                {
+                    Response.Redirect("defaultSinLogeoUN.aspx");
+                }
+            }
+            else
+            {
+                Response.Redirect("defaultSinLogeoUN.aspx");
+            }
             if (!IsPostBack)
             {
-                ListarEscuelas();
-            }
-        }
-
-
-        private void ListarEscuelas()
-        {
-            Resultado resultado = new Resultado();
-            try
-            {
-                List<Escuela> lista = new List<Escuela>();
-
-                Escuela esc = new Escuela();
-
-                esc.Tag = "LISTA_PRINCIPAL";
-                resultado = new EscuelaLogica().Acciones(esc);
-
-                lista = (List<Escuela>)resultado.ObjetoResultado;
-                lista.Add(new Escuela { Nombre = "Seleccione una escuela", Id = "Seleccione una escuela" });
-
-                ddlEscuelas.DataSource = lista;
-                ddlEscuelas.DataTextField = "NOMBRE";
-                ddlEscuelas.DataValueField = "ID";
-                ddlEscuelas.DataBind();
-
-                ddlEscuelas.SelectedValue = "Seleccione una escuela";
-
-            }
-            catch (Exception ex)
-            {
-                string script = "swal('Error', '" + ex + "', 'error'); ";
-                ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
-            }
-        }
-
-
-        protected void idSeleccionar_Click(object sender, EventArgs e)
-        {
-            if (ddlEscuelas.SelectedValue!= "Seleccione una escuela")
-            {
-                idEscuela = ddlEscuelas.SelectedValue;
                 selecion();
             }
-            
         }
+
+
 
         private void selecion()
         {
@@ -75,7 +49,7 @@ namespace SurfTribeSystem1._0
                 Tabla tab = new Tabla();
 
                 tab.Tag = "LISTADO_ESCUELA_NO_VENTA";
-                tab.Id_Escuela = idEscuela;
+                tab.Id_Escuela = usu.IdEscuela;
                 resultado = new TablaLogica().Acciones(tab);
 
                 lista = (List<Tabla>)resultado.ObjetoResultado;
@@ -147,7 +121,7 @@ namespace SurfTribeSystem1._0
                     Tabla tab = new Tabla();
 
                     tab.Tag = "CAMBIA_ESTADO";
-                    tab.Id_Escuela = idEscuela;
+                    tab.Id_Escuela = usu.IdEscuela;
                     tab.Id = idTabla;
                     tab.Estado = ((DropDownList)sender).SelectedValue;
 

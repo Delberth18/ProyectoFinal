@@ -13,10 +13,23 @@ namespace SurfTribeSystem1._0
     {
         Faq faq = new Faq();
         List<Faq> faqs = new List<Faq>();
+        Usuario usu = new Usuario();
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["InicioSesion"] != null)
+            {
+                usu = (Usuario)Session["InicioSesion"];
 
+                if (usu.Tipo_usu != "ADMG")
+                {
+                    Response.Redirect("defaultSinLogeoUN.aspx");
+                }
+            }
+            else
+            {
+                Response.Redirect("defaultSinLogeoUN.aspx");
+            }
         }
 
         protected override void OnLoad(EventArgs e)
