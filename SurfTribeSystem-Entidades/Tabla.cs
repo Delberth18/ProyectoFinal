@@ -18,6 +18,7 @@ namespace SurfTribeSystem_Entidades
         string dificultad;
         string tag;
         string nombreEscuela;
+        string tipo_precio;
         double costo;
         string tipo_precio;
 
