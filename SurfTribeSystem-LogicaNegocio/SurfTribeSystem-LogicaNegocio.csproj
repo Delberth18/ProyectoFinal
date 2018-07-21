@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AlquilerTablaLogica.cs" />
     <Compile Include="ComentarioLogica.cs" />
     <Compile Include="EncriptarLogica.cs" />
     <Compile Include="EscuelaLogica.cs" />

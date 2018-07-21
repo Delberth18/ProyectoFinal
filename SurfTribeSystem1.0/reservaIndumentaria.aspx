@@ -61,31 +61,30 @@
                 <div class="row">
 
 
-                    <asp:Repeater ID="repeater1" runat="server">
+                    <asp:Repeater ID="repeater1" runat="server" OnItemDataBound="repeater1_ItemDataBound">
                         <ItemTemplate>
                             <div class="de4 col-xs-12">
                                 <div style="box-shadow: -11px 9px 45px 2px rgba(0,0,0,0.75); margin-left: 7px;" class="thumbnail deals">
 
                                     <div class="marco3">
-                                        <img src="Imagenes/20180610_135703.jpg" width="200" height="150" style="height: 300px;" alt="">
+                                        <img src='data:image/jpg;base64,<%#Eval("IMAGEN") %>' width="200" height="150" style="height: 300px;" alt=""/>
                                         <div>
 
                                             <br>
 
                                             <p><b>Marca:</b>
-                                                <asp:Label runat="server" ID="playa" Text='<%#Eval("PLAYA_CONCURRIDA")%>'></asp:Label></p>
+                                                <asp:Label runat="server" ID="playa" Text='<%#Eval("MARCA")%>'></asp:Label></p>
                                             <p><b>Tipo:</b>
-                                                <asp:Label runat="server" ID="Label3" Text='<%#Eval("PLAYA_CONCURRIDA")%>'></asp:Label></p>
+                                                <asp:Label runat="server" ID="Label3" Text='<%#Eval("TIPO")%>'></asp:Label></p>
                                             <p><b>Tamaño:</b>
-                                                <asp:Label runat="server" ID="Label2" Text='<%#Eval("PLAYA_CONCURRIDA")%>'></asp:Label></p>
+                                                <asp:Label runat="server" ID="Label2" Text='<%#Eval("TAMANIO")%>'></asp:Label></p>
                                             
                                              <p><b>Precio:</b>
-                                                <asp:Label runat="server" ID="Label1" Text="₡15,000"></asp:Label></p>
-
-
+                                                <asp:Label runat="server" ID="Label1" Text='<%#Eval("COSTO")%>'></asp:Label></p>
+                                            <asp:Label runat="server" ID="IDTabla" Visible="false" Text='<%#Eval("ID")%>'></asp:Label>
                                         </div>
                                     </div>
-                                    <a href="reservaConfirmar.aspx" class="pageLink" ></a>
+                                      <asp:HyperLink ID="hpvReservaConfi" runat="server" class="pageLink"  NavigateUrl="reservaConfirmar.aspx"></asp:HyperLink>
 
 
                                 </div>

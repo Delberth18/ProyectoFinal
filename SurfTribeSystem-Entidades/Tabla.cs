@@ -18,6 +18,7 @@ namespace SurfTribeSystem_Entidades
         string dificultad;
         string tag;
         string nombreEscuela;
+        string tipo_precio;
         double costo;
 
         public string Tamanio { get => tamanio; set => tamanio = value; }
@@ -31,5 +32,6 @@ namespace SurfTribeSystem_Entidades
         public string Tag { get => tag; set => tag = value; }
         public string NombreEscuela { get => nombreEscuela; set => nombreEscuela = value; }
         public double Costo { get => costo; set => costo = value; }
+        public string Tipo_precio { get => tipo_precio; set => tipo_precio = value; }
     }
 }

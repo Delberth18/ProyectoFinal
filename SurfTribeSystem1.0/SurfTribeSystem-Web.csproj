@@ -1607,7 +1607,9 @@
     <Content Include="ccss\star-1-3\Static HTML\img\bg7.png" />
     <Content Include="ccss\star-1-3\Static HTML\img\bgbg.jpg" />
     <Content Include="ccss\star-1-3\Static HTML\img\bgSeleccionar.jpg" />
+    <Content Include="ccss\star-1-3\Static HTML\img\booking\alert-check.png" />
     <Content Include="ccss\star-1-3\Static HTML\img\cities\cities-big-01.jpg" />
+    <Content Include="ccss\star-1-3\Static HTML\img\dashboard\dash-user.jpg" />
     <Content Include="ccss\star-1-3\Static HTML\img\favicon.png" />
     <Content Include="ccss\star-1-3\Static HTML\img\FunBoard.png" />
     <Content Include="ccss\star-1-3\Static HTML\img\guanacaste prueba %282%29.png" />
