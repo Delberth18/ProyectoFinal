@@ -8,7 +8,7 @@ namespace SurfTribeSystem_Entidades
 {
     public class Comentario
     {
-
+        string id;
         string comentariol;
         string nombre;
         string id_Usuario;
@@ -18,5 +18,6 @@ namespace SurfTribeSystem_Entidades
         public string Comentariol { get => comentariol; set => comentariol = value; }
         public string Nombre { get => nombre; set => nombre = value; }
         public string Id_Usuario { get => id_Usuario; set => id_Usuario = value; }
+        public string Id { get => id; set => id = value; }
     }
 }

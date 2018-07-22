@@ -2,7 +2,7 @@
 
 <!DOCTYPE html>
 
-<html lang="en-us" >
+<html lang="en-us">
 
 
 <head runat="server">
@@ -30,7 +30,7 @@
     <!-- GOOGLE FONT -->
     <link href='https://fonts.googleapis.com/css?family=Montserrat:400,600,700' rel='stylesheet' type='text/css' />
 
-      <!--esto es para los popup-->
+    <!--esto es para los popup-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css" />
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
@@ -88,7 +88,7 @@
                                                 <asp:Repeater ID="GuanaRepeat" runat="server">
                                                     <ItemTemplate>
                                                         <li class="">
-                                                        <a  href='paginaEscuela.aspx?idEscuela=<%# Eval("Nombre") %>' >
+                                                            <a href='paginaEscuela.aspx?idEscuela=<%# Eval("Nombre") %>'>
                                                                 <asp:Label runat="server" Text='<%# Eval("Nombre") %>'></asp:Label>
                                                             </a>
 
@@ -103,7 +103,7 @@
                                                 <asp:Repeater ID="PuertoRepeat" runat="server">
                                                     <ItemTemplate>
                                                         <li class="">
-                                                        <a  href='paginaEscuela.aspx?idEscuela=<%# Eval("Nombre") %>' >
+                                                            <a href='paginaEscuela.aspx?idEscuela=<%# Eval("Nombre") %>'>
                                                                 <asp:Label runat="server" Text='<%# Eval("Nombre") %>'></asp:Label>
                                                             </a>
 
@@ -165,7 +165,7 @@
                                     <div class="headerTopNav" style="cursor: pointer;">
                                         <ul class="headerTopNavbar">
 
-                                            <li class="active" ><a href="#"><i class="fa " aria-hidden="true"></i></a></li>
+                                            <li class="active"><a href="#"><i class="fa " aria-hidden="true"></i></a></li>
                                         </ul>
                                         <ul class="headerTopNavbar navbar-right">
                                             <li class="active"><a id="tiro" data-toggle="modal" data-target="#login"><i class="fa fa-user" aria-hidden="true">&nbsp;&nbsp;</i>Iniciar Sesión </a></li>
@@ -360,7 +360,7 @@
                     <div class="row">
                         <div class="col-xs-12">
                             <div class="media destinations">
-                               <%-- <a class="media-left" href="ccss/star-1-3/Static HTML/destination-cities.html">
+                                <%-- <a class="media-left" href="ccss/star-1-3/Static HTML/destination-cities.html">
                                     <img class="media-object" src="Imagenes/PIC_20160827_140254.JPG" alt="Destination" />
                                 </a>--%>
                                 <div class="media-body">
@@ -374,7 +374,7 @@
                                             <asp:Repeater ID="GuanaRepeat2" runat="server">
                                                 <ItemTemplate>
                                                     <li class="">
-                                                        <a  href='paginaEscuela.aspx?idEscuela=<%# Eval("Nombre") %>' >
+                                                        <a href='paginaEscuela.aspx?idEscuela=<%# Eval("Nombre") %>'>
                                                             <asp:Label runat="server" Text='<%# Eval("Nombre") %>'></asp:Label>
                                                         </a>
 
@@ -388,7 +388,7 @@
                                             <asp:Repeater ID="PuertoRepeat2" runat="server">
                                                 <ItemTemplate>
                                                     <li class="">
-                                                        <a  href='paginaEscuela.aspx?idEscuela=<%# Eval("Nombre") %>' >
+                                                        <a href='paginaEscuela.aspx?idEscuela=<%# Eval("Nombre") %>'>
                                                             <asp:Label runat="server" Text='<%# Eval("Nombre") %>'></asp:Label>
                                                         </a>
 
@@ -401,7 +401,7 @@
                                             <asp:Repeater ID="LimonRepeat2" runat="server">
                                                 <ItemTemplate>
                                                     <li class="">
-                                                        <a  href='paginaEscuela.aspx?idEscuela=<%# Eval("Nombre") %>' >
+                                                        <a href='paginaEscuela.aspx?idEscuela=<%# Eval("Nombre") %>'>
                                                             <asp:Label runat="server" Text='<%# Eval("Nombre") %>'></asp:Label>
                                                         </a>
 
@@ -508,12 +508,14 @@
                         <h4 class="modal-title" id="myModalLabel">INICIO DE SESIÓN</h4>
                     </div>
                     <div class="modal-body">
-                        <div class="form-group">
-                            <asp:TextBox TextMode="Email" ID="correoText" runat="server" class="form-control bg-ash" placeholder="Correo" />
-                        </div>
-                        <div class="form-group">
-                            <asp:TextBox TextMode="Password" ID="claveText" runat="server" class="form-control bg-ash" placeholder="Clave" />
-                        </div>
+                        <asp:Panel ID="panelLogin" DefaultButton="ingresarButton" runat="server">
+                            <div class="form-group">
+                                <asp:TextBox TextMode="Email" ID="correoText" runat="server" class="form-control bg-ash" placeholder="Correo" />
+                            </div>
+                            <div class="form-group">
+                                <asp:TextBox TextMode="Password" ID="claveText" runat="server" class="form-control bg-ash" placeholder="Clave" />
+                            </div>
+                        </asp:Panel>
                         <div class="checkbox">
                             <asp:Label ID="lblError" runat="server" Visible="false"></asp:Label>
                             <a class="forgotPass clerfix">Olvido su contraseña?</a><br />
@@ -535,6 +537,8 @@
     </form>
 
     <!-- JAVASCRIPTS -->
+ 
+
     <script src="ccss/star-1-3/Static%20HTML/plugins/jquery/jquery-2.2.4.min.js"></script>
     <script src="ccss/star-1-3/Static%20HTML/plugins/jquery/jquery-migrate-1.2.1.min.js"></script>
     <script src="ccss/star-1-3/Static%20HTML/plugins/jquery-ui/jquery-ui.min.js"></script>

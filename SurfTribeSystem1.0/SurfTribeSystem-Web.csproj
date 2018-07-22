@@ -3103,6 +3103,7 @@
     <Content Include="Imagenes\IMG-20171029-WA0010.jpeg" />
     <Content Include="Imagenes\PIC_20160827_140254.JPG" />
     <Content Include="InformacionGeneral.aspx" />
+    <Content Include="mantComentarios.aspx" />
     <Content Include="mantEscuelas.aspx" />
     <Content Include="mantTablas.aspx" />
     <Content Include="mantUsuarios.aspx" />
@@ -3232,6 +3233,13 @@
     </Compile>
     <Compile Include="InformacionGeneral.aspx.designer.cs">
       <DependentUpon>InformacionGeneral.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="mantComentarios.aspx.cs">
+      <DependentUpon>mantComentarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="mantComentarios.aspx.designer.cs">
+      <DependentUpon>mantComentarios.aspx</DependentUpon>
     </Compile>
     <Compile Include="mantEscuelas.aspx.cs">
       <DependentUpon>mantEscuelas.aspx</DependentUpon>

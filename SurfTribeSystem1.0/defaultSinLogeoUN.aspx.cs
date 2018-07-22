@@ -17,11 +17,15 @@ namespace SurfTribeSystem1._0
 
         protected void Page_Load(object sender, EventArgs e)
         {
-           
-            ListarRegistro();
-            ListarGuana();
-            ListarLimon();
-            ListarPuerto();
+            if (!IsPostBack)
+            {
+
+                ListarRegistro();
+                ListarGuana();
+                ListarLimon();
+                ListarPuerto();
+            }
+            
             Session["InicioNombre"] = null;
         }
 
@@ -62,7 +66,14 @@ namespace SurfTribeSystem1._0
                         Response.Redirect("defaultConLogeoUADM.aspx");
 
                     }
-                    else {
+                    else if (idUsu == "ADMG")
+                    {
+
+                        Response.Redirect("defaultConLogeoUADM.aspx");
+
+                    }
+                    else
+                    {
 
                         if (idUsu == "REG")
                         {

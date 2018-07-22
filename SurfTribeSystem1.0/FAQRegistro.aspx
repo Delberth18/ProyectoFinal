@@ -18,7 +18,7 @@
 
                     </div>
         <br />
-        <div class="container">
+        <div class="container" >
        
         <a aria-label="NuevaPreguntado" href="FAQMantenimiento.aspx" >
                         <span aria-hidden="true" style="margin: 2px 2px 2px 2px; font-size:x-large;color:saddlebrown" ><<-Listado y Mantenimiento</span>
@@ -34,12 +34,14 @@
 
             <div class="row">
           
-                  <div class="form-group" style=" 
-                            border: solid 0.4px #000000;
-                            border-top-left-radius:27px;
-                            border-top-right-radius:27px;
-                            border-bottom-left-radius:27px;
-                            border-bottom-right-radius:28px;  padding:15px 15px 15px 15px; width: 100%; background-color:white" >
+                  <div class="form-group" style="
+                            box-shadow: -11px 9px 45px 2px rgba(0,0,0,0.75); 
+                            border-radius: 12px; 
+                            padding: 12px;  
+                            padding:15px 15px 15px 15px; 
+                            width: 100%; 
+                            background-color:white; 
+                            background-image: url('ccss/star-1-3/Static%20HTML/img/bg-menuReserva.jpg');">
                    
                       
                     <asp:TextBox class="form-control  bg-ashh"  id="preguntaText" runat="server" placeholder="Escriba la pregunta" /><br />
