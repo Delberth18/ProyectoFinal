@@ -24,6 +24,17 @@ namespace SurfTribeSystem_Datos
                 SqlParameter param = new SqlParameter();
 
                 #region parametros
+                param = new SqlParameter();
+                param.ParameterName = "@ID";
+                if (comentario.Id == null)
+                {
+                    param.Value = DBNull.Value;
+                }
+                else
+                {
+                    param.Value = comentario.Id;
+                }
+                parametros.Add(param);
 
                 param = new SqlParameter();
                 param.ParameterName = "@COMENTARIO";
@@ -86,6 +97,18 @@ namespace SurfTribeSystem_Datos
                             {
                                 Comentariol = row["COMENTARIO"] is DBNull ? null : row["COMENTARIO"].ToString(),
                                 Nombre = row["NOMBRE"] is DBNull ? null : row["NOMBRE"].ToString()
+                            });
+                        }
+                    }
+                    if (comentario.Tag == "LISTADO_PENDIENTE" && datos.Tables[1] != null && datos.Tables[1].Rows.Count != 0)
+                    {
+                        foreach (DataRow row in datos.Tables[1].Rows)
+                        {
+                            comentarios.Add(new Comentario
+                            {
+                                Comentariol = row["COMENTARIO"] is DBNull ? null : row["COMENTARIO"].ToString(),
+                                Nombre = row["NOMBRE"] is DBNull ? null : row["NOMBRE"].ToString(),
+                                Id= row["ID"] is DBNull ? null : row["ID"].ToString()
                             });
                         }
                     }

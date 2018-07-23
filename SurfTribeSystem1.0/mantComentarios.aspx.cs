@@ -9,16 +9,29 @@ using System.Web.UI.WebControls;
 
 namespace SurfTribeSystem1._0
 {
-    public partial class ComentariosListado : System.Web.UI.Page
+    public partial class mantComentarios : System.Web.UI.Page
     {
+
         Comentario comentario = new Comentario();
         List<Comentario> comentarios = new List<Comentario>();
         Usuario usu = new Usuario();
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            
             ObtenerListado();
+            if (Session["InicioSesion"] != null)
+            {
+                usu = (Usuario)Session["InicioSesion"];
+
+                if (usu.Tipo_usu != "ADMG")
+                {
+                    Response.Redirect("defaultSinLogeoUN.aspx");
+                }
+            }
+            else
+            {
+                Response.Redirect("defaultSinLogeoUN.aspx");
+            }
         }
 
         private void ObtenerListado()
@@ -26,7 +39,7 @@ namespace SurfTribeSystem1._0
             Resultado resultado = new Resultado();
             try
             {
-                comentario.Tag = "LISTADO_APROBADO";
+                comentario.Tag = "LISTADO_PENDIENTE";
                 resultado = new ComentarioLogica().Acciones(comentario);
                 if (resultado.TipoResultado == "OK")
                 {
@@ -49,53 +62,74 @@ namespace SurfTribeSystem1._0
             }
         }
 
-        private void Guardar()
+        protected void aceptar_Click(object sender, EventArgs e)
         {
-            if (Session["InicioSesion"] == null)
-            {
-                string script = "swal('Lo sentimos, ', 'Para poder dejar su comentario debe de estar logueado', 'error'); ";
-                ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
-                return;
-            }
-            else
-            {
-                usu = (Usuario)Session["InicioSesion"];
-            }
-            if (comentarioText.Text.Trim()=="")
-            {
-                string script = "swal('Lo sentimos, ha ocurrido un error', 'Debe ingresar algún comentario', 'error'); ";
-                ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
-                return;
-            }
             Resultado resultado = new Resultado();
             try
             {
-                comentario.Tag = "GUARDAR";
-                comentario.Comentariol = comentarioText.Text;
-                comentario.Id_Usuario = usu.Correo;
+                LinkButton link = new LinkButton();
+                link = (LinkButton)sender;
+                comentario.Tag = "APROBADO";
+                comentario.Id = link.CommandName;
                 resultado = new ComentarioLogica().Acciones(comentario);
+
+
                 if (resultado.TipoResultado == "OK")
                 {
-                    string script = "swal('Éxito', 'El comentario será revisado lo más pronto posible, para su aprobación', 'success'); ";
+
+                    string script = "swal('Excelente', 'Aceptado con éxito', 'success'); ";
                     ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
+                    preguntasLst.DataSource = null;
+                    preguntasLst.DataBind();
+                    ObtenerListado();
                 }
                 else
                 {
                     string script = "swal('Lo sentimos, ha ocurrido un error', '" + resultado.Mensaje + "', 'error'); ";
                     ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
                 }
+
             }
             catch (Exception ex)
             {
-
-                string script = "swal('Lo sentimos, ha ocurrido un error', '', 'error'); ";
+                string script = "swal('Error', '" + ex + "', 'error'); ";
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
             }
         }
 
-        protected void Unnamed_Click(object sender, EventArgs e)
+        protected void rechazar_Click(object sender, EventArgs e)
         {
-            Guardar();
+            Resultado resultado = new Resultado();
+            try
+            {
+                LinkButton link = new LinkButton();
+                link = (LinkButton)sender;
+                comentario.Tag = "ELIMINAR";
+                comentario.Id = link.CommandName;
+                resultado = new ComentarioLogica().Acciones(comentario);
+
+
+                if (resultado.TipoResultado == "OK")
+                {
+
+                    string script = "swal('Excelente', 'Rechazo con éxito', 'success'); ";
+                    ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
+                    preguntasLst.DataSource = null;
+                    preguntasLst.DataBind();
+                    ObtenerListado();
+                }
+                else
+                {
+                    string script = "swal('Lo sentimos, ha ocurrido un error', '" + resultado.Mensaje + "', 'error'); ";
+                    ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                string script = "swal('Error', '" + ex + "', 'error'); ";
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
+            }
         }
     }
 }

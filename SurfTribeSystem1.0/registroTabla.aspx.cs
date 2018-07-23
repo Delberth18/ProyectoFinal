@@ -185,6 +185,7 @@ namespace SurfTribeSystem1._0
                 List<Tabla> lista = new List<Tabla>();
                 Tabla tab = new Tabla();
                 tab.Tag = "LISTADO";
+                tab.Id_Escuela = usu.IdEscuela;
                 resultado = new TablaLogica().Acciones(tab);
                 if (resultado.TipoResultado == "OK")
                 {
