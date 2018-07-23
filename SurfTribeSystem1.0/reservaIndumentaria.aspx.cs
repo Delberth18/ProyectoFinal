@@ -17,16 +17,28 @@ namespace SurfTribeSystem1._0
         List<Tabla> tablas = new List<Tabla>();
         protected void Page_Load(object sender, EventArgs e)
         {
-           // SqlConnection con = new SqlConnection(@"Data Source=localhost\SQLEXPRESS;Initial Catalog=SURF_TRIBE; Integrated Security=true;Connection Timeout=45;");//delberth
-           // SqlConnection con = new SqlConnection("Data Source=laptop-r7vb3im9\\mssqlserver01;Initial Catalog=SURF_TRIBE;Integrated Security=True");
-            //SqlDataAdapter sda = new SqlDataAdapter("select * from ESCUELA", con);
-            //DataTable dt = new DataTable();
-            //sda.Fill(dt);
-            //repeater1.DataSource = dt;
-            //repeater1.DataBind();
+          
             Session["asigando"] = 0;// no tocar
             Session["numero"] = 0;// no tocar
+
+            if (!IsPostBack)
+            {
+
+
+                if (Session["control"] == null)
+                {
+
+                    Session["timer"] = DateTime.Now.AddMinutes(2).ToString();
+                    Session["control"] = 1;// hay que cambiar el estado control o destruirlo donde lo redirige
+                   
+
+                }
+
+            }
+
             ObtenerListado();
+
+
         }
         private void ObtenerListado()
         {
@@ -63,7 +75,7 @@ namespace SurfTribeSystem1._0
 
         protected void btnOmitir_Click(object sender, EventArgs e)
         {
-            Response.Redirect("reservaConfirmar.aspx");
+            Response.Redirect("reservaConfirmar.aspx?rseT=0");
         }
 
         protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
@@ -75,10 +87,14 @@ namespace SurfTribeSystem1._0
         {
             Label lbl = e.Item.FindControl("IDTabla") as Label;
             HyperLink hyp = e.Item.FindControl("hpvReservaConfi") as HyperLink;
+            EncriptarLogica segr = new EncriptarLogica();
+           string valor= segr.Base64Encode(lbl.Text);
 
-           
-            hyp.NavigateUrl = "reservaConfirmar.aspx?rseT=" +"SFo¿0y"+lbl.Text;
-            
+            hyp.NavigateUrl = "reservaConfirmar.aspx?rseT=" +valor;
+            //hyp.NavigateUrl = "reservaConfirmar.aspx?rseT=" +"SFo¿0y"+lbl.Text;
+
         }
+
+    
     }
 }

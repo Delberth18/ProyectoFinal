@@ -143,16 +143,9 @@
                                     <a href="InformaciónGeneral.aspx">Acerca de</a>
 
                                 </li>
-                                <li class="dropdown searchBox">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="searchIcon"><i class="fa fa-search" aria-hidden="true"></i></span></a>
-                                    <ul class="dropdown-menu dropdown-menu-right">
-                                        <li>
-                                            <span class="input-group">
-                                                <input type="text" class="form-control" placeholder="Search..." aria-describedby="basic-addon2" />
-                                                <span class="input-group-addon" id="basic-addon2">Search</span>
-                                            </span>
-                                        </li>
-                                    </ul>
+                               <li class="dropdown searchBox">
+                                    <a href="reservaClases.aspx" class="dropdown-toggle" role="button"><span class="searchIcon">Reserva!!</span></a>
+                                    
                                 </li>
                                 <li class="dropdown singleDrop">
 

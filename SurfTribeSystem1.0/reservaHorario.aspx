@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" EnableEventValidation="false" MasterPageFile="~/Site2.Master" AutoEventWireup="true" CodeBehind="reservaHorario.aspx.cs" Inherits="SurfTribeSystem1._0.reservaHorario " %>
+﻿<%@ Page Title="" Language="C#" EnableEventValidation="false" MasterPageFile="~/Site2.Master" AutoEventWireup="true" CodeBehind="reservaHorario.aspx.cs" Inherits="SurfTribeSystem1._0.reservaHorario " MaintainScrollPositionOnPostback = "true" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -82,6 +82,28 @@
                        
                    <div class="container">
                        <div class="row">
+                           
+
+                           
+      
+            <asp:Timer ID="Timer1" OnTick="Timer1_Tick" runat="server" Interval="1000">
+            </asp:Timer>
+      
+        <asp:UpdatePanel ID="up" UpdateMode="Conditional" runat="server" style=" margin-top: -20%">
+            <ContentTemplate>
+                <font size="4"><b FACE="arial" style="margin-left: 58%; margin-top: -80%;" >Tiempo Restante: </b></font>
+                
+                <asp:Literal ID="listMSg" runat="server"></asp:Literal>
+               
+            </ContentTemplate>
+       
+            <Triggers>
+                <asp:AsyncPostBackTrigger ControlID="Timer1" EventName="Tick" />
+            </Triggers>
+        </asp:UpdatePanel>
+
+
+
 
                         <asp:Repeater  OnItemDataBound="repeater1_ItemDataBound" OnItemCommand="repeater1_ItemCommand"  ID="repeater1" runat="server" >
                              <ItemTemplate>
@@ -127,7 +149,10 @@ box-shadow: 14px 28px 38px -16px rgba(0,0,0,0.75); background: url('ccss/star-1-
                                  </div>
                              </ItemTemplate>
 
-                        </asp:Repeater>
+                        </asp:Repeater> 
+
+                                   
+
                        </div><br />
                        <asp:Button ID="btnContinuar" runat="server" OnClick="btnRegistrar_Click" Style="margin-right: -600px;  text-decoration: none; padding: 10px 24px; font-family: arial; font-weight: 300; font-size: 25px; font-style: italic; color: white; background-color: #ff891e; border-radius: 1px; border: 3px double white; box-shadow: -11px 9px 45px 2px rgba(0,0,0,0.75);"
                            Text="Continuar"  Visible="false" />

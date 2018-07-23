@@ -54,5 +54,16 @@ namespace SurfTribeSystem_LogicaNegocio
             return textoLimpio;
         }
 
+        public  string Base64Encode(string word)
+        {
+            byte[] byt = System.Text.Encoding.UTF8.GetBytes(word);
+            return Convert.ToBase64String(byt);
+        }
+        public string Base64Decode(string word)
+        {
+            byte[] b = Convert.FromBase64String(word);
+            return System.Text.Encoding.UTF8.GetString(b);
+        }
+
     }
 }

@@ -126,6 +126,7 @@
     <Content Include="ccss\star-1-3\SCSS\index-v2.html" />
     <Content Include="ccss\star-1-3\SCSS\index-v3.html" />
     <Content Include="ccss\star-1-3\SCSS\index.html" />
+    <Content Include="ccss\star-1-3\SCSS\js\contador.js" />
     <Content Include="ccss\star-1-3\SCSS\js\custom.js" />
     <Content Include="ccss\star-1-3\SCSS\packages-grid-left-sidebar.html" />
     <Content Include="ccss\star-1-3\SCSS\packages-grid-right-sidebar.html" />
@@ -3108,6 +3109,7 @@
     <Content Include="mantUsuarios.aspx" />
     <Content Include="paginaEscuela.aspx" />
     <Content Include="PreciosListado.aspx" />
+    <Content Include="Prueba.aspx" />
     <Content Include="registrarse.aspx" />
     <Content Include="registroEscuela.aspx" />
     <Content Include="RegistroImagenes.aspx" />
@@ -3269,6 +3271,13 @@
       <DependentUpon>PreciosListado.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Prueba.aspx.cs">
+      <DependentUpon>Prueba.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Prueba.aspx.designer.cs">
+      <DependentUpon>Prueba.aspx</DependentUpon>
+    </Compile>
     <Compile Include="registrarse.aspx.cs">
       <DependentUpon>registrarse.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

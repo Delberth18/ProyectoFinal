@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site2.Master" AutoEventWireup="true" CodeBehind="reservaConfirmar.aspx.cs" Inherits="SurfTribeSystem1._0.reservaConfirmar" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site2.Master" AutoEventWireup="true" CodeBehind="reservaConfirmar.aspx.cs" Inherits="SurfTribeSystem1._0.reservaConfirmar" MaintainScrollPositionOnPostback = "true" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -59,10 +59,39 @@
                     </div>
                 </div><br /><br />
              
+                <asp:Timer ID="Timer1" OnTick="Timer1_Tick" runat="server" Interval="1000">
+            </asp:Timer>
+      
+        <asp:UpdatePanel ID="up" UpdateMode="Conditional" runat="server" style=" margin-top: -20%">
+            <ContentTemplate>
+                <font size="4"><b FACE="arial" style="margin-left: 58%; margin-top: -80%;" >Tiempo Restante: </b></font>
+                
+                <asp:Literal ID="listMSg" runat="server"></asp:Literal>
+               
+            </ContentTemplate>
+       
+            <Triggers>
+                <asp:AsyncPostBackTrigger ControlID="Timer1" EventName="Tick" />
+            </Triggers>
+        </asp:UpdatePanel>
                 <div class="row">
+                    
+            
 
                     <Table style=" margin-left: 29%; border: dotted;" border="1" >
                          
+
+                         <tr> 
+                            <td>
+                            <b FACE="arial">
+                          <asp:Label ID="Label2"  runat="server" Text="Alumno(a): "  style="font-size: 18px; " ></asp:Label></b>
+                            </td>
+                            <td>
+                               &nbsp; <asp:Label ID="lblAlumno" runat="server" Text=""  Style="font-size: 18px;"></asp:Label>
+                   
+                            </td>
+                           
+                        </tr>
                         <tr> 
                             <td>
                             <b FACE="arial">
@@ -154,11 +183,21 @@
                         <tr>
                            <td>
                                <b FACE="arial">
-                          <asp:Label ID="Label15" runat="server" Text="Subtotal: "  style="font-size: 16px;" ></asp:Label></b>&nbsp;
+                          <asp:Label ID="Label15" runat="server" Text="Lecciones: "  style="font-size: 16px;" ></asp:Label></b>&nbsp;
                            </td>
                             <td>
   
                              &nbsp;  <asp:Label ID="Label16" runat="server" Text="₡ 10.000"  Style="font-size: 16px;"></asp:Label>
+                            </td>
+                        </tr>
+                         <tr>
+                           <td>
+                               <b FACE="arial">
+                          <asp:Label ID="Label4" runat="server" Text="Alquiler: "  style="font-size: 16px;" ></asp:Label></b>&nbsp;
+                           </td>
+                            <td>
+  
+                             &nbsp;  <asp:Label ID="Label13" runat="server" Text="₡ 10.000"  Style="font-size: 16px;"></asp:Label>
                             </td>
                         </tr>
 
