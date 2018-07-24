@@ -24,15 +24,9 @@ namespace SurfTribeSystem1._0
             nombreEscuela.Text= Session["escuela"].ToString();
             nivel.Text= Session["Nivel"].ToString();
 
+           
 
-
-
-            // SqlConnection con = new SqlConnection("Data Source=laptop-r7vb3im9\\mssqlserver01;Initial Catalog=SURF_TRIBE;Integrated Security=True");
-            //SqlDataAdapter sda = new SqlDataAdapter("select * from usuario", con);
-            //DataTable dt = new DataTable();
-            //sda.Fill(dt);
-            //repeater1.DataSource = dt;
-            //repeater1.DataBind();
+            
 
             ObtenerListado();
             
@@ -182,5 +176,7 @@ namespace SurfTribeSystem1._0
 
             //}
         }
+
+       
     }
 }

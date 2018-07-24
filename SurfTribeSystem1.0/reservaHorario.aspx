@@ -1,8 +1,17 @@
-﻿<%@ Page Title="" Language="C#" EnableEventValidation="false" MasterPageFile="~/Site2.Master" AutoEventWireup="true" CodeBehind="reservaHorario.aspx.cs" Inherits="SurfTribeSystem1._0.reservaHorario " %>
+﻿<%@ Page Title="" Language="C#" EnableEventValidation="false" MasterPageFile="~/Site2.Master" AutoEventWireup="true" CodeBehind="reservaHorario.aspx.cs" Inherits="SurfTribeSystem1._0.reservaHorario " MaintainScrollPositionOnPostback = "true" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-   
+    <script src="ccss/star-1-3/SCSS/js/contador.js" type="text/javascript"></script>
+    <style type="text/css">
+        .form_input {
+            font-family: Verdana;
+            font-size: 12;
+            background-color: white;
+            border-width: 0;
+            text-align: right;
+        }
+    </style>
          
    
     <section class="bookingTypeSection">
@@ -41,7 +50,21 @@
             <a  style="cursor: auto;"  class="btn btn-blue-grey btn-circle-2 waves-effect mr-0"  title="Confirmar"><i class="fa fa-check" ></i></a>
         </div>
     </div>
-</div><br /><br />
+</div>
+
+             <body onload="countDown();">
+                        <form name="form2">
+
+                            <font size="4"><b FACE="arial" style="margin-left: 75%; margin-top: -80%;" >Tiempo Restante: </b></font>
+
+                            <input type="text" size="5" class="form_input" name="hour" disabled visible="false" style="visibility: hidden; width: 1%;">
+
+                            <input type="text" size="10" class="form_input" name="minute" disabled style="width: 2%; font-size: xx-large;">
+                            <asp:Label runat="server" Text=":" style="width: 2%; font-size: xx-large;" ></asp:Label>
+	                        <input type="text" size="8" class="form_input" name="second" disabled style="width: 4%; font-size: xx-large;">
+                        </form>
+
+                    </body>
          
           
 
@@ -82,6 +105,7 @@
                        
                    <div class="container">
                        <div class="row">
+                           
 
                         <asp:Repeater  OnItemDataBound="repeater1_ItemDataBound" OnItemCommand="repeater1_ItemCommand"  ID="repeater1" runat="server" >
                              <ItemTemplate>
@@ -127,7 +151,10 @@ box-shadow: 14px 28px 38px -16px rgba(0,0,0,0.75); background: url('ccss/star-1-
                                  </div>
                              </ItemTemplate>
 
-                        </asp:Repeater>
+                        </asp:Repeater> 
+
+                                   
+
                        </div><br />
                        <asp:Button ID="btnContinuar" runat="server" OnClick="btnRegistrar_Click" Style="margin-right: -600px;  text-decoration: none; padding: 10px 24px; font-family: arial; font-weight: 300; font-size: 25px; font-style: italic; color: white; background-color: #ff891e; border-radius: 1px; border: 3px double white; box-shadow: -11px 9px 45px 2px rgba(0,0,0,0.75);"
                            Text="Continuar"  Visible="false" />
