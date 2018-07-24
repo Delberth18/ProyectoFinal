@@ -1,5 +1,6 @@
 ﻿using SurfTribeSystem_Entidades;
 using SurfTribeSystem_LogicaNegocio;
+using SurfTribeSystem1._0.Clases;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -78,6 +79,15 @@ namespace SurfTribeSystem1._0
                 {
                     string script = "swal('Éxito', 'El comentario será revisado lo más pronto posible, para su aprobación', 'success'); ";
                     ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
+
+                    string from = "surftcr@gmail.com";
+                    string password = "tribe12345";
+                    string msn = "Han realizado un nuevo comentario";
+
+                    string subject = "Nuevo Comentario";
+                    string to = "surftcr@gmail.com";
+
+                    new Email().enviarCorreos(from, subject, password, to, msn);
                 }
                 else
                 {
@@ -87,7 +97,6 @@ namespace SurfTribeSystem1._0
             }
             catch (Exception ex)
             {
-
                 string script = "swal('Lo sentimos, ha ocurrido un error', '', 'error'); ";
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
             }
