@@ -24,18 +24,7 @@ namespace SurfTribeSystem1._0
             nombreEscuela.Text= Session["escuela"].ToString();
             nivel.Text= Session["Nivel"].ToString();
 
-            if (!IsPostBack)
-            {
-
-
-                if (Session["control"] == null)
-                {
-
-                    Session["timer"] = DateTime.Now.AddMinutes(2).ToString();
-                    Session["control"] = 1;// hay que cambiar el estado control o destruirlo donde lo redirige
-                }
-
-            }
+           
 
             
 
@@ -187,27 +176,6 @@ namespace SurfTribeSystem1._0
             //}
         }
 
-        protected void Timer1_Tick(object sender, EventArgs e)
-        {
-            if (DateTime.Compare(DateTime.Now, DateTime.Parse(Session["timer"].ToString())) < 0)
-            {
-
-
-                listMSg.Text =
-                    ((Int32)DateTime.Parse(Session["timer"].ToString()).Subtract(DateTime.Now).TotalMinutes).ToString()
-                    + ":"
-                    +
-                    (((Int32)DateTime.Parse(Session["timer"].ToString()).Subtract(DateTime.Now).TotalSeconds) % 60).ToString();
-
-
-            }
-            else
-            {
-
-                listMSg.Text = "Tiempo fuera";
-
-            }
-
-        }
+       
     }
 }

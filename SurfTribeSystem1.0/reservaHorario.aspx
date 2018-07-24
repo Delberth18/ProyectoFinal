@@ -2,7 +2,16 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-   
+    <script src="ccss/star-1-3/SCSS/js/contador.js" type="text/javascript"></script>
+    <style type="text/css">
+        .form_input {
+            font-family: Verdana;
+            font-size: 12;
+            background-color: white;
+            border-width: 0;
+            text-align: right;
+        }
+    </style>
          
    
     <section class="bookingTypeSection">
@@ -41,7 +50,21 @@
             <a  style="cursor: auto;"  class="btn btn-blue-grey btn-circle-2 waves-effect mr-0"  title="Confirmar"><i class="fa fa-check" ></i></a>
         </div>
     </div>
-</div><br /><br />
+</div>
+
+             <body onload="countDown();">
+                        <form name="form2">
+
+                            <font size="4"><b FACE="arial" style="margin-left: 75%; margin-top: -80%;" >Tiempo Restante: </b></font>
+
+                            <input type="text" size="5" class="form_input" name="hour" disabled visible="false" style="visibility: hidden; width: 1%;">
+
+                            <input type="text" size="10" class="form_input" name="minute" disabled style="width: 2%; font-size: xx-large;">
+                            <asp:Label runat="server" Text=":" style="width: 2%; font-size: xx-large;" ></asp:Label>
+	                        <input type="text" size="8" class="form_input" name="second" disabled style="width: 4%; font-size: xx-large;">
+                        </form>
+
+                    </body>
          
           
 
@@ -83,27 +106,6 @@
                    <div class="container">
                        <div class="row">
                            
-
-                           
-      
-            <asp:Timer ID="Timer1" OnTick="Timer1_Tick" runat="server" Interval="1000">
-            </asp:Timer>
-      
-        <asp:UpdatePanel ID="up" UpdateMode="Conditional" runat="server" style=" margin-top: -20%">
-            <ContentTemplate>
-                <font size="4"><b FACE="arial" style="margin-left: 58%; margin-top: -80%;" >Tiempo Restante: </b></font>
-                
-                <asp:Literal ID="listMSg" runat="server"></asp:Literal>
-               
-            </ContentTemplate>
-       
-            <Triggers>
-                <asp:AsyncPostBackTrigger ControlID="Timer1" EventName="Tick" />
-            </Triggers>
-        </asp:UpdatePanel>
-
-
-
 
                         <asp:Repeater  OnItemDataBound="repeater1_ItemDataBound" OnItemCommand="repeater1_ItemCommand"  ID="repeater1" runat="server" >
                              <ItemTemplate>
