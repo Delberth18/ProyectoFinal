@@ -138,6 +138,17 @@ namespace SurfTribeSystem_Datos
                 param.ParameterName = "@ID";//id
                 parametros.Add(param);
 
+                 param = new SqlParameter();
+                if (sesion.IdUsuario == null)
+                {
+                    param.Value = DBNull.Value;
+                }
+                else
+                {
+                    param.Value = sesion.IdUsuario;
+                }
+                param.ParameterName = "@IDUSUARIO";//IdUsuario
+                parametros.Add(param);
 
                 param = new SqlParameter();
                 if (sesion.Tag == null)
@@ -191,7 +202,8 @@ namespace SurfTribeSystem_Datos
                                 Nombre= row["NOMBRE"] is DBNull ? null : row["NOMBRE"].ToString(),
                                 Apellidos = row["APELLIDOS"] is DBNull ? null : row["APELLIDOS"].ToString(),
                                 Mes = row["MES"] is DBNull ? null : row["MES"].ToString(),
-                                Dia = row["DIA"] is DBNull ? null : row["DIA"].ToString()
+                                Dia = row["DIA"] is DBNull ? null : row["DIA"].ToString(),
+                                Precio= row["PRECIO"] is DBNull ? null : row["PRECIO"].ToString()
 
 
 

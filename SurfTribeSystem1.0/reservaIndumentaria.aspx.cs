@@ -24,15 +24,7 @@ namespace SurfTribeSystem1._0
             if (!IsPostBack)
             {
 
-
-                if (Session["control"] == null)
-                {
-
-                    Session["timer"] = DateTime.Now.AddMinutes(2).ToString();
-                    Session["control"] = 1;// hay que cambiar el estado control o destruirlo donde lo redirige
-                   
-
-                }
+                string valor = Request.Form["minute"];
 
             }
 
@@ -92,6 +84,8 @@ namespace SurfTribeSystem1._0
 
             hyp.NavigateUrl = "reservaConfirmar.aspx?rseT=" +valor;
             //hyp.NavigateUrl = "reservaConfirmar.aspx?rseT=" +"SFo¿0y"+lbl.Text;
+
+           
 
         }
 

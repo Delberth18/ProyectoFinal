@@ -4,6 +4,22 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
+    <script>
+      
+    if (localStorage.getItem("SurfTribeSystem_second") != null) {
+
+       localStorage.removeItem("SurfTribeSystem_second");
+
+
+    }
+    if (localStorage.getItem("SurfTribeSystem_minute") != null) {
+
+       localStorage.removeItem("SurfTribeSystem_minute");
+
+    }
+    </script>
+
+
     <section class="bookingTypeSection">
         <div class="container">
             <div class="row">

@@ -45,6 +45,11 @@ namespace SurfTribeSystem1._0
                 sesion.IdEscuela = escuela;
                 sesion.Dificultad = nivel;
 
+                Usuario usu = new Usuario();
+                usu = (Usuario)Session["InicioSesion"];
+                sesion.IdUsuario = usu.Correo;
+
+
                 resultado = new SesionLogica().Acciones(sesion);
 
                 if (resultado.TipoResultado == "OK")

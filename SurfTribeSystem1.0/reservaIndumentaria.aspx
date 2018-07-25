@@ -50,13 +50,13 @@
 
 
              <body onload="countDown();">
-                        <form name="form2">
+                        <form name="form2" method="post">
 
                             <font size="4"><b FACE="arial" style="margin-left: 75%; margin-top: -80%;" >Tiempo Restante: </b></font>
 
-                            <input type="text" size="5" class="form_input" name="hour" disabled visible="false" style="visibility: hidden; width: 1%;">
+                            <input type="text" size="5" class="form_input" name="hour" id="hour" disabled visible="false" style="visibility: hidden; width: 1%;">
 
-                            <input type="text" size="10" class="form_input" name="minute" disabled style="width: 2%; font-size: xx-large;">
+                            <input type="text" size="10" class="form_input" name="minute" id="minute" disabled style="width: 2%; font-size: xx-large;">
                             <asp:Label runat="server" Text=":" style="width: 2%; font-size: xx-large;" ></asp:Label>
 	                        <input type="text" size="8" class="form_input" name="second" disabled style="width: 4%; font-size: xx-large;">
                         </form>

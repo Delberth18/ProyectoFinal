@@ -23,6 +23,10 @@ namespace SurfTribeSystem_Entidades
         string apellidos;
         string mes;
         string dia;
+        string idUsuario;
+        string precio;
+
+    
 
         public string Dificultad { get => dificultad; set => dificultad = value; }
         public DateTime Fecha { get => fecha; set => fecha = value; }
@@ -39,5 +43,7 @@ namespace SurfTribeSystem_Entidades
         public string Apellidos { get => apellidos; set => apellidos = value; }
         public string Mes { get => mes; set => mes = value; }
         public string Dia { get => dia; set => dia = value; }
+        public string IdUsuario { get => idUsuario; set => idUsuario = value; }
+        public string Precio { get => precio; set => precio = value; }
     }
 }
