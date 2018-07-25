@@ -19,7 +19,7 @@ namespace SurfTribeSystem1._0
             {
                 usu = (Usuario)Session["InicioSesion"];
 
-                if (usu.Tipo_usu != "ADM")
+                if (usu.Tipo_usu != "ADMG")
                 {
                     Response.Redirect("defaultSinLogeoUN.aspx");
                 }
