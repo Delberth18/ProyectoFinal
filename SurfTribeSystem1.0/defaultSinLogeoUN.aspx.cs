@@ -12,7 +12,7 @@ namespace SurfTribeSystem1._0
 {
     public partial class defaultSinLogeo : System.Web.UI.Page
     {
-
+        int contador = 0;
         
 
         protected void Page_Load(object sender, EventArgs e)
@@ -36,8 +36,6 @@ namespace SurfTribeSystem1._0
             Resultado resultado = new Resultado();
             try
             {
-                
-
                 Credencial credencial = new Credencial()
                 {
                     ClaveUsuario = claveText.Text,
@@ -84,36 +82,23 @@ namespace SurfTribeSystem1._0
 
 
                     }
-                    
-
-
-
-                    
                 }
                 else
                 {
+                    contador++;
                     lblError.Text = "Usuario no encontrado";
                     lblError.Visible = true;
 
-                    string script = "swal('Error', 'usuario no encontrado', 'error'); ";
+                    string script = "swal('Error', '"+resultado.Mensaje+"', 'error'); ";
                     ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
-                    
-                   
-
                 }
             }
             catch (Exception ex)
             {
-
                 lblError.Text = "Usuario no encontrado";
                 lblError.Visible = true;
                 string script = "swal('Error', '" + ex + "', 'error'); ";
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
-
-                
-               
-
-
             }
             
         }

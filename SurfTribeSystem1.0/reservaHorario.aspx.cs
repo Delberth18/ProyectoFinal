@@ -34,6 +34,7 @@ namespace SurfTribeSystem1._0
         }
         private void ObtenerListado()
         {
+            
             Resultado resultado = new Resultado();
             try
             {

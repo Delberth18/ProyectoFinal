@@ -62,6 +62,8 @@ namespace SurfTribeSystem1._0
 
                 txtauxClave.Text= Convert.ToString(row["CLAVE"]);
 
+                estadoList.SelectedValue= Convert.ToString(row["ESTADO"]);
+
             }
         }
 
@@ -130,6 +132,7 @@ namespace SurfTribeSystem1._0
                     usuario.Clave = txtClave.Text;
                     usuario.Pais = txtPaís.Text;
                     usuario.Tipo_usu = txtUsu.Text;
+                    usuario.Estado = estadoList.SelectedValue;
 
 
                     resultado = new UsuarioLogica().Acciones(usuario);
