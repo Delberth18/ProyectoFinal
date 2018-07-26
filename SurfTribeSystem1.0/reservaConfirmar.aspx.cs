@@ -18,24 +18,16 @@ namespace SurfTribeSystem1._0
             lblEscuela.Text = Session["escuela"].ToString();
             lblNivel.Text = Session["Nivel"].ToString();
             string valor = Request.QueryString["rseT"].ToString();
-           
-            if (!IsPostBack)
-            {
+            lblUbicación.Text = Session["Ubicación"].ToString();
 
 
-                if (Session["control"] == null)
-                {
-
-                    Session["timer"] = DateTime.Now.AddMinutes(2).ToString();
-                    Session["control"] = 1;// hay que cambiar el estado control o destruirlo donde lo redirige
-                }
-
-            }
             //variables cuando hay reserva
             if (valor == "0")
             {
                 usuario = (Usuario)Session["InicioSesion"];
                 lblAlumno.Text = usuario.Nombre + " " + usuario.Apellidos;
+                lblPrecioLec.Text = "₡ "+ Session["PrecioReserva"].ToString();
+                
 
             }
             else
@@ -46,6 +38,7 @@ namespace SurfTribeSystem1._0
                 idTablaRser = valor;
                 usuario = (Usuario)Session["InicioSesion"];
                 lblAlumno.Text = usuario.Nombre + " " + usuario.Apellidos;
+                lblPrecioLec.Text = "₡ " + Session["PrecioReserva"].ToString();
             }
         }
 
@@ -62,26 +55,5 @@ namespace SurfTribeSystem1._0
             Response.Redirect("reservaIndumentaria.aspx");
         }
 
-        protected void Timer1_Tick(object sender, EventArgs e)
-        {
-            if (DateTime.Compare(DateTime.Now, DateTime.Parse(Session["timer"].ToString())) < 0)
-            {
-
-                listMSg.Text =
-                    ((Int32)DateTime.Parse(Session["timer"].ToString()).Subtract(DateTime.Now).TotalMinutes).ToString()
-                    + ":"
-                    +
-                    (((Int32)DateTime.Parse(Session["timer"].ToString()).Subtract(DateTime.Now).TotalSeconds) % 60).ToString();
-
-
-            }
-            else
-            {
-
-                listMSg.Text = "Tiempo fuera";
-
-            }
-
-        }
     }
 }

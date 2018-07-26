@@ -111,8 +111,10 @@ namespace SurfTribeSystem1._0
 
 
             Image lbl = e.Item.FindControl("ss") as Image;
-            Button btn = e.Item.FindControl("1") as Button;
-            
+            Button btn = e.Item.FindControl("1") as Button;//se selecciona 1 uno referencia 
+            Label lblPrecio = e.Item.FindControl("lblPrecio") as Label;
+
+
 
             if ((int)Session["asigando"] == 0) {
 
@@ -142,6 +144,7 @@ namespace SurfTribeSystem1._0
                     Session["asigando"] = +1;
                     btnContinuar.Visible = true;
                     Session["idReserva"] = btn.CommandName;
+                    Session["PrecioReserva"] = lblPrecio.Text;
                 }
             }
             else
@@ -151,6 +154,7 @@ namespace SurfTribeSystem1._0
                 Session["asigando"] = +1;
                 btnContinuar.Visible = true;
                 Session["idReserva"] = btn.CommandName;
+                Session["PrecioReserva"] = lblPrecio.Text;
 
 
             }

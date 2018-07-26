@@ -203,7 +203,7 @@ namespace SurfTribeSystem_Datos
                                 Apellidos = row["APELLIDOS"] is DBNull ? null : row["APELLIDOS"].ToString(),
                                 Mes = row["MES"] is DBNull ? null : row["MES"].ToString(),
                                 Dia = row["DIA"] is DBNull ? null : row["DIA"].ToString(),
-                                Precio= row["PRECIO"] is DBNull ? null : row["PRECIO"].ToString()
+                                 Precio= row["PRECIO"] is DBNull ? 0 : Convert.ToDouble(row["PRECIO"])
 
 
 

@@ -135,7 +135,7 @@ box-shadow: 14px 28px 38px -16px rgba(0,0,0,0.75); background: url('ccss/star-1-
              <font size="3"><b>Instructor:</b></font>&nbsp;&nbsp;<asp:Label ID="Label6" runat="server" Text='<%#Eval("NOMBRE")%>'></asp:Label>&nbsp;
             <asp:Label ID="Label1" runat="server" Text='<%#Eval("APELLIDOS")%>'></asp:Label>
             <br />
-             <font size="3"><b>Precio:</b></font>&nbsp;₡<asp:Label ID="Label2" runat="server" Text='<%#Eval("PRECIO")%>'></asp:Label>
+             <font size="3"><b>Precio:</b></font>&nbsp;₡<asp:Label ID="lblPrecio" runat="server" Text='<%#Eval("PRECIO")%>'></asp:Label>
             <br /><br />
 
         <!--<asp:Button runat="server"  CommandArgument='<%#Eval("ID")%>' style="border-radius: 12px; background: #008CBA; color: white;"  ID="btnRegistrar" Text="  Reservar  "  Visible="true" OnClick="btnRegistrar_Click"/>-->

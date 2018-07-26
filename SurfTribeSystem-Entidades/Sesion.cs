@@ -24,7 +24,7 @@ namespace SurfTribeSystem_Entidades
         string mes;
         string dia;
         string idUsuario;
-        string precio;
+        double precio;
 
     
 
@@ -44,6 +44,6 @@ namespace SurfTribeSystem_Entidades
         public string Mes { get => mes; set => mes = value; }
         public string Dia { get => dia; set => dia = value; }
         public string IdUsuario { get => idUsuario; set => idUsuario = value; }
-        public string Precio { get => precio; set => precio = value; }
+        public double Precio { get => precio; set => precio = value; }
     }
 }

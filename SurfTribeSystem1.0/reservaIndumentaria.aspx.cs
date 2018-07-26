@@ -55,7 +55,7 @@ namespace SurfTribeSystem1._0
                 }
                 else
                 {
-                    Response.Redirect("reservaConfirmar.aspx");
+                    Response.Redirect("reservaConfirmar.aspx?rseT=0");
                 }
             }
             catch (Exception ex)
