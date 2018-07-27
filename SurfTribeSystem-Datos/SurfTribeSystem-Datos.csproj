@@ -49,6 +49,7 @@
     <Compile Include="PantallaDatos.cs" />
     <Compile Include="PrecioDatos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReservaSesionDatos.cs" />
     <Compile Include="SeguridadDatos.cs" />
     <Compile Include="ImagenDatos.cs" />
     <Compile Include="SesionDatos.cs" />

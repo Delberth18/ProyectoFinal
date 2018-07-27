@@ -1,7 +1,11 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site2.Master" AutoEventWireup="true" CodeBehind="reservaConfirmar.aspx.cs" Inherits="SurfTribeSystem1._0.reservaConfirmar" MaintainScrollPositionOnPostback = "true" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+   
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+
+ 
+
      <script src="ccss/star-1-3/SCSS/js/contador.js" type="text/javascript"></script>
     <style type="text/css">
         .form_input {
@@ -241,9 +245,9 @@
                     <asp:Label ID="Label22" runat="server" Font-Size="Small" Style="margin-left: -40px;" Text="Al reservar el administrador en un rango de 24 horas se pondrá en contacto contigo para darle las instrucciones"></asp:Label><br />
                       <asp:Label ID="Label23" runat="server" Font-Size="Small" Style="    margin-left: -67px;" Text="sobre el deposito de reserva, con el fin de que quede en pie la reserva."></asp:Label><br />
                     <br />
-                    <asp:CheckBox ID="CheckBox1" runat="server"/>&nbsp;<asp:Label ID="label24" Font-Bold="true" runat="server" Text="He leído y acepto los términos y condiciones de uso."></asp:Label>
+                    <asp:CheckBox ID="ChkTerminosYCon" runat="server"/>&nbsp;<asp:Label ID="label24" Font-Bold="true" runat="server" Text="He leído y acepto los términos y condiciones de uso."></asp:Label>
                 </div><br /><br />
-                <asp:Button ID="btnOmitir" runat="server"  Style="margin-right: -480px; text-decoration: none; padding: 10px 24px; font-family: arial; font-weight: 300; font-size: 25px; font-style: italic; color: white; background-color: #ff891e; border-radius: 1px; border: 3px double white; box-shadow: -11px 9px 45px 2px rgba(0,0,0,0.75);"
+                <asp:Button ID="btnOmitir" runat="server" OnClick="btnOmitir_Click"  Style="margin-right: -480px; text-decoration: none; padding: 10px 24px; font-family: arial; font-weight: 300; font-size: 25px; font-style: italic; color: white; background-color: #ff891e; border-radius: 1px; border: 3px double white; box-shadow: -11px 9px 45px 2px rgba(0,0,0,0.75);"
                     Text="Confirmar" /><br /><br /><br />
                
             </div>

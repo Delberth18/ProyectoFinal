@@ -75,7 +75,44 @@ namespace SurfTribeSystem1._0
 
             protected void btnOmitir_Click(object sender, EventArgs e)
         {
-           
+            if (ChkTerminosYCon.Checked == false)
+            {
+                string script = "swal('Error', 'Debes de Aceptar los Términos y Condiciones', 'error'); ";
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
+
+            }
+            else {
+
+                Sesion sesion = new Sesion();
+                Resultado resultado = new Resultado();
+                try
+                {
+                    sesion.Id = Session["idReserva"].ToString();
+                    sesion.IdUsuario = usuario.Correo;
+                    sesion.Tag = "REALIZADA";
+
+                    resultado = new ReservaSesionLogica().Acciones(sesion);
+
+                    if (resultado.TipoResultado == "OK")
+                    {
+                        string script = "swal('Excelente', 'Reservado con éxito', 'success'); ";
+                        ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
+                    }
+                    else
+                    {
+                        string script = "swal('Error', 'La reserva no se pudo realizar', 'error'); ";
+                        ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
+                    }
+                }
+                catch (Exception ex)
+                {
+
+                    string script = "swal('Error', 'La reserva no se pudo realizar', 'error'); ";
+                    ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
+                }
+
+            }
+
 
         }
 

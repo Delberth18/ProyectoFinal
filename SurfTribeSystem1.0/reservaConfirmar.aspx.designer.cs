@@ -265,13 +265,13 @@ namespace SurfTribeSystem1._0 {
         protected global::System.Web.UI.WebControls.Label Label23;
         
         /// <summary>
-        /// Control CheckBox1.
+        /// Control ChkTerminosYCon.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox CheckBox1;
+        protected global::System.Web.UI.WebControls.CheckBox ChkTerminosYCon;
         
         /// <summary>
         /// Control label24.
