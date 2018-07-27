@@ -3578,16 +3578,12 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SurfTribeSystem-Datos\SurfTribeSystem-Datos.csproj">
-      <Project>{3901993C-2D10-4440-8CCD-02DC71B866D6}</Project>
-      <Name>SurfTribeSystem-Datos</Name>
-    </ProjectReference>
     <ProjectReference Include="..\SurfTribeSystem-Entidades\SurfTribeSystem-Entidades.csproj">
       <Project>{51e3b1f3-84ad-4fd6-a57d-5d7bb72db95d}</Project>
       <Name>SurfTribeSystem-Entidades</Name>
     </ProjectReference>
     <ProjectReference Include="..\SurfTribeSystem-LogicaNegocio\SurfTribeSystem-LogicaNegocio.csproj">
-      <Project>{8d9e2efa-25b5-40b2-8707-94ca02e59828}</Project>
+      <Project>{8D9E2EFA-25B5-40B2-8707-94CA02E59828}</Project>
       <Name>SurfTribeSystem-LogicaNegocio</Name>
     </ProjectReference>
   </ItemGroup>
