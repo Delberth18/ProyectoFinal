@@ -111,8 +111,13 @@ namespace SurfTribeSystem1._0
 
 
             Image lbl = e.Item.FindControl("ss") as Image;
-            Button btn = e.Item.FindControl("1") as Button;//se selecciona 1 uno referencia 
-            Label lblPrecio = e.Item.FindControl("lblPrecio") as Label;
+            Button btn = e.Item.FindControl("1") as Button;//se selecciona 1 en referencia al primer repeater generico
+            Label lblPrecio = e.Item.FindControl("lblPrecio") as Label;// precio sesion
+            Label lblNombre = e.Item.FindControl("lblNombre") as Label;//nombre instructor
+            Label lblApellidos = e.Item.FindControl("lblApellidos") as Label;//apellidos instructor
+            Label lblDia = e.Item.FindControl("lblDia") as Label;//dia
+            Label lblMes = e.Item.FindControl("lblMes") as Label;//mes
+            Label lblHoraInicio = e.Item.FindControl("hInicio") as Label;//Hora Inicio
 
 
 
@@ -145,6 +150,9 @@ namespace SurfTribeSystem1._0
                     btnContinuar.Visible = true;
                     Session["idReserva"] = btn.CommandName;
                     Session["PrecioReserva"] = lblPrecio.Text;
+                    Session["ConfInstructor"] = lblNombre.Text + " " + lblApellidos.Text;
+                    Session["ConfFecha"] = lblDia.Text + " de " + lblMes.Text + " del " + DateTime.Now.Year.ToString();
+                    Session["ConfHinicio"] = lblHoraInicio.Text;
                 }
             }
             else
@@ -155,6 +163,9 @@ namespace SurfTribeSystem1._0
                 btnContinuar.Visible = true;
                 Session["idReserva"] = btn.CommandName;
                 Session["PrecioReserva"] = lblPrecio.Text;
+                Session["ConfInstructor"] = lblNombre.Text + " " + lblApellidos.Text;
+                Session["ConfFecha"] = lblDia.Text + " de " + lblMes.Text + " del " + DateTime.Now.Year.ToString();
+                Session["ConfHinicio"] = lblHoraInicio.Text;
 
 
             }

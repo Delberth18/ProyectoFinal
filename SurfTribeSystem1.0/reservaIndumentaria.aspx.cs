@@ -21,12 +21,7 @@ namespace SurfTribeSystem1._0
             Session["asigando"] = 0;// no tocar
             Session["numero"] = 0;// no tocar
 
-            if (!IsPostBack)
-            {
-
-                string valor = Request.Form["minute"];
-
-            }
+           
 
             ObtenerListado();
 
@@ -78,9 +73,14 @@ namespace SurfTribeSystem1._0
         protected void repeater1_ItemDataBound(object sender, RepeaterItemEventArgs e)
         {
             Label lbl = e.Item.FindControl("IDTabla") as Label;
+            Label lblPrecio = e.Item.FindControl("lblPrecio") as Label;
+            Label lblMarca = e.Item.FindControl("lblMarca") as Label;
+
             HyperLink hyp = e.Item.FindControl("hpvReservaConfi") as HyperLink;
             EncriptarLogica segr = new EncriptarLogica();
            string valor= segr.Base64Encode(lbl.Text);
+            Session["PrecioAlqui"] = lblPrecio.Text;
+            Session["MarcaTa"] = lblMarca.Text;
 
             hyp.NavigateUrl = "reservaConfirmar.aspx?rseT=" +valor;
             //hyp.NavigateUrl = "reservaConfirmar.aspx?rseT=" +"SFo¿0y"+lbl.Text;
