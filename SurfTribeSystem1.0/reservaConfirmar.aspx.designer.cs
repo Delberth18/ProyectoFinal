@@ -85,13 +85,13 @@ namespace SurfTribeSystem1._0 {
         protected global::System.Web.UI.WebControls.Label lblDia;
         
         /// <summary>
-        /// Control Label14.
+        /// Control lblFecha.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label14;
+        protected global::System.Web.UI.WebControls.Label lblFecha;
         
         /// <summary>
         /// Control Label5.
@@ -103,13 +103,13 @@ namespace SurfTribeSystem1._0 {
         protected global::System.Web.UI.WebControls.Label Label5;
         
         /// <summary>
-        /// Control Label6.
+        /// Control lblHora.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label6;
+        protected global::System.Web.UI.WebControls.Label lblHora;
         
         /// <summary>
         /// Control Label7.
@@ -121,13 +121,13 @@ namespace SurfTribeSystem1._0 {
         protected global::System.Web.UI.WebControls.Label Label7;
         
         /// <summary>
-        /// Control Label8.
+        /// Control lblInstructor.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label8;
+        protected global::System.Web.UI.WebControls.Label lblInstructor;
         
         /// <summary>
         /// Control Label9.
@@ -139,13 +139,13 @@ namespace SurfTribeSystem1._0 {
         protected global::System.Web.UI.WebControls.Label Label9;
         
         /// <summary>
-        /// Control Label10.
+        /// Control lblAlquilerDeta.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label10;
+        protected global::System.Web.UI.WebControls.Label lblAlquilerDeta;
         
         /// <summary>
         /// Control Label11.
@@ -184,22 +184,22 @@ namespace SurfTribeSystem1._0 {
         protected global::System.Web.UI.WebControls.Label lblPrecioLec;
         
         /// <summary>
-        /// Control Label4.
+        /// Control lblHeaderAlquiler.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label4;
+        protected global::System.Web.UI.WebControls.Label lblHeaderAlquiler;
         
         /// <summary>
-        /// Control Label13.
+        /// Control lblPrecioAlquiler.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label13;
+        protected global::System.Web.UI.WebControls.Label lblPrecioAlquiler;
         
         /// <summary>
         /// Control Label19.
@@ -211,13 +211,13 @@ namespace SurfTribeSystem1._0 {
         protected global::System.Web.UI.WebControls.Label Label19;
         
         /// <summary>
-        /// Control Label20.
+        /// Control lblImpuestos.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label20;
+        protected global::System.Web.UI.WebControls.Label lblImpuestos;
         
         /// <summary>
         /// Control Label17.
@@ -229,13 +229,13 @@ namespace SurfTribeSystem1._0 {
         protected global::System.Web.UI.WebControls.Label Label17;
         
         /// <summary>
-        /// Control Label18.
+        /// Control lblTotal.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label18;
+        protected global::System.Web.UI.WebControls.Label lblTotal;
         
         /// <summary>
         /// Control Label21.
@@ -265,13 +265,13 @@ namespace SurfTribeSystem1._0 {
         protected global::System.Web.UI.WebControls.Label Label23;
         
         /// <summary>
-        /// Control CheckBox1.
+        /// Control ChkTerminosYCon.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox CheckBox1;
+        protected global::System.Web.UI.WebControls.CheckBox ChkTerminosYCon;
         
         /// <summary>
         /// Control label24.

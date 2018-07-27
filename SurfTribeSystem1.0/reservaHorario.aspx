@@ -132,8 +132,8 @@ box-shadow: 14px 28px 38px -16px rgba(0,0,0,0.75); background: url('ccss/star-1-
         <div class="panel-body" style=" background-color: lightgoldenrodyellow;"><br />
             <font size="3" text-align="left"><b>Hora de Inicio:</b></font>&nbsp;&nbsp;<asp:Label ID="hInicio" runat="server" Text='<%#Eval("HRAINICIO1")%>'></asp:Label><br />
             <font size="3"><b>Hora de Finalización:</b></font>&nbsp;&nbsp;<asp:Label ID="Label5" runat="server" Text='<%#Eval("HRAFINAL1")%>'></asp:Label><br />
-             <font size="3"><b>Instructor:</b></font>&nbsp;&nbsp;<asp:Label ID="Label6" runat="server" Text='<%#Eval("NOMBRE")%>'></asp:Label>&nbsp;
-            <asp:Label ID="Label1" runat="server" Text='<%#Eval("APELLIDOS")%>'></asp:Label>
+             <font size="3"><b>Instructor:</b></font>&nbsp;&nbsp;<asp:Label ID="lblNombre" runat="server" Text='<%#Eval("NOMBRE")%>'></asp:Label>&nbsp;
+            <asp:Label ID="lblApellidos" runat="server" Text='<%#Eval("APELLIDOS")%>'></asp:Label>
             <br />
              <font size="3"><b>Precio:</b></font>&nbsp;₡<asp:Label ID="lblPrecio" runat="server" Text='<%#Eval("PRECIO")%>'></asp:Label>
             <br /><br />
@@ -144,8 +144,8 @@ box-shadow: 14px 28px 38px -16px rgba(0,0,0,0.75); background: url('ccss/star-1-
         </div>
       </div><br /><br />
         
-         <asp:Label style="margin-top: 80px; color: black;" runat="server" ID="Label3" Font-Size="60px" Text='<%#Eval("DIA")%>'></asp:Label><br /><br />
-         <asp:Label style="margin-top: 80px; color: black;" runat="server" ID="Label4" Font-Size="40px" Text='<%#Eval("MES")%>'></asp:Label>
+         <asp:Label style="margin-top: 80px; color: black;" runat="server" ID="lblDia" Font-Size="60px" Text='<%#Eval("DIA")%>'></asp:Label><br /><br />
+         <asp:Label style="margin-top: 80px; color: black;" runat="server" ID="lblMes" Font-Size="40px" Text='<%#Eval("MES")%>'></asp:Label>
     </div>
     
     

@@ -1,6 +1,6 @@
 ﻿      
 toHour=0;
-toMinute=0;
+toMinute=3;
 toSecond = 60;
 
 

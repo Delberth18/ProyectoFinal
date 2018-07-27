@@ -1,7 +1,11 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site2.Master" AutoEventWireup="true" CodeBehind="reservaConfirmar.aspx.cs" Inherits="SurfTribeSystem1._0.reservaConfirmar" MaintainScrollPositionOnPostback = "true" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+   
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+
+ 
+
      <script src="ccss/star-1-3/SCSS/js/contador.js" type="text/javascript"></script>
     <style type="text/css">
         .form_input {
@@ -89,7 +93,7 @@
                     
             
 
-                    <Table style=" margin-left: 29%; border: dotted;" border="1" >
+                    <Table style=" margin-left: 35%; border: dotted;" border="1" >
                          
 
                          <tr> 
@@ -133,7 +137,7 @@
                                 <asp:Label ID="lblDia" runat="server" Text="Dia de las clases: "  style="font-size: 18px; " ></asp:Label></b>
                             </td>
                             <td>
-                                 <asp:Label ID="Label14" runat="server" Text="12 de Junio 2018"  Style="font-size: 18px;"></asp:Label>
+                                 <asp:Label ID="lblFecha" runat="server" Text="12 de Junio 2018"  Style="font-size: 18px;"></asp:Label>
                     
                             </td>
                         </tr>
@@ -143,7 +147,7 @@
                           <asp:Label ID="Label5" runat="server" Text="Hora: "  style="font-size: 18px;" ></asp:Label> </b> 
                             </td>
                             <td>
-                                 <asp:Label ID="Label6" runat="server" Text="9:00 am"  Style="font-size: 18px;"></asp:Label>
+                                 <asp:Label ID="lblHora" runat="server" Text="9:00 am"  Style="font-size: 18px;"></asp:Label>
                             </td>
                         </tr>
 
@@ -153,7 +157,7 @@
                           <asp:Label ID="Label7" runat="server" Text="Instructor: "  style="font-size: 18px;  " ></asp:Label></b>
                             </td>
                             <td>
-                                 <asp:Label ID="Label8" runat="server" Text="Pedro Alejandro Gómez Alvarado"  Style="font-size: 18px;"></asp:Label>
+                                 <asp:Label ID="lblInstructor" runat="server" Text="Pedro Alejandro Gómez Alvarado"  Style="font-size: 18px;"></asp:Label>
                             </td>
                         </tr>
 
@@ -163,7 +167,7 @@
                           <asp:Label ID="Label9" runat="server" Text="Indumentaria: "  style="font-size: 18px;" ></asp:Label></b>
                             </td>
                             <td>
-                                 <asp:Label ID="Label10" runat="server" Text="No alquilada"  Style="font-size: 18px;"></asp:Label>
+                                 <asp:Label ID="lblAlquilerDeta" runat="server" Text="No alquilada"  Style="font-size: 18px;"></asp:Label>
                             </td>
                         </tr>
                         <tr>
@@ -196,7 +200,7 @@
                                <b FACE="arial">
                           <asp:Label ID="Label15" runat="server" Text="Lecciones: "  style="font-size: 16px;" ></asp:Label></b>&nbsp;
                            </td>
-                            <td>
+                            <td style="text-align: left;">
   
                              &nbsp;  <asp:Label ID="lblPrecioLec" runat="server" Text="₡ 10.000"  Style="font-size: 16px;"></asp:Label>
                             </td>
@@ -204,11 +208,11 @@
                          <tr>
                            <td>
                                <b FACE="arial">
-                          <asp:Label ID="Label4" runat="server" Text="Alquiler: "  style="font-size: 16px;" ></asp:Label></b>&nbsp;
+                          <asp:Label ID="lblHeaderAlquiler" runat="server" Text="Alquiler: "  style="font-size: 16px;" ></asp:Label></b>&nbsp;
                            </td>
-                            <td>
+                            <td style="text-align: left;">
   
-                             &nbsp;  <asp:Label ID="Label13" runat="server" Text="₡ 10.000"  Style="font-size: 16px;"></asp:Label>
+                             &nbsp;  <asp:Label ID="lblPrecioAlquiler" runat="server" Text="₡ 0"  Style="font-size: 16px;"></asp:Label>
                             </td>
                         </tr>
 
@@ -217,8 +221,8 @@
                                  <b FACE="arial">
                           <asp:Label ID="Label19" runat="server" Text="Impuesto: "  style="font-size: 16px;" ></asp:Label></b>&nbsp;
                             </td>
-                            <td>
-                                <asp:Label ID="Label20" runat="server" Text="₡ 1.000"  Style="font-size: 16px;"></asp:Label>
+                            <td style="text-align: left;">
+                               &nbsp;   <asp:Label ID="lblImpuestos" runat="server" Text="₡ 1.000"  Style="font-size: 16px;"></asp:Label>
                             </td>
                         </tr>
                         <tr>
@@ -226,8 +230,8 @@
                                  <b FACE="arial">
                          <asp:Label ID="Label17" runat="server" Text="Total: "  style="font-size: 16px;" ></asp:Label></b>&nbsp; 
                             </td>
-                            <td>&nbsp;
-                         <u><asp:Label ID="Label18" runat="server" Text="₡ 11.000"  Style="font-size: 16px;"></asp:Label></u> 
+                            <td style="text-align: left;">&nbsp;
+                         <u><asp:Label ID="lblTotal" runat="server" Text="₡ 11.000"  Style="font-size: 16px;"></asp:Label></u> 
                             </td>
                         </tr>
 
@@ -241,9 +245,9 @@
                     <asp:Label ID="Label22" runat="server" Font-Size="Small" Style="margin-left: -40px;" Text="Al reservar el administrador en un rango de 24 horas se pondrá en contacto contigo para darle las instrucciones"></asp:Label><br />
                       <asp:Label ID="Label23" runat="server" Font-Size="Small" Style="    margin-left: -67px;" Text="sobre el deposito de reserva, con el fin de que quede en pie la reserva."></asp:Label><br />
                     <br />
-                    <asp:CheckBox ID="CheckBox1" runat="server"/>&nbsp;<asp:Label ID="label24" Font-Bold="true" runat="server" Text="He leído y acepto los términos y condiciones de uso."></asp:Label>
+                    <asp:CheckBox ID="ChkTerminosYCon" runat="server"/>&nbsp;<asp:Label ID="label24" Font-Bold="true" runat="server" Text="He leído y acepto los términos y condiciones de uso."></asp:Label>
                 </div><br /><br />
-                <asp:Button ID="btnOmitir" runat="server"  Style="margin-right: -480px; text-decoration: none; padding: 10px 24px; font-family: arial; font-weight: 300; font-size: 25px; font-style: italic; color: white; background-color: #ff891e; border-radius: 1px; border: 3px double white; box-shadow: -11px 9px 45px 2px rgba(0,0,0,0.75);"
+                <asp:Button ID="btnOmitir" runat="server" OnClick="btnOmitir_Click"  Style="margin-right: -480px; text-decoration: none; padding: 10px 24px; font-family: arial; font-weight: 300; font-size: 25px; font-style: italic; color: white; background-color: #ff891e; border-radius: 1px; border: 3px double white; box-shadow: -11px 9px 45px 2px rgba(0,0,0,0.75);"
                     Text="Confirmar" /><br /><br /><br />
                
             </div>

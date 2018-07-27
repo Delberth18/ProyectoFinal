@@ -50,6 +50,7 @@
     <Compile Include="PrecioLogica.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReservaLogica.cs" />
+    <Compile Include="ReservaSesionLogica.cs" />
     <Compile Include="SeguridadLogica.cs" />
     <Compile Include="ImagenLogica.cs" />
     <Compile Include="SesionLogica.cs" />

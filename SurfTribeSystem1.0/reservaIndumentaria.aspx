@@ -107,14 +107,14 @@
                                             <br>
 
                                             <p><b>Marca:</b>
-                                                <asp:Label runat="server" ID="playa" Text='<%#Eval("MARCA")%>'></asp:Label></p>
+                                                <asp:Label runat="server" ID="lblMarca" Text='<%#Eval("MARCA")%>'></asp:Label></p>
                                             <p><b>Tipo:</b>
                                                 <asp:Label runat="server" ID="Label3" Text='<%#Eval("TIPO")%>'></asp:Label></p>
                                             <p><b>Tamaño:</b>
                                                 <asp:Label runat="server" ID="Label2" Text='<%#Eval("TAMANIO")%>'></asp:Label></p>
                                             
-                                             <p><b>Precio:</b>
-                                                <asp:Label runat="server" ID="Label1" Text='<%#Eval("COSTO")%>'></asp:Label></p>
+                                             <p><b>Precio:</b>&nbsp;₡
+                                                <asp:Label runat="server" ID="lblPrecio" Text='<%#Eval("COSTO")%>'></asp:Label></p>
                                             <asp:Label runat="server" ID="IDTabla" Visible="false" Text='<%#Eval("ID")%>'></asp:Label>
                                         </div>
                                     </div>
