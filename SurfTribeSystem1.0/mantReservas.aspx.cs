@@ -9,30 +9,17 @@ using System.Web.UI.WebControls;
 
 namespace SurfTribeSystem1._0
 {
-    public partial class mantComentarios : System.Web.UI.Page
+    public partial class mantReservas : System.Web.UI.Page
     {
-
-        Comentario comentario = new Comentario();
-        List<Comentario> comentarios = new List<Comentario>();
+        Reserva reserva = new Reserva();
+        List<Reserva> reservas = new List<Reserva>();
         Usuario usu = new Usuario();
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            
-            if (Session["InicioSesion"] != null)
-            {
-                usu = (Usuario)Session["InicioSesion"];
-
-                if (usu.Tipo_usu != "ADMG")
-                {
-                    Response.Redirect("defaultSinLogeoUN.aspx");
-                }
-            }
-            else
-            {
-                Response.Redirect("defaultSinLogeoUN.aspx");
-            }
             ObtenerListado();
+
+
         }
 
         private void ObtenerListado()
@@ -40,14 +27,13 @@ namespace SurfTribeSystem1._0
             Resultado resultado = new Resultado();
             try
             {
-                comentario.Tag = "LISTADO_PENDIENTE";
-                resultado = new ComentarioLogica().Acciones(comentario);
+                reserva.Tag = "LISTADO_PENDIENTE";
+                resultado = new ReservaLogica().Acciones(reserva);
                 if (resultado.TipoResultado == "OK")
                 {
-                    comentarios = (List<Comentario>)resultado.ObjetoResultado;
-                    preguntasLst.DataSource = comentarios;
-                    preguntasLst.DataBind();
-                    cantidadLabel.Text = "(" + comentarios.Count + ")";
+                    reservas = (List<Reserva>)resultado.ObjetoResultado;
+                    reservasLst.DataSource = reservas;
+                    reservasLst.DataBind();
                 }
                 else
                 {
@@ -57,31 +43,32 @@ namespace SurfTribeSystem1._0
             }
             catch (Exception ex)
             {
-
                 string script = "swal('Lo sentimos,', '" + resultado.Mensaje + "', 'info'); ";
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
             }
         }
 
-        protected void aceptar_Click(object sender, EventArgs e)
+        protected void noConfirmarBtn_Click(object sender, EventArgs e)
         {
             Resultado resultado = new Resultado();
             try
             {
                 LinkButton link = new LinkButton();
                 link = (LinkButton)sender;
-                comentario.Tag = "APROBADO";
-                comentario.Id = link.CommandName;
-                resultado = new ComentarioLogica().Acciones(comentario);
+                reserva.Tag = "NO_CONFIRMADA";
+                string[] datos = link.CommandName.Split('-');
+                reserva.IdSesion = datos[0];
+                reserva.IdUsuario = datos[1];
+                resultado = new ReservaLogica().Acciones(reserva);
 
 
                 if (resultado.TipoResultado == "OK")
                 {
 
-                    string script = "swal('Excelente', 'Aceptado con éxito', 'success'); ";
+                    string script = "swal('Excelente', 'Proceso exitoso', 'success'); ";
                     ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
-                    preguntasLst.DataSource = null;
-                    preguntasLst.DataBind();
+                    reservasLst.DataSource = null;
+                    reservasLst.DataBind();
                     ObtenerListado();
                 }
                 else
@@ -98,25 +85,27 @@ namespace SurfTribeSystem1._0
             }
         }
 
-        protected void rechazar_Click(object sender, EventArgs e)
+        protected void confirmarBtn_Click(object sender, EventArgs e)
         {
             Resultado resultado = new Resultado();
             try
             {
                 LinkButton link = new LinkButton();
                 link = (LinkButton)sender;
-                comentario.Tag = "ELIMINAR";
-                comentario.Id = link.CommandName;
-                resultado = new ComentarioLogica().Acciones(comentario);
+                reserva.Tag = "CONFIRMADA";
+                string[] datos = link.CommandName.Split('-');
+                reserva.IdSesion = datos[0];
+                reserva.IdUsuario = datos[1];
+                resultado = new ReservaLogica().Acciones(reserva);
 
 
                 if (resultado.TipoResultado == "OK")
                 {
 
-                    string script = "swal('Excelente', 'Rechazo con éxito', 'success'); ";
+                    string script = "swal('Excelente', 'Proceso exitoso', 'success'); ";
                     ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
-                    preguntasLst.DataSource = null;
-                    preguntasLst.DataBind();
+                    reservasLst.DataSource = null;
+                    reservasLst.DataBind();
                     ObtenerListado();
                 }
                 else

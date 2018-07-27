@@ -33,8 +33,8 @@ namespace SurfTribeSystem1._0
             }
             catch (Exception ex)
             {
-
-                Response.Write("< script > alert('Error: " + ex + " \n Lo sentimos') </ script >");
+                string script = "swal('Error', 'Lo sentimos por lo sucedido', 'error'); ";
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
             }
         }
 
