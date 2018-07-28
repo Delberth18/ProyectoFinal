@@ -65,7 +65,11 @@ namespace SurfTribeSystem1._0
                 lblPrecioAlquiler.Text = "₡ " + (precioAlquilerIV - impuestoAlquiler);
                 lblTotal.Text = "₡ " + (precioSesionIV + precioAlquilerIV);
 
-
+               
+                if (!IsPostBack)
+                {
+                    CrearReservaTabla();
+                }
 
             }
         }
@@ -118,8 +122,71 @@ namespace SurfTribeSystem1._0
 
         protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
         {
+            BajarReservaTabla();
             Response.Redirect("reservaIndumentaria.aspx");
+            
         }
+        private void CrearReservaTabla()
+        {
+            Tabla tabla = new Tabla();
+            Resultado resultado = new Resultado();
 
+            try
+            {
+                tabla.Id = idTablaRser;
+                tabla.Id_usuario = usuario.Correo;
+                tabla.Costo = Convert.ToDouble(Session["PrecioAlqui"].ToString());
+                tabla.Tag = "REGISTRAR";
+
+                resultado = new ReservaTablaLogica().Acciones(tabla);
+
+                if (resultado.TipoResultado == "OK")
+                {
+
+                }
+                else
+                {
+                    string script = "swal('Error', 'La reserva de la tabla no se pudo realizar', 'error'); ";
+                    ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
+                }
+            }
+            catch (Exception ex)
+            {
+
+                string script = "swal('Error', 'La reserva de la tabla no se pudo realizar', 'error'); ";
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
+            }
+        }
+        private void BajarReservaTabla()
+        {
+            Tabla tabla = new Tabla();
+            Resultado resultado = new Resultado();
+
+            try
+            {
+                tabla.Id = idTablaRser;
+                tabla.Id_usuario = usuario.Correo;
+                tabla.Costo = Convert.ToDouble( Session["PrecioAlqui"].ToString());
+                tabla.Tag = "ELIMINAR";
+
+                resultado = new ReservaTablaLogica().Acciones(tabla);
+
+                if (resultado.TipoResultado == "OK")
+                {
+
+                }
+                else
+                {
+                    string script = "swal('Error', 'La reserva de la tabla no se pudo realizar', 'error'); ";
+                    ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
+                }
+            }
+            catch (Exception ex)
+            {
+
+                string script = "swal('Error', 'La reserva de la tabla no se pudo realizar', 'error'); ";
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
+            }
+        }
     }
 }

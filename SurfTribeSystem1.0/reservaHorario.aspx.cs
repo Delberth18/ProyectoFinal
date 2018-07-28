@@ -108,6 +108,7 @@ namespace SurfTribeSystem1._0
             int numeroposible = 0;
             numeroposible= (int) Session["numero"]+1;
             Session["numero"] = numeroposible;
+            
 
 
             Image lbl = e.Item.FindControl("ss") as Image;
@@ -134,21 +135,27 @@ namespace SurfTribeSystem1._0
 
                 if (numeroposible % 2 == 0)
                 {
+                   
                     btn.Text = "  Reservar  ";
                     lbl.Visible = false;
+                    //quitar el -1 
+                    BajarCupo();
                     Session["asigando"] = 0;
                     btnContinuar.Visible = false;
                     Session["idReserva"] = "";
+                    
 
                 }
                 else
                 {
-
+                   
                     btn.Text = "Desseleccionar";
                     lbl.Visible = true;
                     Session["asigando"] = +1;
                     btnContinuar.Visible = true;
                     Session["idReserva"] = btn.CommandName;
+                    //selecciona +1
+                    RegistroCupo();
                     Session["PrecioReserva"] = lblPrecio.Text;
                     Session["ConfInstructor"] = lblNombre.Text + " " + lblApellidos.Text;
                     Session["ConfFecha"] = lblDia.Text + " de " + lblMes.Text + " del " + DateTime.Now.Year.ToString();
@@ -157,15 +164,25 @@ namespace SurfTribeSystem1._0
             }
             else
             {
-                btn.Text = "Desseleccionar";
-                lbl.Visible = true;
-                Session["asigando"] = +1;
-                btnContinuar.Visible = true;
-                Session["idReserva"] = btn.CommandName;
-                Session["PrecioReserva"] = lblPrecio.Text;
-                Session["ConfInstructor"] = lblNombre.Text + " " + lblApellidos.Text;
-                Session["ConfFecha"] = lblDia.Text + " de " + lblMes.Text + " del " + DateTime.Now.Year.ToString();
-                Session["ConfHinicio"] = lblHoraInicio.Text;
+                int numeroposibl = 0;
+                numeroposibl = (int)Session["numero"] + 1;
+                Session["numero"] = numeroposibl;
+                Session["nombreBoton"] = btn.CommandName;
+                
+                    btn.Text = "Desseleccionar";
+                    lbl.Visible = true;
+                    Session["asigando"] = +1;
+                    btnContinuar.Visible = true;
+                //eliminar -1
+                BajarCupo();
+                    Session["idReserva"] = btn.CommandName;
+                //Seleccionar +1
+                RegistroCupo();
+                    Session["PrecioReserva"] = lblPrecio.Text;
+                    Session["ConfInstructor"] = lblNombre.Text + " " + lblApellidos.Text;
+                    Session["ConfFecha"] = lblDia.Text + " de " + lblMes.Text + " del " + DateTime.Now.Year.ToString();
+                    Session["ConfHinicio"] = lblHoraInicio.Text;
+                
 
 
             }
@@ -197,6 +214,68 @@ namespace SurfTribeSystem1._0
             //}
         }
 
-       
+        private void RegistroCupo()
+        {
+            Sesion sesion = new Sesion();
+            Resultado resultado = new Resultado();
+            Usuario usuario = new Usuario();
+            usuario = (Usuario)Session["InicioSesion"];
+            try
+            {
+                sesion.Id = Session["idReserva"].ToString();
+                sesion.IdUsuario = usuario.Correo;
+                sesion.Tag = "SELECCIONADA";
+
+                resultado = new SesionLogica().Acciones(sesion);
+
+                if (resultado.TipoResultado == "OK")
+                {
+                    
+                }
+                else
+                {
+                    string script = "swal('Error', 'La reserva no se pudo realizar', 'error'); ";
+                    ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
+                }
+            }
+            catch (Exception ex)
+            {
+
+                string script = "swal('Error', 'La reserva no se pudo realizar', 'error'); ";
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
+            }
+        }
+
+        private void BajarCupo()
+        {
+            Sesion sesion = new Sesion();
+            Resultado resultado = new Resultado();
+          
+            try
+            {
+                sesion.Id = Session["idReserva"].ToString();
+                sesion.Tag = "DESELECCIONADA";
+
+                resultado = new SesionLogica().Acciones(sesion);
+
+                if (resultado.TipoResultado == "OK")
+                {
+
+                }
+                else
+                {
+                    string script = "swal('Error', 'La reserva no se pudo realizar', 'error'); ";
+                    ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
+                }
+            }
+            catch (Exception ex)
+            {
+
+                string script = "swal('Error', 'La reserva no se pudo realizar', 'error'); ";
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
+            }
+        }
+
+
     }
 }

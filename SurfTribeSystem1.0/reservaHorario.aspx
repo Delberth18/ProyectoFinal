@@ -3,6 +3,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <script src="ccss/star-1-3/SCSS/js/contador.js" type="text/javascript"></script>
+
     <style type="text/css">
         .form_input {
             font-family: Verdana;

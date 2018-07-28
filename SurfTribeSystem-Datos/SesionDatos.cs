@@ -178,39 +178,54 @@ namespace SurfTribeSystem_Datos
                 }
                 else
                 {
-                    if (datos.Tables[1] != null && datos.Tables[1].Rows.Count != 0)
+                    if (sesion.Tag != "SELECCIONADA" && sesion.Tag != "DESELECCIONADA")
                     {
+
+
+                        if (datos.Tables[1] != null && datos.Tables[1].Rows.Count != 0)
+                        {
+                            resultado.TipoResultado = "OK";
+
+                            List<Sesion> lista = new List<Sesion>();
+
+                            
+
+                            foreach (DataRow row in datos.Tables[1].Rows)
+                            {
+
+
+                                lista.Add(new Sesion
+                                {
+                                    Id = row["ID"] is DBNull ? null : row["ID"].ToString(),
+                                    Dificultad = row["DIFICULTAD"] is DBNull ? null : row["DIFICULTAD"].ToString(),
+                                    Fecha = row["FECHA"] is DBNull ? DateTime.MinValue : Convert.ToDateTime(row["FECHA"]),
+                                    Habilitadas = row["HABILITADAS"] is DBNull ? 0 : Convert.ToInt32(row["HABILITADAS"]),
+                                    Reservadas = row["RESERVADAS"] is DBNull ? 0 : Convert.ToInt32(row["RESERVADAS"]),
+                                    HraInicio1 = row["HORA_INICIO"] is DBNull ? null : row["HORA_INICIO"].ToString(),
+                                    HraFinal1 = row["HORA_FINAL"] is DBNull ? null : row["HORA_FINAL"].ToString(),
+                                    IdEscuela = row["ID_ESCUELA"] is DBNull ? null : row["ID_ESCUELA"].ToString(),
+                                    Id_instructor = row["ID_INSTRUCTOR"] is DBNull ? null : row["ID_INSTRUCTOR"].ToString(),
+                                    Nombre = row["NOMBRE"] is DBNull ? null : row["NOMBRE"].ToString(),
+                                    Apellidos = row["APELLIDOS"] is DBNull ? null : row["APELLIDOS"].ToString(),
+                                    Mes = row["MES"] is DBNull ? null : row["MES"].ToString(),
+                                    Dia = row["DIA"] is DBNull ? null : row["DIA"].ToString(),
+                                    Precio = row["PRECIO"] is DBNull ? 0 : Convert.ToDouble(row["PRECIO"])
+
+
+
+
+                                });
+                            }
+
+
+                            resultado.ObjetoResultado = lista;
+                        }
+                    }
+                    else {
+
                         resultado.TipoResultado = "OK";
 
                         List<Sesion> lista = new List<Sesion>();
-
-                        foreach (DataRow row in datos.Tables[1].Rows)
-                        {
-
-
-                            lista.Add(new Sesion
-                            {
-                                Id = row["ID"] is DBNull ? null : row["ID"].ToString(),
-                                Dificultad = row["DIFICULTAD"] is DBNull ? null : row["DIFICULTAD"].ToString(),
-                                Fecha =  row["FECHA"] is DBNull ? DateTime.MinValue : Convert.ToDateTime(row["FECHA"]), 
-                                Habilitadas= row["HABILITADAS"] is DBNull ? 0 : Convert.ToInt32(row["HABILITADAS"]),
-                                Reservadas = row["RESERVADAS"] is DBNull ? 0 : Convert.ToInt32(row["RESERVADAS"]),
-                                HraInicio1 = row["HORA_INICIO"] is DBNull ? null : row["HORA_INICIO"].ToString(),
-                                HraFinal1 = row["HORA_FINAL"] is DBNull ? null : row["HORA_FINAL"].ToString(),
-                                IdEscuela = row["ID_ESCUELA"] is DBNull ? null : row["ID_ESCUELA"].ToString(),
-                                Id_instructor= row["ID_INSTRUCTOR"] is DBNull ? null : row["ID_INSTRUCTOR"].ToString(),
-                                Nombre= row["NOMBRE"] is DBNull ? null : row["NOMBRE"].ToString(),
-                                Apellidos = row["APELLIDOS"] is DBNull ? null : row["APELLIDOS"].ToString(),
-                                Mes = row["MES"] is DBNull ? null : row["MES"].ToString(),
-                                Dia = row["DIA"] is DBNull ? null : row["DIA"].ToString(),
-                                 Precio= row["PRECIO"] is DBNull ? 0 : Convert.ToDouble(row["PRECIO"])
-
-
-
-
-                            });
-                        }
-
                         resultado.ObjetoResultado = lista;
                     }
 

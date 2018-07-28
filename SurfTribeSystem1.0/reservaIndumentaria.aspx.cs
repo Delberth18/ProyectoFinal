@@ -67,6 +67,8 @@ namespace SurfTribeSystem1._0
 
         protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
         {
+            BajarCupo();
+
             Response.Redirect("reservaHorario.aspx");
         }
 
@@ -89,6 +91,36 @@ namespace SurfTribeSystem1._0
 
         }
 
-    
+        private void BajarCupo()
+        {
+            Sesion sesion = new Sesion();
+            Resultado resultado = new Resultado();
+
+            try
+            {
+                sesion.Id = Session["idReserva"].ToString();
+                sesion.Tag = "DESELECCIONADA";
+
+                resultado = new SesionLogica().Acciones(sesion);
+
+                if (resultado.TipoResultado == "OK")
+                {
+
+                }
+                else
+                {
+                    string script = "swal('Error', 'La reserva no se pudo realizar', 'error'); ";
+                    ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
+                }
+            }
+            catch (Exception ex)
+            {
+
+                string script = "swal('Error', 'La reserva no se pudo realizar', 'error'); ";
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
+            }
+        }
+
+
     }
 }

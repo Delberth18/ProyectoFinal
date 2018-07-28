@@ -4,6 +4,27 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
    
     <script src="ccss/star-1-3/SCSS/js/contador.js" type="text/javascript"></script>
+        <script>
+        jQuery(document).ready(function($) {
+
+  if (window.history && window.history.pushState) {
+
+    $(window).on('popstate', function() {
+      var hashLocation = location.hash;
+      var hashSplit = hashLocation.split("#!/");
+      var hashName = hashSplit[1];
+
+      if (hashName !== '') {
+        var hash = window.location.hash;
+       window.history.pushState('forward', null, './#forward');
+      }
+    });
+
+    window.history.pushState('forward', null, './#forward');
+  }
+
+});
+</script>
      <style type="text/css">
 .form_input
 {
