@@ -3087,6 +3087,7 @@
     <Content Include="editarEscuela.aspx" />
     <Content Include="editarUsuarios.aspx" />
     <Content Include="EnvioCorreo.aspx" />
+    <Content Include="eventos.aspx" />
     <Content Include="FAQlistado.aspx" />
     <Content Include="FAQMantenimiento.aspx" />
     <Content Include="FAQRegistro.aspx" />
@@ -3199,6 +3200,13 @@
     </Compile>
     <Compile Include="EnvioCorreo.aspx.designer.cs">
       <DependentUpon>EnvioCorreo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="eventos.aspx.cs">
+      <DependentUpon>eventos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="eventos.aspx.designer.cs">
+      <DependentUpon>eventos.aspx</DependentUpon>
     </Compile>
     <Compile Include="FAQlistado.aspx.cs">
       <DependentUpon>FAQlistado.aspx</DependentUpon>

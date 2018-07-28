@@ -14,7 +14,6 @@
                     <div class="sectionTitle">
                         <h2>
                             <asp:Label runat="server" ID="tituloLabel" Font-Size="xX-Large" Text="Preguntas frecuentes"></asp:Label></h2>
-
                     </div>
                     <h4>
                         <asp:Label runat="server" ID="info1" Text="Todos nos han hecho llegar sus dudas, aquí les mostramos las más comunes"></asp:Label></h4>
