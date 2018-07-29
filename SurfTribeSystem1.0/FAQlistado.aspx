@@ -43,7 +43,6 @@
                                                 <div class="media" style="overflow-wrap: break-word">
 
                                                     <p><%# Eval("Respuesta").ToString() %></p>
-                                                    <!--No puedo hacer que se vean varias lineas-->
 
                                                 </div>
                                             </div>

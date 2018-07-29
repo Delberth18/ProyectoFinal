@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/Site2.Master" AutoEventWireup="true" CodeBehind="eventos.aspx.cs" Inherits="SurfTribeSystem1._0.eventos" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/Site2.Master" AutoEventWireup="true" CodeBehind="mantEventos.aspx.cs" Inherits="SurfTribeSystem1._0.mantEventos" %>
 
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
@@ -13,11 +13,19 @@
                     <br />
                     <div class="sectionTitle">
                         <h2>
-                            <asp:Label runat="server" ID="Label1" Font-Size="xX-Large" Text="Listado de eventos"></asp:Label></h2>
+                            <asp:Label runat="server" ID="Label1" Font-Size="xX-Large" Text="Mantenimiento de eventos"></asp:Label></h2>
 
                     </div>
-                    <h4>
-                        <asp:Label runat="server" ID="info1" Text="Próximos eventos"></asp:Label></h4>
+                </div>
+            </div>
+            <div class="row">
+
+
+                <div class="col-xs-12">
+
+                    <a aria-label="NuevaPreguntado" href="registroEvento.aspx">
+                        <span aria-hidden="true" style="margin: 2px 2px 2px 2px; font-size: x-large; color: saddlebrown">Nuevo evento>></span>
+                    </a>
                 </div>
             </div>
 
@@ -41,26 +49,30 @@
                                                             <div class=" col-sm-7">
                                                                 <ul>
                                                                     <li>
-                                                                        
+
                                                                         <label style="color: SaddleBrown; font-size: x-large"><%# Eval("Titulo") %></label>
                                                                         <br />
                                                                         <div class="media" style="overflow-wrap: break-word">
 
-                                                                            <p style="color:black; font-weight:bold"><%# Eval("Descripcion").ToString() %></p>
+                                                                            <p style="color: black; font-weight: bold"><%# Eval("Descripcion").ToString() %></p>
 
                                                                         </div>
                                                                     </li>
                                                                 </ul>
                                                             </div>
 
-                                                            <div class=" col-sm-5 ">
+                                                            <div class=" col-sm-4 ">
                                                                 <ul>
                                                                     <li>
-                                                                        <img src='data:image/jpg;base64,<%#Eval("Imagen") %>' height="250" alt="" />
+                                                                        <img src='data:image/jpg;base64,<%#Eval("Imagen") %>' width="200" height="200" alt="" />
                                                                     </li>
                                                                 </ul>
                                                             </div>
                                                         </div>
+                                                        <a aria-label="Editar" style="border: solid; border-color: #ff891e; border-radius: 8px; border-width: thin">
+                                                            <asp:LinkButton ID="noConfirmarBtn" CommandName='<%# Eval("Id") %>' Text="Eliminar" runat="server"
+                                                                OnClick="eliminar_Click" aria-hidden="true" Style="margin: 2px 2px 2px 2px; color: darkred; font-weight: bold; font-size: medium" />
+                                                        </a>
                                                         <div class="row"></div>
                                                     </div>
                                                 </li>
@@ -82,3 +94,4 @@
     </section>
 
 </asp:Content>
+

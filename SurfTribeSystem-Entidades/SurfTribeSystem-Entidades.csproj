@@ -45,6 +45,7 @@
     <Compile Include="Credencial.cs" />
     <Compile Include="Escuela.cs" />
     <Compile Include="Estado.cs" />
+    <Compile Include="Evento.cs" />
     <Compile Include="Faq.cs" />
     <Compile Include="Imagen.cs" />
     <Compile Include="Pantalla.cs" />
