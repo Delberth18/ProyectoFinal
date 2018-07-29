@@ -18,6 +18,7 @@ namespace SurfTribeSystem1._0
             lblEscuela.Text = Session["escuela"].ToString();//coloca el nombre de la escuela
             lblNivel.Text = Session["Nivel"].ToString();//coloca el nombre del nivel
             string valor = Request.QueryString["rseT"].ToString();//obtiene el valor de parametro
+           
 
             lblUbicación.Text = Session["Ubicación"].ToString();//coloca la ubicación
             usuario = (Usuario)Session["InicioSesion"];//setea el usuario registrado
@@ -32,8 +33,7 @@ namespace SurfTribeSystem1._0
             {
                 
                 lblTotal.Text = "₡ "+ Session["PrecioReserva"].ToString();
-                
-
+                Session["idTabRe"] = valor;
                 //Calculos de montos
                 int precioSesionIV = Convert.ToInt32(Session["PrecioReserva"].ToString());
                 double impuesto= precioSesionIV*(0.13);
@@ -50,6 +50,7 @@ namespace SurfTribeSystem1._0
                 EncriptarLogica seg = new EncriptarLogica();//decodifica el valor del id
                 valor = seg.Base64Decode(valor);//decodifica el valor del id
                 idTablaRser = valor;//setea el valor de la tabla
+                Session["idTabRe"] = valor;
                 lblAlquilerDeta.Text = Session["MarcaTa"].ToString();
 
                 int precioSesionIV = Convert.ToInt32(Session["PrecioReserva"].ToString());

@@ -23,6 +23,19 @@ namespace SurfTribeSystem1._0
 
                 }
 
+
+            }
+
+            if (Session["idTabRe"] != null)
+            {
+                if (Session["idTabRe"].ToString() != "0")
+                {
+                    BajarReservaTabla();
+                    Session["idTabRe"] = "0";
+                }
+                
+
+                
             }
 
         }
@@ -53,6 +66,38 @@ namespace SurfTribeSystem1._0
             {
 
                 string script = "swal('Error', 'La reserva no se pudo realizar', 'error'); ";
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
+            }
+        }
+        private void BajarReservaTabla()
+        {
+            Tabla tabla = new Tabla();
+            Resultado resultado = new Resultado();
+            Usuario usuario = new Usuario();
+            usuario = (Usuario)Session["InicioSesion"];//setea el usuario registrado
+
+            try
+            {
+                tabla.Id = Session["idTabRe"].ToString();
+                tabla.Id_usuario = usuario.Correo;
+                tabla.Tag = "ELIMINAR";
+
+                resultado = new ReservaTablaLogica().Acciones(tabla);
+
+                if (resultado.TipoResultado == "OK")
+                {
+
+                }
+                else
+                {
+                    string script = "swal('Error', 'La reserva de la tabla no se pudo realizar', 'error'); ";
+                    ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
+                }
+            }
+            catch (Exception ex)
+            {
+
+                string script = "swal('Error', 'La reserva de la tabla no se pudo realizar', 'error'); ";
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
             }
         }
