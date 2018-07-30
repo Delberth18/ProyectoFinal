@@ -51,19 +51,7 @@
     </div>
 </div>
 
-             <body onload="countDown();">
-                        <form name="form2">
-
-                            <font size="4"><b FACE="arial" style="margin-left: 75%; margin-top: -80%;" >Tiempo Restante: </b></font>
-
-                            <input type="text" size="5" class="form_input" name="hour" disabled visible="false" style="visibility: hidden; width: 1%;">
-
-                            <input type="text" size="10" class="form_input" name="minute" disabled style="width: 2%; font-size: xx-large;">
-                            <asp:Label runat="server" Text=":" style="width: 2%; font-size: xx-large;" ></asp:Label>
-	                        <input type="text" size="8" class="form_input" name="second" disabled style="width: 4%; font-size: xx-large;">
-                        </form>
-
-                    </body>
+          
 
 
             <div style=" background-image: url('ccss/star-1-3/Static%20HTML/img/bg-menuReserva6.jpg'); position:relative; z-index:1;
@@ -234,45 +222,7 @@
 </section>
 
 
-      <script>
-        function DescargarPDF(ContenidoID, nombre) {
-            var pdf = new jsPDF('p', 'pt', 'letter');
-            pdf.
-            html = $('#' + ContenidoID).html();
-            specialElementHandlers = {};
-            margins = { top: 10, bottom: 20, left: 20, width: 822 };
-            pdf.fromHTML(html, margins.left, margins.top, { 'width': margins.width }, function (dispose) { pdf.save(nombre + '.pdf'); }, margins);
-          }
-
-          function pdfToHTML(ContenidoID, nombre){
-var pdf = new jsPDF('p', 'pt', 'letter');
-source = $('#Reporte')[0];
-specialElementHandlers = {
-	'#bypassme': function(element, renderer){
-		return true
-	}
-}
-margins = {
-    top: 50,
-    left: 60,
-    width: 545
-  };
-pdf.fromHTML(
-  	source // HTML string or DOM elem ref.
-  	, margins.left // x coord
-  	, margins.top // y coord
-  	, {
-  		'width': margins.width // max width of content on PDF
-  		, 'elementHandlers': specialElementHandlers
-  	},
-  	function (dispose) {
-  	  // dispose: object with X, Y of the last line add to the PDF
-  	  //          this allow the insertion of new lines after html
-        pdf.save('html2pdf.pdf');
-      }
-  )		
-}
-    </script>
+     
 
 
 
