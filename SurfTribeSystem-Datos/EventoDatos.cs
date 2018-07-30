@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 
 namespace SurfTribeSystem_Datos
 {
-    public class FaqDatos
+    public class EventoDatos
     {
-        public Resultado Acciones(Faq faq)
+        public Resultado Acciones(Evento evento)
         {
             Resultado resultado = new Resultado();
             DataSet datos = new DataSet();
@@ -25,44 +25,62 @@ namespace SurfTribeSystem_Datos
                 #region parametros
 
                 param = new SqlParameter();
-                param.ParameterName = "@PREGUNTA";
-                if (faq.Pregunta == null)
+                param.ParameterName = "@TITULO";
+                if (evento.Titulo == null)
                 {
                     param.Value = DBNull.Value;
                 }
                 else
                 {
-                    param.Value = faq.Pregunta;
+                    param.Value = evento.Titulo;
                 }
                 parametros.Add(param);
 
                 param = new SqlParameter();
-                param.ParameterName = "@RESPUESTA";
-                if (faq.Respuesta == null)
+                param.ParameterName = "@DESCRIPCION";
+                if (evento.Descripcion == null)
                 {
                     param.Value = DBNull.Value;
                 }
                 else
                 {
-                    param.Value = faq.Respuesta;
+                    param.Value = evento.Descripcion;
+                }
+                parametros.Add(param);
+
+                param = new SqlParameter();
+                param.ParameterName = "@IMAGEN";
+                if (evento.Imagen == null)
+                {
+                    param.Value = DBNull.Value;
+                }
+                else
+                {
+                    param.Value = evento.Imagen;
                 }
                 parametros.Add(param);
 
                 param = new SqlParameter();
                 param.ParameterName = "@TAG";
-                if (faq.Tag == null)
+                if (evento.Tag == null)
                 {
                     param.Value = DBNull.Value;
                 }
                 else
                 {
-                    param.Value = faq.Tag;
+                    param.Value = evento.Tag;
                 }
                 parametros.Add(param);
+
+                param = new SqlParameter();
+                param.ParameterName = "@ID";
+                param.Value = evento.Id;
+                parametros.Add(param);
+
                 #endregion
 
                 datos = new Conexion()
-                    .EjecutarProcedimientoDS("SPR_FAQ", parametros);
+                    .EjecutarProcedimientoDS("SPR_EVENTO", parametros);
 
 
                 if (datos.Tables[0].Rows[0]["RESULTADO"].ToString() == "ERROR")
@@ -75,26 +93,22 @@ namespace SurfTribeSystem_Datos
                 else
                 {
                     resultado.TipoResultado = "OK";
-                    List<Faq> faqs = new List<Faq>();
+                    List<Evento> eventos = new List<Evento>();
 
-                    if (faq.Tag == "LISTADO" && datos.Tables[1] != null && datos.Tables[1].Rows.Count != 0)
+                    if (evento.Tag == "LISTADO")
                     {
                         foreach (DataRow row in datos.Tables[1].Rows)
                         {
-                            faqs.Add(new Faq
+                            eventos.Add(new Evento
                             {
-                                Pregunta = row["PREGUNTA"] is DBNull ? null : row["PREGUNTA"].ToString(),
-                                Respuesta = row["RESPUESTA"] is DBNull ? null : row["RESPUESTA"].ToString()
+                                Id = row["ID"] is DBNull ? 0 : Convert.ToInt32(row["ID"]),
+                                Titulo = row["TITULO"] is DBNull ? null : row["TITULO"].ToString(),
+                                Imagen = row["IMAGEN"] is DBNull ? null : row["IMAGEN"].ToString(),
+                                Descripcion = row["DESCRIPCION"] is DBNull ? null : row["DESCRIPCION"].ToString()
                             });
                         }
                     }
-                    else if (faq.Tag == "LISTADO")
-                    {
-                        resultado.TipoResultado = "ERROR";
-                        resultado.CodigoMensaje = "1";
-                        resultado.Mensaje = "En estos momentos no existe ninguna pregunta.";
-                    }
-                    resultado.ObjetoResultado = faqs;
+                    resultado.ObjetoResultado = eventos;
 
                 }
 

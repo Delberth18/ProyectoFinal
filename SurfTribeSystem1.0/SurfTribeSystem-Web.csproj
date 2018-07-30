@@ -3112,6 +3112,7 @@
     <Content Include="InformacionGeneral.aspx" />
     <Content Include="mantComentarios.aspx" />
     <Content Include="mantEscuelas.aspx" />
+    <Content Include="mantEventos.aspx" />
     <Content Include="mantReservas.aspx" />
     <Content Include="mantTablas.aspx" />
     <Content Include="mantUsuarios.aspx" />
@@ -3121,6 +3122,7 @@
     <Content Include="prueba2.aspx" />
     <Content Include="registrarse.aspx" />
     <Content Include="registroEscuela.aspx" />
+    <Content Include="registroEvento.aspx" />
     <Content Include="RegistroImagenes.aspx" />
     <Content Include="registroPrecios.aspx" />
     <Content Include="registroTabla.aspx" />
@@ -3266,6 +3268,13 @@
     <Compile Include="mantEscuelas.aspx.designer.cs">
       <DependentUpon>mantEscuelas.aspx</DependentUpon>
     </Compile>
+    <Compile Include="mantEventos.aspx.cs">
+      <DependentUpon>mantEventos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="mantEventos.aspx.designer.cs">
+      <DependentUpon>mantEventos.aspx</DependentUpon>
+    </Compile>
     <Compile Include="mantReservas.aspx.cs">
       <DependentUpon>mantReservas.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -3329,6 +3338,13 @@
     </Compile>
     <Compile Include="registroEscuela.aspx.designer.cs">
       <DependentUpon>registroEscuela.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="registroEvento.aspx.cs">
+      <DependentUpon>registroEvento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="registroEvento.aspx.designer.cs">
+      <DependentUpon>registroEvento.aspx</DependentUpon>
     </Compile>
     <Compile Include="RegistroImagenes.aspx.cs">
       <DependentUpon>RegistroImagenes.aspx</DependentUpon>
@@ -3608,6 +3624,9 @@
       <Project>{8D9E2EFA-25B5-40B2-8707-94CA02E59828}</Project>
       <Name>SurfTribeSystem-LogicaNegocio</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

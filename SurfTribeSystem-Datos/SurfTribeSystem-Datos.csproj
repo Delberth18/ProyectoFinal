@@ -45,6 +45,7 @@
     <Compile Include="ComentarioDatos.cs" />
     <Compile Include="Conexion.cs" />
     <Compile Include="EscuelaDatos.cs" />
+    <Compile Include="EventoDatos.cs" />
     <Compile Include="FaqDatos.cs" />
     <Compile Include="PantallaDatos.cs" />
     <Compile Include="PrecioDatos.cs" />
