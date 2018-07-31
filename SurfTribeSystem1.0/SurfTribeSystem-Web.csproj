@@ -3117,6 +3117,7 @@
     <Content Include="mantTablas.aspx" />
     <Content Include="mantUsuarios.aspx" />
     <Content Include="paginaEscuela.aspx" />
+    <Content Include="pdfReserva.aspx" />
     <Content Include="PreciosListado.aspx" />
     <Content Include="Prueba.aspx" />
     <Content Include="prueba2.aspx" />
@@ -3127,7 +3128,6 @@
     <Content Include="registroPrecios.aspx" />
     <Content Include="registroTabla.aspx" />
     <Content Include="registroUsuario.aspx" />
-    <Content Include="reporteTabla.aspx" />
     <Content Include="reservaClases.aspx" />
     <Content Include="reservaConfirmar.aspx" />
     <Content Include="reservaEscuelas.aspx" />
@@ -3304,6 +3304,13 @@
     <Compile Include="paginaEscuela.aspx.designer.cs">
       <DependentUpon>paginaEscuela.aspx</DependentUpon>
     </Compile>
+    <Compile Include="pdfReserva.aspx.cs">
+      <DependentUpon>pdfReserva.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pdfReserva.aspx.designer.cs">
+      <DependentUpon>pdfReserva.aspx</DependentUpon>
+    </Compile>
     <Compile Include="PreciosListado.aspx.cs">
       <DependentUpon>PreciosListado.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -3374,13 +3381,6 @@
     </Compile>
     <Compile Include="registroUsuario.aspx.designer.cs">
       <DependentUpon>registroUsuario.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="reporteTabla.aspx.cs">
-      <DependentUpon>reporteTabla.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="reporteTabla.aspx.designer.cs">
-      <DependentUpon>reporteTabla.aspx</DependentUpon>
     </Compile>
     <Compile Include="reservaClases.aspx.cs">
       <DependentUpon>reservaClases.aspx</DependentUpon>

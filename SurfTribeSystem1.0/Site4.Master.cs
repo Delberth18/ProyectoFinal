@@ -16,6 +16,7 @@ namespace SurfTribeSystem1._0
             ListarGuana();
             ListarLimon();
             ListarPuerto();
+            lblNombre.Text = Session["InicioNombre"].ToString();
         }
 
         private void ListarGuana()

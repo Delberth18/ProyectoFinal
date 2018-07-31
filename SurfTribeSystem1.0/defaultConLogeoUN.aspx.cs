@@ -1,8 +1,10 @@
-﻿using SurfTribeSystem_Entidades;
+﻿
+using SurfTribeSystem_Entidades;
 using SurfTribeSystem_LogicaDeNegocios;
 using SurfTribeSystem_LogicaNegocio;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -25,6 +27,8 @@ namespace SurfTribeSystem1._0
                 ListarPuerto();
                 lblNombre.Text = Session["InicioNombre"].ToString();
 
+              
+
             }
             else
             {
@@ -33,6 +37,8 @@ namespace SurfTribeSystem1._0
 
             }
         }
+
+        
 
         protected void ingresoButton_Click(object sender, EventArgs e)
         {
@@ -187,5 +193,8 @@ namespace SurfTribeSystem1._0
             Response.Redirect("defaultSinLogeoUN.aspx");
 
         }
+
+
+        
     }
 }

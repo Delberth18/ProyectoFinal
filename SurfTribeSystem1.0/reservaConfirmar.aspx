@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site2.Master" AutoEventWireup="true" CodeBehind="reservaConfirmar.aspx.cs" Inherits="SurfTribeSystem1._0.reservaConfirmar" MaintainScrollPositionOnPostback = "true" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site4.Master" AutoEventWireup="true" CodeBehind="reservaConfirmar.aspx.cs" Inherits="SurfTribeSystem1._0.reservaConfirmar" MaintainScrollPositionOnPostback = "true" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
    
 </asp:Content>

@@ -7,8 +7,7 @@
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
-    <script src="ccss/star-1-3/SCSS/js/jquery-2.1.4.min.js"></script>
-    <script src="ccss/star-1-3/SCSS/js/jspdf.debug.js"></script>
+    
 </head>
 
     
@@ -112,7 +111,8 @@
 
 
                     </table>
-        
+        <asp:Button ID="btnOmitir" runat="server" OnClick="btnOmitir_Click" Style="margin-right: -480px; text-decoration: none; padding: 10px 24px; font-family: arial; font-weight: 300; font-size: 25px; font-style: italic; color: white; background-color: #ff891e; border-radius: 1px; border: 3px double white; box-shadow: -11px 9px 45px 2px rgba(0,0,0,0.75);"
+                                                                    Text="Confirmar" /><br />
 
     <input type="button" onclick="DescargarPDF('Reporte','ReporteASP')" value="Decargar Reporte"/>
 
@@ -120,15 +120,7 @@
 
 
     </form>
-     <script>
-        function DescargarPDF(ContenidoID, nombre) {
-            var pdf = new jsPDF('p', 'pt', 'letter');
-            html = $('#' + ContenidoID).html();
-            specialElementHandlers = {};
-            margins = { top: 10, bottom: 20, left: 20, width: 522 };
-            pdf.fromHTML(html, margins.left, margins.top, { 'width': margins.width }, function (dispose) { pdf.save(nombre + '.pdf'); }, margins);
-        }
-    </script>
+    
        
 </body>
         
