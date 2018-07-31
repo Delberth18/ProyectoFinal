@@ -1,7 +1,10 @@
-﻿using SurfTribeSystem_Entidades;
+﻿using iTextSharp.text;
+using iTextSharp.text.pdf;
+using SurfTribeSystem_Entidades;
 using SurfTribeSystem_LogicaNegocio;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -100,8 +103,21 @@ namespace SurfTribeSystem1._0
 
                     if (resultado.TipoResultado == "OK")
                     {
-                        string script = "swal('Excelente', 'Reservado con éxito', 'success'); ";
-                        ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
+                        
+                        Session["lblAlumno"] = lblAlumno.Text;
+                        Session["lblEscuela"] = lblEscuela.Text;
+                        Session["lblNivel"] = lblNivel.Text;
+                        Session["lblFecha"] = lblFecha.Text;
+                        Session["lblHora"] = lblHora.Text;
+                        Session["lblInstructor"] = lblInstructor.Text;
+                        Session["lblAlquilerDeta"] = lblAlquilerDeta.Text;
+                        Session["lblUbicación"] = lblUbicación.Text;
+                        Session["lblPrecioLec"] = lblPrecioLec.Text;
+                        Session["lblPrecioAlquiler"] = lblPrecioAlquiler.Text;
+                        Session["lblImpuestos"] = lblImpuestos.Text;
+                        Session["lblTotal"] = lblTotal.Text;
+                        Session["facPdf"] = 1;
+                        Response.Redirect("reservaClases.aspx");
                     }
                     else
                     {
@@ -111,6 +127,7 @@ namespace SurfTribeSystem1._0
                 }
                 catch (Exception ex)
                 {
+
 
                     string script = "swal('Error', 'La reserva no se pudo realizar', 'error'); ";
                     ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
@@ -174,7 +191,7 @@ namespace SurfTribeSystem1._0
 
                 if (resultado.TipoResultado == "OK")
                 {
-
+                   
                 }
                 else
                 {
@@ -189,5 +206,7 @@ namespace SurfTribeSystem1._0
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
             }
         }
+
+       
     }
 }
