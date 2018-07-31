@@ -95,7 +95,6 @@
                                 </li>
                                 <li>
                                     <label style="color: saddlebrown; font-size: x-large">Imagen:</label>
-                                    
                                     <asp:FileUpload ID="FileUpload" runat="server" class="form-control  bg-ashh" ClientIDMode="Static" />
                                 </li>
                                 <li>
@@ -123,7 +122,6 @@
 
 
                                             <h4><%# Eval("Marca") %></h4>
-                                            <h5>Escuela: <%# Eval("NombreEscuela") %></h5>
 
                                         </div>
                                     </div>
