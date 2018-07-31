@@ -1,8 +1,10 @@
-﻿using SurfTribeSystem_Entidades;
+﻿
+using SurfTribeSystem_Entidades;
 using SurfTribeSystem_LogicaDeNegocios;
 using SurfTribeSystem_LogicaNegocio;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -27,9 +29,11 @@ namespace SurfTribeSystem1._0
             }
             
             Session["InicioNombre"] = null;
-        }
 
-       
+         
+        }
+        
+
 
         protected void ingresoButton_Click(object sender, EventArgs e)
         {
@@ -215,8 +219,9 @@ namespace SurfTribeSystem1._0
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
             }
         }
+        
 
-       
+
 
     }
 }

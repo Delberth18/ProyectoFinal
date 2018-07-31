@@ -1,5 +1,4 @@
-﻿using iTextSharp.text;
-using iTextSharp.text.pdf;
+﻿
 using SurfTribeSystem_Entidades;
 using SurfTribeSystem_LogicaNegocio;
 using System;
@@ -117,7 +116,14 @@ namespace SurfTribeSystem1._0
                         Session["lblImpuestos"] = lblImpuestos.Text;
                         Session["lblTotal"] = lblTotal.Text;
                         Session["facPdf"] = 1;
-                        Response.Redirect("reservaClases.aspx");
+                        string urlDownload = "pdfReserva.aspx";
+                        string urlRedireccion = "defaultConLogeoUN.aspx";
+
+                        string script = @"window.open('{0}','');
+					window.location.href='{1}';";
+                        script = string.Format(script, urlDownload, urlRedireccion);
+
+                        ScriptManager.RegisterStartupScript(Page, Page.GetType(), "popup", script, true);
                     }
                     else
                     {
@@ -127,10 +133,12 @@ namespace SurfTribeSystem1._0
                 }
                 catch (Exception ex)
                 {
+                  
 
 
-                    string script = "swal('Error', 'La reserva no se pudo realizar', 'error'); ";
-                    ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
+                        string script = "swal('Error', 'La reserva no se pudo realizar', 'error'); ";
+                        ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
+                    
                 }
 
             }
