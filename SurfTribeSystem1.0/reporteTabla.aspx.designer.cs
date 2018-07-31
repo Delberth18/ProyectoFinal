@@ -67,15 +67,6 @@ namespace SurfTribeSystem1._0 {
         protected global::System.Web.UI.WebControls.Button btnRefrescar;
         
         /// <summary>
-        /// btnGenerar control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnGenerar;
-        
-        /// <summary>
         /// imagenesList control.
         /// </summary>
         /// <remarks>
@@ -83,5 +74,14 @@ namespace SurfTribeSystem1._0 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Repeater imagenesList;
+        
+        /// <summary>
+        /// btnGenerar control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnGenerar;
     }
 }

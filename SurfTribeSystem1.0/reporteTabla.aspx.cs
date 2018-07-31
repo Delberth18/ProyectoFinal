@@ -16,11 +16,24 @@ namespace SurfTribeSystem1._0
     public partial class reporteTabla : System.Web.UI.Page
     {
         Tabla tabla = new Tabla();
-        List<Tabla> listaTablas = new List<Tabla>();
+        public static List<Tabla> listaTablas = new List<Tabla>();
         Usuario usu = new Usuario();
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["InicioSesion"] != null)
+            {
+                usu = (Usuario)Session["InicioSesion"];
+
+                if (usu.Tipo_usu != "ADM")
+                {
+                    Response.Redirect("defaultSinLogeoUN.aspx");
+                }
+            }
+            else
+            {
+                Response.Redirect("defaultSinLogeoUN.aspx");
+            }
             if (!IsPostBack)
             {
                 ListarTablas();
@@ -36,9 +49,11 @@ namespace SurfTribeSystem1._0
             Resultado resultado = new Resultado();
             try
             {
-                resultado = new TablaLogica().Reporte("HERMOSA RIDERS","","","","");
+                resultado = new TablaLogica().Reporte("HERMOSA RIDERS", "", "", "", "");
                 if (resultado.TipoResultado == "OK")
                 {
+                    listaTablas = null;
+
                     listaTablas = new List<Tabla>();
                     listaTablas = (List<Tabla>)resultado.ObjetoResultado;
                     imagenesList.DataSource = listaTablas;
@@ -118,12 +133,13 @@ namespace SurfTribeSystem1._0
             Resultado resultado = new Resultado();
             try
             {
+
                 string marca = marcaLst.SelectedValue;
                 string tipo = tipoLst.SelectedValue;
                 string estado = estadoLst.SelectedValue;
                 string dificultad = dificultadLst.SelectedValue;
 
-                if (marca=="Seleccione una marca")
+                if (marca == "Seleccione una marca")
                 {
                     marca = "";
                 }
@@ -140,9 +156,11 @@ namespace SurfTribeSystem1._0
                     dificultad = "";
                 }
 
-                resultado = new TablaLogica().Reporte("HERMOSA RIDERS", marca, tipo, estado,dificultad);
+                resultado = new TablaLogica().Reporte(usu.IdEscuela, marca, tipo, estado, dificultad);
                 if (resultado.TipoResultado == "OK")
                 {
+                    listaTablas = null;
+
                     imagenesList.DataSource = null;
                     imagenesList.DataBind();
 
@@ -177,7 +195,7 @@ namespace SurfTribeSystem1._0
 
             // Le colocamos el título y el autor
             // **Nota: Esto no será visible en el documento
-            doc.AddTitle("Detalles de Reserva");
+            doc.AddTitle("Detalles de tablas");
             doc.AddCreator("STS");
 
             // Abrimos el archivo
@@ -189,7 +207,7 @@ namespace SurfTribeSystem1._0
             Font fuenteT = new Font();
             fuenteT.Size = 18;
             fuenteT.SetStyle(Font.BOLD | Font.UNDERLINE);
-            doc.Add(new Paragraph("Detalles de Reserva", fuenteT));
+            doc.Add(new Paragraph("Detalles de tablas de surf              Escuela: " + usu.IdEscuela, fuenteT));
             doc.Add(Chunk.NEWLINE);
             doc.Add(Chunk.NEWLINE);
 
@@ -204,341 +222,125 @@ namespace SurfTribeSystem1._0
 
             // Creamos una tabla que contendrá el nombre, apellido y país
             // de nuestros visitante.
-            PdfPTable tblPrueba = new PdfPTable(2);
+            PdfPTable tblPrueba = new PdfPTable(6);
             tblPrueba.WidthPercentage = 100;
 
+            PdfPCell clNombre;
+            PdfPCell clApellido;
 
-            for (int i = 0; i < 5; i++)
+            foreach (Tabla tab in listaTablas)
             {
-              
+                iTextSharp.text.Image gif = null;
+                string base64string = tab.Imagen;
+                Byte[] bytes = Convert.FromBase64String(base64string);
+                gif = iTextSharp.text.Image.GetInstance(bytes);
+                gif.Alignment = iTextSharp.text.Image.ALIGN_LEFT;
+                gif.Border = iTextSharp.text.Rectangle.NO_BORDER;
+                gif.BorderColor = iTextSharp.text.BaseColor.WHITE;
+                gif.ScaleToFit(170f, 100f);
+
+                clNombre = new PdfPCell(gif);
+                clNombre.BorderWidth = 0;
+                clNombre.HorizontalAlignment = PdfPCell.ALIGN_LEFT;
+                clNombre.Colspan = 6;
+                tblPrueba.AddCell(clNombre);
 
                 // Configuramos el título de las columnas de la tabla
                 Font fuente = new Font();
-                fuente.Size = 15;
+                fuente.Size = 14;
                 fuente.SetStyle(Font.BOLD);
 
-                PdfPCell clNombre = new PdfPCell(new Phrase("Alumno(a):  ", fuente));
+                clNombre = new PdfPCell(new Phrase("Marca:  ", fuente));
                 clNombre.BorderWidth = 0;
-                clNombre.HorizontalAlignment = PdfPCell.ALIGN_CENTER;
+                clNombre.HorizontalAlignment = PdfPCell.ALIGN_LEFT;
+                tblPrueba.AddCell(clNombre);
 
+                clNombre = new PdfPCell(new Phrase("Tamaño: ", fuente));
+                clNombre.BorderWidth = 0;
+                clNombre.HorizontalAlignment = PdfPCell.ALIGN_LEFT;
+                tblPrueba.AddCell(clNombre);
 
+                clNombre = new PdfPCell(new Phrase("Tipo: ", fuente));
+                clNombre.BorderWidth = 0;
+                clNombre.HorizontalAlignment = PdfPCell.ALIGN_LEFT;
+                tblPrueba.AddCell(clNombre);
 
-                //clNombre.BorderWidthBottom = 0.75f;
+                clNombre = new PdfPCell(new Phrase("Dificultad: ", fuente));
+                clNombre.BorderWidth = 0;
+                clNombre.HorizontalAlignment = PdfPCell.ALIGN_LEFT;
+                tblPrueba.AddCell(clNombre);
+
+                clNombre = new PdfPCell(new Phrase("Estado: ", fuente));
+                clNombre.BorderWidth = 0;
+                clNombre.HorizontalAlignment = PdfPCell.ALIGN_LEFT;
+                tblPrueba.AddCell(clNombre);
+
+                clNombre = new PdfPCell(new Phrase("Precio: ", fuente));
+                clNombre.BorderWidth = 0;
+                clNombre.HorizontalAlignment = PdfPCell.ALIGN_LEFT;
+                tblPrueba.AddCell(clNombre);
+
+                //Contenido
                 Font fuente2 = new Font();
-                fuente2.Size = 15;
+                fuente2.Size = 12;
 
-                PdfPCell clApellido = new PdfPCell(new Phrase("fsd", fuente2));
+                clApellido = new PdfPCell(new Phrase(tab.Marca, fuente2));
                 clApellido.BorderWidth = 0;
-                clApellido.PaddingLeft = 30;
+                clNombre.HorizontalAlignment = PdfPCell.ALIGN_LEFT;
+                tblPrueba.AddCell(clApellido);
+                             
 
-                //clApellido.BorderWidthBottom = 0.75f;
-
-
-                // Añadimos las celdas a la tabla
-                tblPrueba.AddCell(clNombre);
+                clApellido = new PdfPCell(new Phrase(tab.Tamanio, fuente2));
+                clApellido.BorderWidth = 0;
+                clNombre.HorizontalAlignment = PdfPCell.ALIGN_LEFT;
                 tblPrueba.AddCell(clApellido);
 
 
-                // Llenamos la tabla con información
-                clNombre = new PdfPCell(new Phrase("Escuela: ", fuente));
-                clNombre.BorderWidth = 0;
-                clNombre.HorizontalAlignment = PdfPCell.ALIGN_CENTER;
-                // clNombre.HorizontalAlignment = PdfPCell.ALIGN_RIGHT;
-                //
-                clApellido = new PdfPCell(new Phrase("fsd", fuente2));
+                clApellido = new PdfPCell(new Phrase(tab.Tipo, fuente2));
                 clApellido.BorderWidth = 0;
-                clApellido.PaddingLeft = 30;
-
-
-                // Añadimos las celdas a la tabla
-                tblPrueba.AddCell(clNombre);
+                clNombre.HorizontalAlignment = PdfPCell.ALIGN_LEFT;
                 tblPrueba.AddCell(clApellido);
 
-                // Llenamos la tabla con información
-                clNombre = new PdfPCell(new Phrase("Nivel: ", fuente));
-                clNombre.BorderWidth = 0;
-                clNombre.HorizontalAlignment = PdfPCell.ALIGN_CENTER;
-                //clNombre.HorizontalAlignment = PdfPCell.ALIGN_RIGHT;
-                tblPrueba.AddCell(clNombre);
-                //Dato
-                clApellido = new PdfPCell(new Phrase("fsd", fuente2));
+
+                clApellido = new PdfPCell(new Phrase(tab.Dificultad, fuente2));
                 clApellido.BorderWidth = 0;
-                clApellido.PaddingLeft = 30;
-                tblPrueba.AddCell(clApellido);
-                // Llenamos la tabla con información
-                clNombre = new PdfPCell(new Phrase("Fecha: ", fuente));
-                clNombre.BorderWidth = 0;
-                clNombre.HorizontalAlignment = PdfPCell.ALIGN_CENTER;
-                // clNombre.HorizontalAlignment = PdfPCell.ALIGN_RIGHT;
-                tblPrueba.AddCell(clNombre);
-                //Dato
-                clApellido = new PdfPCell(new Phrase("fsd", fuente2));
-                clApellido.BorderWidth = 0;
-                clApellido.PaddingLeft = 30;
-                tblPrueba.AddCell(clApellido);
-                // Llenamos la tabla con información
-                clNombre = new PdfPCell(new Phrase("Hora: ", fuente));
-                clNombre.BorderWidth = 0;
-                clNombre.HorizontalAlignment = PdfPCell.ALIGN_CENTER;
-                // clNombre.HorizontalAlignment = PdfPCell.ALIGN_RIGHT;
-                tblPrueba.AddCell(clNombre);
-                //Dato
-                clApellido = new PdfPCell(new Phrase("fsd", fuente2));
-                clApellido.BorderWidth = 0;
-                clApellido.PaddingLeft = 30;
-                tblPrueba.AddCell(clApellido);
-                // Llenamos la tabla con información
-                clNombre = new PdfPCell(new Phrase("Instructor: ", fuente));
-                clNombre.BorderWidth = 0;
-                clNombre.HorizontalAlignment = PdfPCell.ALIGN_CENTER;
-                // clNombre.HorizontalAlignment = PdfPCell.ALIGN_RIGHT;
-                tblPrueba.AddCell(clNombre);
-                //Dato
-                clApellido = new PdfPCell(new Phrase("fsd", fuente2));
-                clApellido.BorderWidth = 0;
-                clApellido.PaddingLeft = 30;
-                tblPrueba.AddCell(clApellido);
-                // Llenamos la tabla con información
-                clNombre = new PdfPCell(new Phrase("Indumentaria: ", fuente));
-                clNombre.BorderWidth = 0;
-                clNombre.HorizontalAlignment = PdfPCell.ALIGN_CENTER;
-                // clNombre.HorizontalAlignment = PdfPCell.ALIGN_RIGHT;
-                tblPrueba.AddCell(clNombre);
-                //Dato
-                clApellido = new PdfPCell(new Phrase("fsd", fuente2));
-                clApellido.BorderWidth = 0;
-                clApellido.PaddingLeft = 30;
+                clNombre.HorizontalAlignment = PdfPCell.ALIGN_LEFT;
                 tblPrueba.AddCell(clApellido);
 
-                // Llenamos la tabla con información
-                clNombre = new PdfPCell(new Phrase("Ubicación: ", fuente));
-                clNombre.BorderWidth = 0;
-                clNombre.HorizontalAlignment = PdfPCell.ALIGN_CENTER;
-                // clNombre.HorizontalAlignment = PdfPCell.ALIGN_RIGHT;
-                tblPrueba.AddCell(clNombre);
-                //Dato
-                clApellido = new PdfPCell(new Phrase("fsd", fuente2));
+
+                clApellido = new PdfPCell(new Phrase(tab.Estado, fuente2));
                 clApellido.BorderWidth = 0;
-                clApellido.PaddingLeft = 30;
+                clNombre.HorizontalAlignment = PdfPCell.ALIGN_LEFT;
                 tblPrueba.AddCell(clApellido);
 
-                PdfPCell linea = new PdfPCell(new Phrase(" fsd", fuente));
+
+                clApellido = new PdfPCell(new Phrase(tab.Costo.ToString() + " colones", fuente2));
+                clApellido.BorderWidth = 0;
+                clNombre.HorizontalAlignment = PdfPCell.ALIGN_LEFT;
+                tblPrueba.AddCell(clApellido);
+
+
+                //linea
+                PdfPCell linea = new PdfPCell(new Phrase(" ", fuente));
                 linea.BorderWidth = 0;
-                linea.PaddingLeft = 30;
-                PdfPCell linea2 = new PdfPCell(new Phrase("fsd ", fuente));
-                linea2.BorderWidth = 0;
-                linea2.PaddingLeft = 30;
+                clNombre.HorizontalAlignment = PdfPCell.ALIGN_LEFT;
+                linea.Colspan = 6;
                 tblPrueba.AddCell(linea);
-                tblPrueba.AddCell(linea2);
-                ////linea
-                //PdfContentByte cb = writer.DirectContent;
-                //cb.MoveTo(10, doc.Top - 280f);
-                //cb.LineTo(600, doc.Top - 280f);
-                //cb.Stroke();
+               
 
-                // Finalmente, añadimos la tabla al documento PDF y cerramos el documento
-                doc.Add(tblPrueba);
 
             }
-
-            //
-            Font fuente4 = new Font();
-            fuente4.Size = 10;
-            //tabla precio
-            PdfPTable tblPrecio = new PdfPTable(2);
-            tblPrueba.WidthPercentage = 50;
-            //
-            PdfPCell cldetalle = new PdfPCell(new Phrase("Lecciones:  ", fuente4));
-            cldetalle.BorderWidth = 0;
-            cldetalle.HorizontalAlignment = PdfPCell.ALIGN_RIGHT;
-
-            //
-            doc.Close();
-            writer.Close();
-
-            Response.ContentType = "application/pdf";
-            Response.ContentEncoding = System.Text.Encoding.UTF8;
-            Response.AppendHeader("content-disposition", "attachment;filename=TestPage.pdf");
-            // Response.TransmitFile("C:/Users/edu08/Downloads/prueba.pdf");
-            Response.TransmitFile("C:/Users/Public/Downloads/prueba.pdf");
-            Response.End();
-
-        }
-
-        protected void btnOmitir_Click(object sender, EventArgs e)
-        {
-
-            // Creamos el documento con el tamaño de página tradicional
-            Document doc = new Document(PageSize.LETTER);
-            // Indicamos donde vamos a guardar el documento
-            string mdoc = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-
-            // PdfWriter writer = PdfWriter.GetInstance(doc,
-            // new FileStream(@"C:\Users\edu08\Downloads\prueba.pdf", FileMode.Create));
-
-            PdfWriter writer = PdfWriter.GetInstance(doc,
-            new FileStream(@"C:\Users\Public\Downloads\prueba.pdf", FileMode.Create));
-
-            // Le colocamos el título y el autor
-            // **Nota: Esto no será visible en el documento
-            doc.AddTitle("Detalles de Reserva");
-            doc.AddCreator("STS");
-
-            // Abrimos el archivo
-            doc.Open();
-            // Creamos el tipo de Font que vamos utilizar
-            iTextSharp.text.Font _standardFont = new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.HELVETICA, 8, iTextSharp.text.Font.NORMAL, BaseColor.BLACK);
-
-            // Escribimos el encabezamiento en el documento
-            Font fuenteT = new Font();
-            fuenteT.Size = 18;
-            fuenteT.SetStyle(Font.BOLD | Font.UNDERLINE);
-            doc.Add(new Paragraph("Detalles de Reserva", fuenteT));
-            doc.Add(Chunk.NEWLINE);
-            doc.Add(Chunk.NEWLINE);
-
-            //imagen
-            string imageURL = Server.MapPath(".") + "/ccss/star-1-3/Static HTML/img/logo-dark.png";
-            iTextSharp.text.Image img = iTextSharp.text.Image.GetInstance(imageURL);
-
-            img.ScaleToFit(125f, 60F);
-            //Imagen - Movio en el eje de las Y
-            img.SetAbsolutePosition(500, 750);
-            doc.Add(img);
-
-            // Creamos una tabla que contendrá el nombre, apellido y país
-            // de nuestros visitante.
-            PdfPTable tblPrueba = new PdfPTable(2);
-            tblPrueba.WidthPercentage = 100;
-
-
-            // Configuramos el título de las columnas de la tabla
-            Font fuente = new Font();
-            fuente.Size = 15;
-            fuente.SetStyle(Font.BOLD);
-
-            PdfPCell clNombre = new PdfPCell(new Phrase("Alumno(a):  ", fuente));
-            clNombre.BorderWidth = 0;
-            clNombre.HorizontalAlignment = PdfPCell.ALIGN_CENTER;
-
-
-
-            //clNombre.BorderWidthBottom = 0.75f;
-            Font fuente2 = new Font();
-            fuente2.Size = 15;
-
-            PdfPCell clApellido = new PdfPCell(new Phrase("", fuente2));
-            clApellido.BorderWidth = 0;
-            clApellido.PaddingLeft = 30;
-
-            //clApellido.BorderWidthBottom = 0.75f;
-
-
-            // Añadimos las celdas a la tabla
-            tblPrueba.AddCell(clNombre);
-            tblPrueba.AddCell(clApellido);
-
-
-            // Llenamos la tabla con información
-            clNombre = new PdfPCell(new Phrase("Escuela: ", fuente));
-            clNombre.BorderWidth = 0;
-            clNombre.HorizontalAlignment = PdfPCell.ALIGN_CENTER;
-            // clNombre.HorizontalAlignment = PdfPCell.ALIGN_RIGHT;
-            //
-            clApellido = new PdfPCell(new Phrase("", fuente2));
-            clApellido.BorderWidth = 0;
-            clApellido.PaddingLeft = 30;
-
-
-            // Añadimos las celdas a la tabla
-            tblPrueba.AddCell(clNombre);
-            tblPrueba.AddCell(clApellido);
-
-            // Llenamos la tabla con información
-            clNombre = new PdfPCell(new Phrase("Nivel: ", fuente));
-            clNombre.BorderWidth = 0;
-            clNombre.HorizontalAlignment = PdfPCell.ALIGN_CENTER;
-            //clNombre.HorizontalAlignment = PdfPCell.ALIGN_RIGHT;
-            tblPrueba.AddCell(clNombre);
-            //Dato
-            clApellido = new PdfPCell(new Phrase("", fuente2));
-            clApellido.BorderWidth = 0;
-            clApellido.PaddingLeft = 30;
-            tblPrueba.AddCell(clApellido);
-            // Llenamos la tabla con información
-            clNombre = new PdfPCell(new Phrase("Fecha: ", fuente));
-            clNombre.BorderWidth = 0;
-            clNombre.HorizontalAlignment = PdfPCell.ALIGN_CENTER;
-            // clNombre.HorizontalAlignment = PdfPCell.ALIGN_RIGHT;
-            tblPrueba.AddCell(clNombre);
-            //Dato
-            clApellido = new PdfPCell(new Phrase("", fuente2));
-            clApellido.BorderWidth = 0;
-            clApellido.PaddingLeft = 30;
-            tblPrueba.AddCell(clApellido);
-            // Llenamos la tabla con información
-            clNombre = new PdfPCell(new Phrase("Hora: ", fuente));
-            clNombre.BorderWidth = 0;
-            clNombre.HorizontalAlignment = PdfPCell.ALIGN_CENTER;
-            // clNombre.HorizontalAlignment = PdfPCell.ALIGN_RIGHT;
-            tblPrueba.AddCell(clNombre);
-            //Dato
-            clApellido = new PdfPCell(new Phrase("", fuente2));
-            clApellido.BorderWidth = 0;
-            clApellido.PaddingLeft = 30;
-            tblPrueba.AddCell(clApellido);
-            // Llenamos la tabla con información
-            clNombre = new PdfPCell(new Phrase("Instructor: ", fuente));
-            clNombre.BorderWidth = 0;
-            clNombre.HorizontalAlignment = PdfPCell.ALIGN_CENTER;
-            // clNombre.HorizontalAlignment = PdfPCell.ALIGN_RIGHT;
-            tblPrueba.AddCell(clNombre);
-            //Dato
-            clApellido = new PdfPCell(new Phrase("", fuente2));
-            clApellido.BorderWidth = 0;
-            clApellido.PaddingLeft = 30;
-            tblPrueba.AddCell(clApellido);
-            // Llenamos la tabla con información
-            clNombre = new PdfPCell(new Phrase("Indumentaria: ", fuente));
-            clNombre.BorderWidth = 0;
-            clNombre.HorizontalAlignment = PdfPCell.ALIGN_CENTER;
-            // clNombre.HorizontalAlignment = PdfPCell.ALIGN_RIGHT;
-            tblPrueba.AddCell(clNombre);
-            //Dato
-            clApellido = new PdfPCell(new Phrase("", fuente2));
-            clApellido.BorderWidth = 0;
-            clApellido.PaddingLeft = 30;
-            tblPrueba.AddCell(clApellido);
-            // Llenamos la tabla con información
-            clNombre = new PdfPCell(new Phrase("Ubicación: ", fuente));
-            clNombre.BorderWidth = 0;
-            clNombre.HorizontalAlignment = PdfPCell.ALIGN_CENTER;
-            // clNombre.HorizontalAlignment = PdfPCell.ALIGN_RIGHT;
-            tblPrueba.AddCell(clNombre);
-            //Dato
-            clApellido = new PdfPCell(new Phrase("", fuente2));
-            clApellido.BorderWidth = 0;
-            clApellido.PaddingLeft = 30;
-            tblPrueba.AddCell(clApellido);
-            // Finalmente, añadimos la tabla al documento PDF y cerramos el documento
             doc.Add(tblPrueba);
-            //linea
-            PdfContentByte cb = writer.DirectContent;
-
-            cb.MoveTo(10, doc.Top - 280f);
-            cb.LineTo(600, doc.Top - 280f);
-            cb.Stroke();
             //
-            Font fuente4 = new Font();
-            fuente4.Size = 10;
+            //Font fuente4 = new Font();
+            //fuente4.Size = 10;
             //tabla precio
-            PdfPTable tblPrecio = new PdfPTable(2);
-            tblPrueba.WidthPercentage = 50;
-            //
-            PdfPCell cldetalle = new PdfPCell(new Phrase("Lecciones:  ", fuente4));
-            cldetalle.BorderWidth = 0;
-            cldetalle.HorizontalAlignment = PdfPCell.ALIGN_RIGHT;
-
+            //PdfPTable tblPrecio = new PdfPTable(2);
+            //tblPrueba.WidthPercentage = 50;
+            ////
+            //PdfPCell cldetalle = new PdfPCell(new Phrase("Lecciones:  ", fuente4));
+            //cldetalle.BorderWidth = 0;
+            //cldetalle.HorizontalAlignment = PdfPCell.ALIGN_RIGHT;
 
             //
             doc.Close();
@@ -551,9 +353,8 @@ namespace SurfTribeSystem1._0
             Response.TransmitFile("C:/Users/Public/Downloads/prueba.pdf");
             Response.End();
 
-
-
-
         }
+
+
     }
 }

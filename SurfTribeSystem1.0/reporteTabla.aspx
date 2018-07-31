@@ -3,6 +3,17 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+     <script src="ccss/star-1-3/SCSS/js/jquery-2.1.4.min.js"></script>
+    <script src="ccss/star-1-3/SCSS/js/jspdf.debug.js"></script>
+    <style type="text/css">
+        .form_input {
+            font-family: Verdana;
+            font-size: 12;
+            background-color: white;
+            border-width: 0;
+            text-align: right;
+        }
+    </style>
     <section class="mainContentSection packagesSection" style="background-image: url(Imagenes/IMG-20150830-WA0006.jpg); background-repeat: no-repeat; background-size: cover">
         <br />
         <div class="row">
@@ -96,8 +107,7 @@
                                 <li>
                                     <br />
 
-                                    <asp:Button ID="btnGenerar" class="btn btn-default btn-circle-2 " BackColor="SaddleBrown" ForeColor="White"
-                                        runat="server" Text="Generar Reporte" Width="200px" OnClick="btnOmitir_Click" />
+                                    
 
                                 </li>
                             </ul>
@@ -147,12 +157,12 @@
                     <asp:AsyncPostBackTrigger ControlID="dificultadLst" EventName="" />
                     <asp:AsyncPostBackTrigger ControlID="estadoLst" EventName="" />
                     <asp:AsyncPostBackTrigger ControlID="marcaLst" EventName="" />
-                    <asp:AsyncPostBackTrigger ControlID="btnGenerar" EventName="Click" />
                     <asp:AsyncPostBackTrigger ControlID="btnRefrescar" EventName="Click" />
                 </Triggers>
             </asp:UpdatePanel>
 
-
+            <asp:Button ID="btnGenerar" class="btn btn-default btn-circle-2 " BackColor="SaddleBrown" ForeColor="White"
+                                        runat="server" Text="Generar Reporte" Width="200px" OnClick="GenerarReporte" />
         </div>
     </section>
 </asp:Content>
