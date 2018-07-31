@@ -203,7 +203,7 @@ namespace SurfTribeSystem_Datos
 
                         }
                     }
-                    else if (tabla.Tag == "INSER_ACTUA" || tabla.Tag=="CAMBIA_ESTADO")
+                    else if (tabla.Tag == "INSER_ACTUA" || tabla.Tag == "CAMBIA_ESTADO")
                     {
                         resultado.TipoResultado = "OK";
                     }
@@ -245,7 +245,7 @@ namespace SurfTribeSystem_Datos
                     lista.Add(new Estado { Descripcion = row["DESCRIPCION"].ToString() });
 
                 }
-                
+
 
                 resultado.ObjetoResultado = lista;
 
@@ -257,5 +257,215 @@ namespace SurfTribeSystem_Datos
             }
         }
 
+        public Resultado Marcas()
+        {
+            Resultado resultado = new Resultado();
+            DataSet datos = new DataSet();
+
+            try
+            {
+                datos = new Conexion()
+                    .EjecutarConsultaSimple("select distinct marca from TABLASURF");
+
+                List<string> lista = new List<string>();
+
+                foreach (DataRow row in datos.Tables[0].Rows)
+                {
+
+                    lista.Add(row["MARCA"].ToString());
+
+                }
+
+
+                resultado.ObjetoResultado = lista;
+
+                return resultado;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public Resultado Tipos()
+        {
+            Resultado resultado = new Resultado();
+            DataSet datos = new DataSet();
+
+            try
+            {
+                datos = new Conexion()
+                    .EjecutarConsultaSimple("select distinct tipo from TABLASURF");
+
+                List<string> lista = new List<string>();
+
+                foreach (DataRow row in datos.Tables[0].Rows)
+                {
+
+                    lista.Add(row["TIPO"].ToString());
+
+                }
+
+
+                resultado.ObjetoResultado = lista;
+
+                return resultado;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public Resultado Dificultad()
+        {
+            Resultado resultado = new Resultado();
+            DataSet datos = new DataSet();
+
+            try
+            {
+                datos = new Conexion()
+                    .EjecutarConsultaSimple("select distinct dificultad from TABLASURF");
+
+                List<string> lista = new List<string>();
+
+                foreach (DataRow row in datos.Tables[0].Rows)
+                {
+
+                    lista.Add(row["DIFICULTAD"].ToString());
+
+                }
+
+
+                resultado.ObjetoResultado = lista;
+
+                return resultado;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+
+        public Resultado Reporte(string idEscuela, string marca, string tipo, string estado, string dificultad)
+        {
+            Resultado resultado = new Resultado();
+            DataSet datos = new DataSet();
+
+            try
+            {
+
+                List<SqlParameter> parametros = new List<SqlParameter>();
+                SqlParameter param = new SqlParameter();
+
+                #region parametros
+                param = new SqlParameter();
+                if (idEscuela == null)
+                {
+                    param.Value = DBNull.Value;
+                }
+                else
+                {
+                    param.Value = idEscuela;
+                }
+                param.ParameterName = "@ESCUELA";
+                parametros.Add(param);
+
+                param = new SqlParameter();
+                if (marca == null)
+                {
+                    param.Value = DBNull.Value;
+                }
+                else
+                {
+                    param.Value = marca;
+                }
+                param.ParameterName = "@MARCA";
+                parametros.Add(param);
+
+                param = new SqlParameter();
+                if (tipo == null)
+                {
+                    param.Value = DBNull.Value;
+                }
+                else
+                {
+                    param.Value = tipo;
+                }
+                param.ParameterName = "@TIPO";
+                parametros.Add(param);
+
+                param = new SqlParameter();
+                if (estado == null)
+                {
+                    param.Value = DBNull.Value;
+                }
+                else
+                {
+                    param.Value = estado;
+                }
+                param.ParameterName = "@ESTADO";
+                parametros.Add(param);
+
+                param = new SqlParameter();
+                if (dificultad == null)
+                {
+                    param.Value = DBNull.Value;
+                }
+                else
+                {
+                    param.Value = dificultad;
+                }
+                param.ParameterName = "@DIFICULTAD";
+                parametros.Add(param);
+                #endregion
+
+
+                datos = new Conexion()
+                    .EjecutarProcedimientoDS("SPR_REPORTE_INVENTARIO", parametros);
+
+
+                if (datos.Tables[0].Rows[0]["RESULTADO"].ToString() == "ERROR")
+                {
+                    resultado.TipoResultado = "ERROR";
+                    resultado.CodigoMensaje = datos.Tables[0].Rows[0]["CODIGO"].ToString();
+                    resultado.Mensaje = datos.Tables[0].Rows[0]["MENSAJE"].ToString();
+                    resultado.ObjetoResultado = null;
+                }
+                else
+                {
+                    resultado.TipoResultado = "OK";
+                    List<Tabla> lista = new List<Tabla>();
+
+                    foreach (DataRow row in datos.Tables[1].Rows)
+                    {
+
+                        lista.Add(new Tabla
+                        {
+                            Costo = row["PRECIO"] is DBNull ? 0 : Convert.ToDouble(row["PRECIO"]),
+                            Tipo = row["TIPO"] is DBNull ? null : row["TIPO"].ToString(),
+                            Estado = row["ESTADO"] is DBNull ? null : row["ESTADO"].ToString(),
+                            Imagen = row["IMAGEN"] is DBNull ? null : row["IMAGEN"].ToString(),
+                            Dificultad = row["DIFICULTAD"] is DBNull ? null : row["DIFICULTAD"].ToString(),
+                            Tamanio = row["TAMANIO"] is DBNull ? null : row["TAMANIO"].ToString(),
+                            Marca = row["MARCA"] is DBNull ? null : row["MARCA"].ToString()
+                        });
+
+                    }
+                    resultado.ObjetoResultado = lista;
+
+                }
+
+
+                return resultado;
+
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }
