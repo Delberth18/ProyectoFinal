@@ -75,7 +75,7 @@
                 </div>
             </ContentTemplate>
             <Triggers>
-                <asp:AsyncPostBackTrigger ControlID="borrarBtn" EventName="" />
+                <asp:AsyncPostBackTrigger ControlID="preguntasLst" EventName="" />
             </Triggers>
         </asp:UpdatePanel>
     </section>

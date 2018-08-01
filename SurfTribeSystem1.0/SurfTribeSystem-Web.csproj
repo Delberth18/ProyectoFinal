@@ -44,6 +44,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=18.1.0.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Documents\ASP.NET AJAX Control Toolkit\Bin\AjaxControlToolkit.dll</HintPath>
+    </Reference>
     <Reference Include="itextsharp, Version=5.5.13.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
       <HintPath>..\packages\iTextSharp.5.5.13\lib\itextsharp.dll</HintPath>
     </Reference>
@@ -3128,6 +3132,7 @@
     <Content Include="registroPrecios.aspx" />
     <Content Include="registroTabla.aspx" />
     <Content Include="registroUsuario.aspx" />
+    <Content Include="reporteTablas.aspx" />
     <Content Include="reservaClases.aspx" />
     <Content Include="reservaConfirmar.aspx" />
     <Content Include="reservaEscuelas.aspx" />
@@ -3381,6 +3386,13 @@
     </Compile>
     <Compile Include="registroUsuario.aspx.designer.cs">
       <DependentUpon>registroUsuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="reporteTablas.aspx.cs">
+      <DependentUpon>reporteTablas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="reporteTablas.aspx.designer.cs">
+      <DependentUpon>reporteTablas.aspx</DependentUpon>
     </Compile>
     <Compile Include="reservaClases.aspx.cs">
       <DependentUpon>reservaClases.aspx</DependentUpon>
