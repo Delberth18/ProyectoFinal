@@ -21,7 +21,6 @@ namespace SurfTribeSystem_LogicaNegocio
             }
             catch (Exception ex)
             {
-
                 throw ex;
             }
         }
