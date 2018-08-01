@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/Site2.Master" AutoEventWireup="true" CodeBehind="reporteTabla.aspx.cs" Inherits="SurfTribeSystem1._0.reporteTabla" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/Site2.Master" AutoEventWireup="true" CodeBehind="reporteTablas.aspx.cs" Inherits="SurfTribeSystem1._0.reporteTablas" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
@@ -166,3 +166,4 @@
         </div>
     </section>
 </asp:Content>
+

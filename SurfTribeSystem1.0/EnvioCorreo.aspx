@@ -51,7 +51,7 @@
                                     <asp:TextBox ID="mensajeText" runat="server" class="form-control  bg-ashh" TextMode="MultiLine" Rows="14"></asp:TextBox>
                                 </li>
                                 <li>
-                                    <label style="color: darkred; font-size: x-small">**El correo será enviado a todos los usuarios:</label>
+                                    <label style="color: darkred; font-size: x-small">**El correo será enviado a todos los usuarios.</label>
                                 </li>
                             </ul>
 

@@ -1,5 +1,4 @@
 ﻿using iTextSharp.text;
-using iTextSharp.text.html.simpleparser;
 using iTextSharp.text.pdf;
 using SurfTribeSystem_Entidades;
 using SurfTribeSystem_LogicaNegocio;
@@ -13,7 +12,7 @@ using System.Web.UI.WebControls;
 
 namespace SurfTribeSystem1._0
 {
-    public partial class reporteTabla : System.Web.UI.Page
+    public partial class reporteTablas : System.Web.UI.Page
     {
         Tabla tabla = new Tabla();
         public static List<Tabla> listaTablas = new List<Tabla>();
@@ -288,7 +287,7 @@ namespace SurfTribeSystem1._0
                 clApellido.BorderWidth = 0;
                 clNombre.HorizontalAlignment = PdfPCell.ALIGN_LEFT;
                 tblPrueba.AddCell(clApellido);
-                             
+
 
                 clApellido = new PdfPCell(new Phrase(tab.Tamanio, fuente2));
                 clApellido.BorderWidth = 0;
@@ -326,7 +325,7 @@ namespace SurfTribeSystem1._0
                 clNombre.HorizontalAlignment = PdfPCell.ALIGN_LEFT;
                 linea.Colspan = 6;
                 tblPrueba.AddCell(linea);
-               
+
 
 
             }

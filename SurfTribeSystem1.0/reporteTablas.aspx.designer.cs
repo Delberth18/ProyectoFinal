@@ -10,7 +10,7 @@
 namespace SurfTribeSystem1._0 {
     
     
-    public partial class reporteTabla {
+    public partial class reporteTablas {
         
         /// <summary>
         /// tituloLabel control.
