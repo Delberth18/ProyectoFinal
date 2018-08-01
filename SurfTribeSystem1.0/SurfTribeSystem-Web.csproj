@@ -3139,6 +3139,7 @@
     <Content Include="reservaHorario.aspx" />
     <Content Include="reservaIndumentaria.aspx" />
     <Content Include="reservaNivel.aspx" />
+    <Content Include="reservaSesion.aspx" />
     <Content Include="reservaSinCampo.aspx" />
     <Content Include="TérminosCondiciones.aspx" />
     <Content Include="Web.config" />
@@ -3435,6 +3436,13 @@
     </Compile>
     <Compile Include="reservaNivel.aspx.designer.cs">
       <DependentUpon>reservaNivel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="reservaSesion.aspx.cs">
+      <DependentUpon>reservaSesion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="reservaSesion.aspx.designer.cs">
+      <DependentUpon>reservaSesion.aspx</DependentUpon>
     </Compile>
     <Compile Include="reservaSinCampo.aspx.cs">
       <DependentUpon>reservaSinCampo.aspx</DependentUpon>
