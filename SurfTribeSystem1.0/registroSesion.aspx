@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site2.Master" AutoEventWireup="true" CodeBehind="reservaSesion.aspx.cs" Inherits="SurfTribeSystem1._0.reservaSesion" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site2.Master" AutoEventWireup="true" CodeBehind="registroSesion.aspx.cs" Inherits="SurfTribeSystem1._0.reservaSesion" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -58,17 +58,36 @@
                         <div class="col-xs-12 col-sm-4">
                             <ul>
                                 <li><div class="col-xs-12 col-sm-10">
-                                    <label style="color: saddlebrown; font-size: x-large">Hora inicio:</label>
+                                    <label style="color: saddlebrown; font-size: x-large">Dificultad:</label>
                                     </div>
                                 </li>
                                 <li>
                                       <div class="col-xs-12 col-sm-10">
-                                    <asp:DropDownList ID="ddlHi" runat="server" CssClass="bg-ashh" Width="100%" style="color:black; font-size:large;" AutoPostBack="true" DataTextField=""
+                                    <asp:DropDownList ID="ddlDificultad" runat="server" CssClass="bg-ashh" Width="100%" style="color:black; font-size:large;" AutoPostBack="true" DataTextField=""
                                         DataValueField="" >
                                     </asp:DropDownList>
                                           </div>
 
                                 </li>
+                            </ul>
+
+                        </div>
+                                    <div class="col-xs-12 col-sm-4">
+                            <ul>
+                                <li><br /><br />
+                                    <div class="col-xs-12 col-sm-10">
+                                    <label style="color: saddlebrown; font-size: x-large">Hora Inicio:</label>
+                                        </div>
+                                </li>
+                                <li>
+                                    <div class="col-xs-12 col-sm-10">
+                                    <asp:DropDownList ID="ddlHi" runat="server" CssClass="bg-ashh" Width="100%" style="color:black; font-size:large;" AutoPostBack="true" DataTextField=""
+                                        DataValueField="" >
+                                    </asp:DropDownList>
+                                        </div>
+
+                                </li>
+
                             </ul>
 
                         </div>

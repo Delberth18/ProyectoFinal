@@ -40,6 +40,15 @@ namespace SurfTribeSystem1._0 {
         protected global::System.Web.UI.WebControls.DropDownList ddlIns;
         
         /// <summary>
+        /// Control ddlDificultad.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlDificultad;
+        
+        /// <summary>
         /// Control ddlHi.
         /// </summary>
         /// <remarks>
