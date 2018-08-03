@@ -20,7 +20,8 @@ namespace SurfTribeSystem1._0
             {
                 usu = (Usuario)Session["InicioSesion"];
 
-                if(usu.Tipo_usu!="ADM"){
+                if (usu.Tipo_usu != "ADM")
+                {
                     Response.Redirect("defaultSinLogeoUN.aspx");
                 }
             }
@@ -28,11 +29,16 @@ namespace SurfTribeSystem1._0
             {
                 Response.Redirect("defaultSinLogeoUN.aspx");
             }
-                if (!IsPostBack)
+            if (!IsPostBack)
             {
                 ObtenerListado();
             }
-            
+
+        }
+
+        protected void Page_PreInit(object sender, EventArgs e)
+        {
+            this.MasterPageFile = "~/Site2.master";
         }
 
         private void ObtenerListado()

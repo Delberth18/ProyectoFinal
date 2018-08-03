@@ -29,6 +29,11 @@ namespace SurfTribeSystem1._0
             }
         }
 
+        protected void Page_PreInit(object sender, EventArgs e)
+        {
+            this.MasterPageFile = "~/Site3.master";
+        }
+
         protected void btnGuardar_Click(object sender, EventArgs e)
         {
             Escuela escuela = new Escuela();
@@ -180,7 +185,7 @@ namespace SurfTribeSystem1._0
                 resultado = new EscuelaLogica().Acciones(esc);
 
                 if (resultado.TipoResultado == "ERROR")
-                { 
+                {
                     string script = "swal('Lo sentimos, ha ocurrido un error', '" + resultado.Mensaje + "', 'error'); ";
                     ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
                     txtNombre.Focus();

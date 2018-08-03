@@ -28,15 +28,16 @@ namespace SurfTribeSystem1._0
             {
                 Response.Redirect("defaultSinLogeoUN.aspx");
             }
-            if (Session["Exito"]!= null) {
+            if (Session["Exito"] != null)
+            {
 
                 string script = "swal('Excelente', 'Guardado con éxito', 'success'); ";
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
                 Session["Exito"] = null;
-            
+
             }
 
-            
+
 
             if (Session["exiBorrar"] != null)
             {
@@ -49,6 +50,12 @@ namespace SurfTribeSystem1._0
 
         }
 
+        protected void Page_PreInit(object sender, EventArgs e)
+        {
+            this.MasterPageFile = "~/Site3.master";
+        }
+
+
         protected void grvEstado_RowDataBound(object sender, GridViewRowEventArgs e)
         {
 
@@ -60,12 +67,12 @@ namespace SurfTribeSystem1._0
         }
         protected void idBuscar_Click(object sender, EventArgs e)
         {
-            
-                try
-                {
+
+            try
+            {
                 SqlConnection con = new SqlConnection(@"Data Source=localhost\SQLEXPRESS;Initial Catalog=SURF_TRIBE; Integrated Security=true;Connection Timeout=45;");//delberth
                 //SqlConnection con = new SqlConnection("Data Source=laptop-r7vb3im9\\mssqlserver01;Initial Catalog=SURF_TRIBE;Integrated Security=True");//Eduardo
-                SqlDataAdapter sda = new SqlDataAdapter("select * from USUARIO where CORREO='"+txtCed.Text+"'",con);
+                SqlDataAdapter sda = new SqlDataAdapter("select * from USUARIO where CORREO='" + txtCed.Text + "'", con);
                 DataTable dt = new DataTable();
                 sda.Fill(dt);
 
@@ -82,25 +89,26 @@ namespace SurfTribeSystem1._0
                     lblexito.Text = "";
 
                 }
-                else {
-
-                    lblexito.Text = "Usuario no encontrado";
-                    idEditar.Visible = false;
-                    grvEstado.DataBind();
-                    
-
-
-                }
-
-                }
-                catch
+                else
                 {
+
                     lblexito.Text = "Usuario no encontrado";
                     idEditar.Visible = false;
                     grvEstado.DataBind();
+
+
+
+                }
 
             }
-            
+            catch
+            {
+                lblexito.Text = "Usuario no encontrado";
+                idEditar.Visible = false;
+                grvEstado.DataBind();
+
+            }
+
         }
 
         protected void idEditar_Click(object sender, EventArgs e)
@@ -108,8 +116,8 @@ namespace SurfTribeSystem1._0
             try
             {
                 GridViewRow row = grvEstado.SelectedRow;
-              
-                Session["idEditar"]  = (row.Cells[2].Text);//esta es la ubicacion del id en el grid para guardar
+
+                Session["idEditar"] = (row.Cells[2].Text);//esta es la ubicacion del id en el grid para guardar
 
                 Response.Redirect("editarUsuarios.aspx");
             }

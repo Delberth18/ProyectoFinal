@@ -16,6 +16,14 @@ namespace SurfTribeSystem1._0
         Usuario usuario = new Usuario();
         List<Usuario> usu = new List<Usuario>();
         Usuario usu2 = new Usuario();
+
+        protected void Page_PreInit(object sender, EventArgs e)
+        {
+
+            this.MasterPageFile = "~/Site3.master";
+
+        }
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["InicioSesion"] != null)
@@ -60,9 +68,9 @@ namespace SurfTribeSystem1._0
 
                 txtUsu.Text = Convert.ToString(row["ID_TIPO_USU"]);
 
-                txtauxClave.Text= Convert.ToString(row["CLAVE"]);
+                txtauxClave.Text = Convert.ToString(row["CLAVE"]);
 
-                estadoList.SelectedValue= Convert.ToString(row["ESTADO"]);
+                estadoList.SelectedValue = Convert.ToString(row["ESTADO"]);
 
             }
         }
@@ -103,7 +111,7 @@ namespace SurfTribeSystem1._0
                 txtPaís.Focus();
                 return;
             }
-           
+
             errorLabel.Visible = false;
 
 
@@ -168,7 +176,8 @@ namespace SurfTribeSystem1._0
                 }
 
             }
-            else {
+            else
+            {
 
                 try
                 {
@@ -217,7 +226,7 @@ namespace SurfTribeSystem1._0
 
                 }
 
-                
+
 
             }
         }
@@ -226,10 +235,10 @@ namespace SurfTribeSystem1._0
         {
             try
             {
-               
+
                 Resultado resultado = new Resultado();
                 usuario.Tag = "BORRAR";
-                usuario.Correo= txtCorreo.Text;
+                usuario.Correo = txtCorreo.Text;
 
                 resultado = new UsuarioLogica().Acciones(usuario);
 

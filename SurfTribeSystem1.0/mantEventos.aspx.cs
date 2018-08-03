@@ -36,6 +36,13 @@ namespace SurfTribeSystem1._0
             }
         }
 
+        protected void Page_PreInit(object sender, EventArgs e)
+        {
+            this.MasterPageFile = "~/Site3.master";
+
+
+        }
+
         private void ObtenerListado()
         {
             Resultado resultado = new Resultado();
@@ -72,7 +79,7 @@ namespace SurfTribeSystem1._0
                 link = (LinkButton)sender;
                 evento.Tag = "ELIMINAR";
                 string datos = link.CommandName;
-                evento.Id =Convert.ToInt32(datos);
+                evento.Id = Convert.ToInt32(datos);
                 resultado = new EventoLogica().Acciones(evento);
 
 

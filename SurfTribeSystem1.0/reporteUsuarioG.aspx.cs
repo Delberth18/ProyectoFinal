@@ -39,6 +39,11 @@ namespace SurfTribeSystem1._0
             }
         }
 
+        protected void Page_PreInit(object sender, EventArgs e)
+        {
+            this.MasterPageFile = "~/Site3.master";
+        }
+
         private void ListarEscuelas()
         {
             Resultado resultado = new Resultado();

@@ -18,7 +18,7 @@ namespace SurfTribeSystem1._0
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+
             if (Session["InicioSesion"] != null)
             {
                 usu = (Usuario)Session["InicioSesion"];
@@ -33,6 +33,12 @@ namespace SurfTribeSystem1._0
                 Response.Redirect("defaultSinLogeoUN.aspx");
             }
             ObtenerListado();
+        }
+
+        protected void Page_PreInit(object sender, EventArgs e)
+        {
+
+            this.MasterPageFile = "~/Site3.master";
         }
 
         private void ObtenerListado()

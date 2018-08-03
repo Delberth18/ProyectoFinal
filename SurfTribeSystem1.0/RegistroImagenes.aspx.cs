@@ -42,12 +42,18 @@ namespace SurfTribeSystem1._0
                 ListarRegistro();
                 ListarPertenencia();
             }
-            
+
         }
+
+        protected void Page_PreInit(object sender, EventArgs e)
+        {
+            this.MasterPageFile = "~/Site3.master";
+        }
+
         private void borrar()
         {
             //txtDescripcion.Text = "";
-           // txtFecha.Text = "";
+            // txtFecha.Text = "";
         }
         private Boolean ValidarExtension(string sExtension)
         {
@@ -74,7 +80,7 @@ namespace SurfTribeSystem1._0
         }
         protected void btnGuardar_Click(object sender, EventArgs e)
         {
-                
+
             try
             {
                 string Extension = string.Empty;
@@ -130,7 +136,7 @@ namespace SurfTribeSystem1._0
                     ListarRegistro();
                     string script = "swal('Excelente', 'Éxito en la insersión', 'success'); ";
                     ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
-                    
+
                 }
                 else
                 {
@@ -159,9 +165,9 @@ namespace SurfTribeSystem1._0
                     lista = (List<Imagen>)resultado.ObjetoResultado;
                     imagenesList.DataSource = lista;
                     imagenesList.DataBind();
-                    
+
                 }
-                
+
             }
             catch (Exception ex)
             {
@@ -176,12 +182,12 @@ namespace SurfTribeSystem1._0
             try
             {
                 List<string> lista1 = new List<string>();
-                List<string> lista2 = new List<string>(); 
+                List<string> lista2 = new List<string>();
                 List<object> lista3 = new List<object>();
                 resultado = new ImagenLogica().ObtenerPertenencia();
                 if (resultado.TipoResultado == "OK")
                 {
-                    lista3= (List<object>)resultado.ObjetoResultado;
+                    lista3 = (List<object>)resultado.ObjetoResultado;
                     lista1 = (List<string>)lista3[0];
                     lista2 = (List<string>)lista3[1];
 
@@ -213,9 +219,9 @@ namespace SurfTribeSystem1._0
         protected void pertenece_Click(object sender, EventArgs e)
         {
             pert = pertenece.SelectedValue;
-           // pertenece.SelectedValue = pert;
+            // pertenece.SelectedValue = pert;
         }
 
-        
+
     }
 }

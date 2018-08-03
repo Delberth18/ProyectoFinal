@@ -23,7 +23,7 @@ namespace SurfTribeSystem1._0
             {
                 usuario = (Usuario)Session["InicioSesion"];
 
-                if (usuario.Tipo_usu != "ADMG")
+                if (usuario.Tipo_usu != "ADM")
                 {
                     Response.Redirect("defaultSinLogeoUN.aspx");
                 }
@@ -37,8 +37,11 @@ namespace SurfTribeSystem1._0
                 ListarUsuarios();
             }
         }
+        protected void Page_PreInit(object sender, EventArgs e)
+        {
+            this.MasterPageFile = "~/Site2.master";
+        }
 
-        
 
         private void ListarUsuarios()
         {
@@ -78,8 +81,8 @@ namespace SurfTribeSystem1._0
             {
                 string pais = paisLst.SelectedValue;
                 string estado = estadoLst.SelectedValue;
-                
-                
+
+
                 if (pais == "Seleccione un país")
                 {
                     pais = "";
@@ -88,7 +91,7 @@ namespace SurfTribeSystem1._0
                 {
                     estado = "";
                 }
-                
+
                 resultado = new UsuarioLogica().Reporte(pais, usuario.IdEscuela, estado);
                 if (resultado.TipoResultado == "OK")
                 {
@@ -104,7 +107,7 @@ namespace SurfTribeSystem1._0
 
                 }
 
-                
+
 
 
             }
@@ -143,7 +146,7 @@ namespace SurfTribeSystem1._0
             Font fuenteT = new Font();
             fuenteT.Size = 18;
             fuenteT.SetStyle(Font.BOLD | Font.UNDERLINE);
-            doc.Add(new Paragraph("Detalles de usuarios                Escuela: "+usuario.IdEscuela, fuenteT));
+            doc.Add(new Paragraph("Detalles de usuarios                Escuela: " + usuario.IdEscuela, fuenteT));
             Font fuent = new Font();
             fuent.Size = 10;
             doc.Add(new Paragraph("Hora y hora de realización: " + DateTime.Now.ToString("dd/MM/yyyy hh:mm tt") + "    Usuario: " + usuario.Nombre + " " + usuario.Apellidos, fuent));

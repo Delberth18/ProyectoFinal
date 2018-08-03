@@ -31,6 +31,10 @@ namespace SurfTribeSystem1._0
                 Response.Redirect("defaultSinLogeoUN.aspx");
             }
         }
+        protected void Page_PreInit(object sender, EventArgs e)
+        {
+            this.MasterPageFile = "~/Site3.master";
+        }
 
         protected override void OnLoad(EventArgs e)
         {
@@ -54,7 +58,7 @@ namespace SurfTribeSystem1._0
                 }
                 else
                 {
-                    if (resultado.CodigoMensaje=="1")
+                    if (resultado.CodigoMensaje == "1")
                     {
                         string script = "swal('Lo sentimos,', '" + resultado.Mensaje + "', 'info'); ";
                         ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
@@ -64,7 +68,7 @@ namespace SurfTribeSystem1._0
                         string script = "swal('Lo sentimos, ha ocurrido un error', '" + resultado.Mensaje + "', 'error'); ";
                         ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
                     }
-                    
+
                 }
             }
             catch (Exception ex)
@@ -102,11 +106,11 @@ namespace SurfTribeSystem1._0
                 faq.Tag = "BORRAR";
                 faq.Pregunta = link.CommandName;
                 resultado = new FaqLogica().Acciones(faq);
-                
-                
+
+
                 if (resultado.TipoResultado == "OK")
                 {
-                    
+
                     string script = "swal('Excelente', 'Éxito en el borrado', 'success'); ";
                     ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
                     preguntasLst.DataSource = null;
@@ -115,10 +119,10 @@ namespace SurfTribeSystem1._0
                 }
                 else
                 {
-                    string script = "swal('Lo sentimos, ha ocurrido un error', '"+resultado.Mensaje+"', 'error'); ";
+                    string script = "swal('Lo sentimos, ha ocurrido un error', '" + resultado.Mensaje + "', 'error'); ";
                     ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
                 }
-               
+
             }
             catch (Exception ex)
             {

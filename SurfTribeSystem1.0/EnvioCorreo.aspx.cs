@@ -14,6 +14,27 @@ namespace SurfTribeSystem1._0
     {
         List<string> correos = new List<string>();
         Usuario usu2 = new Usuario();
+
+        protected void Page_PreInit(object sender, EventArgs e)
+        {
+
+            if (Session["InicioSesion"] != null)
+            {
+                usu2 = (Usuario)Session["InicioSesion"];
+
+                switch (usu2.Tipo_usu)
+                {
+                    case "ADM":
+                        this.MasterPageFile = "~/Site2.master";
+                        break;
+                    case "ADMG":
+                        this.MasterPageFile = "~/Site3.master";
+                        break;
+                }
+            }
+
+        }
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["InicioSesion"] != null)

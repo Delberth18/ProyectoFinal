@@ -37,6 +37,11 @@ namespace SurfTribeSystem1._0
                 ListarRegistro();
             }
         }
+
+        protected void Page_PreInit(object sender, EventArgs e)
+        {
+            this.MasterPageFile = "~/Site2.master";
+        }
         private Boolean ValidarExtension(string sExtension)
         {
             Boolean verif = false;
@@ -67,9 +72,9 @@ namespace SurfTribeSystem1._0
 
             string Extension = string.Empty;
             string Nombre = string.Empty;
-            
 
-            if (FileUpload.HasFile==false)
+
+            if (FileUpload.HasFile == false)
             {
                 string script = "swal('Error', ' No puede faltar la imagen ', 'error'); ";
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
@@ -85,9 +90,9 @@ namespace SurfTribeSystem1._0
                 tabla.Tamanio = txtPies.Text + "-" + txtPulgadas.Text;
                 tabla.Tipo = txtTipo.Text;
                 tabla.Estado = estado.SelectedValue;
-                tabla.Id_Escuela =usu.IdEscuela;
+                tabla.Id_Escuela = usu.IdEscuela;
 
-                if (Convert.ToInt32(txtPies.Text)>=9)
+                if (Convert.ToInt32(txtPies.Text) >= 9)
                 {
                     tabla.Tipo_precio = "LONG";
                 }
@@ -110,7 +115,7 @@ namespace SurfTribeSystem1._0
                 return;
             }
 
-                     
+
 
             try
             {
@@ -132,7 +137,7 @@ namespace SurfTribeSystem1._0
                     }
                 }
             }
-            catch (Exception )
+            catch (Exception)
             {
                 string script = "swal('Error', 'Lo sentimos por lo sucedido', 'error'); ";
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);

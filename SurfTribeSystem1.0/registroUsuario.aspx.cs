@@ -36,6 +36,11 @@ namespace SurfTribeSystem1._0
             }
         }
 
+        protected void Page_PreInit(object sender, EventArgs e)
+        {
+            this.MasterPageFile = "~/Site3.master";
+        }
+
         private void ListadoEscuela()
         {
             Resultado resultado = new Resultado();
@@ -127,7 +132,7 @@ namespace SurfTribeSystem1._0
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
                 txtNombre.Focus();
                 return;
-            }   
+            }
 
             if (txtContraseña.Text.Length <= 5)
             {
@@ -136,8 +141,8 @@ namespace SurfTribeSystem1._0
                 txtContraseña.Focus();
                 return;
             }
-            
-           
+
+
 
             Guardar();
         }

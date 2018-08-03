@@ -43,6 +43,13 @@ namespace SurfTribeSystem1._0
             }
         }
 
+        protected void Page_PreInit(object sender, EventArgs e)
+        {
+
+            this.MasterPageFile = "~/Site2.master";
+
+        }
+
         private void ListarTablas()
         {
             Resultado resultado = new Resultado();
@@ -209,7 +216,7 @@ namespace SurfTribeSystem1._0
             doc.Add(new Paragraph("Detalles de tablas de surf              Escuela: " + usu.IdEscuela, fuenteT));
             Font fuent = new Font();
             fuent.Size = 10;
-            doc.Add(new Paragraph("Hora y hora de realización: "+DateTime.Now.ToString("dd/MM/yyyy hh:mm tt")+ "    Usuario: " + usu.Nombre +" "+usu.Apellidos, fuent));
+            doc.Add(new Paragraph("Hora y hora de realización: " + DateTime.Now.ToString("dd/MM/yyyy hh:mm tt") + "    Usuario: " + usu.Nombre + " " + usu.Apellidos, fuent));
             doc.Add(Chunk.NEWLINE);
             doc.Add(Chunk.NEWLINE);
 

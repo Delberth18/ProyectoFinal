@@ -33,8 +33,13 @@ namespace SurfTribeSystem1._0
                 preguntaText.Text = Request.QueryString["valor1"];
                 respuestaText.Text = Request.QueryString["valor2"];
             }
-                
-            
+
+
+        }
+        protected void Page_PreInit(object sender, EventArgs e)
+        {
+
+            this.MasterPageFile = "~/Site3.master";
         }
 
         protected void Guardar_Click(object sender, EventArgs e)
@@ -44,7 +49,7 @@ namespace SurfTribeSystem1._0
             {
 
                 faq.Tag = "INSER_ACTUA";
-                if (preguntaText.Text=="")
+                if (preguntaText.Text == "")
                 {
                     string script = "swal('Lo sentimos, ha ocurrido un error', '*Debe ingresar una pregunta', 'error'); ";
                     ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
@@ -68,7 +73,7 @@ namespace SurfTribeSystem1._0
                     string script = "swal('Excelente', 'Se registró la pregunta con éxito', 'success'); ";
                     ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
                 }
-                 else
+                else
                 {
                     string script = "swal('Lo sentimos, ha ocurrido un error', '" + resultado.Mensaje + "', 'error'); ";
                     ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);

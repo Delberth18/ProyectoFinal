@@ -16,6 +16,17 @@ namespace SurfTribeSystem1._0
         Escuela escuela = new Escuela();
         List<Escuela> esc = new List<Escuela>();
         Usuario usu = new Usuario();
+
+        protected void Page_PreInit(object sender, EventArgs e)
+        {
+
+            if (Session["InicioSesion"] != null)
+            {
+                this.MasterPageFile = "~/Site3.master";
+            }
+
+        }
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["InicioSesion"] != null)
@@ -44,8 +55,8 @@ namespace SurfTribeSystem1._0
 
                 lista = (List<Escuela>)resultado.ObjetoResultado;
                 esc = lista[0];
-                
-                txtCorreo.Text =esc.Correo;
+
+                txtCorreo.Text = esc.Correo;
 
 
                 txtNombre.Text = esc.Nombre;

@@ -14,25 +14,62 @@ namespace SurfTribeSystem1._0
     {
         string nombreEscuela = "";
         Escuela escuela = new Escuela();
+        Usuario usu = new Usuario();
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+
             try
             {
-                nombreEscuela = Request.QueryString["idEscuela"].ToString();
-                nombreEscuela = nombreEscuela.Trim().ToUpper();
-                
-                MostrarBaner();
-                CargarGaleria();
-                CargarInfo();
-                CargarInfoSencilla();
+                if (Session["InicioSesion"] != null)
+                {
+                }
+                else
+                { Response.Redirect("defaultSinLogeoUN.aspx"); }
+
+                if (!IsPostBack)
+                {
+                    nombreEscuela = Request.QueryString["idEscuela"].ToString();
+                    nombreEscuela = nombreEscuela.Trim().ToUpper();
+
+                    MostrarBaner();
+                    CargarGaleria();
+                    CargarInfo();
+                    CargarInfoSencilla();
+                }
             }
             catch (Exception)
             {
 
                 Response.Redirect("defaultSinLogeoUN.aspx");
             }
-            
+
+        }
+
+        protected void Page_PreInit(object sender, EventArgs e)
+        {
+
+            if (Session["InicioSesion"] != null)
+            {
+                usu = (Usuario)Session["InicioSesion"];
+
+                switch (usu.Tipo_usu)
+                {
+                    case "ADM":
+                        this.MasterPageFile = "~/Site2.master";
+                        break;
+                    case "ADMG":
+                        this.MasterPageFile = "~/Site3.master";
+                        break;
+                    case "REG":
+                        this.MasterPageFile = "~/Site4.master";
+                        break;
+                }
+            }
+            else
+            {
+                this.MasterPageFile = "~/Site1.master";
+            }
+
         }
 
         private void CargarGaleria()
@@ -65,7 +102,7 @@ namespace SurfTribeSystem1._0
 
         private void MostrarBaner()
         {
-            
+
             Resultado resultado = new Resultado();
             Imagen img = new Imagen();
             List<Imagen> lista = new List<Imagen>();
@@ -116,7 +153,7 @@ namespace SurfTribeSystem1._0
             }
         }
 
-        private void CargarInfoSencilla ()
+        private void CargarInfoSencilla()
         {
             Resultado resultado = new Resultado();
             List<Escuela> lista = new List<Escuela>();
