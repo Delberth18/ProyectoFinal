@@ -53,12 +53,14 @@ namespace SurfTribeSystem1._0
             ddlDificultad.Items.Add("Avanzado");
 
             List<string> fechas = new List<string>();
+            fechas.Add("Seleccione una fecha");
             DateTime fecha = new DateTime();
 
             for (int i = 1; i < 8; i++)
             {
                 fecha = DateTime.Now.AddDays(i + 4);
                 fechas.Add(fecha.ToString("dd/MM/yyyy"));
+
             }
             ddlfecha.DataSource = fechas;
             ddlfecha.DataBind();
@@ -79,33 +81,124 @@ namespace SurfTribeSystem1._0
                 if (resultado.TipoResultado == "OK")
                 {
                     usuarios = (List<Usuario>)resultado.ObjetoResultado;
-                    usuarios.Add(new Usuario { Nc = "Seleccione un Instructor(a)" });
+                    usuarios.Add(new Usuario { Nc = "Seleccione un Instructor(a)", Correo= "Seleccione un Instructor(a)" });
 
                     ddlIns.DataSource = usuarios;
                     foreach (Usuario  usuaddl in usuarios)
                     {
 
                        string nombre = usuaddl.Nombre + " " + usuaddl.Apellidos;
-                      
+
+                        ddlIns.SelectedValue = "Seleccione un Instructor(a)";
                         ddlIns.DataTextField = "Nc";
                         ddlIns.DataValueField = "Correo";
                         
-                        
+
                     }
                     ddlIns.DataBind();
                    
                 }
                 else
                 {
-                    Response.Write("< script > alert('Error: " + resultado.Mensaje + " \n Lo sentimos') </ script >");
+                    string script = "swal('Error', '', 'error'); ";
+                    ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
                 }
             }
             catch (Exception ex)
             {
 
-                Response.Write("< script > alert('Error: " + ex + " \n Lo sentimos') </ script >");
+                string script = "swal('Error', '" + ex + "', 'error'); ";
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
             }
 
+        }
+
+        protected void btnGenerar_Click(object sender, EventArgs e)
+        {
+            Sesion sesion = new Sesion();
+            sesion.Habilitadas = Convert.ToInt32(txtCupos.Text);//Cupos
+            sesion.HraInicio1 = ddlHi.SelectedItem.ToString();//Hora de Inicio
+            sesion.HraFinal1 = ddlHf.SelectedItem.ToString();//Hora de finalizacion
+            sesion.Dificultad = ddlDificultad.SelectedItem.ToString();//Dificultad
+            sesion.IdEscuela = usure.IdEscuela;//IdEscuela
+            sesion.Activa = true;
+            sesion.Id_instructor = ddlIns.SelectedValue;
+            try
+            {
+                sesion.Fecha = Convert.ToDateTime(ddlfecha.SelectedItem.ToString());
+            }
+            catch (Exception ex)
+            {
+                string script = "swal('Error', 'Debe elegir una fecha', 'error'); ";
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
+
+            }
+
+
+            if (sesion.Habilitadas <= 0)
+            {
+
+                string script = "swal('Error', 'Los cupos deben de ser mayores a 0', 'error'); ";
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
+            }
+            else {
+
+                if (sesion.HraInicio1 == "Seleccione Hora Inicio")
+                {
+
+                    string script = "swal('Error', 'Selecciona una hora de inicio', 'error'); ";
+                    ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
+                }
+                else {
+
+                    if (sesion.HraFinal1 == "Seleccione Hora Final")
+                    {
+
+                        string script = "swal('Error', 'Selecciona una hora de finalización', 'error'); ";
+                        ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
+                    }
+                    else {
+
+                        if (sesion.Dificultad == "Seleccione Dificultad")
+                        {
+
+                            string script = "swal('Error', 'Selecciona una dificultad', 'error'); ";
+                            ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
+                        }
+                        else {
+
+
+                            if (sesion.Id_instructor == "Seleccione un Instructor(a)")
+                            {
+
+                                string script = "swal('Error', 'Selecciona un Instructor(a)', 'error'); ";
+                                ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
+                            }
+                            else {
+
+                                int mes= sesion.Fecha.Month;
+
+
+
+                            }
+
+
+
+                        }
+
+
+
+                    }
+
+
+                }
+
+
+            }
+
+
+
+            
         }
     }
 }

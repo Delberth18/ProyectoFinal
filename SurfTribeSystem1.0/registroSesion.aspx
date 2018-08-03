@@ -135,7 +135,7 @@
                                     <center>
                                     <div class="col-xs-12 col-sm-10">
             <asp:Button ID="btnGenerar" class="btn btn-default btn-circle-2 " BackColor="SaddleBrown" ForeColor="White"
-                                        runat="server" Text="Crear Sesion" Width="200px"  />
+                                        runat="server" Text="Crear Sesion" Width="200px"  OnClick="btnGenerar_Click" />
                                         </div>
                                         </center>
 
