@@ -80,7 +80,7 @@
                                 <li>
                                     <label style="color: SaddleBrown; font-size: x-large">Zona:</label>
                                     <br />
-                                    <asp:DropDownList ID="ddlZona" runat="server" CssClass="bg-ashh" Width="100%">
+                                    <asp:DropDownList ID="ddlZona" runat="server" CssClass="bg-ashh" Width="100%"  ForeColor="Black" style="font-size:large">
                                         <asp:ListItem>LIMON</asp:ListItem>
                                         <asp:ListItem>GUANACASTE</asp:ListItem>
                                         <asp:ListItem>PUNTARENAS</asp:ListItem>

@@ -36,7 +36,8 @@
                                                                         <li>
                                                                             <br />
                                                                             <center>
-                                                                            <asp:DropDownList ID="ddlEscuelas" AutoPostBack="True" runat="server" OnSelectedIndexChanged="Seleccionar" CssClass="bg-ashh" Style="width: 30%" >
+                                                                            <asp:DropDownList ID="ddlEscuelas" AutoPostBack="True" runat="server" OnSelectedIndexChanged="Seleccionar" 
+                                                                                CssClass="bg-ashh" Style="width: 30%"  ForeColor="Black" style="font-size:large">
                                                                             </asp:DropDownList>
                                                                             <br />
                                                                              </center>

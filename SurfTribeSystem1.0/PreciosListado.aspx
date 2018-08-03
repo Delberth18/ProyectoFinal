@@ -22,7 +22,8 @@
 
                             <div class="col-sm-4 col-xs-12 ">
 
-                                <asp:DropDownList ID="ddlEscuela" AutoPostBack="true" OnSelectedIndexChanged="Seleccionar" runat="server" CssClass="bg-ashh" Width="100%">
+                                <asp:DropDownList ID="ddlEscuela" AutoPostBack="true" OnSelectedIndexChanged="Seleccionar" runat="server" 
+                                    CssClass="bg-ashh" Width="100%"  ForeColor="Black" style="font-size:large">
                                 </asp:DropDownList>
 
                             </div>

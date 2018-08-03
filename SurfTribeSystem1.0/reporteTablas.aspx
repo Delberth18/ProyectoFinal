@@ -37,7 +37,7 @@
                                 </li>
                                 <li>
                                     <asp:DropDownList ID="marcaLst" runat="server" CssClass="bg-ashh" Width="100%" AutoPostBack="true" DataTextField=""
-                                        DataValueField="" OnSelectedIndexChanged="reporteTablaSurf">
+                                        DataValueField="" OnSelectedIndexChanged="reporteTablaSurf" ForeColor="Black" style="font-size:large">
                                     </asp:DropDownList>
 
 
@@ -52,7 +52,7 @@
                                 </li>
                                 <li>
                                     <asp:DropDownList ID="tipoLst" runat="server" CssClass="bg-ashh" Width="100%" AutoPostBack="true" DataTextField=""
-                                        DataValueField="" OnSelectedIndexChanged="reporteTablaSurf">
+                                        DataValueField="" OnSelectedIndexChanged="reporteTablaSurf" ForeColor="Black" style="font-size:large">
                                     </asp:DropDownList>
                                 </li>
                             </ul>
@@ -66,7 +66,7 @@
                                 <li>
 
                                     <asp:DropDownList ID="estadoLst" runat="server" CssClass="bg-ashh" Width="100%" AutoPostBack="true" DataTextField=""
-                                        DataValueField="" OnSelectedIndexChanged="reporteTablaSurf">
+                                        DataValueField="" OnSelectedIndexChanged="reporteTablaSurf" ForeColor="Black" style="font-size:large">
                                     </asp:DropDownList>
 
                                 </li>
@@ -81,7 +81,7 @@
                                 <li>
 
                                     <asp:DropDownList ID="dificultadLst" runat="server" CssClass="bg-ashh" Width="100%" AutoPostBack="true" DataTextField=""
-                                        DataValueField="" OnSelectedIndexChanged="reporteTablaSurf">
+                                        DataValueField="" OnSelectedIndexChanged="reporteTablaSurf" ForeColor="Black" style="font-size:large">
                                     </asp:DropDownList>
 
                                 </li>

@@ -92,7 +92,7 @@
                                                                                 <label class="col-lg-4 control-label" for="focusedInput">Año de fundación</label>
                                                                                 
                                                                                 <div class="col-lg-5 ">  
-                                                                                    <asp:DropDownList ID="ddlZona" runat="server" CssClass="form-control"  >
+                                                                                    <asp:DropDownList ID="ddlZona" runat="server" CssClass="form-control" ForeColor="Black" style="font-size:large" >
                                                                                         <asp:ListItem Value="LIMON">LIMON</asp:ListItem>
                                                                                         <asp:ListItem Value="GUANACASTE">GUANACASTE</asp:ListItem>
                                                                                         <asp:ListItem Value="PUNTARENAS">PUNTARENAS</asp:ListItem>
@@ -133,7 +133,7 @@
                                                                             <div class="form-group" style="color: saddlebrown; font-size: x-large;">
                                                                                 <label class="col-lg-4 control-label" for="focusedInput">Se encuentra activa?</label>
                                                                                 <div class="col-lg-1 ">
-                                                                                    <asp:DropDownList ID="ddlActiva" runat="server" CssClass="form-control">
+                                                                                    <asp:DropDownList ID="ddlActiva" runat="server" CssClass="form-control" ForeColor="Black" style="font-size:large"   >
                                                                                         <asp:ListItem Value="true">Si</asp:ListItem>
                                                                                         <asp:ListItem Value="false">No</asp:ListItem>
                                                                                     </asp:DropDownList>

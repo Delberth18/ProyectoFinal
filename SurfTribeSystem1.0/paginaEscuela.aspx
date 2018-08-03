@@ -6,7 +6,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-
+    <div style="background-image: url(Imagenes/fondo1.jpg);background-repeat: no-repeat; background-size: cover">
     <!-- PAGE TITLE -->
     <asp:Repeater runat="server" ID="banerImg">
         <ItemTemplate>
@@ -29,7 +29,7 @@
     </asp:Repeater>
 
     <!-- PAGE CONTENT -->
-    <section class="mainContentSection singlePackage">
+    <section class="mainContentSection singlePackage" >
         <div class="container">
              <div class="row galleryCarousel">
                 <div class="col-xs-12">
@@ -58,7 +58,7 @@
                                 <ItemTemplate>
                                     <div class="sectionTitle2">
                                         <h1 style="color: saddlebrown;">Descripción</h1>
-                                        <p style="color: white; font-size: x-large"><%# Eval("Descripcion") %> </p>
+                                        <p style="color: black; font-size: x-large"><%# Eval("Descripcion") %> </p>
                                     </div>
                                     <div class="row">
                                         <div class="col-xs-12 col-sm-6">
@@ -66,33 +66,33 @@
 
                                                 <li>
                                                     <div class="sectionTitle2">
-                                                        <h2>Zona de:</h2>
+                                                        <h2 style="color: saddlebrown; font-weight:bold">Zona de:</h2>
                                                     </div>
                                                 </li>
-                                                <li style="color: white; font-size: x-large"><i class="fa fa-dot-circle-o" aria-hidden="true"></i><%# Eval("Zona") %></li>
+                                                <li style="color: black; font-size: x-large"><i class="fa fa-dot-circle-o" aria-hidden="true"></i><%# Eval("Zona") %></li>
                                                 <li>
                                                     <div class="sectionTitle2">
-                                                        <h2>Nos ubicamos en:</h2>
+                                                        <h2 style="color: saddlebrown; font-weight:bold">Nos ubicamos en:</h2>
                                                     </div>
                                                 </li>
-                                                <li style="color: white; font-size: x-large"><i class="fa fa-dot-circle-o" aria-hidden="true"></i><%# Eval("Ubicacion") %></li>
+                                                <li style="color: black; font-size: x-large"><i class="fa fa-dot-circle-o" aria-hidden="true"></i><%# Eval("Ubicacion") %></li>
                                                 <li>
                                                     <div class="sectionTitle2">
-                                                        <h2>Playa en la cual se imparten la mayoría de lecciones:</h2>
+                                                        <h2 style="color: saddlebrown; font-weight:bold">Playa en la cual se imparten la mayoría de lecciones:</h2>
                                                     </div>
                                                 </li>
-                                                <li style="color: white; font-size: x-large"><i class="fa fa-dot-circle-o" aria-hidden="true"></i><%# Eval("Playa_concurrida") %></li>
+                                                <li style="color: black; font-size: x-large"><i class="fa fa-dot-circle-o" aria-hidden="true"></i><%# Eval("Playa_concurrida") %></li>
                                             </ul>
                                         </div>
                                         <div class="col-xs-12 col-sm-6">
                                             <ul class="descriptionList">
                                                 <li>
                                                     <div class="sectionTitle2">
-                                                        <h2>Nos pueden contactar por:</h2>
+                                                        <h2 style="color: saddlebrown; font-weight:bold">Nos pueden contactar por:</h2>
                                                     </div>
                                                 </li>
-                                                <li style="color: saddlebrown; font-size: x-large; font-weight: bold;"><i class="fa fa-dot-circle-o" aria-hidden="true"></i><a href='mailto:<%# Eval("Correo") %>' style="color: saddlebrown;"><%# Eval("Correo") %></a></li>
-                                                <li style="color: white; font-size: x-large"><i class="fa fa-dot-circle-o" aria-hidden="true"></i><%# Eval("Telefono") %>          <%# Eval("Telefono2") %></li>
+                                                <li style="color: darkred; font-size: x-large; font-weight: bold;"><i class="fa fa-dot-circle-o" aria-hidden="true"></i><a href='mailto:<%# Eval("Correo") %>' style="color: darkred;"><%# Eval("Correo") %></a></li>
+                                                <li style="color: black; font-size: x-large"><i class="fa fa-dot-circle-o" aria-hidden="true"></i><%# Eval("Telefono") %>          <%# Eval("Telefono2") %></li>
 
                                                 <br />
                                                 <br />
@@ -167,7 +167,8 @@
             <div class="row">
                 <div class="col-xs-12">
                     <div class="sectionTitle2">
-                        <h1>También puedes ver</h1>
+                        <br />
+                        <h1>También puede ver</h1>
                     </div>
                 </div>
                 <div class="row">
@@ -180,14 +181,14 @@
                                     <a href="single-hotel-right-sidebar.html" class="pageLink"></a>
 
                                     <div class="caption">
-                                        <h4><a href="single-hotel-right-sidebar.html" class="captionTitle">Escuela <%# Eval("Nombre") %></a></h4>
-                                        <p>
+                                        <h4><a href="single-hotel-right-sidebar.html" class="captionTitle" style="color:saddlebrown">Escuela <%# Eval("Nombre") %></a></h4>
+                                        <p style="color:black">
                                             Zona de: <%# Eval("Zona") %><br />
                                             Playa: <%# Eval("Playa_concurrida") %>
                                         </p>
                                         <div class="detailsInfo">
                                             <ul class="list-inline detailsBtn">
-                                                <li><a href="paginaEscuela.aspx?idEscuela=<%# Eval("Nombre") %>" class="btn buttonTransparent">Ir ahora</a></li>
+                                                <li><a href="paginaEscuela.aspx?idEscuela=<%# Eval("Nombre") %>" class="btn buttonTransparent" style="color:darkorange; font-weight:bold">Ir ahora</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -200,4 +201,5 @@
             </div>
         </div>
     </section>
+        </div>
 </asp:Content>

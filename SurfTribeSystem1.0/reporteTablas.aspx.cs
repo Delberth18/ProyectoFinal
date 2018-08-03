@@ -207,8 +207,12 @@ namespace SurfTribeSystem1._0
             fuenteT.Size = 18;
             fuenteT.SetStyle(Font.BOLD | Font.UNDERLINE);
             doc.Add(new Paragraph("Detalles de tablas de surf              Escuela: " + usu.IdEscuela, fuenteT));
+            Font fuent = new Font();
+            fuent.Size = 10;
+            doc.Add(new Paragraph("Hora y hora de realización: "+DateTime.Now.ToString("dd/MM/yyyy hh:mm tt")+ "    Usuario: " + usu.Nombre +" "+usu.Apellidos, fuent));
             doc.Add(Chunk.NEWLINE);
             doc.Add(Chunk.NEWLINE);
+
 
             //imagen
             string imageURL = Server.MapPath(".") + "/ccss/star-1-3/Static HTML/img/logo-dark.png";
@@ -347,7 +351,7 @@ namespace SurfTribeSystem1._0
 
             Response.ContentType = "application/pdf";
             Response.ContentEncoding = System.Text.Encoding.UTF8;
-            Response.AppendHeader("content-disposition", "attachment;filename=TestPage.pdf");
+            Response.AppendHeader("content-disposition", "attachment;filename=ReporteTablasSurf.pdf");
             // Response.TransmitFile("C:/Users/edu08/Downloads/prueba.pdf");
             Response.TransmitFile("C:/Users/Public/Downloads/prueba.pdf");
             Response.End();

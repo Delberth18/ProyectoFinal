@@ -56,7 +56,7 @@
                                     <label style="color: saddlebrown; font-size: x-large">Estado:</label>
                                 </li>
                                 <li>
-                                    <asp:DropDownList ID="estado" runat="server" CssClass="bg-ashh" Width="100%">
+                                    <asp:DropDownList ID="estado" runat="server" CssClass="bg-ashh" Width="100%"  ForeColor="Black" style="font-size:large">
                                     </asp:DropDownList>
                                 </li>
                                 <li>
@@ -87,7 +87,7 @@
                                     <label style="color: saddlebrown; font-size: x-large">Dificultad:</label>
                                 </li>
                                 <li>
-                                    <asp:DropDownList ID="dificultad" runat="server" CssClass="bg-ashh" Width="100%">
+                                    <asp:DropDownList ID="dificultad" runat="server" CssClass="bg-ashh" Width="100%"  ForeColor="Black" style="font-size:large">
                                         <asp:ListItem Value="PRINCIPIANTE">PRINCIPIANTE</asp:ListItem>
                                         <asp:ListItem Value="INTERMEDIO">INTERMEDIO</asp:ListItem>
                                         <asp:ListItem Value="AVANZADO">AVANZADO</asp:ListItem>

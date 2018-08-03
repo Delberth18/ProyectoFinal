@@ -78,7 +78,7 @@
                     <asp:TextBox runat="server" type="number" class="form-control bg-ashh" placeholder="Teléfono" ID="telefonoText" ></asp:TextBox><br />
 
 
-                    <asp:DropDownList ID="paisesList" runat="server" class="form-control bg-ash">
+                    <asp:DropDownList ID="paisesList" runat="server" class="form-control bg-ash"  ForeColor="Black" style="font-size:large">
                         <asp:listitem value ="Afganistán">Afganistán</asp:listitem>
                         <asp:listitem value ="Alemania">Albania</asp:listitem >
                         <asp:listitem value ="Andorra">Andorra</asp:listitem >

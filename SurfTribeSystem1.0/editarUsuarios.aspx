@@ -92,7 +92,7 @@
                                                                             <div class="form-group" style="color: black; font-size: 20px; margin-left: 40px;">
                                                                                 <label class="col-lg-2 control-label" for="inputEmail">Estado</label>
                                                                                 <div class=" col-lg-10 txtnormal">
-                                                                                    <asp:DropDownList ID="estadoList" runat="server"  CssClass="form-control" Width="400px">
+                                                                                    <asp:DropDownList ID="estadoList" runat="server"  CssClass="form-control" Width="400px"  ForeColor="Black" style="font-size:large">
                                                                                         <asp:ListItem>ACTIVO</asp:ListItem>
                                                                                         <asp:ListItem>BLOQUEADO</asp:ListItem>
                                                                                         <asp:ListItem>INACTIVO</asp:ListItem>

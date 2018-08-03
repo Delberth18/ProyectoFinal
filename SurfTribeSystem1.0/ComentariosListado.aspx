@@ -31,21 +31,21 @@
                             <div class="review-aria">
                                 
                                 <div class="reviewContent" style="margin: 8px 8px 8px 8px;">
-                                    <h3 style="color: SaddleBrown; font-size: x-large;">Opiniones
-                                        <asp:Label ForeColor="SaddleBrown" Font-Size="Large" runat="server" ID="cantidadLabel"></asp:Label>
+                                    <h3 style="color: black; font-size: x-large;">Opiniones
+                                        <asp:Label ForeColor="Black" Font-Size="Large" runat="server" ID="cantidadLabel"></asp:Label>
                                     </h3>
                                     <asp:ListView runat="server" ID="preguntasLst">
                                         <ItemTemplate>
 
-                                            <div class="reviewMedia">
+                                            <div class="reviewMedia" style="border:solid;border-color:white">
                                                 <ul class="media-list">
                                                     <li class="media">
                                                         <div class="media-body">
-                                                            <h4 class="media-heading">
-                                                                <asp:Label runat="server" Font-Size="X-Large" ForeColor="White" ID="preguntaLabel" Text='<%# Eval("Nombre") %>'></asp:Label></h4>
+                                                            <h4 class="media-heading" style="text-align:center">
+                                                                <asp:Label runat="server" Font-Size="X-Large" ForeColor="SaddleBrown" ID="preguntaLabel" Text='<%# Eval("Nombre") %>'></asp:Label></h4>
 
-                                                            <p>
-                                                                <asp:Label ForeColor="#333333" runat="server" Font-Size="X-Large" ID="Label2" Text='<%# Eval("Comentariol") %>'></asp:Label></p>
+                                                            <p style="text-align:center">
+                                                                <asp:Label ForeColor="Black" runat="server" Font-Size="X-Large" ID="Label2" Text='<%# Eval("Comentariol") %>'></asp:Label></p>
                                                         </div>
                                                     </li>
 

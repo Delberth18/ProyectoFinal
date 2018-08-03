@@ -45,7 +45,8 @@
                         <li>
                             <asp:UpdatePanel runat="server">
                                 <ContentTemplate>
-                                    <asp:DropDownList ID="pertenece" runat="server" CssClass="bg-ashh" Width="100%" OnSelectedIndexChanged="pertenece_Click" AutoPostBack="true" DataTextField="" DataValueField="">
+                                    <asp:DropDownList ID="pertenece" runat="server" CssClass="bg-ashh" Width="100%" OnSelectedIndexChanged="pertenece_Click" 
+                                        AutoPostBack="true" DataTextField="" DataValueField=""  ForeColor="Black" style="font-size:large">
                                     </asp:DropDownList>
                                 </ContentTemplate>
                                 <Triggers>
@@ -60,7 +61,7 @@
                         <li>
                             <asp:UpdatePanel runat="server">
                                 <ContentTemplate>
-                                    <asp:DropDownList ID="duenos" runat="server" CssClass="bg-ashh" Width="100%">
+                                    <asp:DropDownList ID="duenos" runat="server" CssClass="bg-ashh" Width="100%"  ForeColor="Black" style="font-size:large">
                                     </asp:DropDownList>
                                 </ContentTemplate>
                                 <Triggers>

@@ -3104,6 +3104,7 @@
     <Content Include="Global.asax" />
     <Content Include="Imagenes\20170423_095213.jpg" />
     <Content Include="Imagenes\20171222_161839.jpg" />
+    <Content Include="Imagenes\fondo1.jpg" />
     <Content Include="Imagenes\20180603_160427.jpg" />
     <Content Include="Imagenes\20180610_081948.jpg" />
     <Content Include="Imagenes\20180610_135703.jpg" />
@@ -3132,6 +3133,8 @@
     <Content Include="registroPrecios.aspx" />
     <Content Include="registroTabla.aspx" />
     <Content Include="registroUsuario.aspx" />
+    <Content Include="reporteUsuarioE.aspx" />
+    <Content Include="reporteUsuarioG.aspx" />
     <Content Include="reporteTablas.aspx" />
     <Content Include="reservaClases.aspx" />
     <Content Include="reservaConfirmar.aspx" />
@@ -3387,6 +3390,20 @@
     </Compile>
     <Compile Include="registroUsuario.aspx.designer.cs">
       <DependentUpon>registroUsuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="reporteUsuarioE.aspx.cs">
+      <DependentUpon>reporteUsuarioE.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="reporteUsuarioE.aspx.designer.cs">
+      <DependentUpon>reporteUsuarioE.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="reporteUsuarioG.aspx.cs">
+      <DependentUpon>reporteUsuarioG.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="reporteUsuarioG.aspx.designer.cs">
+      <DependentUpon>reporteUsuarioG.aspx</DependentUpon>
     </Compile>
     <Compile Include="reporteTablas.aspx.cs">
       <DependentUpon>reporteTablas.aspx</DependentUpon>

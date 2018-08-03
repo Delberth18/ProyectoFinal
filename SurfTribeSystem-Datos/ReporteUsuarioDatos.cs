@@ -23,7 +23,17 @@ namespace SurfTribeSystem_Datos
                 SqlParameter param = new SqlParameter();
 
                 #region parametros
-               
+                param = new SqlParameter();
+                if (usuario.Estado == null)
+                {
+                    param.Value = DBNull.Value;
+                }
+                else
+                {
+                    param.Value = usuario.Estado;
+                }
+                param.ParameterName = "@ESTADO";
+                parametros.Add(param);
 
                 param = new SqlParameter();
                 if (usuario.Pais == null)

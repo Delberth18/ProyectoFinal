@@ -15,6 +15,8 @@ namespace SurfTribeSystem_Entidades
         string telefono;
         string pais;
         string tipo_usu;
+        string tipo_usu_dsc;
+        string escuela_dsc;
         string tag;
         string idEscuela;
         string estado;
@@ -31,5 +33,7 @@ namespace SurfTribeSystem_Entidades
         public string IdEscuela { get => idEscuela; set => idEscuela = value; }
         public string Estado { get => estado; set => estado = value; }
         public string Nc { get => nc; set => nc = value; }
+        public string Tipo_usu_dsc { get => tipo_usu_dsc; set => tipo_usu_dsc = value; }
+        public string Escuela_dsc { get => escuela_dsc; set => escuela_dsc = value; }
     }
 }

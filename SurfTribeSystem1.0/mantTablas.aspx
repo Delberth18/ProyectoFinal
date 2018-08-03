@@ -75,7 +75,8 @@
                                                             </div>
                                                             <div id="collapse1" class="panel-collapse collapse">
                                                                 <div class="panel-body">
-                                                                    <asp:DropDownList ID="estadoList" runat="server" OnSelectedIndexChanged="estadoList_SelectedIndexChanged" AutoPostBack="True" CssClass="bg-ashh" Width="100%">
+                                                                    <asp:DropDownList ID="estadoList" runat="server" OnSelectedIndexChanged="estadoList_SelectedIndexChanged"
+                                                                        AutoPostBack="True" CssClass="bg-ashh" Width="100%"  ForeColor="Black" style="font-size:large">
                                                                     </asp:DropDownList>
                                                                 </div>
                                                             </div>
