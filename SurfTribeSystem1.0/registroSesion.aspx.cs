@@ -52,6 +52,17 @@ namespace SurfTribeSystem1._0
             ddlDificultad.Items.Add("Intermedio");
             ddlDificultad.Items.Add("Avanzado");
 
+            List<string> fechas = new List<string>();
+            DateTime fecha = new DateTime();
+
+            for (int i = 1; i < 8; i++)
+            {
+                fecha = DateTime.Now.AddDays(i + 4);
+                fechas.Add(fecha.ToString("dd/MM/yyyy"));
+            }
+            ddlfecha.DataSource = fechas;
+            ddlfecha.DataBind();
+
             Resultado resultado = new Resultado();
             try
             {
