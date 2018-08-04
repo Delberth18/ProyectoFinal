@@ -129,7 +129,7 @@
                                     <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Información</a>
                                     <ul class="dropdown-menu dropdown-menu-right">
 
-                                        <li class=""><a href="registrarse.aspx">Preguntas Frecuentes</a></li>
+                                        <li class=""><a href="FAQlistado.aspx">Preguntas Frecuentes</a></li>
                                         <li class=""><a href="">Sea parte de nosotros</a></li>
 
 
@@ -141,7 +141,7 @@
                                
                                 </li>
                                  <li class="dropdown singleDrop ">
-                                    <a href="InformaciónGeneral.aspx">Acerca de</a>
+                                    <a href="InformacionGeneral.aspx">Acerca de</a>
 
                                 </li>
                                <li class="dropdown searchBox">

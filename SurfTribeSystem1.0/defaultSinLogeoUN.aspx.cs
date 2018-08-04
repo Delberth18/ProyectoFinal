@@ -65,7 +65,7 @@ namespace SurfTribeSystem1._0
                     if (idUsu == "ADM")
                     {
 
-                        Response.Redirect("defaultConLogeoUADM.aspx");
+                        Response.Redirect("defaultConLogeoUADE.aspx");
 
                     }
                     else if (idUsu == "ADMG")

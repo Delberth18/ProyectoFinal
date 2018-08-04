@@ -37,7 +37,7 @@
                                                                             <br />
                                                                             <center>
                                                                             <asp:DropDownList ID="ddlEscuelas" AutoPostBack="True" runat="server" OnSelectedIndexChanged="Seleccionar" 
-                                                                                CssClass="bg-ashh" Style="width: 30%"  ForeColor="Black" style="font-size:large">
+                                                                                CssClass="bg-ashh" Style="width: 30%;  font-size:large;"  ForeColor="Black" >
                                                                             </asp:DropDownList>
                                                                             <br />
                                                                              </center>

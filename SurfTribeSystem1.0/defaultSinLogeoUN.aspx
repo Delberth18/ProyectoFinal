@@ -129,10 +129,7 @@
                                         </li>
                                     </ul>
                                 </li>
-                                <li class="dropdown megaDropMenu ">
-                                    <a href="">Galeria</a>
-
-                                </li>
+                               
                                 <li class="dropdown singleDrop ">
                                     <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Información</a>
                                     <ul class="dropdown-menu dropdown-menu-right">

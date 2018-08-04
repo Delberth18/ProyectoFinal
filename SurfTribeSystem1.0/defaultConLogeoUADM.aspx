@@ -72,7 +72,7 @@
                         <div class="collapse navbar-collapse navbar-ex1-collapse">
                             <ul class="nav navbar-nav navbar-right">
                                 <li class="dropdown singleDrop active">
-                                    <a href="defaultConLogeoUDM.aspx">Inicio </a>
+                                    <a href="defaultConLogeoUADM.aspx">Inicio </a>
 
                                 </li>
                                 <li class="dropdown megaDropMenu ">
@@ -125,43 +125,50 @@
                                         </li>
                                     </ul>
                                 </li>
-                                <li class="dropdown megaDropMenu ">
-                                    <a href="">Galeria</a>
-
-                                </li>
+                                
                                 <li class="dropdown singleDrop ">
                                     <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Información</a>
                                     <ul class="dropdown-menu dropdown-menu-right">
 
-                                        <li class=""><a href="registrarse.aspx">Preguntas Frecuentes</a></li>
+                                        <li class=""><a href="FAQlistado.aspx">Preguntas Frecuentes</a></li>
                                         <li class=""><a href="">Sea parte de nosotros</a></li>
+                                        <li class=""><a href="TérminosCondiciones.aspx">Términos y Condiciones</a></li>
 
 
                                     </ul>
                                 </li>
-                                <li class="dropdown singleDrop ">
-                                    <a href="InformaciónGeneral.aspx">Acerca de</a>
-
-                                </li>
+                           
                                  <li class="dropdown singleDrop ">
                                     <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Mantenimiento</a>
                                     <ul class="dropdown-menu dropdown-menu-right">
 
-                                        <li class=""><a href="mantUsuarios.aspx">Usuarios</a></li>
-                                        <li class=""><a href="mantEscuelas.aspx">Escuela</a></li>
+                                          <li class=""><a href="mantUsuarios.aspx">Usuarios</a></li>
+                                          <li class=""><a href="mantEscuelas.aspx">Escuela</a></li>
+                                         <!--<li class=""><a href="mantTablas.aspx">Tablas</a></li>-->
+                                         <li class=""><a href="mantReservas.aspx">Reservas</a></li>
+                                         <li class=""><a href="mantEventos.aspx">Eventos</a></li>
 
                                     </ul>
                                 </li>
-                                <li class="dropdown searchBox">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="searchIcon"><i class="fa fa-search" aria-hidden="true"></i></span></a>
+                                <li class="dropdown singleDrop ">
+                                    <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Reportes</a>
                                     <ul class="dropdown-menu dropdown-menu-right">
-                                        <li>
-                                            <span class="input-group">
-                                                <input type="text" class="form-control" placeholder="Search..." aria-describedby="basic-addon2" />
-                                                <span class="input-group-addon" id="basic-addon2">Search</span>
-                                            </span>
-                                        </li>
+
+                                          <li class=""><a href="mantUsuarios.aspx">Usuarios</a></li>
+                                          <li class=""><a href="mantEscuelas.aspx">Escuela</a></li>
+                                          <li class=""><a href="mantTablas.aspx">Tablas</a></li>
+                                         <li class=""><a href="mantReservas.aspx">Reservas</a></li>
+                                        
+
                                     </ul>
+                                </li>
+                                     <li class="dropdown singleDrop ">
+                                    <a href="InformacionGeneral.aspx">Acerca de</a>
+
+                                </li>
+                                <li class="dropdown searchBox">
+                                      <a href="reservaClases.aspx" class="dropdown-toggle" role="button"><span class="searchIcon">Reserva!!</span></a>
+                                    
                                 </li>
                                 <li class="dropdown singleDrop">
 
@@ -169,9 +176,7 @@
                                     <img class="avatar" src="ccss\star-1-3\Static HTML\img\dashboard\dash-user.jpg" alt="">&nbsp;&nbsp;<i class="fa fa-angle-down" aria-hidden="true"></i></a>
                                 <ul class="dropdown-menu dropdownMenu">
                                      <center><h5><b><asp:Label ID="lblNombre" runat="server" Text="Label"></asp:Label></b></h5></center>
-                                    <li><a href="profile.html">
-                                        <h5>Perfil</h5>
-                                    </a></li>
+
                                     <li><a href="setting.html">
                                         <h5>Configuración</h5>
                                     </a></li>       
