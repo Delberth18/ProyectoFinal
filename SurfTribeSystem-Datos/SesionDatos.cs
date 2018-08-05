@@ -151,6 +151,30 @@ namespace SurfTribeSystem_Datos
                 parametros.Add(param);
 
                 param = new SqlParameter();
+                if (sesion.Mes == null)
+                {
+                    param.Value = DBNull.Value;
+                }
+                else
+                {
+                    param.Value = sesion.Mes;
+                }
+                param.ParameterName = "MES"; //hora de inicio
+                parametros.Add(param);
+
+                param = new SqlParameter();
+                if (sesion.Dia == null)
+                {
+                    param.Value = DBNull.Value;
+                }
+                else
+                {
+                    param.Value = sesion.Dia;
+                }
+                param.ParameterName = "@DIA"; //hora de inicio
+                parametros.Add(param);
+
+                param = new SqlParameter();
                 if (sesion.Tag == null)
                 {
                     param.Value = DBNull.Value;
