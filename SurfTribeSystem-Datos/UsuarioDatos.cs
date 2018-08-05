@@ -51,6 +51,18 @@ namespace SurfTribeSystem_Datos
                 parametros.Add(param);
 
                 param = new SqlParameter();
+                if (usuario.Clave_antigua == null)
+                {
+                    param.Value = DBNull.Value;
+                }
+                else
+                {
+                    param.Value = usuario.Clave_antigua;
+                }
+                param.ParameterName = "@CLAVE_ANTIGUA";
+                parametros.Add(param);
+
+                param = new SqlParameter();
                 if (usuario.Nombre == null)
                 {
                     param.Value = DBNull.Value;

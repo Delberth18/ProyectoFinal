@@ -4,8 +4,10 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Globalization;
 using System.IO;
 using System.Linq;
+using System.Threading;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -42,6 +44,7 @@ namespace SurfTribeSystem1._0
         {
             this.MasterPageFile = "~/Site2.master";
         }
+
         private Boolean ValidarExtension(string sExtension)
         {
             Boolean verif = false;

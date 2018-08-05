@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/Site2.Master" AutoEventWireup="true" CodeBehind="registroTabla.aspx.cs" Inherits="SurfTribeSystem1._0.registroTabla" %>
+﻿<%@ Page Language="C#" UICulture="es"  MasterPageFile="~/Site2.Master" AutoEventWireup="true" CodeBehind="registroTabla.aspx.cs" Inherits="SurfTribeSystem1._0.registroTabla" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>

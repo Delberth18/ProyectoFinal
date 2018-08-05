@@ -60,19 +60,19 @@
                                                                     </li>
                                                                 </ul>
                                                             </div>
-
                                                             <div class=" col-sm-4 ">
                                                                 <ul>
                                                                     <li>
-                                                                        <img src='data:image/jpg;base64,<%#Eval("Imagen") %>' width="200" height="200" alt="" />
+                                                                        <img src='data:image/jpg;base64,<%#Eval("Imagen") %>' width="330"  alt="" />
                                                                     </li>
                                                                 </ul>
                                                             </div>
+                                                            <br />
                                                         </div>
                                                         <a aria-label="Editar" style="border: solid; border-color: #ff891e; border-radius: 8px; border-width: thin">
                                                             <asp:LinkButton ID="noConfirmarBtn" CommandName='<%# Eval("Id") %>' Text="Eliminar" runat="server"
                                                                 OnClick="eliminar_Click" aria-hidden="true" Style="margin: 2px 2px 2px 2px; color: darkred; font-weight: bold; font-size: medium" />
-                                                        </a>
+                                                        </a>    
                                                         <div class="row"></div>
                                                     </div>
                                                 </li>

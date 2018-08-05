@@ -257,101 +257,100 @@
                         </div>
                     </div>
 
-                    
 
-                        <div class="col-xs-12">
-                            <br />
-                            <div class="col-md-12">
-                                <div class="col-md-1" style="color: saddlebrown; text-align: center; font-size: x-large; font-weight: bold">
-                                    Nombre
-                                </div>
-                                <div class="col-md-2" style="color: saddlebrown; text-align: center; font-size: x-large; font-weight: bold">
-                                    Apellidos
-                                </div>
-                                <div class="col-md-1" style="color: saddlebrown; text-align: center; font-size: x-large; font-weight: bold">
-                                    Teléfono
-                                </div>
-                                <div class="col-md-3" style="color: saddlebrown; text-align: center; font-size: x-large; font-weight: bold">
-                                    Correo
-                                </div>
-                                <div class="col-md-2" style="color: saddlebrown; text-align: center; font-size: x-large; font-weight: bold">
-                                    Tipo Usuario
-                                </div>
-                                <div class="col-md-1" style="color: saddlebrown; text-align: center; font-size: x-large; font-weight: bold">
-                                    Estado
-                                </div>
-                                <div class="col-md-2" style="color: saddlebrown; text-align: center; font-size: x-large; font-weight: bold">
-                                    Escuela
-                                </div>
+
+                    <div class="col-xs-12">
+                        <br />
+                        <div class="col-md-12">
+                            <div class="col-md-1" style="color: saddlebrown; text-align: center; font-size: x-large; font-weight: bold">
+                                Nombre
                             </div>
-                            <asp:Repeater ID="imagenesList" runat="server">
-
-                                <ItemTemplate>
-                                    <div class="col-md-12" style="border-bottom: solid; border-color: saddlebrown; border-width: 2px">
-                                        <div class="col-md-1" >
-                                            <ul>
-                                                <li style="color: black; font-weight: bold;text-align: center; font-size: medium"><%# Eval("Nombre") %>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-md-2" >
-                                            <ul>
-                                                <li style="color: black; font-weight: bold;text-align: center; font-size: medium"><%# Eval("Apellidos") %>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-md-1" >
-                                            <ul>
-                                                <li style="color: black; font-weight: bold;text-align: center; font-size: medium"><%# Eval("Telefono") %>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-md-3" >
-                                            <ul>
-                                                <li style="color: black; font-weight: bold;text-align: center; font-size: medium"><%# Eval("Correo") %>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-md-2" >
-                                            <ul>
-                                                <li style="color: black; font-weight: bold;text-align: center; font-size: medium"><%# Eval("Tipo_usu_dsc") %>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-md-1" >
-                                            <ul>
-                                                <li style="color: black; font-weight: bold;text-align: center; font-size: medium"><%# Eval("Estado") %> 
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-md-2" >
-                                            <ul>
-                                                <li style="color: black; font-weight: bold;text-align: center; font-size: medium"><%# Eval("Escuela_dsc") %> 
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <br />
-                                </ItemTemplate>
-                            </asp:Repeater>
-
+                            <div class="col-md-2" style="color: saddlebrown; text-align: center; font-size: x-large; font-weight: bold">
+                                Apellidos
+                            </div>
+                            <div class="col-md-1" style="color: saddlebrown; text-align: center; font-size: x-large; font-weight: bold">
+                                Teléfono
+                            </div>
+                            <div class="col-md-3" style="color: saddlebrown; text-align: center; font-size: x-large; font-weight: bold">
+                                Correo
+                            </div>
+                            <div class="col-md-2" style="color: saddlebrown; text-align: center; font-size: x-large; font-weight: bold">
+                                Tipo Usuario
+                            </div>
+                            <div class="col-md-1" style="color: saddlebrown; text-align: center; font-size: x-large; font-weight: bold">
+                                Estado
+                            </div>
+                            <div class="col-md-2" style="color: saddlebrown; text-align: center; font-size: x-large; font-weight: bold">
+                                Escuela
+                            </div>
                         </div>
-                        </ContentTemplate>
+                        <asp:Repeater ID="imagenesList" runat="server">
+
+                            <ItemTemplate>
+                                <div class="col-md-12" style="border-bottom: solid; border-color: saddlebrown; border-width: 2px">
+                                    <div class="col-md-1">
+                                        <ul>
+                                            <li style="color: black; font-weight: bold; text-align: center; font-size: medium"><%# Eval("Nombre") %>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <ul>
+                                            <li style="color: black; font-weight: bold; text-align: center; font-size: medium"><%# Eval("Apellidos") %>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-1">
+                                        <ul>
+                                            <li style="color: black; font-weight: bold; text-align: center; font-size: medium"><%# Eval("Telefono") %>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <ul>
+                                            <li style="color: black; font-weight: bold; text-align: center; font-size: medium"><%# Eval("Correo") %>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <ul>
+                                            <li style="color: black; font-weight: bold; text-align: center; font-size: medium"><%# Eval("Tipo_usu_dsc") %>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-1">
+                                        <ul>
+                                            <li style="color: black; font-weight: bold; text-align: center; font-size: medium"><%# Eval("Estado") %> 
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <ul>
+                                            <li style="color: black; font-weight: bold; text-align: center; font-size: medium"><%# Eval("Escuela_dsc") %> 
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <br />
+                            </ItemTemplate>
+                        </asp:Repeater>
+
+                    </div>
+                </ContentTemplate>
                 <Triggers>
                     <asp:AsyncPostBackTrigger ControlID="escuelaLst" EventName="" />
                     <asp:AsyncPostBackTrigger ControlID="paisLst" EventName="" />
                     <asp:AsyncPostBackTrigger ControlID="estadoLst" EventName="" />
                 </Triggers>
             </asp:UpdatePanel>
-                        <div class="col-xs-12">
-                            <br />
-                            <asp:Button ID="btnGenerar" class="btn btn-default btn-circle-2 " BackColor="SaddleBrown" ForeColor="White"
-                                runat="server" Text="Generar Reporte" Width="200px" OnClick="GenerarReporte" />
-                        </div>
-                    </div>
-                
-
+            <div class="col-xs-12">
+                <br />
+                <asp:Button ID="btnGenerar" class="btn btn-default btn-circle-2 " BackColor="SaddleBrown" ForeColor="White"
+                    runat="server" Text="Generar Reporte" Width="200px" OnClick="GenerarReporte" />
+            </div>
         </div>
+
+
 
     </section>
 </asp:Content>

@@ -194,7 +194,7 @@
                                               <li><a href="Configuración.aspx">
                                             <h5>Configuración</h5>
                                         </a></li>
-                                        <li><a href="Configuración.aspx">
+                                        <li><a href="defaultSinLogeoUN.aspx">
                                             <h5>Cerrar Sesión</h5>
                                         </a></li>
                                     </ul>
