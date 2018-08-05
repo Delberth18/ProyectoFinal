@@ -159,7 +159,7 @@ namespace SurfTribeSystem_Datos
                 {
                     param.Value = sesion.Mes;
                 }
-                param.ParameterName = "MES"; //hora de inicio
+                param.ParameterName = "MES"; //mes
                 parametros.Add(param);
 
                 param = new SqlParameter();
@@ -171,7 +171,7 @@ namespace SurfTribeSystem_Datos
                 {
                     param.Value = sesion.Dia;
                 }
-                param.ParameterName = "@DIA"; //hora de inicio
+                param.ParameterName = "@DIA"; //dia
                 parametros.Add(param);
 
                 param = new SqlParameter();
