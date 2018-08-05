@@ -131,6 +131,7 @@
 
                                         <li class=""><a href="FAQlistado.aspx">Preguntas Frecuentes</a></li>
                                         <li class=""><a href="">Sea parte de nosotros</a></li>
+                                          <li class=""><a href="TérminosCondiciones.aspx">Términos y Condiciones</a></li>
 
 
 
@@ -159,7 +160,7 @@
                                     <li><a href="profile.html">
                                         <h5>Perfil</h5>
                                     </a></li>
-                                    <li><a href="setting.html">
+                                    <li><a href="Configuración.aspx">
                                         <h5>Configuración</h5>
                                     </a></li>
                                      <li>

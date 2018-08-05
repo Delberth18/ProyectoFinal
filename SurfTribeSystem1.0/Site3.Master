@@ -191,8 +191,8 @@
                                     <ul class="dropdown-menu dropdownMenu">
                                           <center><h5><b><asp:Label ID="lblNombre" runat="server" Text="Label"></asp:Label></b></h5></center>
                                         
-                                        <li><a href="">
-                                            <h5>Configuración de la cuenta</h5>
+                                              <li><a href="Configuración.aspx">
+                                            <h5>Configuración</h5>
                                         </a></li>
                                         <li><a href="Configuración.aspx">
                                             <h5>Cerrar Sesión</h5>

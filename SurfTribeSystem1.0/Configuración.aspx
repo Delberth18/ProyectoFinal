@@ -2,6 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <br /><br /><br /><br />
     <fielset>
      <section class="pageTitle" >
       <div class="container">
@@ -32,74 +33,27 @@
           <div class="changePassword">
           
             <div class="row">
-              <form action="" method="post">
+             
+                   <div class="col-sm-12">
+                  <asp:TextBox ID="TextBox3" class="form-control" placeholder="Contraseña Pasada"  runat="server" TextMode="Password"></asp:TextBox>
+                </div>
+                
                 <div class="col-sm-12">
-                  <input type="text" class="form-control" id="inputPassword3" placeholder="Old Password">
+                    <asp:TextBox ID="TextBox1" class="form-control" placeholder="Contraseña Nueva"  runat="server" TextMode="Password"></asp:TextBox>
                 </div>
                 <div class="col-sm-12">
-                  <input type="text" class="form-control" id="inputPassword3" placeholder="New Password">
-                </div>
+                   <asp:TextBox ID="TextBox2" class="form-control" placeholder="Confirmar Contraseña Nueva"  runat="server" TextMode="Password"></asp:TextBox>
+                    </div>
                 <div class="col-sm-12">
-                  <input type="password" class="form-control" id="inputPassword3" placeholder="Confirm New Password">
+                  
+                    <asp:Button ID="Button1" runat="server" class="btn buttonTransparent" Text="Actualizar Contraseña"></asp:Button>
                 </div>
-                <div class="col-sm-12">
-                  <button type="submit" class="btn buttonTransparent">Update Password</button>
-                </div>
-              </form>
+             
             </div>
           </div>
-          <hr>
+         
             <br />
-          <!-- Change email -->
-             <font size="5" color="#ff891e"><b FACE="arial" size="20%">Cambio de Correo Electrónico</b></font>
-          <div class="changeEmail">
-            <div class="row">
-              <form action="" method="post">
-                <div class="col-sm-12">
-                  <input type="text" class="form-control" id="inputPassword3" placeholder="Old Email">
-                    <asp:TextBox runat="server" type="text" class="form-control" id="inputPassword" placeholder="Old Email" ></asp:TextBox>
-                </div>
-                <div class="col-sm-12">
-                  <input type="text" class="form-control" id="inputPassword3" placeholder="New Email">
-                </div>
-                <div class="col-sm-12">
-                  <input type="password" class="form-control" id="inputPassword3" placeholder="Confirm New Email">
-                </div>
-                <div class="col-sm-12">
-                  <button type="submit" class="btn buttonTransparent">Update Email Address</button>
-                </div>
-              </form>
-            </div>
-          </div>
-          <hr>
-            <br />
-             <font size="5" color="#ff891e"><b FACE="arial" size="20%">Cambio de Preferencias</b></font>
-
-          <!-- Change Setting  -->
-          <div class="changeSetting">
-           
-            <div class="row">
-              <form action="" method="post">
-                <div class="form-check col-sm-12">
-                	<input id="checkbox-1" class="checkbox-custom form-check-input" name="checkbox-1" type="checkbox"  >
-                	<label for="checkbox-1" class="checkbox-custom-label form-check-label">Star Travel has periodic offers and deals on really cool destinations.</label>
-                </div>
-                <div class="form-check col-sm-12">
-                	<input id="checkbox-2" class="checkbox-custom form-check-input" name="checkbox-1" type="checkbox"  >
-                	<label for="checkbox-2" class="checkbox-custom-label form-check-label">Star Travel has fun company news, as well as periodic emails.</label>
-                </div>
-                <div class="form-check col-sm-12">
-                	<input id="checkbox-3" class="checkbox-custom form-check-input" name="checkbox-1" type="checkbox" >
-                	<label for="checkbox-3" class="checkbox-custom-label form-check-label">I have an upcoming reservation.</label>
-                </div>
-
-                <div class="col-sm-12">
-                  <button type="submit" class="btn buttonTransparent">Update Email Address</button>
-                </div>
-              </form>
-            </div>
-          </div>
-
+         
         </div>
       </div>
     </div>
