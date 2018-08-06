@@ -136,6 +136,7 @@
 
                                         <li class=""><a href="registrarse.aspx">Preguntas Frecuentes</a></li>
                                         <li class=""><a href="">Sea parte de nosotros</a></li>
+                                         <li class=""><a href="TérminosCondiciones.aspx">Términos y Condiciones</a></li>
 
 
 

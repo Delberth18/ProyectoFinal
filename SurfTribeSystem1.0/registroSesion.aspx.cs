@@ -14,7 +14,29 @@ namespace SurfTribeSystem1._0
         Usuario usure = new Usuario();
         protected void Page_Load(object sender, EventArgs e)
         {
-            usure= (Usuario)Session["InicioSesion"];
+           
+            if (Session["InicioSesion"] != null)
+            {
+                usure = (Usuario)Session["InicioSesion"];
+
+                if (usure.Tipo_usu != "ADM")
+                {
+                    Response.Redirect("defaultSinLogeoUN.aspx");
+                }
+                DateTime nis = new DateTime();
+                nis= DateTime.Now;
+
+                string dia = nis.DayOfWeek.ToString();
+                if (dia != "Sunday")
+                {
+                    Response.Redirect("defaultConLogeoUADE.aspx");
+                }
+                
+            }
+            else
+            {
+                Response.Redirect("defaultSinLogeoUN.aspx");
+            }
             if (!IsPostBack) {
 
                 CargarDatos();
@@ -119,10 +141,11 @@ namespace SurfTribeSystem1._0
             sesion.Habilitadas = Convert.ToInt32(txtCupos.Text);//Cupos
             sesion.HraInicio1 = ddlHi.SelectedItem.ToString();//Hora de Inicio
             sesion.HraFinal1 = ddlHf.SelectedItem.ToString();//Hora de finalizacion
-            sesion.Dificultad = ddlDificultad.SelectedItem.ToString();//Dificultad
+            sesion.Dificultad = ddlDificultad.SelectedItem.ToString().ToUpper();//Dificultad
             sesion.IdEscuela = usure.IdEscuela;//IdEscuela
             sesion.Activa = true;
             sesion.Id_instructor = ddlIns.SelectedValue;
+            sesion.Reservadas = 0;
             try
             {
                 sesion.Fecha = Convert.ToDateTime(ddlfecha.SelectedItem.ToString());
@@ -177,8 +200,90 @@ namespace SurfTribeSystem1._0
                             else {
 
                                 int mes= sesion.Fecha.Month;
+                                int dia = sesion.Fecha.Day;
+
+                                string mesno = Convert.ToString(mes);
+
+                                switch (mesno)
+                                {
+                                    case "1":
+                                        sesion.Mes = "Enero";
+                                        break;
+                                    case "2":
+                                        sesion.Mes = "Febrero";
+                                        break;
+                                    case "3":
+                                        sesion.Mes = "Marzo";
+                                        break;
+                                    case "4":
+                                        sesion.Mes = "Abril";
+                                        break;
+                                    case "5":
+                                        sesion.Mes = "Mayo";
+                                        break;
+                                    case "6":
+                                        sesion.Mes = "Junio";
+                                        break;
+                                    case "7":
+                                        sesion.Mes = "Julio";
+                                        break;
+                                    case "8":
+                                        sesion.Mes = "Agosto";
+                                        break;
+                                    case "9":
+                                        sesion.Mes = "Septiembre";
+                                        break;
+                                    case "10":
+                                        sesion.Mes = "Octubre";
+                                        break;
+                                    case "11":
+                                        sesion.Mes = "Noviembre";
+                                        break;
+                                    case "12":
+                                        sesion.Mes = "Diciembre";
+                                        break;
+                                }
+                                
+
+                                sesion.Dia = Convert.ToString(dia);
+
+                                sesion.Id = sesion.Fecha.ToString("dd-MM-yyyy") + sesion.Dificultad.Substring(0, 1) +sesion.IdEscuela+ sesion.HraInicio1.Substring(0, 1) + sesion.HraFinal1.Substring(0, 1);
+                                sesion.Tag = "INSERTAR";
+                                Resultado resultado = new Resultado();
+
+                                try
+                                {
+
+                                    resultado = new SesionLogica().Acciones(sesion);
+                                    if (resultado.TipoResultado == "OK")
+                                    {
+                                        ddlHi.SelectedValue=("Seleccione Hora Inicio");
+                                        ddlHf.SelectedValue=("Seleccione Hora Final");
+                                        ddlIns.SelectedValue = "Seleccione un Instructor(a)";
+                                        ddlDificultad.SelectedValue=("Seleccione Dificultad");
+                                        ddlfecha.SelectedValue = ("Seleccione una fecha");
+                                           
+                                        txtCupos.Text = "0";
+
+                                        string script = "swal('Excelente', 'Éxito en la insersión', 'success'); ";
+                                        ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
+
+                                    }
+                                    else
+                                    {
+                                        string script = "swal('Lo sentimos, Ya hay una reserva en esa misma fecha y con el mismo Instructor', '', 'error'); ";
+                                        ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
+
+                                    }
 
 
+                                }
+                                catch
+                                {
+                                    string script = "swal('Lo sentimos, Ya hay una reserva en esa misma fecha y con el mismo Instructor', '', 'error'); ";
+                                    ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
+
+                                }
 
                             }
 
