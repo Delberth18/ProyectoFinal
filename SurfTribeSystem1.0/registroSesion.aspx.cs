@@ -247,7 +247,7 @@ namespace SurfTribeSystem1._0
 
                                 sesion.Dia = Convert.ToString(dia);
 
-                                sesion.Id = sesion.Fecha.ToString("dd-MM-yyyy") + sesion.Dificultad.Substring(0, 1) +sesion.IdEscuela.Substring(0,1)+ sesion.HraInicio1.Substring(0, 1) + sesion.HraFinal1.Substring(0, 1);
+                                sesion.Id = sesion.Fecha.ToString("dd-MM-yyyy") + sesion.Dificultad.Substring(0, 1) +sesion.IdEscuela+ sesion.HraInicio1.Substring(0, 1) + sesion.HraFinal1.Substring(0, 1);
                                 sesion.Tag = "INSERTAR";
                                 Resultado resultado = new Resultado();
 
