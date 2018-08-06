@@ -13,15 +13,19 @@ namespace SurfTribeSystem1._0.Clases
         MailMessage m = new MailMessage();
         SmtpClient smtp = new SmtpClient();
 
-        public bool enviarCorreos(string from, string subject, string password, string to, string mensaje)
+        public bool enviarCorreos(string from, string subject, string password, List<string> to, string mensaje)
         {
             try
             {
                 m.From = new MailAddress(from);
-                m.To.Add(new MailAddress(to));
+                foreach (string item in to)
+                {
+                    m.To.Add(new MailAddress(item));
+                }
+                
                 m.Body = mensaje;
                 m.Subject = subject;
-                // m.IsBodyHtml = true;
+                m.IsBodyHtml = true;
                 smtp.Host = "smtp.gmail.com"; // "smtp-mail.outlook.com";
                 smtp.Port = 587;
 

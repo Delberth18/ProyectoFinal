@@ -59,6 +59,7 @@
     <Compile Include="SesionDatos.cs" />
     <Compile Include="TablaDatos.cs" />
     <Compile Include="TipoUsuarioDatos.cs" />
+    <Compile Include="unsuscribeDatos.cs" />
     <Compile Include="UsuarioDatos.cs" />
   </ItemGroup>
   <ItemGroup>

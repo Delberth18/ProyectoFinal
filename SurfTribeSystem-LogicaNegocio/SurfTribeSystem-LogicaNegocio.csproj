@@ -59,6 +59,7 @@
     <Compile Include="SesionLogica.cs" />
     <Compile Include="TablaLogica.cs" />
     <Compile Include="TipoUsuarioLogica.cs" />
+    <Compile Include="unsuscribeLogica.cs" />
     <Compile Include="UsuarioLogica.cs" />
   </ItemGroup>
   <ItemGroup>

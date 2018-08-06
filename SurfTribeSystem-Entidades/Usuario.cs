@@ -21,6 +21,7 @@ namespace SurfTribeSystem_Entidades
         string idEscuela;
         string estado;
         string nc;
+        string clave_antigua;
 
         public string Correo { get => correo; set => correo = value; }
         public string Clave { get => clave; set => clave = value; }
@@ -35,5 +36,6 @@ namespace SurfTribeSystem_Entidades
         public string Nc { get => nc; set => nc = value; }
         public string Tipo_usu_dsc { get => tipo_usu_dsc; set => tipo_usu_dsc = value; }
         public string Escuela_dsc { get => escuela_dsc; set => escuela_dsc = value; }
+        public string Clave_antigua { get => clave_antigua; set => clave_antigua = value; }
     }
 }

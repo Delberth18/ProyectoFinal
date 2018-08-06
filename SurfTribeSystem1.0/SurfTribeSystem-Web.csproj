@@ -3113,6 +3113,7 @@
     <Content Include="Imagenes\IMG-20150830-WA0006.jpg" />
     <Content Include="Imagenes\IMG-20170915-WA0002-01.jpeg" />
     <Content Include="Imagenes\IMG-20171029-WA0010.jpeg" />
+    <Content Include="Imagenes\img_unsuscribe.jpg" />
     <Content Include="Imagenes\PIC_20160827_140254.JPG" />
     <Content Include="InformacionGeneral.aspx" />
     <Content Include="mantComentarios.aspx" />
@@ -3145,6 +3146,7 @@
     <Content Include="registroSesion.aspx" />
     <Content Include="reservaSinCampo.aspx" />
     <Content Include="TérminosCondiciones.aspx" />
+    <Content Include="ususcribe.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -3502,6 +3504,13 @@
     </Compile>
     <Compile Include="TérminosCondiciones.aspx.designer.cs">
       <DependentUpon>TérminosCondiciones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ususcribe.aspx.cs">
+      <DependentUpon>ususcribe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ususcribe.aspx.designer.cs">
+      <DependentUpon>ususcribe.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

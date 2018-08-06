@@ -51,6 +51,18 @@ namespace SurfTribeSystem_Datos
                 parametros.Add(param);
 
                 param = new SqlParameter();
+                if (usuario.Clave_antigua == null)
+                {
+                    param.Value = DBNull.Value;
+                }
+                else
+                {
+                    param.Value = usuario.Clave_antigua;
+                }
+                param.ParameterName = "@CLAVE_ANTIGUA";
+                parametros.Add(param);
+
+                param = new SqlParameter();
                 if (usuario.Nombre == null)
                 {
                     param.Value = DBNull.Value;
@@ -169,7 +181,7 @@ namespace SurfTribeSystem_Datos
                 {
                     resultado.TipoResultado = "OK";
                     List<string> lista = new List<string>();
-                    if (usuario.Tag == "CORREOS")
+                    if (usuario.Tag == "CORREOS" || usuario.Tag == "CORREOS2")
                     {
                         foreach (DataRow row in datos.Tables[1].Rows)
                         {

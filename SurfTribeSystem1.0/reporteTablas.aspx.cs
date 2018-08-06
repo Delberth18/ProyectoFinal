@@ -55,7 +55,7 @@ namespace SurfTribeSystem1._0
             Resultado resultado = new Resultado();
             try
             {
-                resultado = new TablaLogica().Reporte("HERMOSA RIDERS", "", "", "", "");
+                resultado = new TablaLogica().Reporte(usu.IdEscuela, "", "", "", "");
                 if (resultado.TipoResultado == "OK")
                 {
                     listaTablas = null;
