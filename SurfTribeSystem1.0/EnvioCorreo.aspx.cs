@@ -55,37 +55,51 @@ namespace SurfTribeSystem1._0
 
         protected void btnEnviar_Click(object sender, EventArgs e)
         {
-            if(asuntoText.Text.Trim()=="" || mensajeText.Text.Trim() == "")
+            if (asuntoText.Text.Trim() == "" || mensajeText.Text.Trim() == "")
             {
                 string script = "swal('Error', ' Debe digitar tanto el asunto como el mensaje correspondiente', 'error'); ";
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
                 return;
             }
+            else
+            {
+
+                string script = "swal('Éxito', 'EL correo se ha enviado a todos los usuarios', 'success'); ";
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
+                validar();
+            }
+        }
+
+        private void validar()
+        {
             try
             {
+
+
                 string from = "surftcr@gmail.com";
                 string password = "tribe12345";
                 string msn = "";
 
-                if (usu2.Tipo_usu=="ADM")
+                if (usu2.Tipo_usu == "ADM")
                 {
-                    msn = mensajeText.Text + "\n\nMensaje enviado por escuela de surf: " + usu2.IdEscuela + "\n Para más información puede escribir al correo: " + "surftcr@gmail.com" ;
+                    msn = mensajeText.Text + "<br /><br />Mensaje enviado por escuela de surf: " + usu2.IdEscuela + "<br /> Para más información puede escribir al correo: "
+                        + "  surftcr@gmail.com";
                 }
                 else
                 {
-                    msn = mensajeText.Text + "\n\nMensaje enviado desde la página Surf Tribe" ;
+                    msn = mensajeText.Text + "<br /><br />Mensaje enviado desde la página Surf Tribe";
                 }
 
-                string subject = asuntoText.Text ;
-                string to = "";
-                foreach (string item in correos)
-                {                    
-                     to = item;
+                msn += "<br /><br /><br /><a href='http://localhost:54289/ususcribe.aspx'>Deseo desincribirme</a>";
 
-                    new Email().enviarCorreos(from, subject, password, to, msn);
-                }
-                string script = "swal('Éxito', 'EL correo se ha enviado a todos los usuarios', 'succes'); ";
+                string subject = asuntoText.Text;
+
+
+                new Email().enviarCorreos(from, subject, password, correos, msn);
+
+                string script = "swal('Éxito', 'EL correo se ha enviado a todos los usuarios', 'success'); ";
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
+
             }
             catch (Exception)
             {
@@ -101,9 +115,9 @@ namespace SurfTribeSystem1._0
             Usuario usu = new Usuario();
             try
             {
-                usu.IdEscuela = usu.IdEscuela;
+                usu.IdEscuela = usu2.IdEscuela;
 
-                if (usu2.Tipo_usu=="ADM")
+                if (usu2.Tipo_usu == "ADM")
                 {
                     usu.Tag = "CORREOS";
                 }
@@ -111,11 +125,11 @@ namespace SurfTribeSystem1._0
                 {
                     usu.Tag = "CORREOS2";
                 }
-               
+
 
                 resultado = new UsuarioLogica().Acciones(usu);
 
-                if (resultado.TipoResultado=="OK")
+                if (resultado.TipoResultado == "OK")
                 {
                     correos = (List<string>)resultado.ObjetoResultado;
                 }

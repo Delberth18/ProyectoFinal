@@ -117,8 +117,9 @@ namespace SurfTribeSystem1._0
 
                     string subject = "Nuevo Comentario";
                     string to = "surftcr@gmail.com";
-
-                    new Email().enviarCorreos(from, subject, password, to, msn);
+                    List<string> correos = new List<string>();
+                    correos.Add(to);
+                    new Email().enviarCorreos(from, subject, password, correos, msn);
                 }
                 else
                 {

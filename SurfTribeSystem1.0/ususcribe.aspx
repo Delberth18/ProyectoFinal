@@ -53,7 +53,7 @@
 
 
 </head>
-<body class="mainContentSection packagesSection" style="background-image: url(Imagenes/IMG-20171029-WA0010.jpeg); background-repeat: no-repeat; background-size: cover;">
+<body class="mainContentSection packagesSection" style="background-image: url(Imagenes/IMG-20171029-WA0010.jpeg); background-repeat: no-repeat; background-size: cover; position:relative">
     <header>
         <nav class="navbar navbar-default navbar-main navbar-fixed-top " role="navigation">
             <div class="container">
@@ -72,27 +72,34 @@
     </header>
 
     <form runat="server">
-<div class="row" style="align-content:center;margin-left:8%;margin-right:8%">
-                <div class=" col-xs-12 col-sm-12">
-                    <ul>
-                        <li>
-                            <h2 style="text-align: center">
-                                <asp:Label runat="server" ID="tituloLabel" Text="Comentenos el motivo de su deseción de dejar nuestra página:" BackColor="#f5f5f5" Font-Size="XX-Large"></asp:Label></h2>
-                            <asp:TextBox class="form-control  bg-ashh" ID="preguntaText" runat="server" TextMode="Email" Width="30%" placeholder="Digite su correo" /><br />
-                            <asp:TextBox ID="txtPor" runat="server" class="form-control  bg-ashh" TextMode="MultiLine"  Style=" font-size: large"
-                                Height="50%" Rows="6"></asp:TextBox>
-                        </li>
-                        <li>
-                            <br />
-                            <asp:Button runat="server" Text="Desinscribirme" class="btn btn-default" BackColor="DarkOrange" ForeColor="White" style="padding:8px;"/>
-                        </li>
-                    </ul>
+        <div class="row" style="align-content: center; margin-left: 8%; margin-right: 8%">
+            <div class=" col-xs-12 col-sm-12">
+                <ul>
+                    <li>
+                        <h2 style="text-align: center">
+                            <asp:Label runat="server" ID="tituloLabel" Text="Comentenos el motivo de su deseción de dejar nuestra página:" BackColor="#f5f5f5" Font-Size="XX-Large"></asp:Label></h2>
+                        <asp:TextBox class="form-control  bg-ashh" ID="correoText" runat="server" TextMode="Email" Width="30%" placeholder="Digite su correo" /><br />
+                        <asp:TextBox ID="comentarioText" runat="server" class="form-control  bg-ashh" TextMode="MultiLine" Style="font-size: large"
+                            Height="50%" Rows="6"></asp:TextBox>
+                    </li>
+                    <li>
+                        <br />
+                        <asp:Button runat="server" Text="Desinscribirme" class="btn btn-default" BackColor="DarkOrange"
+                            ForeColor="White" Style="padding: 8px;" OnClick="Unnamed_Click" />
 
-                </div>
+                        <asp:Button runat="server" Text="Salir" class="btn btn-default" BackColor="SaddleBrown"
+                            ForeColor="White" Style="padding: 8px;" OnClick="Unnamed_Click1" />
+                    </li>
+                </ul>
+
             </div>
+        </div>
     </form>
+    <br />
+    <br />
 
-    <footer class="footer" style="position: absolute; bottom: 0;">
+
+    <footer class="footer">
         <div class="footer clearfix">
             <div class="container">
                 <div class="row">
@@ -117,7 +124,7 @@
                     </div>
                     <div class="col-sm-6 col-sm-pull-6 col-xs-12">
                         <div class="copyRightText">
-                            <p>Copyright © 2018. Todos los derechos reservados</a>.</p>
+                            <p>Copyright © 2018. Todos los derechos reservados.</p>
                         </div>
                     </div>
                 </div>

@@ -181,7 +181,7 @@ namespace SurfTribeSystem_Datos
                 {
                     resultado.TipoResultado = "OK";
                     List<string> lista = new List<string>();
-                    if (usuario.Tag == "CORREOS")
+                    if (usuario.Tag == "CORREOS" || usuario.Tag == "CORREOS2")
                     {
                         foreach (DataRow row in datos.Tables[1].Rows)
                         {

@@ -6,8 +6,7 @@
 
 
     <section class="mainContentSection packagesSection" style="background-image: url(Imagenes/IMG-20150830-WA0006.jpg); background-repeat: no-repeat; background-size: cover">
-        <asp:UpdatePanel runat="server">
-            <ContentTemplate>
+      
                 <br />
                 <div class="row">
                     <div class="col-xs-12">
@@ -60,11 +59,6 @@
 
 
                 </div>
-            </ContentTemplate>
-            <Triggers>
-                <asp:AsyncPostBackTrigger ControlID="btnEnviar" EventName="" />
-            </Triggers>
-        </asp:UpdatePanel>
     </section>
 
 

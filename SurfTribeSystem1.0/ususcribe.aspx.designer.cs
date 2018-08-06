@@ -31,21 +31,21 @@ namespace SurfTribeSystem1._0 {
         protected global::System.Web.UI.WebControls.Label tituloLabel;
         
         /// <summary>
-        /// preguntaText control.
+        /// correoText control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox preguntaText;
+        protected global::System.Web.UI.WebControls.TextBox correoText;
         
         /// <summary>
-        /// txtPor control.
+        /// comentarioText control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPor;
+        protected global::System.Web.UI.WebControls.TextBox comentarioText;
     }
 }
