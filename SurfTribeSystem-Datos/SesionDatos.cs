@@ -76,6 +76,30 @@ namespace SurfTribeSystem_Datos
                 param.ParameterName = "@FECHA";//fecha
                 parametros.Add(param);
 
+                param = new SqlParameter();
+                if (sesion.Habilitadas.ToString() == null)
+                {
+                    param.Value = DBNull.Value;
+                }
+                else
+                {
+                    param.Value = sesion.Habilitadas;
+                }
+                param.ParameterName = "@HABILITADAS"; //habilitadas
+                parametros.Add(param);
+
+                param = new SqlParameter();
+                if (sesion.Reservadas.ToString() == null)
+                {
+                    param.Value = DBNull.Value;
+                }
+                else
+                {
+                    param.Value = sesion.Reservadas;
+                }
+                param.ParameterName = "@RESERVADAS";//Reservadas
+                parametros.Add(param);
+
 
                 param = new SqlParameter();
                 if (sesion.HraInicio1 == null)
@@ -101,29 +125,9 @@ namespace SurfTribeSystem_Datos
                 param.ParameterName = "@HORA_FINAL";//hora final
                 parametros.Add(param);
 
-                param = new SqlParameter();
-                if (sesion.Reservadas.ToString()== null)
-                {
-                    param.Value = DBNull.Value;
-                }
-                else
-                {
-                    param.Value =  sesion.Reservadas;
-                }
-                param.ParameterName = "@RESERVADAS";//Reservadas
-                parametros.Add(param);
+               
 
-                param = new SqlParameter();
-                if (sesion.Habilitadas.ToString() == null)
-                {
-                    param.Value = DBNull.Value;
-                }
-                else
-                {
-                    param.Value = sesion.Habilitadas;
-                }
-                param.ParameterName = "@HABILITADAS"; //habilitadas
-                parametros.Add(param);
+                
 
 
                 param = new SqlParameter();
@@ -150,6 +154,30 @@ namespace SurfTribeSystem_Datos
                 param.ParameterName = "@IDUSUARIO";//IdUsuario
                 parametros.Add(param);
 
+                param = new SqlParameter();
+                if (sesion.Mes == null)
+                {
+                    param.Value = DBNull.Value;
+                }
+                else
+                {
+                    param.Value = sesion.Mes;
+                }
+                param.ParameterName = "@MES"; //Mes
+                parametros.Add(param);
+
+                param = new SqlParameter();
+                if (sesion.Dia == null)
+                {
+                    param.Value = DBNull.Value;
+                }
+                else
+                {
+                    param.Value = sesion.Dia;
+                }
+                param.ParameterName = "@DIA"; //dia
+                parametros.Add(param);
+                //
                 param = new SqlParameter();
                 if (sesion.Tag == null)
                 {
@@ -178,7 +206,7 @@ namespace SurfTribeSystem_Datos
                 }
                 else
                 {
-                    if (sesion.Tag != "SELECCIONADA" && sesion.Tag != "DESELECCIONADA")
+                    if (sesion.Tag != "SELECCIONADA" && sesion.Tag != "DESELECCIONADA" && sesion.Tag!="INSERTAR")
                     {
 
 

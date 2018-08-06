@@ -41,5 +41,15 @@ namespace SurfTribeSystem1._0
             }
 
         }
+
+
+        protected void Sesion_Click(object sender, EventArgs e)
+        {
+
+            Session["InicioSesion"] = null;
+
+            Response.Redirect("defaultSinLogeoUN.aspx");
+
+        }
     }
 }

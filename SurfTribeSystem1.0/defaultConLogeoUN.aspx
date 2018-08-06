@@ -157,9 +157,7 @@
                                     <img class="avatar" src="ccss\star-1-3\Static HTML\img\dashboard\dash-user.jpg" alt="">&nbsp;&nbsp;<i class="fa fa-angle-down" aria-hidden="true"></i></a>
                                 <ul class="dropdown-menu dropdownMenu">
                                     <center><h5><b><asp:Label ID="lblNombre" runat="server" Text="Label"></asp:Label></b></h5></center>
-                                    <li><a href="profile.html">
-                                        <h5>Perfil</h5>
-                                    </a></li>
+                                   
                                     <li><a href="Configuración.aspx">
                                         <h5>Configuración</h5>
                                     </a></li>

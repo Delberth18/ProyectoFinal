@@ -125,10 +125,7 @@
                                         </li>
                                     </ul>
                                 </li>
-                                <li class="dropdown megaDropMenu ">
-                                    <a href="">Galeria</a>
-
-                                </li>
+                                
                                 <li class="dropdown singleDrop ">
                                     <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Información</a>
                                     <ul class="dropdown-menu dropdown-menu-right">
@@ -141,43 +138,36 @@
 
                                     </ul>
                                 </li>
-                                <li class="dropdown singleDrop ">
-                                    <a href="InformaciónGeneral.aspx">Acerca de</a>
-
-                                </li>
+                              
                                  <li class="dropdown singleDrop ">
                                     <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Mantenimiento</a>
                                     <ul class="dropdown-menu dropdown-menu-right">
 
+                                        <li class=""><a href="registroSesion.aspx">Agregar Reservas Semanales</a></li>
                                         <li class=""><a href="">Usuarios Locales</a></li>
                                          <li class=""><a href="">Tablas Locales</a></li>
                                          <li class=""><a href="">Reservas Locales</a></li>
-                                         <li class=""><a href="">Agregar Reservas Semanales</a></li>
                                        
 
 
                                     </ul>
                                 </li>
-                                <li class="dropdown searchBox">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="searchIcon"><i class="fa fa-search" aria-hidden="true"></i></span></a>
-                                    <ul class="dropdown-menu dropdown-menu-right">
-                                        <li>
-                                            <span class="input-group">
-                                                <input type="text" class="form-control" placeholder="Search..." aria-describedby="basic-addon2" />
-                                                <span class="input-group-addon" id="basic-addon2">Search</span>
-                                            </span>
-                                        </li>
-                                    </ul>
+                                  <li class="dropdown singleDrop ">
+                                    <a href="InformacionGeneral.aspx">Acerca de</a>
+
+                                </li>
+
+                               <li class="dropdown searchBox">
+                                    <a href="reservaClases.aspx" class="dropdown-toggle" role="button"><span class="searchIcon">Reserva!!</span></a>
+                                    
                                 </li>
                                 <li class="dropdown singleDrop">
 
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                                     <img class="avatar" src="ccss\star-1-3\Static HTML\img\dashboard\dash-user.jpg" alt="">&nbsp;&nbsp;<i class="fa fa-angle-down" aria-hidden="true"></i></a>
                                 <ul class="dropdown-menu dropdownMenu">
-                                    <center><h5><b>Marielos Valverde Rojas</b></h5></center>
-                                    <li><a href="profile.html">
-                                        <h5>Perfil</h5>
-                                    </a></li>
+                                     <center><h5><b><asp:Label ID="lblNombre" runat="server" Text="Label"></asp:Label></b></h5></center>
+                                    
                                      <li><a href="Configuración.aspx">
                                         <h5>Configuración</h5>
                                     </a></li>

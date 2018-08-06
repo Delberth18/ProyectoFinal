@@ -19,6 +19,8 @@
                 </div>
                 <br />
                 <div class="container" style="background-image: url('ccss/star-1-3/Static%20HTML/img/bg-menuReserva.jpg'); position: relative; z-index: 1; box-shadow: -11px 9px 45px 2px rgba(0,0,0,0.75); border-radius: 12px; padding: 11px;">
+                     <asp:UpdatePanel runat="server">
+                <ContentTemplate>
                               <div class="row" style="background-color: rgba(108, 161, 121, 0.5); border: solid 0.40px #009510; border-radius: 8px; margin: 0.3%; padding: 0.3%;" >
                         <div class="col-xs-12 col-sm-4" >
                             <ul>
@@ -144,6 +146,16 @@
                             </ul>
                         </div>
                     </div>
+                    </ContentTemplate>
+                           <Triggers>
+                    <asp:AsyncPostBackTrigger ControlID="ddlHf" EventName="" />
+                    <asp:AsyncPostBackTrigger ControlID="ddlHi" EventName="" />
+                    <asp:AsyncPostBackTrigger ControlID="ddlDificultad" EventName="" />
+                    <asp:AsyncPostBackTrigger ControlID="ddlIns" EventName="" />
+                    <asp:AsyncPostBackTrigger ControlID="ddlfecha" EventName="" />
+
+                </Triggers>
+                         </asp:UpdatePanel>
                 </div>
             
     </section>
