@@ -33,20 +33,20 @@
           <div class="changePassword">
           
             <div class="row">
-             
+              <asp:Label ID="errorLabel" class="alert alert-danger alert-dismissible" runat="server" Visible="false"></asp:Label>  
                    <div class="col-sm-12">
-                  <asp:TextBox ID="TextBox3" class="form-control" placeholder="Contraseña Pasada"  runat="server" TextMode="Password"></asp:TextBox>
+                  <asp:TextBox ID="txtContraPasa" class="form-control" placeholder="Contraseña Pasada"  runat="server" TextMode="Password"></asp:TextBox>
                 </div>
                 
                 <div class="col-sm-12">
-                    <asp:TextBox ID="TextBox1" class="form-control" placeholder="Contraseña Nueva"  runat="server" TextMode="Password"></asp:TextBox>
+                    <asp:TextBox ID="txtContraNueva" class="form-control" placeholder="Contraseña Nueva"  runat="server" TextMode="Password"></asp:TextBox>
                 </div>
                 <div class="col-sm-12">
-                   <asp:TextBox ID="TextBox2" class="form-control" placeholder="Confirmar Contraseña Nueva"  runat="server" TextMode="Password"></asp:TextBox>
+                   <asp:TextBox ID="txtContraNConfirmar" class="form-control" placeholder="Confirmar Contraseña Nueva"  runat="server" TextMode="Password"></asp:TextBox>
                     </div>
                 <div class="col-sm-12">
                   
-                    <asp:Button ID="Button1" runat="server" class="btn buttonTransparent" Text="Actualizar Contraseña"></asp:Button>
+                    <asp:Button ID="btnActualizar" runat="server" class="btn buttonTransparent" Text="Actualizar Contraseña" OnClick="btnActualizar_Click"></asp:Button>
                 </div>
              
             </div>

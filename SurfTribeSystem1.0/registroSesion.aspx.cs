@@ -27,7 +27,7 @@ namespace SurfTribeSystem1._0
                 nis= DateTime.Now;
 
                 string dia = nis.DayOfWeek.ToString();
-                if (dia != "Sunday")
+                if (dia != "Monday")
                 {
                     Response.Redirect("defaultConLogeoUADE.aspx");
                 }

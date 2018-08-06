@@ -189,6 +189,10 @@ namespace SurfTribeSystem_Datos
                         }
                         resultado.ObjetoResultado = lista;
                     }
+                    else {
+                        resultado.ObjetoResultado = lista;
+
+                    }
 
 
 
