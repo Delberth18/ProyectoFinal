@@ -43,7 +43,7 @@
                                             <div class="panel-body">
                                                 <div class="media" style="overflow-wrap: break-word">
 
-                                                    <p><%# Eval("Respuesta").ToString() %></p>
+                                                    <p style="color:saddlebrown; font-size:medium; font-weight:bold"><%# Eval("Respuesta").ToString() %></p>
 
                                                 </div>
                                             </div>

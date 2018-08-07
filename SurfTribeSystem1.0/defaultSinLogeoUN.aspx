@@ -271,10 +271,10 @@
 
                                 <div class="caption">
                                     <h4><a href="reservaClases.aspx" class="captionTitle">Reserva de clases</a></h4>
-                                    <p>Puedes reservar en la zona de su preferencia y escoger la escuela que guste.</p>
+                                    <p style="color:saddlebrown">Puedes reservar en la zona de su preferencia y escoger la escuela que guste.</p>
                                     <div class="detailsInfo">
                                         <ul class="list-inline detailsBtn">
-                                            <li><a href="reservaClases.aspx" class="btn buttonTransparent">Ir...</a></li>
+                                            <li><a href="reservaClases.aspx" class="btn buttonTransparent" style="color:saddlebrown">Ir...</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -288,10 +288,10 @@
 
                                 <div class="caption">
                                     <h4><a href="ccss/star-1-3/Static HTML/single-package-fullwidth.html" class="captionTitle">Alquiler de tablas</a></h4>
-                                    <p>Las escuelas tienen diferentes tipos de tablas, las cuales pueden ser alquiladas por cualquier persona.</p>
+                                    <p style="color:saddlebrown">Las escuelas tienen diferentes tipos de tablas, las cuales pueden ser alquiladas por cualquier persona.</p>
                                     <div class="detailsInfo">
                                         <ul class="list-inline detailsBtn">
-                                            <li><a data-toggle="modal" data-target="#inquiryModal" href="#" class="btn buttonTransparent">Ir...</a></li>
+                                            <li><a data-toggle="modal" data-target="#inquiryModal" href="reservaClases.aspx" class="btn buttonTransparent" style="color:saddlebrown">Ir...</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -305,10 +305,10 @@
 
                                 <div class="caption">
                                     <h4><a href="ccss/star-1-3/Static HTML/single-package-left-sidebar.html" class="captionTitle">Información</a></h4>
-                                    <p>Le mostramos la informacion mas relevante de las escuelas.</p>
+                                    <p style="color:saddlebrown">Le mostramos la informacion mas relevante de las escuelas.</p>
                                     <div class="detailsInfo">
                                         <ul class="list-inline detailsBtn">
-                                            <li><a href='ccss/star-1-3/Static HTML/booking-1.html' class="btn buttonTransparent">Ir...</a></li>
+                                            <li><a href="InformacionGeneral.aspx" class="btn buttonTransparent" style="color:saddlebrown">Ir...</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -327,9 +327,9 @@
                             <div class="promotionTable">
                                 <div class="promotionTableInner">
                                     <div class="promotionInfo">
-                                        <span>Precios regulares</span>
-                                        <h2>Todas las escuelas</h2>
-                                        <a href="ccss/star-1-3/Static HTML/single-package-right-sidebar.html" class="btn buttonCustomPrimary">Ver precios</a>
+                                        <span>Preguntas frecuentes</span>
+                                        <h2>Le mostramos las dudas más frecuentes en la página</h2>
+                                        <a href="FAQlistado.aspx" class="btn buttonCustomPrimary">Ver preguntas</a>
                                     </div>
                                 </div>
                             </div>

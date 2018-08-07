@@ -84,7 +84,7 @@
                                                 <asp:Repeater ID="GuanaRepeat" runat="server">
                                                     <ItemTemplate>
                                                         <li class="">
-                                                        <a  href='paginaEscuela.aspx?idEscuela=<%# Eval("Nombre") %>' >
+                                                            <a href='paginaEscuela.aspx?idEscuela=<%# Eval("Nombre") %>'>
                                                                 <asp:Label runat="server" Text='<%# Eval("Nombre") %>'></asp:Label>
                                                             </a>
 
@@ -99,7 +99,7 @@
                                                 <asp:Repeater ID="PuertoRepeat" runat="server">
                                                     <ItemTemplate>
                                                         <li class="">
-                                                        <a  href='paginaEscuela.aspx?idEscuela=<%# Eval("Nombre") %>' >
+                                                            <a href='paginaEscuela.aspx?idEscuela=<%# Eval("Nombre") %>'>
                                                                 <asp:Label runat="server" Text='<%# Eval("Nombre") %>'></asp:Label>
                                                             </a>
 
@@ -125,7 +125,7 @@
                                         </li>
                                     </ul>
                                 </li>
-                                     <li class="dropdown singleDrop ">
+                                <li class="dropdown singleDrop ">
                                     <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Información</a>
                                     <ul class="dropdown-menu dropdown-menu-right">
 
@@ -137,7 +137,7 @@
 
                                     </ul>
                                 </li>
-                                  <li class="dropdown singleDrop ">
+                                <li class="dropdown singleDrop ">
                                     <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Agregar</a>
                                     <ul class="dropdown-menu dropdown-menu-right">
 
@@ -149,7 +149,7 @@
 
                                     </ul>
                                 </li>
-                                 <li class="dropdown singleDrop ">
+                                <li class="dropdown singleDrop ">
                                     <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Mantenimientos</a>
                                     <ul class="dropdown-menu dropdown-menu-right">
 
@@ -159,7 +159,7 @@
 
                                     </ul>
                                 </li>
-                                  <li class="dropdown singleDrop ">
+                                <li class="dropdown singleDrop ">
                                     <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Reportes</a>
                                     <ul class="dropdown-menu dropdown-menu-right">
 
@@ -167,13 +167,13 @@
                                         <li class=""><a href="reporteUsuarioE.aspx">Usuarios</a></li>
                                         <li class=""><a href="">Sesiones</a></li>
                                         <li class=""><a href="">Reservas</a></li>
-                                       
+
 
                                     </ul>
                                 </li>
                                 <li class="dropdown searchBox">
-                                      <a href="reservaClases.aspx" class="dropdown-toggle" role="button"><span class="searchIcon">Reserva!!</span></a>
-                                    
+                                    <a href="reservaClases.aspx" class="dropdown-toggle" role="button"><span class="searchIcon">Reserva!!</span></a>
+
                                 </li>
 
                                 <li class="dropdown singleDrop">
@@ -181,18 +181,18 @@
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                                         <img class="avatar" src="ccss\star-1-3\Static HTML\img\dashboard\dash-user.jpg" alt="">&nbsp;&nbsp;<i class="fa fa-angle-down" aria-hidden="true"></i></a>
                                     <ul class="dropdown-menu dropdownMenu">
-                                         <center><h5><b><asp:Label ID="lblNombre" runat="server" Text="Label"></asp:Label></b></h5></center>
+                                        <center><h5><b><asp:Label ID="lblNombre" runat="server" Text="Label"></asp:Label></b></h5></center>
                                         <li><a href="Configuración.aspx">
                                             <h5>Configuración</h5>
                                         </a></li>
-                                       <li>
-                                        <asp:LinkButton ID="Sesion" runat="server"  OnClick="Sesion_Click">
+                                        <li>
+                                            <asp:LinkButton ID="Sesion" runat="server" OnClick="Sesion_Click">
                                         <h5>Cerrar Sesión</h5>
-                                    </asp:LinkButton></li>
+                                            </asp:LinkButton></li>
                                     </ul>
 
                                 </li>
-                               
+
 
 
                             </ul>
@@ -298,10 +298,10 @@
 
                                 <div class="caption">
                                     <h4><a href="reservaClases.aspx" class="captionTitle">Reserva de clases</a></h4>
-                                    <p>Puedes reservar en la zona de su preferencia y escoger la escuela que guste.</p>
+                                    <p style="color:saddlebrown">Puedes reservar en la zona de su preferencia y escoger la escuela que guste.</p>
                                     <div class="detailsInfo">
                                         <ul class="list-inline detailsBtn">
-                                            <li><a href="reservaClases.aspx" class="btn buttonTransparent">Ir...</a></li>
+                                            <li><a href="reservaClases.aspx" class="btn buttonTransparent" style="color:saddlebrown">Ir...</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -315,10 +315,10 @@
 
                                 <div class="caption">
                                     <h4><a href="ccss/star-1-3/Static HTML/single-package-fullwidth.html" class="captionTitle">Alquiler de tablas</a></h4>
-                                    <p>Las escuelas tienen diferentes tipos de tablas, las cuales pueden ser alquiladas por cualquier persona.</p>
+                                    <p style="color:saddlebrown">Las escuelas tienen diferentes tipos de tablas, las cuales pueden ser alquiladas por cualquier persona.</p>
                                     <div class="detailsInfo">
                                         <ul class="list-inline detailsBtn">
-                                            <li><a data-toggle="modal" data-target="#inquiryModal" href="#" class="btn buttonTransparent">Ir...</a></li>
+                                            <li><a data-toggle="modal" data-target="#inquiryModal" href="reservaClases.aspx" class="btn buttonTransparent" style="color:saddlebrown">Ir...</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -332,10 +332,10 @@
 
                                 <div class="caption">
                                     <h4><a href="ccss/star-1-3/Static HTML/single-package-left-sidebar.html" class="captionTitle">Información</a></h4>
-                                    <p>Le mostramos la informacion mas relevante de las escuelas.</p>
+                                    <p style="color:saddlebrown">Le mostramos la informacion mas relevante de las escuelas.</p>
                                     <div class="detailsInfo">
                                         <ul class="list-inline detailsBtn">
-                                            <li><a href='ccss/star-1-3/Static HTML/booking-1.html' class="btn buttonTransparent">Ir...</a></li>
+                                            <li><a href="InformacionGeneral.aspx" class="btn buttonTransparent" style="color:saddlebrown">Ir...</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -354,9 +354,9 @@
                             <div class="promotionTable">
                                 <div class="promotionTableInner">
                                     <div class="promotionInfo">
-                                        <span>Precios regulares</span>
-                                        <h2>Todas las escuelas</h2>
-                                        <a href="ccss/star-1-3/Static HTML/single-package-right-sidebar.html" class="btn buttonCustomPrimary">Ver precios</a>
+                                        <span>Preguntas frecuentes</span>
+                                        <h2>Le mostramos las dudas más frecuentes en la página</h2>
+                                        <a href="FAQlistado.aspx" class="btn buttonCustomPrimary">Ver preguntas</a>
                                     </div>
                                 </div>
                             </div>
@@ -379,7 +379,7 @@
                     <div class="row">
                         <div class="col-xs-12">
                             <div class="media destinations">
-                               <%-- <a class="media-left" href="ccss/star-1-3/Static HTML/destination-cities.html">
+                                <%-- <a class="media-left" href="ccss/star-1-3/Static HTML/destination-cities.html">
                                     <img class="media-object" src="Imagenes/PIC_20160827_140254.JPG" alt="Destination" />
                                 </a>--%>
                                 <div class="media-body">
@@ -393,7 +393,7 @@
                                             <asp:Repeater ID="GuanaRepeat2" runat="server">
                                                 <ItemTemplate>
                                                     <li class="">
-                                                        <a  href='paginaEscuela.aspx?idEscuela=<%# Eval("Nombre") %>' >
+                                                        <a href='paginaEscuela.aspx?idEscuela=<%# Eval("Nombre") %>'>
                                                             <asp:Label runat="server" Text='<%# Eval("Nombre") %>'></asp:Label>
                                                         </a>
 
@@ -407,7 +407,7 @@
                                             <asp:Repeater ID="PuertoRepeat2" runat="server">
                                                 <ItemTemplate>
                                                     <li class="">
-                                                        <a  href='paginaEscuela.aspx?idEscuela=<%# Eval("Nombre") %>' >
+                                                        <a href='paginaEscuela.aspx?idEscuela=<%# Eval("Nombre") %>'>
                                                             <asp:Label runat="server" Text='<%# Eval("Nombre") %>'></asp:Label>
                                                         </a>
 
@@ -420,7 +420,7 @@
                                             <asp:Repeater ID="LimonRepeat2" runat="server">
                                                 <ItemTemplate>
                                                     <li class="">
-                                                        <a  href='paginaEscuela.aspx?idEscuela=<%# Eval("Nombre") %>' >
+                                                        <a href='paginaEscuela.aspx?idEscuela=<%# Eval("Nombre") %>'>
                                                             <asp:Label runat="server" Text='<%# Eval("Nombre") %>'></asp:Label>
                                                         </a>
 
@@ -458,21 +458,21 @@
                 </div>
                 <div class="copyRight clearfix">
                     <div class="container">
-                    <div class="row">
-                        <div class="col-sm-6 col-sm-push-6 col-xs-12">
-                            <ul class="list-inline">
-                                <li><a href="TérminosCondiciones.aspx">Términos y condiciones</a></li>
-                                <li><a href="InformacionGeneral.aspx">Información general</a></li>
+                        <div class="row">
+                            <div class="col-sm-6 col-sm-push-6 col-xs-12">
+                                <ul class="list-inline">
+                                    <li><a href="TérminosCondiciones.aspx">Términos y condiciones</a></li>
+                                    <li><a href="InformacionGeneral.aspx">Información general</a></li>
 
-                            </ul>
-                        </div>
-                        <div class="col-sm-6 col-sm-pull-6 col-xs-12">
-                            <div class="copyRightText">
-                                <p>Copyright © 2018. Todos los derechos reservados.</p>
+                                </ul>
+                            </div>
+                            <div class="col-sm-6 col-sm-pull-6 col-xs-12">
+                                <div class="copyRightText">
+                                    <p>Copyright © 2018. Todos los derechos reservados.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
                 </div>
             </footer>
         </div>
