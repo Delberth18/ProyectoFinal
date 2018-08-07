@@ -13,13 +13,23 @@ namespace SurfTribeSystem1._0
     {
         Precio precio = new Precio();
         List<Precio> faqs = new List<Precio>();
+        string esc;
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
+            if (Request.QueryString["esc"] == null)
             {
-                ObtenerListado();
-                ListarEscuelas();
+                string script = "swal('Lo sentimos,', 'Debe seleccionar primeramente una escuela, para poder ver los comentarios', 'info'); ";
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
+
+            }
+            else
+            {
+                if (!IsPostBack)
+                {
+                    esc = Request.QueryString["esc"].ToString();
+                    ObtenerListado();
+                }
             }
         }
 
@@ -55,10 +65,13 @@ namespace SurfTribeSystem1._0
             Resultado resultado = new Resultado();
             try
             {
+                precio.IdEscuela = esc;
                 precio.Tag = "LISTADO";
                 resultado = new PrecioLogica().Acciones(precio);
                 if (resultado.TipoResultado == "OK")
                 {
+                    tituloLabel.Text = "Precios de la escuela: " + esc;
+                    info1.Text = "Le mostramos nuestros diferentes precios para las clases y alquiler de tablas. ";
                     faqs = (List<Precio>)resultado.ObjetoResultado;
                     preciosLst.DataSource = faqs;
                     preciosLst.DataBind();
@@ -77,40 +90,7 @@ namespace SurfTribeSystem1._0
             }
         }
 
-        private void ListarEscuelas()
-        {
-            Resultado resultado = new Resultado();
-            try
-            {
-                List<Escuela> lista = new List<Escuela>();
-
-                Escuela esc = new Escuela();
-
-                esc.Tag = "LISTA_PRINCIPAL";
-                resultado = new EscuelaLogica().Acciones(esc);
-
-                lista = (List<Escuela>)resultado.ObjetoResultado;
-                lista.Add(new Escuela { Nombre = "Seleccione una escuela", Id = "Seleccione una escuela" });
-
-                ddlEscuela.DataSource = lista;
-                ddlEscuela.DataTextField = "NOMBRE";
-                ddlEscuela.DataValueField = "ID";
-                ddlEscuela.DataBind();
-
-                ddlEscuela.SelectedValue = "Seleccione una escuela";
-
-            }
-            catch (Exception ex)
-            {
-                string script = "swal('Error', '" + ex + "', 'error'); ";
-                ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
-            }
-        }
-
-        protected void Seleccionar(object sender, EventArgs e)
-        {
-            precio.IdEscuela = ddlEscuela.SelectedValue;
-            ObtenerListado();
-        }
+        
+        
     }
 }

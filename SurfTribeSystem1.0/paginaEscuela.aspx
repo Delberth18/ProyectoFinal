@@ -100,7 +100,7 @@
                                                 <br />
 
                                                 <li>
-                                                    <a class="btn btn-block buttonCustomPrimary" style="font-size: xx-large">Reserva ya!</a></li>
+                                                    <a class="btn btn-block buttonCustomPrimary" style="font-size: xx-large" href="reservaClases.aspx">Reserva ya!</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -143,7 +143,7 @@
                     <div class="col-xs-12 col-sm-6">
                         <div class="review-aria">
                             <div class="sectionTitle2">
-                                <h1 style="color: saddlebrown;"><a href="#" style="color: saddlebrown;">Opiniones >>></a></h1>
+                                <h1 style="color: saddlebrown;"><a runat="server" id="linkComent" style="color: saddlebrown;">Opiniones >>></a></h1>
                             </div>
                         </div>
                     </div>
@@ -151,7 +151,7 @@
                     <div class="col-xs-12 col-sm-6">
                         <div class="review-aria">
                             <div class="sectionTitle2">
-                                <h1 style="color: saddlebrown;"><a href="#" style="color: saddlebrown;">Precios >>></a></h1>
+                                <h1 style="color: saddlebrown;"><a runat="server" id="linkPrecios" style="color: saddlebrown;">Precios >>></a></h1>
                             </div>
                         </div>
                     </div>

@@ -20,12 +20,6 @@ namespace SurfTribeSystem1._0
 
             try
             {
-                if (Session["InicioSesion"] != null)
-                {
-                }
-                else
-                { Response.Redirect("defaultSinLogeoUN.aspx"); }
-
                 if (!IsPostBack)
                 {
                     nombreEscuela = Request.QueryString["idEscuela"].ToString();
@@ -140,6 +134,8 @@ namespace SurfTribeSystem1._0
                 resultado = new EscuelaLogica().Acciones(escuela);
                 if (resultado.TipoResultado == "OK")
                 {
+                    linkComent.HRef = "ComentariosListado.aspx?esc=" + nombreEscuela;
+                    linkPrecios.HRef = "PreciosListado.aspx?esc=" + nombreEscuela;
                     lista = (List<Escuela>)resultado.ObjetoResultado;
                     info.DataSource = lista;
                     info.DataBind();
