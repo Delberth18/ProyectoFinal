@@ -125,68 +125,74 @@
                                         </li>
                                     </ul>
                                 </li>
-                                
-                                <li class="dropdown singleDrop ">
+                                     <li class="dropdown singleDrop ">
                                     <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Información</a>
                                     <ul class="dropdown-menu dropdown-menu-right">
 
-                                        <li class=""><a href="registrarse.aspx">Preguntas Frecuentes</a></li>
-                                        <li class=""><a href="">Sea parte de nosotros</a></li>
-                                          <li class=""><a href="TérminosCondiciones.aspx">Términos y Condiciones</a></li>
-
-
-
-                                    </ul>
-                                </li>
-                              
-                                 <li class="dropdown singleDrop ">
-                                    <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Mantenimiento</a>
-                                    <ul class="dropdown-menu dropdown-menu-right">
-
-                                        <li class=""><a href="registroSesion.aspx">Agregar Reservas Semanales</a></li>
-                                        <li class=""><a href="">Usuarios Locales</a></li>
-                                         <li class=""><a href="">Tablas Locales</a></li>
-                                         <li class=""><a href="">Reservas Locales</a></li>
-                                       
-
-
-                                    </ul>
-                                </li>
-                                          <li class="dropdown singleDrop ">
-                                    <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Reportes</a>
-                                    <ul class="dropdown-menu dropdown-menu-right">
-
-                                          <li class=""><a href="reporteUsuarioE.aspx">Usuarios Locales</a></li>
-                                          <li class=""><a href="mantTablas.aspx">Tablas locales</a></li>
-                                         <li class=""><a href="mantReservas.aspx">Reservas locales</a></li>
-                                        
+                                        <li class=""><a href="eventos.aspx">Próximos eventos</a></li>
+                                        <li class=""><a href="PreciosListado.aspx">Lista de Precios</a></li>
+                                        <li class=""><a href="FAQlistado.aspx">Preguntas Frecuentes</a></li>
+                                        <li class=""><a href="InformacionGeneral.aspx">Información General</a></li>
+                                        <li class=""><a href="TérminosCondiciones.aspx">Términos y Condiciones</a></li>
 
                                     </ul>
                                 </li>
                                   <li class="dropdown singleDrop ">
-                                    <a href="InformacionGeneral.aspx">Acerca de</a>
+                                    <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Agregar</a>
+                                    <ul class="dropdown-menu dropdown-menu-right">
 
+                                        <li class=""><a href="registroEvento.aspx">Eventos</a></li>
+                                        <li class=""><a href="registroPrecios.aspx">Precios</a></li>
+                                        <li class=""><a href="registroSesion.aspx">Sesiones</a></li>
+                                        <li class=""><a href="registroTabla.aspx">Tablas</a></li>
+                                        <li class=""><a href="EnvioCorreo.aspx">Envio de correo</a></li>
+
+                                    </ul>
                                 </li>
+                                 <li class="dropdown singleDrop ">
+                                    <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Mantenimientos</a>
+                                    <ul class="dropdown-menu dropdown-menu-right">
 
-                               <li class="dropdown searchBox">
-                                    <a href="reservaClases.aspx" class="dropdown-toggle" role="button"><span class="searchIcon">Reserva!!</span></a>
+                                        <li class=""><a href="mantEventos.aspx">Eventos</a></li>
+                                        <li class=""><a href="mantTablas.aspx">Tablas</a></li>
+                                        <li class=""><a href="mantReservas.aspx">Reservas</a></li>
+
+                                    </ul>
+                                </li>
+                                  <li class="dropdown singleDrop ">
+                                    <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Reportes</a>
+                                    <ul class="dropdown-menu dropdown-menu-right">
+
+                                        <li class=""><a href="reporteTablas.aspx">Tablas</a></li>
+                                        <li class=""><a href="reporteUsuarioE.aspx">Usuarios</a></li>
+                                        <li class=""><a href="">Sesiones</a></li>
+                                        <li class=""><a href="">Reservas</a></li>
+                                       
+
+                                    </ul>
+                                </li>
+                                <li class="dropdown searchBox">
+                                      <a href="reservaClases.aspx" class="dropdown-toggle" role="button"><span class="searchIcon">Reserva!!</span></a>
                                     
                                 </li>
+
                                 <li class="dropdown singleDrop">
 
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                                    <img class="avatar" src="ccss\star-1-3\Static HTML\img\dashboard\dash-user.jpg" alt="">&nbsp;&nbsp;<i class="fa fa-angle-down" aria-hidden="true"></i></a>
-                                <ul class="dropdown-menu dropdownMenu">
-                                     <center><h5><b><asp:Label ID="lblNombre" runat="server" Text="Label"></asp:Label></b></h5></center>
-                                    
-                                     <li><a href="Configuración.aspx">
-                                        <h5>Configuración</h5>
-                                    </a></li>
-                                    <li>
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                        <img class="avatar" src="ccss\star-1-3\Static HTML\img\dashboard\dash-user.jpg" alt="">&nbsp;&nbsp;<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                    <ul class="dropdown-menu dropdownMenu">
+                                         <center><h5><b><asp:Label ID="lblNombre" runat="server" Text="Label"></asp:Label></b></h5></center>
+                                        <li><a href="Configuración.aspx">
+                                            <h5>Configuración</h5>
+                                        </a></li>
+                                       <li>
                                         <asp:LinkButton ID="Sesion" runat="server"  OnClick="Sesion_Click">
                                         <h5>Cerrar Sesión</h5>
                                     </asp:LinkButton></li>
-                              </ul></li>
+                                    </ul>
+
+                                </li>
+                               
 
 
                             </ul>
