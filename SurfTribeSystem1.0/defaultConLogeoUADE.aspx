@@ -152,6 +152,17 @@
 
                                     </ul>
                                 </li>
+                                          <li class="dropdown singleDrop ">
+                                    <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Reportes</a>
+                                    <ul class="dropdown-menu dropdown-menu-right">
+
+                                          <li class=""><a href="reporteUsuarioE.aspx">Usuarios Locales</a></li>
+                                          <li class=""><a href="mantTablas.aspx">Tablas locales</a></li>
+                                         <li class=""><a href="mantReservas.aspx">Reservas locales</a></li>
+                                        
+
+                                    </ul>
+                                </li>
                                   <li class="dropdown singleDrop ">
                                     <a href="InformacionGeneral.aspx">Acerca de</a>
 

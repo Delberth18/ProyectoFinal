@@ -119,6 +119,7 @@ namespace SurfTribeSystem1._0
             Label lblDia = e.Item.FindControl("lblDia") as Label;//dia
             Label lblMes = e.Item.FindControl("lblMes") as Label;//mes
             Label lblHoraInicio = e.Item.FindControl("hInicio") as Label;//Hora Inicio
+            Label fecha = e.Item.FindControl("lblfecha") as Label;//fecha
 
 
 
@@ -160,6 +161,7 @@ namespace SurfTribeSystem1._0
                     Session["ConfInstructor"] = lblNombre.Text + " " + lblApellidos.Text;
                     Session["ConfFecha"] = lblDia.Text + " de " + lblMes.Text + " del " + DateTime.Now.Year.ToString();
                     Session["ConfHinicio"] = lblHoraInicio.Text;
+                    Session["fechaIndu"] = fecha.Text;
                 }
             }
             else
@@ -182,7 +184,8 @@ namespace SurfTribeSystem1._0
                     Session["ConfInstructor"] = lblNombre.Text + " " + lblApellidos.Text;
                     Session["ConfFecha"] = lblDia.Text + " de " + lblMes.Text + " del " + DateTime.Now.Year.ToString();
                     Session["ConfHinicio"] = lblHoraInicio.Text;
-                
+                    Session["fechaIndu"] = fecha.Text;
+
 
 
             }

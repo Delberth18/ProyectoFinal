@@ -21,6 +21,7 @@ namespace SurfTribeSystem_Entidades
         string tipo_precio;
         double costo;
         string id_usuario;
+        DateTime fecha;
 
         public string Tamanio { get => tamanio; set => tamanio = value; }
         public string Tipo { get => tipo; set => tipo = value; }
@@ -35,5 +36,6 @@ namespace SurfTribeSystem_Entidades
         public double Costo { get => costo; set => costo = value; }
         public string Tipo_precio { get => tipo_precio; set => tipo_precio = value; }
         public string Id_usuario { get => id_usuario; set => id_usuario = value; }
+        public DateTime Fecha { get => fecha; set => fecha = value; }
     }
 }

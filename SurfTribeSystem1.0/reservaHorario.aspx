@@ -152,6 +152,7 @@ box-shadow: 14px 28px 38px -16px rgba(0,0,0,0.75); background: url('ccss/star-1-
     
  </center>
                                  </div>
+                                 <asp:Label ID="lblfecha" runat="server" Text='<%#Eval("FECHA")%>' Visible="false"></asp:Label>
                              </ItemTemplate>
 
                         </asp:Repeater> 
