@@ -16,14 +16,26 @@ namespace SurfTribeSystem1._0
         List<Comentario> comentarios = new List<Comentario>();
         Usuario usu = new Usuario();
 
+        string esc;
+
         protected void Page_Load(object sender, EventArgs e)
         {
-            
 
-            if (!IsPostBack)
+            if (Request.QueryString["esc"] == null)
             {
-                ObtenerListado();
+                string script = "swal('Lo sentimos,', 'Debe seleccionar primeramente una escuela, para poder ver los comentarios', 'info'); ";
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
+                
             }
+            else
+            {
+                if (!IsPostBack)
+                {
+                    esc = Request.QueryString["esc"].ToString();
+                    ObtenerListado();
+                }
+            }
+
         }
 
         protected void Page_PreInit(object sender, EventArgs e)
@@ -50,7 +62,7 @@ namespace SurfTribeSystem1._0
             {
                 this.MasterPageFile = "~/Site1.master";
             }
-            
+
         }
 
         private void ObtenerListado()
@@ -59,6 +71,7 @@ namespace SurfTribeSystem1._0
             try
             {
                 comentario.Tag = "LISTADO_APROBADO";
+                comentario.Escuela = esc;
                 resultado = new ComentarioLogica().Acciones(comentario);
                 if (resultado.TipoResultado == "OK")
                 {
@@ -93,7 +106,7 @@ namespace SurfTribeSystem1._0
             {
                 usu = (Usuario)Session["InicioSesion"];
             }
-            if (comentarioText.Text.Trim()=="")
+            if (comentarioText.Text.Trim() == "")
             {
                 string script = "swal('Lo sentimos, ha ocurrido un error', 'Debe ingresar algún comentario', 'error'); ";
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
@@ -105,6 +118,8 @@ namespace SurfTribeSystem1._0
                 comentario.Tag = "GUARDAR";
                 comentario.Comentariol = comentarioText.Text;
                 comentario.Id_Usuario = usu.Correo;
+                comentario.Escuela = esc;
+
                 resultado = new ComentarioLogica().Acciones(comentario);
                 if (resultado.TipoResultado == "OK")
                 {

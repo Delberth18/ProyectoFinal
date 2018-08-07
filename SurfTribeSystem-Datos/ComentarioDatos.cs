@@ -49,6 +49,18 @@ namespace SurfTribeSystem_Datos
                 parametros.Add(param);
 
                 param = new SqlParameter();
+                param.ParameterName = "@ESCUELA";
+                if (comentario.Escuela == null)
+                {
+                    param.Value = DBNull.Value;
+                }
+                else
+                {
+                    param.Value = comentario.Escuela;
+                }
+                parametros.Add(param);
+
+                param = new SqlParameter();
                 param.ParameterName = "@ID_USUARIO";
                 if (comentario.Id_Usuario == null)
                 {

@@ -30,7 +30,6 @@ namespace SurfTribeSystem1._0
             
             Session["InicioNombre"] = null;
 
-         
         }
         
 

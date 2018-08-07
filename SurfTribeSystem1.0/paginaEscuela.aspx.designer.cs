@@ -40,6 +40,24 @@ namespace SurfTribeSystem1._0 {
         protected global::System.Web.UI.WebControls.Repeater info;
         
         /// <summary>
+        /// linkComent control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor linkComent;
+        
+        /// <summary>
+        /// linkPrecios control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor linkPrecios;
+        
+        /// <summary>
         /// infoSencilla control.
         /// </summary>
         /// <remarks>

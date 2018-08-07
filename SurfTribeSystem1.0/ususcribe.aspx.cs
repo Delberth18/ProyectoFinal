@@ -11,8 +11,38 @@ namespace SurfTribeSystem1._0
 {
     public partial class ususcribe : System.Web.UI.Page
     {
+        Usuario usu = new Usuario();
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["InicioSesion"] == null)
+            {
+                usu = (Usuario)Session["InicioSesion"];
+                if (usu.Tipo_usu!="REG")
+                {
+                    Response.Redirect("defaultSinLogeoUN.aspx");
+                }
+
+            }
+            else
+            {
+                Response.Redirect("defaultSinLogeoUN.aspx");
+            }
+        }
+
+        protected void Page_PreInit(object sender, EventArgs e)
+        {
+
+            if (Session["InicioSesion"] != null)
+            {
+                usu = (Usuario)Session["InicioSesion"];
+
+                switch (usu.Tipo_usu)
+                {
+                    case "REG":
+                        this.MasterPageFile = "~/Site4.master";
+                        break;
+                }
+            }
 
         }
 
