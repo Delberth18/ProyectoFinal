@@ -258,7 +258,7 @@
                         <div class="col-xs-12">
                             <div class="sectionTitle">
                                 <h2><span class="lightBg">Nuestras funciones</span></h2>
-                                <p>Cada escuela posee las mismas funciones básicas.</p>
+                                <p style="color:saddlebrown">Cada escuela posee las mismas funciones básicas.</p>
                             </div>
                         </div>
                     </div>
@@ -345,7 +345,7 @@
                         <div class="col-xs-12">
                             <div class="sectionTitle">
                                 <h2><span>Escuelas</span></h2>
-                                <p>Informese de las diferentes escuelas de nuestra comunidad</p>
+                                <p style="color:saddlebrown">Informese de las diferentes escuelas de nuestra comunidad</p>
                             </div>
                         </div>
                     </div>

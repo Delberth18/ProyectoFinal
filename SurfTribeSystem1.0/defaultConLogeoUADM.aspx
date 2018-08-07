@@ -277,7 +277,7 @@
                         <div class="col-xs-12">
                             <div class="sectionTitle">
                                 <h2><span class="lightBg">Nuestras funciones</span></h2>
-                                <p>Cada escuela posee las mismas funciones básicas.</p>
+                                <p style="color:saddlebrown">Cada escuela posee las mismas funciones básicas.</p>
                             </div>
                         </div>
                     </div>
@@ -364,7 +364,7 @@
                         <div class="col-xs-12">
                             <div class="sectionTitle">
                                 <h2><span>Escuelas</span></h2>
-                                <p>Informese de las diferentes escuelas de nuestra comunidad</p>
+                                <p style="color:saddlebrown">Informese de las diferentes escuelas de nuestra comunidad</p>
                             </div>
                         </div>
                     </div>
@@ -378,7 +378,7 @@
                                     <h3 class="media-heading">Escoga
                                         <br />
                                         La escuela que desee</h3>
-                                    <p>Visualize la información más relevante de cada escuela. Esta información es brindada por cada una de las escuelas. Puede ser de ayuda para la escongencia de la escuela que más se adecue a lo que ande buscando</p>
+                                    <p >Visualize la información más relevante de cada escuela. Esta información es brindada por cada una de las escuelas. Puede ser de ayuda para la escongencia de la escuela que más se adecue a lo que ande buscando</p>
                                     <div class="clearfix">
                                         <ul class="list-unstyled">
                                             <li><i class="fa fa-minus" aria-hidden="true"></i>Guanacaste</li>
