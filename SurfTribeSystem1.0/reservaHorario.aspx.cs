@@ -24,12 +24,36 @@ namespace SurfTribeSystem1._0
             nombreEscuela.Text= Session["escuela"].ToString();
             nivel.Text= Session["Nivel"].ToString();
 
-           
+
+
 
             
-
-            ObtenerListado();
+                ObtenerListado();
             
+
+        }
+
+        protected void Page_PreInit(object sender, EventArgs e)
+        {
+
+            if (Session["InicioSesion"] != null)
+            {
+                Usuario usu = (Usuario)Session["InicioSesion"];
+
+                switch (usu.Tipo_usu)
+                {
+                    case "ADM":
+                        this.MasterPageFile = "~/Site2.master";
+                        break;
+                    case "ADMG":
+                        this.MasterPageFile = "~/Site3.master";
+                        break;
+                    case "REG":
+                        this.MasterPageFile = "~/Site4.master";
+                        break;
+                }
+            }
+
 
         }
         private void ObtenerListado()
@@ -64,7 +88,24 @@ namespace SurfTribeSystem1._0
                 }
                 else
                 {
-                    Response.Redirect("reservaSinCampo.aspx");
+                    if (Session["Seleccionado"] != null)
+                    {
+                        if (Session["Seleccionado"].ToString() == "1")
+                        {
+
+                            return;
+                        }
+                        else {
+
+                            Response.Redirect("reservaSinCampo.aspx");
+
+                        }
+
+                    }
+                    else {
+
+                        Response.Redirect("reservaSinCampo.aspx");
+                    }
                 }
             }
             catch (Exception ex)
@@ -233,7 +274,7 @@ namespace SurfTribeSystem1._0
 
                 if (resultado.TipoResultado == "OK")
                 {
-                    
+                    Session["Seleccionado"] = 1;
                 }
                 else
                 {
@@ -263,7 +304,7 @@ namespace SurfTribeSystem1._0
 
                 if (resultado.TipoResultado == "OK")
                 {
-
+                    Session["Seleccionado"] = 0;
                 }
                 else
                 {
