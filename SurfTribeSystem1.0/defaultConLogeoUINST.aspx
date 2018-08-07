@@ -446,22 +446,21 @@
                 </div>
                 <div class="copyRight clearfix">
                     <div class="container">
-                        <div class="row">
-                            <div class="col-sm-6 col-sm-push-6 col-xs-12">
-                                <ul class="list-inline">
-                                    <li><a href="#">Redes Sociales</a></li>
-                                    <li><a href="#">Políticas</a></li>
-                                    <li><a href="#">Acerca de</a></li>
+                    <div class="row">
+                        <div class="col-sm-6 col-sm-push-6 col-xs-12">
+                            <ul class="list-inline">
+                                <li><a href="TérminosCondiciones.aspx">Términos y condiciones</a></li>
+                                <li><a href="InformacionGeneral.aspx">Información general</a></li>
 
-                                </ul>
-                            </div>
-                            <div class="col-sm-6 col-sm-pull-6 col-xs-12">
-                                <div class="copyRightText">
-                                    <p>Copyright © 2018. Todos los derechos reservados</a>.</p>
-                                </div>
+                            </ul>
+                        </div>
+                        <div class="col-sm-6 col-sm-pull-6 col-xs-12">
+                            <div class="copyRightText">
+                                <p>Copyright © 2018. Todos los derechos reservados.</p>
                             </div>
                         </div>
                     </div>
+                </div>
                 </div>
             </footer>
         </div>
