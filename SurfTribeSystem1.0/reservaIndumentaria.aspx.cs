@@ -100,6 +100,7 @@ namespace SurfTribeSystem1._0
             {
                 sesion.Id = Session["idReserva"].ToString();
                 sesion.Tag = "DESELECCIONADA";
+                sesion.Fecha = Convert.ToDateTime(Session["fechaIndu"].ToString());
 
                 resultado = new SesionLogica().Acciones(sesion);
 

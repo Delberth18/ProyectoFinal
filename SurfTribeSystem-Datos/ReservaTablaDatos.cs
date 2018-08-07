@@ -16,6 +16,7 @@ namespace SurfTribeSystem_Datos
         {
             Resultado resultado = new Resultado();
             DataSet datos = new DataSet();
+            DateTime Compara = new DateTime();
 
             try
             {
@@ -53,8 +54,14 @@ namespace SurfTribeSystem_Datos
 
 
                 param = new SqlParameter();
-                DateTime fecha = DateTime.Today; 
-                param.Value = fecha;
+                if (tabla.Fecha == Compara)
+                {
+                    param.Value = DateTime.Now;
+                }
+                else
+                {
+                    param.Value = tabla.Fecha;
+                }
                 param.ParameterName = "@FECHA";//fecha
                 parametros.Add(param);
 
