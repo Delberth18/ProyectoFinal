@@ -23,7 +23,9 @@ namespace SurfTribeSystem_Entidades
         string idEscuela;
         string estado;
         string marca;
-        int precioTotal;
+        double precioreserva;
+        double precioTotal;
+        double precioCl;
 
 
         public string IdUsuario { get => idUsuario; set => idUsuario = value; }
@@ -38,6 +40,8 @@ namespace SurfTribeSystem_Entidades
         public string IdEscuela { get => idEscuela; set => idEscuela = value; }
         public string Estado { get => estado; set => estado = value; }
         public string Marca { get => marca; set => marca = value; }
-        public int PrecioTotal { get => precioTotal; set => precioTotal = value; }
+        public double PrecioTotal { get => precioTotal; set => precioTotal = value; }
+        public double Precioreserva { get => precioreserva; set => precioreserva = value; }
+        public double PrecioCl { get => precioCl; set => precioCl = value; }
     }
 }

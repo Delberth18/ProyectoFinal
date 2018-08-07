@@ -137,12 +137,9 @@
 
                                     </ul>
                                 </li>
+                                
                                  <li class="dropdown singleDrop ">
-                                    <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Mis Reservas</a>
-                               
-                                </li>
-                                 <li class="dropdown singleDrop ">
-                                    <a href="InformacionGeneral.aspx">Acerca de</a>
+                                    <a href="reporteReserva.aspx">Mis Reservas</a>
 
                                 </li>
                                <li class="dropdown searchBox">

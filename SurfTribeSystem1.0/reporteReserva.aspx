@@ -12,6 +12,7 @@
             border-width: 0;
             text-align: right;
         }
+     
     </style>
     <section class="mainContentSection packagesSection" style="background-image: url(Imagenes/IMG-20150830-WA0006.jpg); background-repeat: no-repeat; background-size: cover">
         <br />
@@ -32,103 +33,55 @@
                         
                        
 
-                        <div class="col-xs-12 col-sm-3">
-                  
-                        <div class="col-xs-12 col-sm-3">
-                            <ul>
-                                <li>
-                                    <br />
-                                    <asp:Button ID="btnRefrescar" class="btn btn-default btn-circle-2 " BackColor="darkorange" ForeColor="White"
-                                        runat="server" Text="Refrescar" Width="150px" />
-                                </li>
+                      
 
-                            </ul>
+                    <center>
 
-                        </div>
-                    </div>
-
-                    
-
-                        <div class="col-xs-13">
+                        <div class="col-xs-13" style="text-align: center;">
                             <br />
-                            <div class="col-md-12">
-                                <div class="col-md-1" style="color: saddlebrown; text-align: center; font-size: x-large; font-weight: bold">
-                                    Escuela
-                                </div>
-                                <div class="col-md-2" style="color: saddlebrown; text-align: center; font-size: x-large; font-weight: bold">
-                                    Nivel
-                                </div>
-                                <div class="col-md-1" style="color: saddlebrown; text-align: center; font-size: x-large; font-weight: bold">
-                                    Instructor
-                                </div>
-                                <div class="col-md-2" style="color: saddlebrown; text-align: center; font-size: x-large; font-weight: bold">
-                                    Fecha
-                                </div>
-                                <div class="col-md-2" style="color: saddlebrown; text-align: center; font-size: x-large; font-weight: bold">
-                                    Hora Inicio
-                                </div>
-                                <div class="col-md-1" style="color: saddlebrown; text-align: center; font-size: x-large; font-weight: bold">
-                                    Alquiler
-                                </div>
-                                <div class="col-md-2" style="color: saddlebrown; text-align: center; font-size: x-large; font-weight: bold">
-                                    Ubicación
-                                </div>
-                                <div class="col-md-1" style="color: saddlebrown; text-align: center; font-size: x-large; font-weight: bold">
-                                    Precio
-                                </div>
-                            </div>
-                            <asp:Repeater ID="imagenesList" runat="server">
+                                      <asp:GridView ID="grvreportes" runat="server" AutoGenerateColumns="False" HorizontalAlign="Center" CssClass="" BackColor="White" BorderColor="SaddleBrown"
+                                                                                BorderStyle="None" BorderWidth="1px" CellPadding="3"  
+                                                                                SelectedIndex="0" HeaderStyle-HorizontalAlign="Center" RowHeaderColumn="center" SortedAscendingHeaderStyle-HorizontalAlign="Center" HeaderStyle-Width="40%">
+                                                                                <Columns>
 
-                                <ItemTemplate>
-                                    <div class="col-md-12" style="border-bottom: solid; border-color: saddlebrown; border-width: 2px">
-                                        <div class="col-md-1" >
-                                            <ul>
-                                                <li style="color: black; font-weight: bold;text-align: center; font-size: medium"><%# Eval("Nombre") %>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-md-2" >
-                                            <ul>
-                                                <li style="color: black; font-weight: bold;text-align: center; font-size: medium"><%# Eval("Apellidos") %>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-md-1" >
-                                            <ul>
-                                                <li style="color: black; font-weight: bold;text-align: center; font-size: medium"><%# Eval("Telefono") %>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-md-3" >
-                                            <ul>
-                                                <li style="color: black; font-weight: bold;text-align: center; font-size: medium"><%# Eval("Correo") %>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-md-2" >
-                                            <ul>
-                                                <li style="color: black; font-weight: bold;text-align: center; font-size: medium"><%# Eval("Tipo_usu_dsc") %>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-md-1" >
-                                            <ul>
-                                                <li style="color: black; font-weight: bold;text-align: center; font-size: medium"><%# Eval("Estado") %> 
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-md-2" >
-                                            <ul>
-                                                <li style="color: black; font-weight: bold;text-align: center; font-size: medium"><%# Eval("Escuela_dsc") %> 
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <br />
-                                </ItemTemplate>
-                            </asp:Repeater>
+
+                                                                                    <asp:BoundField DataField="FECHA" HeaderText="Fecha"  HeaderStyle-HorizontalAlign="Center" ></asp:BoundField>
+                                                                                    <asp:BoundField DataField="NOMBREUSU" HeaderText="Alumno(a)" ReadOnly="True" HeaderStyle-Width="20%  "></asp:BoundField>
+                                                                                    <asp:BoundField DataField="IDESCUELA" HeaderText="Escuela"></asp:BoundField>
+                                                                                    <asp:BoundField HeaderText="Dificultad" DataField="DIFICULTAD"></asp:BoundField>
+                                                                                    <asp:BoundField HeaderText="Instructor(a)" DataField="NOMBREINS"></asp:BoundField>
+                                                                                    <asp:BoundField HeaderText="Hra Inicio" DataField="HORAINICIO"></asp:BoundField>
+                                                                                    <asp:BoundField HeaderText="Alquiler" DataField="MARCA"></asp:BoundField>
+                                                                                    <asp:BoundField HeaderText="Precio Alquiler" DataField="PRECIORESERVA"></asp:BoundField>
+                                                                                    <asp:BoundField HeaderText="Precio Clase" DataField="PRECIOCL"></asp:BoundField>
+                                                                                    <asp:BoundField HeaderText="Total" DataField="PRECIOTOTAL"></asp:BoundField>
+                                                                                    <asp:BoundField HeaderText="Estado" DataField="ESTADO"></asp:BoundField>
+                                                                                </Columns>
+
+
+                                                                                <FooterStyle BackColor="White" ForeColor="#000066"></FooterStyle>
+
+                                                                                <HeaderStyle BackColor="DarkOrange" Font-Bold="True" ForeColor="White"   HorizontalAlign="Center" ></HeaderStyle>
+                                                                                <PagerStyle HorizontalAlign="Center" BackColor="White" ForeColor="#000066"></PagerStyle>
+
+                                                                                <RowStyle ForeColor="SaddleBrown" Font-Bold="true" ></RowStyle>
+
+                                                                                
+
+                                                                                <SortedAscendingCellStyle BackColor="#F1F1F1"></SortedAscendingCellStyle>
+
+                                                                                <SortedAscendingHeaderStyle BackColor="#007DBB"></SortedAscendingHeaderStyle>
+
+                                                                                <SortedDescendingCellStyle BackColor="#CAC9C9"></SortedDescendingCellStyle>
+
+                                                                                <SortedDescendingHeaderStyle BackColor="#00547E"></SortedDescendingHeaderStyle>
+                                                                            </asp:GridView>
+                           
+                       
+                        
 
                         </div>
+                        </center>
                         </ContentTemplate>
                 <Triggers>
                     
@@ -142,7 +95,7 @@
                     </div>
                 
 
-        </div>
+       <br /><br />
 
     </section>
 </asp:Content>

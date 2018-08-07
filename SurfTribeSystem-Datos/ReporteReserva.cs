@@ -66,27 +66,56 @@ namespace SurfTribeSystem_Datos
                     resultado.TipoResultado = "OK";
                     List<Reserva> reservas = new List<Reserva>();
 
-                    if (reserva.Tag == "ALQUILER" || reserva.Tag == "SINALQUILER")
+                    if (reserva.Tag == "SINALQUILER")
                     {
                         foreach (DataRow row in datos.Tables[1].Rows)
                         {
                             reservas.Add(new Reserva
                             {
-                                Dificultad= row["DIFICULTAD"] is DBNull ? null : row["DIFICULTAD"].ToString(),
+                                Dificultad = row["DIFICULTAD"] is DBNull ? null : row["DIFICULTAD"].ToString(),
                                 Fecha = row["FECHA"] is DBNull ? "" : row["FECHA"].ToString(),
                                 Horainicio = row["HORA_INICIO"] is DBNull ? null : row["HORA_INICIO"].ToString(),
-                                IdEscuela = row["ID_ESCUELA"] is DBNull ? null : row["ID_SESION"].ToString(),
+                                IdEscuela = row["ID_ESCUELA"] is DBNull ? null : row["ID_ESCUELA"].ToString(),
                                 NombreUsu = row["NC"] is DBNull ? null : row["NC"].ToString(),
                                 Precio = row["PRECIO"] is DBNull ? null : row["PRECIO"].ToString(),
+                                PrecioCl = row["PRECIO"] is DBNull ? 0 : Convert.ToDouble(row["PRECIO"]),
                                 NombreIns = row["ins"] is DBNull ? null : row["ins"].ToString(),
                                 Estado = row["ESTADO"] is DBNull ? null : row["ESTADO"].ToString(),
-                              
-                               
-                               
-                                
+                                Marca = "NO alquilada",
+                                Precioreserva = 0,
+                                PrecioTotal = row["PRECIO"] is DBNull ? 0 : Convert.ToDouble(row["PRECIO"])
+
+
+
                             });
                         }
                     }
+                    if (reserva.Tag == "ALQUILER")
+                    {
+                        foreach (DataRow row in datos.Tables[1].Rows)
+                        {
+                            reservas.Add(new Reserva
+                            {
+                                Dificultad = row["DIFICULTAD"] is DBNull ? null : row["DIFICULTAD"].ToString(),
+                                Fecha = row["FECHA"] is DBNull ? "" : row["FECHA"].ToString(),
+                                Horainicio = row["HORA_INICIO"] is DBNull ? null : row["HORA_INICIO"].ToString(),
+                                IdEscuela = row["ID_ESCUELA"] is DBNull ? null : row["ID_ESCUELA"].ToString(),
+                                NombreUsu = row["NC"] is DBNull ? null : row["NC"].ToString(),
+                                Precio = row["PRECIO"] is DBNull ? null : row["PRECIO"].ToString(),
+                                PrecioCl= row["PRECIO"] is DBNull ? 0 : Convert.ToDouble(row["PRECIO"]),
+                                NombreIns = row["ins"] is DBNull ? null : row["ins"].ToString(),
+                                Estado = row["ESTADO"] is DBNull ? null : row["ESTADO"].ToString(),
+                                Marca= row["MARCA"] is DBNull ? null : row["MARCA"].ToString(),
+                                Precioreserva = row["COSTO"] is DBNull ? 0 : Convert.ToDouble(row["COSTO"]),
+                                PrecioTotal = row["total"] is DBNull ? 0 : Convert.ToDouble(row["total"])
+                                
+
+
+                            });
+                        }
+                    }
+
+
                     resultado.ObjetoResultado = reservas;
 
                 }
