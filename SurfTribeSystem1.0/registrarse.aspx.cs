@@ -27,7 +27,7 @@ namespace SurfTribeSystem1._0
                String ClaveUsuario = claveText.Text;
                String CorreoUsuario = correoText1.Text;
 
-                Master.ingresarButton_Click(ClaveUsuario,CorreoUsuario);
+                Master.login(CorreoUsuario, ClaveUsuario);
                
                
             }

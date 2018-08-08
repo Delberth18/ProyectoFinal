@@ -25,6 +25,8 @@ namespace SurfTribeSystem_Entidades
         string dia;
         string idUsuario;
         double precio;
+        string fechaBasica;
+        string estaActiva;
 
     
 
@@ -45,5 +47,7 @@ namespace SurfTribeSystem_Entidades
         public string Dia { get => dia; set => dia = value; }
         public string IdUsuario { get => idUsuario; set => idUsuario = value; }
         public double Precio { get => precio; set => precio = value; }
+        public string FechaBasica { get => fechaBasica; set => fechaBasica = value; }
+        public string EstaActiva { get => estaActiva; set => estaActiva = value; }
     }
 }

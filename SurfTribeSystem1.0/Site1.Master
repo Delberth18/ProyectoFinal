@@ -68,11 +68,8 @@
 
 
             <!-- HEADER -->
-            <header>
-
-
-
-                <nav class="navbar navbar-default navbar-main navbar-fixed-top lightHeader" role="navigation">
+             <header>
+                 <nav  class="navbar navbar-default navbar-main navbar-fixed-top lightHeader" role="navigation">
                     <div class="container">
 
                         <!-- Brand and toggle get grouped for better mobile display -->
@@ -83,18 +80,17 @@
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
                             </button>
-                            <a class="navbar-brand" href="index.html"></a>
+                            <a class="navbar-brand" href="defaultSinLogeoUN.aspx"></a>
                         </div>
 
                         <!-- Collect the nav links, forms, and other content for toggling -->
                         <div class="collapse navbar-collapse navbar-ex1-collapse">
                             <ul class="nav navbar-nav navbar-right">
                                 <li class="dropdown singleDrop active">
-                                    <a href="defaultSinLogeoUN.aspx">Inicio</a>
+                                    <a href="defaultSinLogeoUN.aspx">Inicio </a>
 
                                 </li>
-                         
-                                     <li class="dropdown megaDropMenu ">
+                                <li class="dropdown megaDropMenu ">
                                     <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="300" data-close-others="true" aria-expanded="false">Escuelas</a>
                                     <ul class="row dropdown-menu">
                                         <li class="col-sm-4 col-xs-12">
@@ -144,55 +140,39 @@
                                         </li>
                                     </ul>
                                 </li>
-                              
-                               
                                 <li class="dropdown singleDrop ">
-                                    <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" >Información</a>
+                                    <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Información</a>
                                     <ul class="dropdown-menu dropdown-menu-right">
-                                        <li class=""><a href="registrarse.aspx">Preguntas Frecuentes</a></li>
-                                        <li class=""><a href="">Sea parte de nosotros</a></li>
-                                         <li class=""><a href="TérminosCondiciones.aspx">Términos y Condiciones</a></li>
 
+                                        <li class=""><a href="eventos.aspx">Próximos eventos</a></li>
+                                        <li class=""><a href="PreciosListado.aspx">Lista de Precios</a></li>
+                                        <li class=""><a href="FAQlistado.aspx">Preguntas Frecuentes</a></li>
+                                        <li class=""><a href="InformacionGeneral.aspx">Información General</a></li>
+                                        <li class=""><a href="TérminosCondiciones.aspx">Términos y Condiciones</a></li>
 
                                     </ul>
                                 </li>
-                                <li class="dropdown singleDrop ">
-                                    <a href="InformacionGeneral.aspx">Acerca de</a>
-
-                                </li>
-
-                                <!-- -->
+                                  
                                <li class="dropdown searchBox">
-                                    <a href="registrarse.aspx" class="dropdown-toggle" role="button"><span class="searchIcon">Reserva!!</span></a>
+                                      <a href="reservaClases.aspx" class="dropdown-toggle" role="button"><span class="searchIcon">Reserva!!</span></a>
                                     
                                 </li>
-                                <!-- -->
 
+                                 <li>
+                                    <br />
+                                    <div class="headerTopNav" style="cursor: pointer;">
+                                        <ul class="headerTopNavbar">
 
+                                            <li class="active"><a href="#"><i class="fa " aria-hidden="true"></i></a></li>
+                                        </ul>
+                                        <ul class="headerTopNavbar navbar-right">
+                                            <li class="active"><a id="tiro" data-toggle="modal" data-target="#login"><i class="fa fa-user" aria-hidden="true">&nbsp;&nbsp;</i>Iniciar Sesión </a></li>
 
-                                <li></br>
-                    <div class="headerTopNav">
-                    <ul class="headerTopNavbar">
-
-                    <li class="active"><a href="#"><i class="fa " aria-hidden="true"></i></a></li>
-                </ul>
-                <ul class="headerTopNavbar navbar-right">
-                    <li class="active">
-                        <a href="#" data-toggle="modal" data-target="#login">
-                            <i class="fa fa-user" aria-hidden="true">&nbsp;&nbsp;
-                            </i>Iniciar Sesión </a></li>
-
-                </ul>
-            </div>
+                                        </ul>
+                                    </div>
 
                                 </li>
-
-
-
-
-
                             </ul>
-
                         </div>
 
                     </div>
@@ -243,6 +223,42 @@
                 </div>
             </div>
         </footer>
+
+
+        <!-- Login Modal -->
+        <div class="modal fade signupLoging" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content modalContentCustom">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">INICIO DE SESIÓN</h4>
+                    </div>
+                    <div class="modal-body">
+                        <asp:Panel ID="panelLogin" DefaultButton="ingresarButton" runat="server">
+                            <div class="form-group">
+                                <asp:TextBox TextMode="Email" ID="correoText" runat="server" class="form-control bg-ash" placeholder="Correo" />
+                            </div>
+                            <div class="form-group">
+                                <asp:TextBox TextMode="Password" ID="claveText" runat="server" class="form-control bg-ash" placeholder="Clave" />
+                            </div>
+                        </asp:Panel>
+                        <div class="checkbox">
+                            <asp:Label ID="lblError" runat="server" Visible="false"></asp:Label>
+                            <a class="forgotPass clerfix">Olvido su contraseña?</a><br />
+                        </div>
+                        <asp:Button ID="ingresarButton" class="btn btn-default" runat="server" Text="Ingresar" OnClick="ingresarButton_Click" />
+
+
+                    </div>
+
+                    <div class="modal-footer">
+                        <div class="dontHaveAccount">
+                            <p>Olvido su contraseña?<a href="registrarse.aspx"> Registrese</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
 
