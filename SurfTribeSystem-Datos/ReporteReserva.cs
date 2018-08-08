@@ -36,7 +36,43 @@ namespace SurfTribeSystem_Datos
                     param.Value = reserva.IdUsuario;
                 }
                 parametros.Add(param);
-
+                //
+                param = new SqlParameter();
+                param.ParameterName = "@ID_ESCUELA";
+                if (reserva.IdEscuela == null)
+                {
+                    param.Value = DBNull.Value;
+                }
+                else
+                {
+                    param.Value = reserva.IdEscuela;
+                }
+                parametros.Add(param);
+                //
+                param = new SqlParameter();
+                param.ParameterName = "@MES";
+                if (reserva.Dificultad == null)
+                {
+                    param.Value = DBNull.Value;
+                }
+                else
+                {
+                    param.Value = reserva.Dificultad;
+                }
+                parametros.Add(param);
+                //
+                param = new SqlParameter();
+                param.ParameterName = "@ANNO";
+                if (reserva.Marca == null)
+                {
+                    param.Value = DBNull.Value;
+                }
+                else
+                {
+                    param.Value = reserva.Marca;
+                }
+                parametros.Add(param);
+                //
                 param = new SqlParameter();
                 param.ParameterName = "@TIPO_CONSULTA";
                 if (reserva.Tag == null)
@@ -66,7 +102,7 @@ namespace SurfTribeSystem_Datos
                     resultado.TipoResultado = "OK";
                     List<Reserva> reservas = new List<Reserva>();
 
-                    if (reserva.Tag == "SINALQUILER")
+                    if (reserva.Tag == "SINALQUILER"|| reserva.Tag == "SINALQUILERFILTRO")
                     {
                         foreach (DataRow row in datos.Tables[1].Rows)
                         {
@@ -90,7 +126,7 @@ namespace SurfTribeSystem_Datos
                             });
                         }
                     }
-                    if (reserva.Tag == "ALQUILER")
+                    if (reserva.Tag == "ALQUILER"|| reserva.Tag == "ALQUILERFILTRO")
                     {
                         foreach (DataRow row in datos.Tables[1].Rows)
                         {

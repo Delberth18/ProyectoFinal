@@ -3135,6 +3135,7 @@
     <Content Include="registroTabla.aspx" />
     <Content Include="registroUsuario.aspx" />
     <Content Include="reporteReserva.aspx" />
+    <Content Include="reporteReservaE.aspx" />
     <Content Include="reporteUsuarioE.aspx" />
     <Content Include="reporteUsuarioG.aspx" />
     <Content Include="reporteTablas.aspx" />
@@ -3400,6 +3401,13 @@
     </Compile>
     <Compile Include="reporteReserva.aspx.designer.cs">
       <DependentUpon>reporteReserva.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="reporteReservaE.aspx.cs">
+      <DependentUpon>reporteReservaE.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="reporteReservaE.aspx.designer.cs">
+      <DependentUpon>reporteReservaE.aspx</DependentUpon>
     </Compile>
     <Compile Include="reporteUsuarioE.aspx.cs">
       <DependentUpon>reporteUsuarioE.aspx</DependentUpon>

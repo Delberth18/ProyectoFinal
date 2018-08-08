@@ -166,7 +166,7 @@
                                         <li class=""><a href="reporteTablas.aspx">Tablas</a></li>
                                         <li class=""><a href="reporteUsuarioE.aspx">Usuarios</a></li>
                                         <li class=""><a href="">Sesiones</a></li>
-                                        <li class=""><a href="">Reservas</a></li>
+                                        <li class=""><a href="reporteReservaE.aspx">Reservas</a></li>
 
 
                                     </ul>
