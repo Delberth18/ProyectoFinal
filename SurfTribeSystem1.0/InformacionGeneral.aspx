@@ -30,7 +30,7 @@
              
                 
         <center><font size="14" color="black"><b FACE="arial"  size="30%">Surf Tribe System</b></font></center><br /><br />
-              <p>Es una aplicación web que unifica la mayoria de escuelas de surf de Costa Rica, en la cual usted puede reservar sus clases de surf en una de las diferentes escuelas ubicadas en todo el país, ademas de tener la opción de alquilar indumentaria en el proceso y reservar diferentes articulos de las escuelas para que se les sean entregados en el momento de su visita para que no tengas que preocuparte por nada, solo de disfrutar.  </p>
+          <p style="color:saddlebrown;">Es una aplicación web que unifica la mayoria de escuelas de surf de Costa Rica, en la cual usted puede reservar sus clases de surf en una de las diferentes escuelas ubicadas en todo el país, ademas de tener la opción de alquilar indumentaria en el proceso y reservar diferentes articulos de las escuelas para que se les sean entregados en el momento de su visita para que no tengas que preocuparte por nada, solo de disfrutar.  </p>  
             </div>
           </div>
         </div>
@@ -40,7 +40,7 @@
               <a class="media-left" href="#"><i class="fa fa-bell" aria-hidden="true"></i></a>
               <div class="media-body">
                 <h4 class="media-heading">Notificaciónes</h4>
-                <p>Mediante nuestra apliación usted podrá recibir notificaciones internas como información vía correo.</p>
+                <p style="color:saddlebrown;">Mediante nuestra aplicación usted podrá recibir correo de nuestros administradores.</p>
               </div>
             </div>
           </div>
@@ -48,8 +48,8 @@
             <div class="media">
               <a class="media-left" href="#"><i class="fa fa-briefcase" aria-hidden="true"></i></a>
               <div class="media-body">
-                <h4 class="media-heading">Indumentaria</h4>
-                <p>No tiene indumentaria adecuada? No se preocupe usted puede alquilarla mediante nuestra página.</p>
+                <h4 class="media-heading">Alquiler</h4>
+                <p style="color:saddlebrown;">No tienes una tabla adecuada? No se preocupe cuando reserve pordrá alquilar una tabla adecuada para usted.</p>
               </div>
             </div>
           </div>
@@ -58,7 +58,7 @@
               <a class="media-left" href="#"><i class="fa fa-cab" aria-hidden="true"></i></a>
               <div class="media-body">
                 <h4 class="media-heading">Variados Destinos</h4>
-                <p>Echele un vistazo alas diferentes escuelas que estan en los litorales de nuestro país.</p>
+                <p style="color:saddlebrown;">Echele un vistazo alas diferentes escuelas que estan en los litorales de nuestro país.</p>
               </div>
             </div>
           </div>
@@ -67,7 +67,7 @@
               <a class="media-left" href="#"><i class="fa fa-camera" aria-hidden="true"></i></a>
               <div class="media-body">
                 <h4 class="media-heading">Galeria</h4>
-                <p>Disfrute de las bellas imagenes y videos de cada uno de las playas.</p>
+                <p style="color:saddlebrown;">Disfrute de las bellas imagenes de cada una de las playas utilizadas por las escuelas.</p>
               </div>
             </div>
           </div>
@@ -76,7 +76,7 @@
               <a class="media-left" href="#"><i class="fa  fa-clock-o" aria-hidden="true"></i></a>
               <div class="media-body">
                 <h4 class="media-heading">Reserve </h4>
-                <p>Reserve desde ya los días a su conveniencia para tomar clases de surf ademas de la indumentaria.</p>
+                <p style="color:saddlebrown;">Reserve desde ya los días a su conveniencia para tomar clases de surf ademas de la indumentaria.</p>
               </div>
             </div>
           </div>
@@ -85,7 +85,7 @@
               <a class="media-left" href="#"><i class="fa fa-user" aria-hidden="true"></i></a>
               <div class="media-body">
                 <h4 class="media-heading">Registrese</h4>
-                <p>Registrese para poder reservar y disfrutar de las ofertas del momento.</p>
+                <p style="color:saddlebrown;">Registrese para poder reservar y disfrutar de las ofertas del momento.</p>
               </div>
             </div>
           </div>
@@ -118,12 +118,12 @@
         <div class="row">
           <div class="col-xs-12">
             <div class="sectionTitle">
-              <h2><span>¿Como Reservar?</span></h2>
+              <h2><span >¿Como hacer para que tu escuela sea parte de nosotros?</span></h2>
               
             </div><center>
-              <p>- Para reservar necesitas tener una cuenta con la cual hacer la reserva.</p>
-              <p>- Despues de confirmar la reserva en la página, el administrador de la escuela se pondra en contacto con usted para que realice el depósito en la cuenta respectiva.</p>
-              <p>- Una vez hecho el deposito y confirmado el respaldo por parte de la escuela su reserva quedara en firme.</p>    
+              <p style="color:saddlebrown;">- Para ser parte de nosotros lo que tienes que hacer es comunicarte con nosotros por medio del correo surftcr@gmail.com.</p>
+              <p style="color:saddlebrown;">- Nosotros nos pondremos en comunicación contigo para valorar la integridad de la escuela.</p>
+              <p style="color:saddlebrown;">- En un periodo de una semana nos comunicamos para que seas parte de nosotros.</p>    
           </div></center>
         </div>
         <div class="row">
