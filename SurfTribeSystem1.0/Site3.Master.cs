@@ -1,4 +1,6 @@
-﻿using System;
+﻿using SurfTribeSystem_Entidades;
+using SurfTribeSystem_LogicaNegocio;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
