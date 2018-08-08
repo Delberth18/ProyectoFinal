@@ -36,7 +36,11 @@
                 </div><br /><br />
              
                 <div class="row">
-                    <asp:TextBox ID="TextBox1" TextMode="MultiLine" runat="server" Font-Size="Small"  Width="53%" Height="230px" Columns="10" ReadOnly="True"   >Al aceptar los términos usted ha leído y esta de acuerdo con el uso de esta aplicación aaaa aaa aaaaaaaaaaaa sssssssssssssssssssssssssss aaaa</asp:TextBox>
+                    <asp:TextBox ID="TextBox1" TextMode="MultiLine" runat="server" Font-Size="Small"  Width="53%" Height="230px" Columns="10" ReadOnly="True">Al aceptar los términos usted se compromete en estar de acuerdo con los siguientes puntos que abarcan sobre el uso y manejo de esta aplicación:
+ -La aplicación Surf Tribe System es una herramienta que falicita la reservación de las clases de surf, por lo tanto el sistema no se hace responsable de problemas ajenos al proceso de reservación.
+ -Las escuelas son responsables de cualquier tipo de póliza sobre accidentes durante la clase por lo que la aplicación no tiene ningun tipo de reponsabilidad.
+ -
+                    </asp:TextBox>
 
                     
                    
