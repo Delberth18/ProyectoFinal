@@ -20,37 +20,77 @@ namespace SurfTribeSystem1._0
         }
 
 
-        public void ingresarButton_Click(String claveUsu, String correoUsu)
+        protected void ingresarButton_Click(object sender, EventArgs e)
         {
+            login(correoText.Text, claveText.Text);
+        }
 
-            registrarse re = new registrarse();
-            
-
+        public void login(string correo,string clave)
+        {
             Resultado resultado = new Resultado();
             try
             {
                 Credencial credencial = new Credencial()
                 {
-                    ClaveUsuario = claveUsu,
-                    CorreoUsuario = correoUsu
+                    ClaveUsuario = clave,
+                    CorreoUsuario = correo
                 };
                 resultado = new SeguridadLogica().ValidarUsuario(credencial);
 
                 if (resultado.TipoResultado == "OK")
                 {
-                    Session["InicioSesion"] = 1;
-                    Response.Redirect("defaultConLogeoUDM.aspx");
+
+
+                    List<Usuario> usu2 = new List<Usuario>();
+
+                    usu2 = (List<Usuario>)resultado.ObjetoResultado;
+
+
+                    Session["InicioNombre"] = usu2[0].Nombre.ToString() + " " + usu2[0].Apellidos.ToString();
+
+                    Session["InicioSesion"] = usu2[0];
+
+                    String idUsu = usu2[0].Tipo_usu.ToString();
+
+                    if (idUsu == "ADM")
+                    {
+
+                        Response.Redirect("defaultConLogeoUADE.aspx");
+
+                    }
+                    else if (idUsu == "ADMG")
+                    {
+
+                        Response.Redirect("defaultConLogeoUADM.aspx");
+
+                    }
+                    else
+                    {
+
+                        if (idUsu == "REG")
+                        {
+
+                            Response.Redirect("defaultConLogeoUN.aspx");
+
+                        }
+
+
+                    }
                 }
                 else
                 {
-                    string script = "swal('Error', 'usuario no encontrado', 'error'); ";
+                    lblError.Text = "Usuario no encontrado";
+                    lblError.Visible = true;
+
+                    string script = "swal('Error', '" + resultado.Mensaje + "', 'error'); ";
                     ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
                 }
             }
             catch (Exception ex)
             {
-
-                string script = "swal('Error', 'usuario no encontrado', 'error'); ";
+                lblError.Text = "Usuario no encontrado";
+                lblError.Visible = true;
+                string script = "swal('Error', '" + ex + "', 'error'); ";
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
             }
         }

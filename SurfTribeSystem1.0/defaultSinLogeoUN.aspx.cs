@@ -14,8 +14,6 @@ namespace SurfTribeSystem1._0
 {
     public partial class defaultSinLogeo : System.Web.UI.Page
     {
-        int contador = 0;
-        
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -29,7 +27,7 @@ namespace SurfTribeSystem1._0
             }
             
             Session["InicioNombre"] = null;
-
+            Session["InicioSesion"] = null;
         }
         
 
@@ -88,7 +86,6 @@ namespace SurfTribeSystem1._0
                 }
                 else
                 {
-                    contador++;
                     lblError.Text = "Usuario no encontrado";
                     lblError.Visible = true;
 

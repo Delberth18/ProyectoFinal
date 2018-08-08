@@ -272,8 +272,218 @@ namespace SurfTribeSystem_Datos
 
         }
 
+        public Resultado datosParaReporte(string escuela, string tag)
+        {
+            Resultado resultado = new Resultado();
+            DataSet datos = new DataSet();
+            DateTime Compara = new DateTime();
+
+            try
+            {
+
+                List<SqlParameter> parametros = new List<SqlParameter>();
+                SqlParameter param = new SqlParameter();
+
+                #region parametros
+
+                param = new SqlParameter();
+                if (escuela == null)
+                {
+                    param.Value = DBNull.Value;
+                }
+                else
+                {
+                    param.Value = escuela;
+                }
+                param.ParameterName = "@ESCUELA";
+                parametros.Add(param);
 
 
+                param = new SqlParameter();
+                if( tag == null)
+                {
+                    param.Value = DBNull.Value;
+                }
+                else
+                {
+                    param.Value = tag;
+                }
+                param.ParameterName = "@TAG"; 
+                parametros.Add(param);
+
+
+               
+
+                #endregion
+
+
+                datos = new Conexion()
+                    .EjecutarProcedimientoDS("SPR_DATOS_RESERVA_SESION ", parametros);
+
+
+                if (datos.Tables[0].Rows[0]["RESULTADO"].ToString() == "ERROR")
+                {
+                    resultado.TipoResultado = "ERROR";
+                    resultado.CodigoMensaje = datos.Tables[0].Rows[0]["CODIGO"].ToString();
+                    resultado.Mensaje = datos.Tables[0].Rows[0]["MENSAJE"].ToString();
+                    resultado.ObjetoResultado = null;
+                }
+                else
+                {
+
+
+                    if (datos.Tables[1] != null && datos.Tables[1].Rows.Count != 0)
+                    {
+                        resultado.TipoResultado = "OK";
+
+                        List<string> lista = new List<string>();
+
+
+
+                        foreach (DataRow row in datos.Tables[1].Rows)
+                        {
+
+                            switch (tag)
+                            {
+                                case "FECHA":
+                                    lista.Add(row["FECHA"] is DBNull ? null : row["FECHA"].ToString());
+                                    break;
+                                case "INSTRUCTOR":
+                                    lista.Add(row["NOMBRE"] is DBNull ? null : row["NOMBRE"].ToString());
+                                    break;
+                                case "DIFICULTAD":
+                                    lista.Add(row["DIFICULTAD"] is DBNull ? null : row["DIFICULTAD"].ToString());
+                                    break;
+                            }
+                            
+                        }
+
+
+                        resultado.ObjetoResultado = lista;
+                    }
+
+                }
+
+
+                return resultado;
+
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+
+        public Resultado Reporte(string escuela, string dificultad, string horario, string instructor)
+        {
+            Resultado resultado = new Resultado();
+            DataSet datos = new DataSet();
+
+            try
+            {
+
+                List<SqlParameter> parametros = new List<SqlParameter>();
+                SqlParameter param = new SqlParameter();
+
+                #region parametros
+
+                param = new SqlParameter();
+                if (dificultad == null)
+                {
+                    param.Value = DBNull.Value;
+                }
+                else
+                {
+                    param.Value = dificultad;
+                }
+                param.ParameterName = "@DIFICULTAD";
+                parametros.Add(param);
+
+                param = new SqlParameter();
+                if (escuela == null)
+                {
+                    param.Value = DBNull.Value;
+                }
+                else
+                {
+                    param.Value = escuela;
+                }
+                param.ParameterName = "@ESCUELA";
+                parametros.Add(param);
+
+                param = new SqlParameter();
+                if (horario == null)
+                {
+                    param.Value = DBNull.Value;
+                }
+                else
+                {
+                    param.Value = horario;
+                }
+                param.ParameterName = "@HORARIO";
+                parametros.Add(param);
+
+                param = new SqlParameter();
+                if (instructor == null)
+                {
+                    param.Value = DBNull.Value;
+                }
+                else
+                {
+                    param.Value = instructor;
+                }
+                param.ParameterName = "@INSTRUCTOR";
+                parametros.Add(param);
+
+
+                #endregion
+
+
+                datos = new Conexion()
+                    .EjecutarProcedimientoDS("SPR_REPORTE_LECCIONES", parametros);
+
+
+                if (datos.Tables[0].Rows[0]["RESULTADO"].ToString() == "ERROR")
+                {
+                    resultado.TipoResultado = "ERROR";
+                    resultado.CodigoMensaje = datos.Tables[0].Rows[0]["CODIGO"].ToString();
+                    resultado.Mensaje = datos.Tables[0].Rows[0]["MENSAJE"].ToString();
+                    resultado.ObjetoResultado = null;
+                }
+                else
+                {
+                    resultado.TipoResultado = "OK";
+                    List<Sesion> lista = new List<Sesion>();
+
+                    foreach (DataRow row in datos.Tables[1].Rows)
+                    {
+                        lista.Add(new Sesion
+                        {
+                            Nombre = row["NOMBRE"] is DBNull ? null : row["NOMBRE"].ToString(),
+                            FechaBasica = row["FECHA"] is DBNull ? null : row["FECHA"].ToString(),
+                            Dificultad = row["DIFICULTAD"] is DBNull ? null : row["DIFICULTAD"].ToString(),
+                            HraInicio1 = row["HORA_INICIO"] is DBNull ? null : row["HORA_INICIO"].ToString(),
+                            HraFinal1 = row["HORA_FINAL"] is DBNull ? null : row["HORA_FINAL"].ToString(),
+                            EstaActiva = row["ACTIVA"] is DBNull ? null : Convert.ToBoolean(row["ACTIVA"])?"Disponible":"Finalizada"
+                        });
+                    }
+                    resultado.ObjetoResultado = lista;
+
+
+                }
+
+
+                return resultado;
+
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
 
     }
 }

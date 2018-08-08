@@ -142,10 +142,6 @@
 
                                     </ul>
                                 </li>
-                                <li class="dropdown singleDrop ">
-                                    <a href="InformacionGeneral.aspx">Acerca de</a>
-
-                                </li>
                               
                                <li class="dropdown searchBox">
                                     <a href="registrarse.aspx" class="dropdown-toggle" role="button"><span class="searchIcon">Reserva!!</span></a>

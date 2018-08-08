@@ -24,5 +24,35 @@ namespace SurfTribeSystem_LogicaNegocio
                 throw ex;
             }
         }
+
+        public Resultado datosParaReporte(string escuela,string tag )
+        {
+            Resultado resultado = new Resultado();
+            try
+            {
+                resultado = new SesionDatos().datosParaReporte(escuela,tag);
+
+                return resultado;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public Resultado Reporte(string escuela, string dificultad, string horario, string instructor)
+        {
+            Resultado resultado = new Resultado();
+            try
+            {
+                resultado = new SesionDatos().Reporte(escuela, dificultad,horario,instructor);
+
+                return resultado;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }
