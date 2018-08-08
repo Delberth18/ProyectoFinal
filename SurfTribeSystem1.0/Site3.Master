@@ -175,7 +175,7 @@
                                 <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Reportes</a>
                                 <ul class="dropdown-menu dropdown-menu-right">
 
-                                    <li class=""><a href="reporteUsuarioE.aspx">Usuarios</a></li>
+                                    <li class=""><a href="reporteUsuarioG.aspx">Usuarios</a></li>
 
                                 </ul>
                             </li>
