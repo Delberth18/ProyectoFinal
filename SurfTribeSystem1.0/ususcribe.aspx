@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ususcribe.aspx.cs" Inherits="SurfTribeSystem1._0.ususcribe" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ususcribe.aspx.cs" Inherits="SurfTribeSystem1._0.ususcribe" MasterPageFile="~/Site4.Master" %>
 
 
 <!DOCTYPE html>
