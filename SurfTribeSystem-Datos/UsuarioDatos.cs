@@ -295,7 +295,8 @@ namespace SurfTribeSystem_Datos
                             Apellidos= row["APELLIDOS"] is DBNull ? null : row["APELLIDOS"].ToString(),
                             Telefono= row["TELEFONO"] is DBNull ? null : row["TELEFONO"].ToString(),
                             Correo= row["CORREO"] is DBNull ? null : row["CORREO"].ToString(),
-                            Tipo_usu_dsc= row["TIPO"] is DBNull ? null : row["TIPO"].ToString(),
+                            Pais=row["PAIS"] is DBNull ? null : row["PAIS"].ToString(),
+                            Tipo_usu_dsc = row["TIPO"] is DBNull ? null : row["TIPO"].ToString(),
                             Estado= row["ESTADO"] is DBNull ? null : row["ESTADO"].ToString(),
                             Escuela_dsc= row["ESCUELA"] is DBNull ? null : row["ESCUELA"].ToString()
                         });

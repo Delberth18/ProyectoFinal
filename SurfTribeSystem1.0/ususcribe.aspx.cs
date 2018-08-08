@@ -12,12 +12,13 @@ namespace SurfTribeSystem1._0
     public partial class ususcribe : System.Web.UI.Page
     {
         Usuario usu = new Usuario();
+
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["InicioSesion"] == null)
+            if (Session["InicioSesion"] != null)
             {
                 usu = (Usuario)Session["InicioSesion"];
-                if (usu.Tipo_usu!="REG")
+                if (usu.Tipo_usu != "REG")
                 {
                     Response.Redirect("defaultSinLogeoUN.aspx");
                 }
@@ -48,24 +49,15 @@ namespace SurfTribeSystem1._0
 
         protected void Unnamed_Click(object sender, EventArgs e)
         {
-            if (correoText.Text.Trim()=="")
-            {
-                string script = "swal('Error', 'Debe ingresar su correo', 'error'); ";
-                ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
-                return;
-            }
-
             Resultado resultado = new Resultado();
             try
             {
-                resultado = new unsuscribeLogica().Acciones(correoText.Text, comentarioText.Text);
+                resultado = new unsuscribeLogica().Acciones(usu.Correo, comentarioText.Text);
                 if (resultado.TipoResultado == "OK")
                 {
-                    string script = "swal( 'Se ha realizado la desactivación satisfactoriamente.','', 'success'); ";
-                    ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
-                    correoText.Text = "";
-                    comentarioText.Text = "";
-                   
+                    
+                    Session["Desactivado"] = "DES";
+                    Response.Redirect("defaultSinLogeoUN.aspx");
                 }
                 else
                 {

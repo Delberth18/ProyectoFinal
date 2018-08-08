@@ -151,7 +151,7 @@
                                 <ul class="dropdown-menu dropdown-menu-right">
 
                                     <li class=""><a href="registroEscuela.aspx">Escuelas</a></li>
-                                    <li class=""><a href="RegistroUsuario.aspx">Usuarios priveligiados</a></li>
+                                    <li class=""><a href="RegistroUsuario.aspx">Usuarios privilegiados</a></li>
                                     <li class=""><a href="registroEvento.aspx">Eventos</a></li>
                                     <li class=""><a href="RegistroImagenes.aspx">Imágenes</a></li>
                                     <li class=""><a href="FAQRegistro.aspx">Preguntas frecuentes</a></li>

@@ -28,6 +28,12 @@ namespace SurfTribeSystem1._0
             
             Session["InicioNombre"] = null;
             Session["InicioSesion"] = null;
+            if (Session["Desactivado"]!=null)
+            {
+                Session["Desactivado"] = null;
+                string script = "swal( 'Se ha realizado la desactivación satisfactoriamente.','', 'success'); ";
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
+            }
         }
         
 
