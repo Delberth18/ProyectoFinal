@@ -17,7 +17,10 @@ namespace SurfTribeSystem1._0
         List<Tabla> tablas = new List<Tabla>();
         protected void Page_Load(object sender, EventArgs e)
         {
-          
+            if (Session["InicioSesion"] == null)
+            {
+                Response.Redirect("defaultSinLogeoUN.aspx");
+            }
             Session["asigando"] = 0;// no tocar
             Session["numero"] = 0;// no tocar
 

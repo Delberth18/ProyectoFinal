@@ -134,9 +134,10 @@
                                     <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Información</a>
                                     <ul class="dropdown-menu dropdown-menu-right">
 
-                                        <li class=""><a href="registrarse.aspx">Preguntas Frecuentes</a></li>
-                                        <li class=""><a href="">Sea parte de nosotros</a></li>
-                                         <li class=""><a href="TérminosCondiciones.aspx">Términos y Condiciones</a></li>
+                                       <li class=""><a href="eventos.aspx">Próximos eventos</a></li>
+                                        <li class=""><a href="FAQlistado.aspx">Preguntas Frecuentes</a></li>
+                                        <li class=""><a href="InformacionGeneral.aspx">Información General</a></li>
+                                        <li class=""><a href="TérminosCondiciones.aspx">Términos y Condiciones</a></li>
 
 
 
@@ -144,7 +145,7 @@
                                 </li>
                               
                                <li class="dropdown searchBox">
-                                    <a href="registrarse.aspx" class="dropdown-toggle" role="button"><span class="searchIcon">Reserva!!</span></a>
+                                   <a id="tiro5" data-toggle="modal" data-target="#login" class="btn buttonTransparent"><span class="searchIcon">Reserva!!</span></a>
                                  
                                 </li>
 
@@ -270,7 +271,7 @@
                                     <p style="color:saddlebrown">Puedes reservar en la zona de su preferencia y escoger la escuela que guste.</p>
                                     <div class="detailsInfo">
                                         <ul class="list-inline detailsBtn">
-                                            <li><a href="reservaClases.aspx" class="btn buttonTransparent" style="color:saddlebrown">Ir...</a></li>
+                                            <li><a id="tiro2" data-toggle="modal" data-target="#login" class="btn buttonTransparent">Ir...</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -287,7 +288,7 @@
                                     <p style="color:saddlebrown">Las escuelas tienen diferentes tipos de tablas, las cuales pueden ser alquiladas por cualquier persona.</p>
                                     <div class="detailsInfo">
                                         <ul class="list-inline detailsBtn">
-                                            <li><a data-toggle="modal" data-target="#inquiryModal" href="reservaClases.aspx" class="btn buttonTransparent" style="color:saddlebrown">Ir...</a></li>
+                                            <li><a id="tiro3" data-toggle="modal" data-target="#login" class="btn buttonTransparent">Ir...</a></li>
                                         </ul>
                                     </div>
                                 </div>

@@ -12,10 +12,11 @@
             border-width: 0;
             text-align: right;
         }
+       
      
     </style>
     <section class="mainContentSection packagesSection" style="background-image: url(Imagenes/IMG-20150830-WA0006.jpg); background-repeat: no-repeat; background-size: cover">
-        <br />
+        <br /><br /><br />
         <div class="row">
             <div class="col-xs-12">
                 <div class="sectionTitle">
@@ -25,15 +26,15 @@
                 </div>
 
             </div>
-        </div>
+        </div><br />
         <div class="container" style="background-image: url('ccss/star-1-3/Static%20HTML/img/bg-menuReserva.jpg'); position: relative; z-index: 1; -webkit-box-shadow: -11px 9px 45px 2px rgba(0,0,0,0.75); -moz-box-shadow: -11px 9px 45px 2px rgba(0,0,0,0.75); box-shadow: -11px 9px 45px 2px rgba(0,0,0,0.75); border-radius: 12px; padding: 12px;">
             <asp:UpdatePanel runat="server">
                 <ContentTemplate>
-                    <div>
+                    <div style="text-align: center;  color: saddlebrown;" >
                         
                        
 
-                      
+                      <asp:Label ID="lblEti" runat="server"   Text="No has realizado reservas" Visible="false" Font-Size="XX-Large" Font-Bold="true"></asp:Label>
 
                     <center>
 
@@ -86,16 +87,10 @@
                 <Triggers>
                     
                 </Triggers>
-            </asp:UpdatePanel>
-                        <div class="col-xs-12">
-                            <br />
-                            <asp:Button ID="btnGenerar" class="btn btn-default btn-circle-2 " BackColor="SaddleBrown" ForeColor="White"
-                                runat="server" Text="Generar Reporte" Width="200px"  />
-                        </div>
-                    </div>
-                
-
-       <br /><br />
-
+            </asp:UpdatePanel> 
+                    </div><br /><br />
+                <asp:Button ID="btnGenerar" class="btn btn-default btn-circle-2 " BackColor="SaddleBrown" ForeColor="White"
+                                runat="server" Text="Generar Reporte" Width="200px"  OnClick="GenerarReporte" />
+        <br />
     </section>
 </asp:Content>

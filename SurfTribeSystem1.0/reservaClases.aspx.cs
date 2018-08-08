@@ -16,6 +16,11 @@ namespace SurfTribeSystem1._0
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["InicioSesion"] == null)
+            {
+                Response.Redirect("defaultSinLogeoUN.aspx");
+            }
+
             if (Session["idReserva"] != null)
             {
 

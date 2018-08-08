@@ -29,6 +29,7 @@
         <div class="container" style="background-image: url('ccss/star-1-3/Static%20HTML/img/bg-menuReserva.jpg'); position: relative; z-index: 1; -webkit-box-shadow: -11px 9px 45px 2px rgba(0,0,0,0.75); -moz-box-shadow: -11px 9px 45px 2px rgba(0,0,0,0.75); box-shadow: -11px 9px 45px 2px rgba(0,0,0,0.75); border-radius: 12px; padding: 12px;">
             <asp:UpdatePanel runat="server">
                 <ContentTemplate>
+                      
                     <div>
                         <div class="col-xs-12 col-sm-3">
                              <label style="color: saddlebrown; font-size: x-large">Mes:</label>
@@ -41,8 +42,13 @@
                         <asp:DropDownList ID="ddlAnno" runat="server" CssClass="bg-ashh" Width="100%" DataTextField=""
                                         DataValueField=""  ForeColor="Black" style="font-size:large">
                                     </asp:DropDownList>
-                            </div><br /><br />
-
+                            </div><br />
+                          <div class="col-xs-12 col-sm-3">
+                         <asp:Button ID="btnBuscar" class="btn btn-default btn-circle-2 " BackColor="SaddleBrown" ForeColor="White"
+                                runat="server" Text="BUscar" Width="200px" Height="55px" OnClick="btnBuscar_Click" />
+                              </div>
+                        <br />
+                       
                     <center>
 
                         <div class="col-xs-13" style="text-align: center;">
@@ -91,12 +97,14 @@
 
                         </div>
                         </center>
+                         <div style="text-align: center;  color: saddlebrown;" >
+                        <asp:Label ID="lblEti" runat="server"   Text="No se encuentran reservas" Visible="false" Font-Size="XX-Large" Font-Bold="true"></asp:Label>
+                            </div>
                         
-                        <div class="col-lg-offset-7" >
+                        <div class="col-lg-offset-9" >
                             <br />
                             
-                         <asp:Button ID="btnBuscar" class="btn btn-default btn-circle-2 " BackColor="SaddleBrown" ForeColor="White"
-                                runat="server" Text="BUscar" Width="200px" OnClick="btnBuscar_Click" />
+                        
                            
                             </div>
                         </ContentTemplate>
@@ -108,7 +116,8 @@
                 </Triggers>
             </asp:UpdatePanel>
                 </div>
-         <asp:Button ID="Button2" class="btn btn-default btn-circle-2" BackColor="SaddleBrown" EnableViewState="true" ForeColor="White"
+          <asp:Button ID="btnGenerar" class="btn btn-default btn-circle-2 "  Visible="true" BackColor="SaddleBrown" ForeColor="White"
                                 runat="server" Text="Generar Reporte" Width="200px"  OnClick="GenerarReporte" />
+        <br /><br />
     </section>
 </asp:Content>

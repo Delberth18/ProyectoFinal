@@ -19,7 +19,10 @@ namespace SurfTribeSystem1._0
         List<Sesion> sesiones = new List<Sesion>();
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["InicioSesion"] == null)
+            {
+                Response.Redirect("defaultSinLogeoUN.aspx");
+            }
             Ubicacion.Text = Session["Ubicación"].ToString();
             nombreEscuela.Text= Session["escuela"].ToString();
             nivel.Text= Session["Nivel"].ToString();

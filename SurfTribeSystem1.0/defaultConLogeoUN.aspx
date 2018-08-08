@@ -71,7 +71,7 @@
                         <div class="collapse navbar-collapse navbar-ex1-collapse">
                             <ul class="nav navbar-nav navbar-right">
                                 <li class="dropdown singleDrop active">
-                                    <a href="defaultSinLogeoUN.aspx">Inicio </a>
+                                    <a href="defaultConLogeoUN.aspx">Inicio </a>
 
                                 </li>
                                 <li class="dropdown megaDropMenu ">
@@ -129,9 +129,11 @@
                                     <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Información</a>
                                     <ul class="dropdown-menu dropdown-menu-right">
 
+                                       
+                                       <li class=""><a href="eventos.aspx">Próximos eventos</a></li>
                                         <li class=""><a href="FAQlistado.aspx">Preguntas Frecuentes</a></li>
-                                        <li class=""><a href="">Sea parte de nosotros</a></li>
-                                          <li class=""><a href="TérminosCondiciones.aspx">Términos y Condiciones</a></li>
+                                        <li class=""><a href="InformacionGeneral.aspx">Información General</a></li>
+                                        <li class=""><a href="TérminosCondiciones.aspx">Términos y Condiciones</a></li>
 
 
 
@@ -154,7 +156,9 @@
                                     <img class="avatar" src="ccss\star-1-3\Static HTML\img\dashboard\dash-user.jpg" alt="">&nbsp;&nbsp;<i class="fa fa-angle-down" aria-hidden="true"></i></a>
                                 <ul class="dropdown-menu dropdownMenu">
                                     <center><h5><b><asp:Label ID="lblNombre" runat="server" Text="Label"></asp:Label></b></h5></center>
-                                   
+                                   <li><a href="ususcribe.aspx">
+                                        <h5>Dessuscribirse</h5>
+                                    </a></li>
                                     <li><a href="Configuración.aspx">
                                         <h5>Configuración</h5>
                                     </a></li>

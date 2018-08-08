@@ -72,7 +72,7 @@
                         <div class="collapse navbar-collapse navbar-ex1-collapse">
                             <ul class="nav navbar-nav navbar-right">
                                 <li class="dropdown singleDrop active">
-                                    <a href="defaultConLogeoUDM.aspx">Inicio </a>
+                                    <a href="defaultConLogeoUADE.aspx">Inicio </a>
 
                                 </li>
                                 <li class="dropdown megaDropMenu ">
@@ -130,7 +130,6 @@
                                     <ul class="dropdown-menu dropdown-menu-right">
 
                                         <li class=""><a href="eventos.aspx">Próximos eventos</a></li>
-                                        <li class=""><a href="PreciosListado.aspx">Lista de Precios</a></li>
                                         <li class=""><a href="FAQlistado.aspx">Preguntas Frecuentes</a></li>
                                         <li class=""><a href="InformacionGeneral.aspx">Información General</a></li>
                                         <li class=""><a href="TérminosCondiciones.aspx">Términos y Condiciones</a></li>

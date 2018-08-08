@@ -17,6 +17,10 @@ namespace SurfTribeSystem1._0
         Usuario usuario = new Usuario();
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["InicioSesion"] == null)
+            {
+                Response.Redirect("defaultSinLogeoUN.aspx");
+            }
             lblEscuela.Text = Session["escuela"].ToString();//coloca el nombre de la escuela
             lblNivel.Text = Session["Nivel"].ToString();//coloca el nombre del nivel
             string valor = Request.QueryString["rseT"].ToString();//obtiene el valor de parametro

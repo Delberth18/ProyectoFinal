@@ -19,13 +19,11 @@ namespace SurfTribeSystem1._0
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            //SqlConnection con = new SqlConnection("Data Source=laptop-r7vb3im9\\mssqlserver01;Initial Catalog=SURF_TRIBE;Integrated Security=True");
-            //SqlDataAdapter sda = new SqlDataAdapter("select * from ESCUELA",con);
-            //DataTable dt = new DataTable();
-            //sda.Fill(dt);
-            //repeater1.DataSource = dt;
-            //repeater1.DataBind();  
-            
+            if (Session["InicioSesion"] == null)
+            {
+                Response.Redirect("defaultSinLogeoUN.aspx");
+            }
+
 
             if (Request.QueryString["nombreUbicación"].ToString() == "LIMON")
             {

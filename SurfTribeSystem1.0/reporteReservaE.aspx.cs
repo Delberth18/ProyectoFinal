@@ -130,11 +130,23 @@ namespace SurfTribeSystem1._0
                 listareserva.Add(res);
             }
 
+            if (listareserva.Count <= 0)
+            {
+                
+                lblEti.Visible = true;
+                grvreportes.DataSource = listareserva;
+                grvreportes.DataBind();
+                listaReservaF = listareserva;
 
-            grvreportes.DataSource = listareserva;
-            grvreportes.DataBind();
-            listaReservaF = listareserva;
-            Button2.Visible = true;
+            }
+            else
+            {
+                grvreportes.DataSource = listareserva;
+                grvreportes.DataBind();
+                listaReservaF = listareserva;
+                btnGenerar.Visible = true;
+                lblEti.Visible = false;
+            }
         }
 
         protected void btnBuscar_Click(object sender, EventArgs e)
