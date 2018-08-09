@@ -43,31 +43,21 @@
                             <label style="color: saddlebrown; font-size: x-large">Pertenecia:</label>
                         </li>
                         <li>
-                            <asp:UpdatePanel runat="server">
-                                <ContentTemplate>
                                     <asp:DropDownList ID="pertenece" runat="server" CssClass="bg-ashh" Width="100%" OnSelectedIndexChanged="pertenece_Click" 
                                         AutoPostBack="true" DataTextField="" DataValueField=""  ForeColor="Black" style="font-size:large">
                                     </asp:DropDownList>
-                                </ContentTemplate>
-                                <Triggers>
-                                    <asp:AsyncPostBackTrigger ControlID="pertenece" EventName="" />
-                                </Triggers>
-                            </asp:UpdatePanel>
+                               
+                               
 
                         </li>
                         <li>
                             <label style="color: saddlebrown; font-size: x-large">Dueño:</label>
                         </li>
                         <li>
-                            <asp:UpdatePanel runat="server">
-                                <ContentTemplate>
+                            
                                     <asp:DropDownList ID="duenos" runat="server" CssClass="bg-ashh" Width="100%"  ForeColor="Black" style="font-size:large">
                                     </asp:DropDownList>
-                                </ContentTemplate>
-                                <Triggers>
-                                    <asp:AsyncPostBackTrigger ControlID="duenos" EventName="" />
-                                </Triggers>
-                            </asp:UpdatePanel>
+                               
                         </li>
                     </ul>
                 </div>
@@ -80,15 +70,10 @@
                         </li>
                         <li>
                             <br />
-                            <asp:UpdatePanel runat="server">
-                                <ContentTemplate>
+                            
                                     <asp:Button ID="btnGuardar" class="btn btn-default btn-circle-2 " BackColor="darkorange" ForeColor="White" runat="server" Text="Guardar" OnClick="btnGuardar_Click" Width="150px" />
 
-                                </ContentTemplate>
-                                <Triggers>
-                                    <asp:AsyncPostBackTrigger ControlID="btnGuardar" EventName="Click" />
-                                </Triggers>
-                            </asp:UpdatePanel>
+                               
                         </li>
                     </ul>
 
