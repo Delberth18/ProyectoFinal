@@ -128,7 +128,7 @@ namespace SurfTribeSystem1._0
                 LinkButton link = new LinkButton();
                 link = (LinkButton)sender;
                 reserva.Tag = "CONFIRMADA";
-                string[] datos = link.CommandName.Split('-');
+                string[] datos = link.CommandName.Split('/');
                 reserva.IdSesion = datos[0];
                 reserva.IdUsuario = datos[1];
                 resultado = new ReservaLogica().Acciones(reserva);

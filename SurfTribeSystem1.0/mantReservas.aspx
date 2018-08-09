@@ -98,11 +98,11 @@
                                                             </div>
                                                         </div>
                                                                                             <a aria-label="Editar" style="border: solid; border-color: #ff891e; border-radius: 8px; border-width: thin">
-                                                            <asp:LinkButton ID="noConfirmarBtn" CommandName=<%# String.Format("{0}-{1}", Eval("IdSesion"), Eval("IdUsuario")) %> Text="Deshacer" runat="server" 
+                                                            <asp:LinkButton ID="noConfirmarBtn" CommandName=<%# String.Format("{0}/{1}", Eval("IdSesion"), Eval("IdUsuario")) %> Text="Deshacer" runat="server" 
                                                               OnClick="noConfirmarBtn_Click"  aria-hidden="true" Style="margin: 2px 2px 2px 2px;color:darkred; font-weight:bold;font-size:medium" />
                                                         </a>
                                                         <a aria-label="Borrar" style="margin-left: 15px; border: solid; border-color: #ff891e; border-radius: 8px; border-width: thin">
-                                                            <asp:LinkButton ID="confirmarBtn" CommandName=<%# String.Format("{0}-{1}", Eval("IdSesion"), Eval("IdUsuario")) %> Text="Confirmar" runat="server" 
+                                                            <asp:LinkButton ID="confirmarBtn" CommandName=<%# String.Format("{0}/{1}", Eval("IdSesion"), Eval("IdUsuario")) %> Text="Confirmar" runat="server" 
                                                                OnClick="confirmarBtn_Click" aria-hidden="true" Style="margin: 2px 2px 2px 2px;color:forestgreen; font-weight:bold;font-size:medium" />
                                                         </a>
                                                         

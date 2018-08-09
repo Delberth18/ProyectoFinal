@@ -24,6 +24,21 @@ namespace SurfTribeSystem1._0
                 usu = (Usuario)Session["InicioSesion"];
 
                 ListarReservas();
+
+                if (Session["validacionReserva"] != null)
+                {
+                    if (Session["validacionReserva"].ToString() == "Reprobado")
+                    {
+                        if (Session["valida"].ToString() == "1")
+                        {
+                            string script = "swal('Error', 'Debes de cancelar tu reserva anterior', 'error'); ";
+                            ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
+                            Session["valida"] = 0;
+                        }
+
+                    }
+
+                }
             }
             else
             {

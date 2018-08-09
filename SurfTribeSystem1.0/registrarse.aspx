@@ -75,7 +75,7 @@
 
                     <asp:TextBox class="form-control bg-ashh" id="apellidosText" runat="server" placeholder="Apellidos"/><br />
                 
-                    <asp:TextBox runat="server" type="number" class="form-control bg-ashh" placeholder="Teléfono" ID="telefonoText" ></asp:TextBox><br />
+                    <asp:TextBox runat="server" type="number" class="form-control bg-ashh" placeholder="Teléfono" ID="telefonoText"  ForeColor="Black"></asp:TextBox><br />
 
 
                     <asp:DropDownList ID="paisesList" runat="server" class="form-control bg-ash"  ForeColor="Black" style="font-size:large">
@@ -248,6 +248,15 @@
                        
 
                     </asp:DropDownList>
+                      <br />
+                      <asp:DropDownList ID="ddlEscuela" runat="server"  class="form-control bg-ash"  ForeColor="Black" style="font-size:large">
+                          
+                        <asp:listitem value ="TOTEM">Totem</asp:listitem >
+                        <asp:listitem value ="AVELLANAS">Avellanas</asp:listitem >
+                        <asp:listitem value ="HERMOSA RIDERS">Hermosa Riders</asp:listitem >
+                        <asp:listitem value ="MANUERL ANTONIO">Manuel Antonio</asp:listitem >
+                        <asp:listitem value ="SAFARI">Safari</asp:listitem >
+                      </asp:DropDownList>
 
                   </div>
                 

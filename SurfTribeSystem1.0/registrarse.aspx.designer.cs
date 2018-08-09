@@ -94,6 +94,15 @@ namespace SurfTribeSystem1._0 {
         protected global::System.Web.UI.WebControls.DropDownList paisesList;
         
         /// <summary>
+        /// Control ddlEscuela.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlEscuela;
+        
+        /// <summary>
         /// Control chkboxLeido.
         /// </summary>
         /// <remarks>

@@ -14,11 +14,25 @@ namespace SurfTribeSystem1._0
 {
     public partial class reservaClases : System.Web.UI.Page
     {
+        Reserva reserva = new Reserva();
+        public static List<Reserva> listareserva = new List<Reserva>();
+        Usuario usu = new Usuario();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["InicioSesion"] == null)
             {
                 Response.Redirect("defaultSinLogeoUN.aspx");
+            }
+            else {
+                usu = (Usuario)Session["InicioSesion"];
+
+                if (ValidaciónEstado() != "Aprobado")
+                {
+                    Session["validacionReserva"] = "Reprobado";
+                    Session["valida"] = 1;
+                    Response.Redirect("reporteReserva.aspx");
+                }
+
             }
 
             if (Session["idReserva"] != null)
@@ -69,6 +83,64 @@ namespace SurfTribeSystem1._0
             }
            
 
+        }
+        private string ValidaciónEstado()
+        {
+            Resultado resultado = new Resultado();
+            string validado = "Reprobado";
+            try
+            {
+               
+                reserva.IdUsuario = usu.Correo;
+                reserva.Tag = "ALQUILER";
+                resultado = new ReporteReservaLogica().Acciones(reserva);
+
+
+                listareserva = new List<Reserva>();
+                listareserva = (List<Reserva>)resultado.ObjetoResultado;
+
+
+
+                //
+                reserva.Tag = "SINALQUILER";
+                resultado = new ReporteReservaLogica().Acciones(reserva);
+
+                List<Reserva> listareserva2 = new List<Reserva>();
+
+                listareserva2 = (List<Reserva>)resultado.ObjetoResultado;
+
+                foreach (Reserva re in listareserva2)
+                {
+                    listareserva.Add(re);
+                }
+
+                if (listareserva.Count <= 0)
+                {
+                    validado= "Aprobado";
+                }
+                else
+                {
+                    foreach (Reserva re1 in listareserva)
+                    {
+                        if (re1.Estado == "PENDIENTE")
+                        {
+                            validado = "Reprobado";
+                            return validado;
+                        }
+                        else {
+
+                            validado = "Aprobado";
+                        }
+                    }
+                }
+
+                return validado;
+
+            }
+            catch (Exception ex)
+            {
+                return validado;
+            }
         }
 
         private void BajarCupo()

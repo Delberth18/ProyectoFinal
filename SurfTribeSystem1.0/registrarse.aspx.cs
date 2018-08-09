@@ -118,6 +118,7 @@ namespace SurfTribeSystem1._0
                     Telefono = telefonoText.Text,
                     Pais = paisesList.SelectedValue,
                     Tipo_usu = "REG",
+                    IdEscuela = ddlEscuela.SelectedValue.ToString(),
                     Tag="INSERTAR"
                 };
                 resultado = new UsuarioLogica().Acciones(usu);
@@ -127,7 +128,7 @@ namespace SurfTribeSystem1._0
                     confirmaLabel.Visible = true;
                     confirmaLabel.Text = "El registro se realizó con éxito";
 
-                    Session["InicioSesion"] = 1;
+                    Session["InicioSesion"] = usu;
                     Session["InicioNombre"] = nombreText.Text + " " + apellidosText.Text;
 
                     Response.Redirect("defaultConLogeoUN.aspx");
