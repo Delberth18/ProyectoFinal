@@ -108,7 +108,7 @@
                                                                                     <asp:TextBox ID="txtUsu" runat="server" Visible="false"></asp:TextBox>
                                                                                     <asp:TextBox ID="txtauxClave" runat="server" Visible="false"></asp:TextBox>
 
-                                                                                    <div class="container" style="margin-left: 2px; width: 430px;">
+                                                                                    <div class="container" style="margin-left: 75px; width: 430px;">
                                                                                         <div class="panel-group">
                                                                                             <div class="panel panel-default">
                                                                                                 <div class="panel-heading">

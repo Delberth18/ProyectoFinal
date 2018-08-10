@@ -32,6 +32,10 @@ namespace SurfTribeSystem1._0
                 if (!IsPostBack)
                 {
                     esc = Request.QueryString["esc"].ToString();
+                    if (esc!="null")
+                    {
+                        Session["esc"] = esc;
+                    }
                     ObtenerListado();
                 }
             }
@@ -118,7 +122,7 @@ namespace SurfTribeSystem1._0
                 comentario.Tag = "GUARDAR";
                 comentario.Comentariol = comentarioText.Text;
                 comentario.Id_Usuario = usu.Correo;
-                comentario.Escuela = esc;
+                comentario.Escuela = Session["esc"].ToString();
 
                 resultado = new ComentarioLogica().Acciones(comentario);
                 if (resultado.TipoResultado == "OK")
