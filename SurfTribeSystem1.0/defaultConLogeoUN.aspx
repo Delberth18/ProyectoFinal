@@ -157,7 +157,7 @@
                                 <ul class="dropdown-menu dropdownMenu">
                                     <center><h5><b><asp:Label ID="lblNombre" runat="server" Text="Label"></asp:Label></b></h5></center>
                                    <li><a href="ususcribe.aspx">
-                                        <h5>Dessuscribirse</h5>
+                                        <h5>Desinscribir</h5>
                                     </a></li>
                                     <li><a href="Configuración.aspx">
                                         <h5>Configuración</h5>

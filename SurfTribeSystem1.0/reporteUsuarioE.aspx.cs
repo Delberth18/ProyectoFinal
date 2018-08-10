@@ -134,7 +134,7 @@ namespace SurfTribeSystem1._0
 
             // Le colocamos el título y el autor
             // **Nota: Esto no será visible en el documento
-            doc.AddTitle("Detalles de tablas");
+            doc.AddTitle("Detalles de usuarios");
             doc.AddCreator("STS");
 
             // Abrimos el archivo

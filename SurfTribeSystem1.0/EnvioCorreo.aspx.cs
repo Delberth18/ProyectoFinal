@@ -90,7 +90,7 @@ namespace SurfTribeSystem1._0
                     msn = mensajeText.Text + "<br /><br />Mensaje enviado desde la página Surf Tribe";
                 }
 
-                //msn += "<br /><br /><br /><a href='http://localhost:54289/ususcribe.aspx'>Deseo desincribirme</a>";
+                msn += "<br /><br /><br /><a >Si desea desinscribrise puede acceder a la página Surf Tribe, una ves inicie sesión podra acceder a la opción de desinscribir</a>";
 
                 string subject = asuntoText.Text;
 

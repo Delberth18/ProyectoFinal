@@ -21,7 +21,7 @@
             <div class="col-xs-12">
                 <div class="sectionTitle">
                     <h2>
-                        <asp:Label runat="server" ID="tituloLabel" Text="Reporte de lecciones " BackColor="#f5f5f5" Font-Size="XX-Large"></asp:Label></h2>
+                        <asp:Label runat="server" ID="tituloLabel" Text="Reporte de sesiones " BackColor="#f5f5f5" Font-Size="XX-Large"></asp:Label></h2>
 
                 </div>
 
@@ -39,7 +39,7 @@
                                 </li>
                                 <li>
                                     <asp:DropDownList ID="dificultadLst" runat="server" CssClass="bg-ashh" Width="100%" AutoPostBack="true" DataTextField=""
-                                        DataValueField="" OnSelectedIndexChanged="reporteSesion" ForeColor="Black" Style="font-size: large">
+                                        DataValueField="" OnSelectedIndexChanged="reportSesion" ForeColor="Black" Style="font-size: large">
                                     </asp:DropDownList>
                                 </li>
                             </ul>
@@ -53,7 +53,7 @@
                                 <li>
 
                                     <asp:DropDownList ID="fechalst" runat="server" CssClass="bg-ashh" Width="100%" AutoPostBack="true" DataTextField=""
-                                        DataValueField="" OnSelectedIndexChanged="reporteSesion" ForeColor="Black" Style="font-size: large">
+                                        DataValueField="" OnSelectedIndexChanged="reportSesion" ForeColor="Black" Style="font-size: large">
                                     </asp:DropDownList>
 
                                 </li>
@@ -68,7 +68,7 @@
                                 <li>
 
                                     <asp:DropDownList ID="instructorlst" runat="server" CssClass="bg-ashh" Width="100%" AutoPostBack="true" DataTextField=""
-                                        DataValueField="" OnSelectedIndexChanged="reporteSesion" ForeColor="Black" Style="font-size: large">
+                                        DataValueField="" OnSelectedIndexChanged="reportSesion" ForeColor="Black" Style="font-size: large">
                                     </asp:DropDownList>
 
                                 </li>
@@ -80,7 +80,7 @@
                                 <li>
                                     <br />
                                     <asp:Button ID="btnRefrescar" class="btn btn-default btn-circle-2 " BackColor="darkorange" ForeColor="White"
-                                        runat="server" Text="Refrescar" Width="150px" OnClick="reporteSesion" />
+                                        runat="server" Text="Refrescar" Width="150px" OnClick="reportSesion" />
                                 </li>
 
                             </ul>
@@ -162,7 +162,6 @@
                 <Triggers>
                     <asp:AsyncPostBackTrigger ControlID="dificultadLst" EventName="" />
                     <asp:AsyncPostBackTrigger ControlID="fechalst" EventName="" />
-                    
                     <asp:AsyncPostBackTrigger ControlID="instructorlst" EventName="" />
                 </Triggers>
             </asp:UpdatePanel>

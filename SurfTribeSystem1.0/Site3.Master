@@ -166,6 +166,7 @@
                                     <li class=""><a href="mantEscuelas.aspx">Escuelas</a></li>
                                     <li class=""><a href="mantUsuarios.aspx">Usuarios</a></li>
                                     <li class=""><a href="mantEventos.aspx">Eventos</a></li>
+                                    <li class=""><a href="RegistroImagenes.aspx">Imágenes</a></li>
                                     <li class=""><a href="mantComentarios.aspx">Comentarios</a></li>
                                     <li class=""><a href="FAQMantenimiento.aspx">Preguntas frecuentes</a></li>
 

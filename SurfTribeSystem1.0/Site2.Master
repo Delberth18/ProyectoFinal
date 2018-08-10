@@ -148,7 +148,6 @@
                                     <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Agregar</a>
                                     <ul class="dropdown-menu dropdown-menu-right">
 
-                                        <li class=""><a href="registroEvento.aspx">Eventos</a></li>
                                         <li class=""><a href="registroPrecios.aspx">Precios</a></li>
                                         <li class=""><a href="registroSesion.aspx">Sesiones</a></li>
                                         <li class=""><a href="registroTabla.aspx">Tablas</a></li>
@@ -160,7 +159,6 @@
                                     <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Mantenimientos</a>
                                     <ul class="dropdown-menu dropdown-menu-right">
 
-                                        <li class=""><a href="mantEventos.aspx">Eventos</a></li>
                                         <li class=""><a href="mantTablas.aspx">Tablas</a></li>
                                         <li class=""><a href="mantReservas.aspx">Reservas</a></li>
 

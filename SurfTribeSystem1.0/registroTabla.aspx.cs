@@ -68,6 +68,7 @@ namespace SurfTribeSystem1._0
             }
             return verif;
         }
+
         protected void btnGuardar_Click(object sender, EventArgs e)
         {
             Tabla tabla = new Tabla();
@@ -128,10 +129,14 @@ namespace SurfTribeSystem1._0
 
                     if (resultado.TipoResultado == "OK")
                     {
-                        string script = "swal('Excelente', 'Éxito en la insersión', 'success'); ";
-                        ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
-                        Limpiar();
-                        ListarRegistro();
+                        //string script = "swal('Excelente', 'Éxito en la insersión', 'success'); ";
+                        //ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
+
+                        //Limpiar();
+                        //ListarRegistro();
+
+                        Session["RegistroTabla"] = "OK";
+                        Response.Redirect("mantTablas.aspx");
                     }
                     else
                     {

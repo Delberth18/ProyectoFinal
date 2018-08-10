@@ -19,7 +19,7 @@ namespace SurfTribeSystem1._0
             {
                 usu = (Usuario)Session["InicioSesion"];
 
-                if (usu.Tipo_usu != "ADMG" && usu.Tipo_usu != "ADM")
+                if (usu.Tipo_usu != "ADMG")
                 {
                     Response.Redirect("defaultSinLogeoUN.aspx");
                 }
@@ -32,23 +32,7 @@ namespace SurfTribeSystem1._0
 
         protected void Page_PreInit(object sender, EventArgs e)
         {
-
-            if (Session["InicioSesion"] != null)
-            {
-                usu = (Usuario)Session["InicioSesion"];
-
-                switch (usu.Tipo_usu)
-                {
-                    case "ADM":
-                        this.MasterPageFile = "~/Site2.master";
-                        break;
-                    case "ADMG":
                         this.MasterPageFile = "~/Site3.master";
-                        break;
-                }
-            }
-           
-
         }
 
         private Boolean ValidarExtension(string sExtension)

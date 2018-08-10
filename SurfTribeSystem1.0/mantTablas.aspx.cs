@@ -35,6 +35,13 @@ namespace SurfTribeSystem1._0
             {
                 selecion();
             }
+
+            if (Session["RegistroTabla"]!=null)
+            {
+                string script = "swal('Excelente', 'Éxito en la insersión de la nueva tabla', 'success'); ";
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
+                Session["RegistroTabla"] = null;
+            }
         }
 
         protected void Page_PreInit(object sender, EventArgs e)

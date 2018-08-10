@@ -22,6 +22,7 @@ namespace SurfTribeSystem1._0
         Usuario usu = new Usuario();
 
         string pert = "";
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["InicioSesion"] != null)
@@ -221,7 +222,33 @@ namespace SurfTribeSystem1._0
             pert = pertenece.SelectedValue;
             // pertenece.SelectedValue = pert;
         }
+        
 
+        protected void eliminarBtn_Click(object sender, EventArgs e)
+        {
+            Resultado resultado = new Resultado();
+            try
+            {
+                LinkButton link = new LinkButton();
+                link = (LinkButton)sender;
 
+                img.Tag = "ELIMINAR";
+                img.Codigo =Convert.ToInt32(link.CommandName);
+                resultado = new ImagenLogica().Acciones(img);
+                if (resultado.TipoResultado == "OK")
+                {
+                    ListarRegistro();
+                    string script = "swal('Excelente', 'La imagen se borró con éxito', 'success'); ";
+                    ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                string script = "swal('Error', '" + ex + "', 'error'); ";
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
+            }
+        }
+        
     }
 }

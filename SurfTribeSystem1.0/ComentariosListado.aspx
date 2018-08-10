@@ -13,7 +13,7 @@
                     <div class="col-xs-12">
                         <div class="sectionTitle">
                             <h2>
-                                <asp:Label runat="server" ID="tituloLabel" Text="Comentarios" BackColor="#f5f5f5" Font-Size="XX-Large"></asp:Label></h2>
+                                <asp:Label runat="server" ID="tituloLabel" Text="Opiniones" BackColor="#f5f5f5" Font-Size="XX-Large"></asp:Label></h2>
 
                         </div>
                         <div class="sectionTitle">

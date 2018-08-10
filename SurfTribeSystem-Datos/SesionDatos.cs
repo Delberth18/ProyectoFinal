@@ -337,6 +337,7 @@ namespace SurfTribeSystem_Datos
                         resultado.TipoResultado = "OK";
 
                         List<string> lista = new List<string>();
+                        List<Usuario> listaUsu = new List<Usuario>();
 
 
 
@@ -347,19 +348,25 @@ namespace SurfTribeSystem_Datos
                             {
                                 case "FECHA":
                                     lista.Add(row["FECHA"] is DBNull ? null : row["FECHA"].ToString());
+                                    resultado.ObjetoResultado = lista;
                                     break;
                                 case "INSTRUCTOR":
-                                    lista.Add(row["NOMBRE"] is DBNull ? null : row["NOMBRE"].ToString());
+                                    listaUsu.Add(new Usuario(){
+                                        Nombre=row["NOMBRE"] is DBNull ? null : row["NOMBRE"].ToString() ,
+                                        Correo= row["CORREO"] is DBNull ? null : row["CORREO"].ToString()
+                                    });
+                                    resultado.ObjetoResultado = listaUsu;
                                     break;
                                 case "DIFICULTAD":
                                     lista.Add(row["DIFICULTAD"] is DBNull ? null : row["DIFICULTAD"].ToString());
+                                    resultado.ObjetoResultado = lista;
                                     break;
                             }
                             
                         }
 
 
-                        resultado.ObjetoResultado = lista;
+                        
                     }
 
                 }

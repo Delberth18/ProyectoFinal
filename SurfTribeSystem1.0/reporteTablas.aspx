@@ -125,12 +125,12 @@
 
                             <asp:Repeater ID="imagenesList" runat="server">
                                 <ItemTemplate>
-                                    <div class="col-md-3">
+                                    <div class="col-md-3" style="height:250px">
                                         <div class="thumbnail deals packagesPage isotopeSelector" style="background: none">
                                             <img src='data:image/jpg;base64,<%# Eval("Imagen") %>' alt="deal-image" />
                                         </div>
                                     </div>
-                                    <div class="col-md-3">
+                                    <div class="col-md-3" style="height:250px">
                                         <ul>
                                             <li style="color: black; font-weight: bold; font-size: large">Marca: <%# Eval("Marca") %>
                                             </li>

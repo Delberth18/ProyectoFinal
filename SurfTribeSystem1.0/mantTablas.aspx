@@ -70,10 +70,10 @@
                                                         <div class="panel panel-default">
                                                             <div class="panel-heading">
                                                                 <h4 class="panel-title">
-                                                                    <a data-toggle="collapse" href="#collapse1">Cambiar Estado</a>
+                                                                    <a data-toggle="collapse" href='<%# "#"+ Eval("Id").ToString() %>'>Cambiar Estado</a>
                                                                 </h4>
                                                             </div>
-                                                            <div id="collapse1" class="panel-collapse collapse">
+                                                            <div id='<%# Eval("Id") %>' class="panel-collapse collapse">
                                                                 <div class="panel-body">
                                                                     <asp:DropDownList ID="estadoList" runat="server" OnSelectedIndexChanged="estadoList_SelectedIndexChanged"
                                                                         AutoPostBack="True" CssClass="bg-ashh" Width="100%"  ForeColor="Black" style="font-size:large">
