@@ -53,27 +53,30 @@
                                                                         <div class="Alineado eti" style="margin-left: -40px; color: black;">
                                                                             <asp:Label ID="lblexito" runat="server" Text="" Font-Size="Medium" Font-Bold="true"></asp:Label>
                                                                         </div>
-                                                                        <div style="margin-left: 260px;">
-                                                                            <asp:GridView ID="grvEstado" runat="server" AutoGenerateColumns="False" HorizontalAlign="Center" BackColor="White" BorderColor="#CCCCCC"
+                                                                        <div style="margin-left: 130px;">
+                                                                            <asp:GridView ID="grvEstado" runat="server"  OnRowCommand="grvEstado_RowCommand" AutoGenerateColumns="False" AutoGenerateSelectButton="True"  HorizontalAlign="Center" BackColor="White"  BorderColor="SaddleBrown" 
                                                                                 BorderStyle="None" BorderWidth="1px" CellPadding="3"
                                                                                 SelectedIndex="0"
-                                                                                OnSelectedIndexChanged="grvEstado_SelectedIndexChanged"
-                                                                                OnRowDataBound="grvEstado_RowDataBound">
+                                                                                HeaderStyle-HorizontalAlign="Center" RowHeaderColumn="center" SortedAscendingHeaderStyle-HorizontalAlign="Center" HeaderStyle-Width="40%">
                                                                                 <Columns>
 
 
                                                                                     <asp:BoundField DataField="NOMBRE" HeaderText="Nombre" HeaderStyle-Width="20%"></asp:BoundField>
                                                                                     <asp:BoundField DataField="APELLIDOS" HeaderText="Apellidos" ReadOnly="True" HeaderStyle-Width="40%"></asp:BoundField>
                                                                                     <asp:BoundField DataField="CORREO" HeaderText="Correo"></asp:BoundField>
+                                                                                    
+                                                                                    <asp:ButtonField Text="Editar" ButtonType="Button" CommandName="Editar">
+                                                                                        <ControlStyle BackColor="#666666" ForeColor="White"></ControlStyle>
+                                                                                    </asp:ButtonField>
                                                                                 </Columns>
 
 
                                                                                 <FooterStyle BackColor="White" ForeColor="#000066"></FooterStyle>
 
-                                                                                <HeaderStyle BackColor="DarkOrange" Font-Bold="True" ForeColor="White" CssClass="celdas-titulos"></HeaderStyle>
+                                                                                <HeaderStyle BackColor="DarkOrange" Font-Bold="True" ForeColor="White"   HorizontalAlign="Center" ></HeaderStyle>
                                                                                 <PagerStyle HorizontalAlign="Left" BackColor="White" ForeColor="#000066"></PagerStyle>
 
-                                                                                <RowStyle ForeColor="#669999"></RowStyle>
+                                                                                <RowStyle ForeColor="SaddleBrown" Font-Bold="true" ></RowStyle>
 
                                                                                 <SelectedRowStyle BackColor="#262a2e" Font-Bold="True" ForeColor="White"></SelectedRowStyle>
 
@@ -85,7 +88,7 @@
 
                                                                                 <SortedDescendingHeaderStyle BackColor="#00547E"></SortedDescendingHeaderStyle>
                                                                             </asp:GridView>
-                                                                            <asp:Button ID="idEditar" Style="margin-top: -69px; margin-left: 120px;" Text="Editar Usuario" class="btn  btn-lg" BackColor="DarkOrange" ForeColor="White" runat="server" OnClick="idEditar_Click" Visible="false" />
+                                                                           
 
                                                                         </div>
 

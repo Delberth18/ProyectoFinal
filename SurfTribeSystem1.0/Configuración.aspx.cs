@@ -3,6 +3,7 @@ using SurfTribeSystem_LogicaNegocio;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -91,6 +92,27 @@ namespace SurfTribeSystem1._0
                 txtContraNueva.Focus();
                 return;
             }
+            if (valido(txtContraNConfirmar.Text) == false)
+            {
+                errorLabel.Visible = true;
+                errorLabel.Text = "*La contraseña no debe de contener caracteres especiales";
+                txtContraNConfirmar.Focus();
+                return;
+            }
+            if (valido(txtContraNueva.Text) == false)
+            {
+                errorLabel.Visible = true;
+                errorLabel.Text = "*La contraseña no debe de contener caracteres especiales";
+                txtContraNueva.Focus();
+                return;
+            }
+            if (valido(txtContraPasa.Text) == false)
+            {
+                errorLabel.Visible = true;
+                errorLabel.Text = "*La contraseña no debe de contener caracteres especiales";
+                txtContraPasa.Focus();
+                return;
+            }
 
 
             Usuario us = new Usuario();
@@ -130,6 +152,21 @@ namespace SurfTribeSystem1._0
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
             }
 
+        }
+        public bool valido(string cadena)
+        {
+            string formato = "^([a-zA-Z0-9]{4,16})$";
+
+            Regex r = new Regex(formato);
+
+            if (r.IsMatch(cadena))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }

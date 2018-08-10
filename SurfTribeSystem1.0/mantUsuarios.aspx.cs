@@ -1,4 +1,5 @@
 ﻿using SurfTribeSystem_Entidades;
+using SurfTribeSystem_LogicaNegocio;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -13,6 +14,8 @@ namespace SurfTribeSystem1._0
     public partial class mantUsuarios : System.Web.UI.Page
     {
         Usuario usu = new Usuario();
+        public static List<Usuario> listaUsuarios = new List<Usuario>();
+        
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["InicioSesion"] != null)
@@ -48,6 +51,12 @@ namespace SurfTribeSystem1._0
 
             }
 
+            if (!IsPostBack)
+            {
+                listado();
+            }
+
+
         }
 
         protected void Page_PreInit(object sender, EventArgs e)
@@ -56,15 +65,6 @@ namespace SurfTribeSystem1._0
         }
 
 
-        protected void grvEstado_RowDataBound(object sender, GridViewRowEventArgs e)
-        {
-
-        }
-
-        protected void grvEstado_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
         protected void idBuscar_Click(object sender, EventArgs e)
         {
 
@@ -85,7 +85,7 @@ namespace SurfTribeSystem1._0
 
                     grvEstado.DataSource = dt;
                     grvEstado.DataBind();
-                    idEditar.Visible = true;
+                   
                     lblexito.Text = "";
 
                 }
@@ -93,7 +93,7 @@ namespace SurfTribeSystem1._0
                 {
 
                     lblexito.Text = "Usuario no encontrado";
-                    idEditar.Visible = false;
+                   
                     grvEstado.DataBind();
 
 
@@ -104,26 +104,62 @@ namespace SurfTribeSystem1._0
             catch
             {
                 lblexito.Text = "Usuario no encontrado";
-                idEditar.Visible = false;
+               
                 grvEstado.DataBind();
 
             }
 
+        }
+        protected void listado()
+        {
+
+            Resultado resultado = new Resultado();
+            try
+            {
+                resultado = new UsuarioLogica().Reporte("", "", "");
+                if (resultado.TipoResultado == "OK")
+                {
+                    listaUsuarios = null;
+
+                    grvEstado.DataSource = null;
+                    grvEstado.DataBind();
+
+                    listaUsuarios = new List<Usuario>();
+                    listaUsuarios = (List<Usuario>)resultado.ObjetoResultado;
+                    grvEstado.DataSource = listaUsuarios;
+                    grvEstado.DataBind();
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+                string script = "swal('Error', '" + ex + "', 'error'); ";
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
+            }
         }
 
         protected void idEditar_Click(object sender, EventArgs e)
         {
             try
             {
-                GridViewRow row = grvEstado.SelectedRow;
-
-                Session["idEditar"] = (row.Cells[2].Text);//esta es la ubicacion del id en el grid para guardar
-
-                Response.Redirect("editarUsuarios.aspx");
+                
             }
             catch
             {
                 alert.Text = "Lo sentimos no existe ningún usuario";
+            }
+        }
+
+        protected void grvEstado_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            if (e.CommandName == "Editar")
+            {
+                GridViewRow row = grvEstado.SelectedRow;
+
+                Session["idEditar"] = (row.Cells[3].Text);//esta es la ubicacion del id en el grid para guardar
+
+                Response.Redirect("editarUsuarios.aspx");
             }
         }
     }

@@ -206,6 +206,21 @@ namespace SurfTribeSystem1._0
                     Session["ConfFecha"] = lblDia.Text + " de " + lblMes.Text + " del " + DateTime.Now.Year.ToString();
                     Session["ConfHinicio"] = lblHoraInicio.Text;
                     Session["fechaIndu"] = fecha.Text;
+
+                    if (Session["errorCupo"] != null)
+                    {
+                        if (Session["errorCupo"].ToString() == "1")
+                        {
+                            Session["errorCupo"] = 0;
+                            btn.Text = "  Reservar  ";
+                            lbl.Visible = false;
+                            Session["asigando"] = 0;
+                            btnContinuar.Visible = false;
+                            Session["idReserva"] = "";
+                            numeroposible = (int)Session["numero"] - 1;
+                            Session["numero"] = numeroposible;
+                        }
+                    }
                 }
             }
             else
@@ -230,7 +245,20 @@ namespace SurfTribeSystem1._0
                     Session["ConfHinicio"] = lblHoraInicio.Text;
                     Session["fechaIndu"] = fecha.Text;
 
-
+                if (Session["errorCupo"] != null)
+                {
+                    if (Session["errorCupo"].ToString() == "1")
+                    {
+                        Session["errorCupo"] = 0;
+                        btn.Text = "  Reservar  ";
+                        lbl.Visible = false;
+                        Session["asigando"] = 0;
+                        btnContinuar.Visible = false;
+                        Session["idReserva"] = "";
+                        numeroposible = (int)Session["numero"] - 1;
+                        Session["numero"] = numeroposible;
+                    }
+                }
 
             }
 
@@ -281,8 +309,9 @@ namespace SurfTribeSystem1._0
                 }
                 else
                 {
-                    string script = "swal('Error', 'La reserva no se pudo realizar', 'error'); ";
+                    string script = "swal('Error', 'Ya has realizado una reserva de esta sesion', 'error'); ";
                     ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
+                    Session["errorCupo"] = 1;
                 }
             }
             catch (Exception ex)
