@@ -3095,6 +3095,7 @@
     <Content Include="defaultConLogeoUN.aspx" />
     <Content Include="defaultSinLogeoUN.aspx" />
     <Content Include="editarEscuela.aspx" />
+    <Content Include="editarEvento.aspx" />
     <Content Include="editarUsuarios.aspx" />
     <Content Include="EnvioCorreo.aspx" />
     <Content Include="eventos.aspx" />
@@ -3210,6 +3211,13 @@
     </Compile>
     <Compile Include="editarEscuela.aspx.designer.cs">
       <DependentUpon>editarEscuela.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="editarEvento.aspx.cs">
+      <DependentUpon>editarEvento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="editarEvento.aspx.designer.cs">
+      <DependentUpon>editarEvento.aspx</DependentUpon>
     </Compile>
     <Compile Include="editarUsuarios.aspx.cs">
       <DependentUpon>editarUsuarios.aspx</DependentUpon>

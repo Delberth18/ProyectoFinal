@@ -107,8 +107,19 @@ namespace SurfTribeSystem_Datos
                                 Descripcion = row["DESCRIPCION"] is DBNull ? null : row["DESCRIPCION"].ToString()
                             });
                         }
+                        resultado.ObjetoResultado = eventos;
                     }
-                    resultado.ObjetoResultado = eventos;
+                    else if (evento.Tag == "UNICO")
+                    {
+                        resultado.ObjetoResultado = new Evento
+                        {
+                            Id = datos.Tables[1].Rows[0]["ID"] is DBNull ? 0 : Convert.ToInt32(datos.Tables[1].Rows[0]["ID"]),
+                            Titulo = datos.Tables[1].Rows[0]["TITULO"] is DBNull ? null : datos.Tables[1].Rows[0]["TITULO"].ToString(),
+                            Imagen = datos.Tables[1].Rows[0]["IMAGEN"] is DBNull ? null : datos.Tables[1].Rows[0]["IMAGEN"].ToString(),
+                            Descripcion = datos.Tables[1].Rows[0]["DESCRIPCION"] is DBNull ? null : datos.Tables[1].Rows[0]["DESCRIPCION"].ToString()
+                        };
+                    }
+                    
 
                 }
 

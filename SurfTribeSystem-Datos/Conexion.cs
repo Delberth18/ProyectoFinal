@@ -16,9 +16,9 @@ namespace SurfTribeSystem_Datos
         /// <returns></returns>
         public string CadenaConexion()
         {
-            //return @"Data Source=localhost\SQLEXPRESS;Initial Catalog=SURF_TRIBE; Integrated Security=true;Connection Timeout=45;";
+            return @"Data Source=localhost\SQLEXPRESS;Initial Catalog=SURF_TRIBE; Integrated Security=true;Connection Timeout=45;";
             
-            return @"Data Source = laptop-r7vb3im9\mssqlserver01; Initial Catalog = SURF_TRIBE; Integrated Security = True";//Eduardo No BORRAR
+           // return @"Data Source = laptop-r7vb3im9\mssqlserver01; Initial Catalog = SURF_TRIBE; Integrated Security = True";//Eduardo No BORRAR
         }
 
         public DataSet EjecutarProcedure(string NombreProcedimiento)

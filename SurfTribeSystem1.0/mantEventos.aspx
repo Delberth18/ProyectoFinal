@@ -73,6 +73,11 @@
                                                             <asp:LinkButton ID="noConfirmarBtn" CommandName='<%# Eval("Id") %>' Text="Eliminar" runat="server"
                                                                 OnClick="eliminar_Click" aria-hidden="true" Style="margin: 2px 2px 2px 2px; color: darkred; font-weight: bold; font-size: medium" />
                                                         </a>    
+
+                                                        <a aria-label="Editar" style="border: solid; border-color: #ff891e; border-radius: 8px; border-width: thin">
+                                                            <asp:LinkButton ID="editarBtn" CommandName='<%# Eval("Id") %>' Text="Editar" runat="server"
+                                                                OnClick="LinkButton1_Click" aria-hidden="true" Style="margin: 2px 2px 2px 2px; color: darkred; font-weight: bold; font-size: medium" />
+                                                        </a>  
                                                         <div class="row"></div>
                                                     </div>
                                                 </li>

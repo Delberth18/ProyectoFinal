@@ -25,7 +25,17 @@ namespace SurfTribeSystem1._0
                 {
                     Response.Redirect("defaultSinLogeoUN.aspx");
                 }
-            }
+
+                if (Session["exito"] != null)
+                {
+                    string script = "swal('Excelente', 'Se actualizó el evento con éxito', 'success'); ";
+                    ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
+                    Session["idEvento"] = null;
+                    Session["exito"] = null;
+                    ObtenerListado();
+                }
+
+                }
             else
             {
                 Response.Redirect("defaultSinLogeoUN.aspx");
@@ -116,6 +126,16 @@ namespace SurfTribeSystem1._0
                 string script = "swal('Error', '" + ex + "', 'error'); ";
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
             }
+        }
+
+        protected void LinkButton1_Click(object sender, EventArgs e)
+        {
+            LinkButton link = new LinkButton();
+            link = (LinkButton)sender;
+            string datos = link.CommandName;
+            int Id = Convert.ToInt32(datos);
+            Session["idEvento"] = Id;
+            Response.Redirect("editarEvento.aspx");
         }
     }
 }
