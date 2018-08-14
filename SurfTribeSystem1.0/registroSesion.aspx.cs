@@ -27,10 +27,10 @@ namespace SurfTribeSystem1._0
                 nis= DateTime.Now;
 
                 string dia = nis.DayOfWeek.ToString();
-                if (dia != "Wednesday")
-                {
-                    Response.Redirect("defaultConLogeoUADE.aspx");
-                }
+                //if (dia != "Wednesday")
+                //{
+                  //  Response.Redirect("defaultConLogeoUADE.aspx");
+                //}
                 
             }
             else

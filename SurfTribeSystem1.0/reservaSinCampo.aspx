@@ -89,7 +89,7 @@
 
                              <img src="ccss/star-1-3/Static%20HTML/img/not-found/not-found.png" style="width: 26%; margin-top: 3%; margin-left: 4%;" /><br />
                              <br />
-                             <h4 class="col-lg-12" style="font-size: 20px; color: white;">En este momento no hay reservas disponibles en esta escuela con el nivel seleccionado.</h4>
+                             <h4 class="col-lg-12" style="font-size: 20px; color: white;">En este momento no hay sesiones disponibles en esta escuela con el nivel seleccionado.</h4>
 
                              <div class="input-group">
                              </div>

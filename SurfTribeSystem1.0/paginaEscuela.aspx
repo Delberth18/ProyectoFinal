@@ -31,11 +31,11 @@
         
         
         <!-- PAGE CONTENT -->
-        <section class="mainContentSection singlePackage">
-             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Label runat="server" ForeColor="DarkOrange" Font-Size="XX-Large" Font-Bold="true" style="top" ><a href="#galery">Ver galeria >></a>
+        <section class="mainContentSection singlePackage" style="padding: 45px 0 70px 0;">
+             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Label runat="server" ForeColor="DarkOrange" Font-Size="XX-Large" Font-Bold="true" style="margin-left:10%;" ><a href="#galery">Ver galeria >></a>
                        </asp:Label>
 
-             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Label runat="server" ForeColor="DarkOrange" Font-Size="XX-Large" Font-Bold="true" style="top" ><a href="#otras">Ver otras escuelas >></a>
+             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Label runat="server" ForeColor="DarkOrange" Font-Size="XX-Large" Font-Bold="true" style="" ><a href="#otras">Ver otras escuelas >></a>
                        </asp:Label>
 
             <br />
@@ -79,8 +79,11 @@
                     </div>
                 </div>--%>
 
-                <div class="row"  style="background-image: url('ccss/star-1-3/Static%20HTML/img/bg-menuReserva.jpg'); position: relative; z-index: 1; box-shadow: -11px 9px 45px 2px rgba(0,0,0,0.75); border-radius: 12px; padding: 12px;">
-                    <div class="row">
+                <div class="row"  style="background-image: url('ccss/star-1-3/Static%20HTML/img/bg-menuReserva.jpg'); 
+                                            position: relative; z-index: 1; box-shadow: -11px 9px 45px 2px rgba(0,0,0,0.75); 
+                                            border-radius: 12px; padding: 12px;">
+                    
+                    <div class="row" >
                         <div class="col-xs-12">
                             <div class="description-aria" >
                                 <asp:Repeater runat="server" ID="info">
@@ -123,7 +126,6 @@
                                                     <li style="color: darkred; font-size: x-large; font-weight: bold;"><i class="fa fa-dot-circle-o" aria-hidden="true"></i><a href='mailto:<%# Eval("Correo") %>' style="color: darkred;"><%# Eval("Correo") %></a></li>
                                                     <li style="color: black; font-size: x-large"><i class="fa fa-dot-circle-o" aria-hidden="true"></i><%# Eval("Telefono") %>          <%# Eval("Telefono2") %></li>
 
-                                                    <br />
                                                     <br />
                                                     <br />
                                                     <br />

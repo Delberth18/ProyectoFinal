@@ -220,6 +220,7 @@ namespace SurfTribeSystem1._0
                 tabla.Id = idTablaRser;
                 tabla.Id_usuario = usuario.Correo;
                 tabla.Costo = Convert.ToDouble( Session["PrecioAlqui"].ToString());
+                tabla.Fecha=  Convert.ToDateTime(Session["fechaIndu"].ToString());
                 tabla.Tag = "ELIMINAR";
 
                 resultado = new ReservaTablaLogica().Acciones(tabla);

@@ -54,9 +54,9 @@ namespace SurfTribeSystem_Datos
 
 
                 param = new SqlParameter();
-                if (tabla.Fecha == Compara)
+                if (tabla.Fecha == DateTime.MinValue)
                 {
-                    param.Value = DateTime.Now;
+                    param.Value = DBNull.Value;
                 }
                 else
                 {
