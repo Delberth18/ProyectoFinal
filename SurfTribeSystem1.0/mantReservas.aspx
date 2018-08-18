@@ -71,9 +71,11 @@
                                                             <div class="col-sm-3">
                                                                 <ul>
                                                                     <li>
-                                                                        <label style="color: SaddleBrown; font-size: x-large">PRECIO:</label>
+                                                                        <label style="color: SaddleBrown; font-size: x-large">CORREO:</label>
                                                                         <br />
-                                                                        <asp:Label ID="txtprecio" Text='<%# Eval("Precio") %>' runat="server" Style="color:black;font-weight:bold"></asp:Label>
+                                                                        <asp:Label ID="txtprecio"    runat="server" >
+                                                                            <a Style="color:black;font-weight:bold" href='mailto: <%#Eval("Correo") %>'> <%#Eval("Correo") %> </a>
+                                                                        </asp:Label>
                                                                     </li>
                                                                     <li>
                                                                         <br />
@@ -126,6 +128,10 @@
             </div>
 
         </div>
+        <br />
+        <br />
+        <br />
+        <br />
     </section>
 
 

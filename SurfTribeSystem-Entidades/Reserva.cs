@@ -26,6 +26,7 @@ namespace SurfTribeSystem_Entidades
         double precioreserva;
         double precioTotal;
         double precioCl;
+        string correo;
 
 
         public string IdUsuario { get => idUsuario; set => idUsuario = value; }
@@ -43,5 +44,6 @@ namespace SurfTribeSystem_Entidades
         public double PrecioTotal { get => precioTotal; set => precioTotal = value; }
         public double Precioreserva { get => precioreserva; set => precioreserva = value; }
         public double PrecioCl { get => precioCl; set => precioCl = value; }
+        public string Correo { get => correo; set => correo = value; }
     }
 }

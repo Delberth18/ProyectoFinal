@@ -38,7 +38,7 @@
 
                     <center>
 
-                        <div class="col-xs-13" style="text-align: center;">
+                        <div class="col-lg-13" style="text-align: center; margin-left: 90px;">
                             <br />
                                       <asp:GridView ID="grvreportes" runat="server" AutoGenerateColumns="False" HorizontalAlign="Center" CssClass="" BackColor="White" BorderColor="SaddleBrown"
                                                                                 BorderStyle="None" BorderWidth="1px" CellPadding="3"  
@@ -46,8 +46,8 @@
                                                                                 <Columns>
 
 
-                                                                                    <asp:BoundField DataField="FECHA" HeaderText="Fecha"  HeaderStyle-HorizontalAlign="Center" ></asp:BoundField>
-                                                                                    <asp:BoundField DataField="NOMBREUSU" HeaderText="Alumno(a)" ReadOnly="True" HeaderStyle-Width="20%  "></asp:BoundField>
+                                                                                    <asp:BoundField DataField="FECHA" HeaderText="Fecha"  HeaderStyle-HorizontalAlign="Center"></asp:BoundField>
+                                                                                    <asp:BoundField DataField="NOMBREUSU" HeaderText="Alumno(a)" ReadOnly="True" HeaderStyle-Width="20%  " ></asp:BoundField>
                                                                                     <asp:BoundField DataField="IDESCUELA" HeaderText="Escuela"></asp:BoundField>
                                                                                     <asp:BoundField HeaderText="Dificultad" DataField="DIFICULTAD"></asp:BoundField>
                                                                                     <asp:BoundField HeaderText="Instructor(a)" DataField="NOMBREINS"></asp:BoundField>
@@ -92,5 +92,10 @@
                 <asp:Button ID="btnGenerar" class="btn btn-default btn-circle-2 " BackColor="SaddleBrown" ForeColor="White"
                                 runat="server" Text="Generar Reporte" Width="200px"  OnClick="GenerarReporte" />
         <br />
+        <br />
+    <br />
+        <br />
+
     </section>
+    
 </asp:Content>

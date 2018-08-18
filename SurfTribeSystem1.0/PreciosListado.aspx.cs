@@ -71,7 +71,7 @@ namespace SurfTribeSystem1._0
                 if (resultado.TipoResultado == "OK")
                 {
                     tituloLabel.Text = "Precios de la escuela: " + esc;
-                    info1.Text = "Le mostramos nuestros diferentes precios para las clases y alquiler de tablas. ";
+                    info1.Text = "Les mostramos nuestros diferentes precios para las clases y alquiler de tablas. ";
                     faqs = (List<Precio>)resultado.ObjetoResultado;
                     preciosLst.DataSource = faqs;
                     preciosLst.DataBind();

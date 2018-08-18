@@ -164,7 +164,7 @@ namespace SurfTribeSystem1._0
 
             // Creamos una tabla que contendrá el nombre, apellido y país
             // de nuestros visitante.
-            PdfPTable tblPrueba = new PdfPTable(11);
+            PdfPTable tblPrueba = new PdfPTable(10);
             tblPrueba.WidthPercentage = 100;
 
             PdfPCell clNombre;
@@ -178,11 +178,7 @@ namespace SurfTribeSystem1._0
             clNombre.BorderWidth = 0;
             clNombre.HorizontalAlignment = PdfPCell.ALIGN_LEFT;
             tblPrueba.AddCell(clNombre);
-
-            clNombre = new PdfPCell(new Phrase("Almno(a):  ", fuente));
-            clNombre.BorderWidth = 0;
-            clNombre.HorizontalAlignment = PdfPCell.ALIGN_LEFT;
-            tblPrueba.AddCell(clNombre);
+            
 
             clNombre = new PdfPCell(new Phrase("Escuela: ", fuente));
             clNombre.BorderWidth = 0;
@@ -253,13 +249,7 @@ namespace SurfTribeSystem1._0
                 clApellido.BorderWidth = 0;
                 clNombre.HorizontalAlignment = PdfPCell.ALIGN_LEFT;
                 tblPrueba.AddCell(clApellido);
-
-
-                clApellido = new PdfPCell(new Phrase(usu.NombreUsu, fuente2));
-                clApellido.BorderWidth = 0;
-                clNombre.HorizontalAlignment = PdfPCell.ALIGN_LEFT;
-                tblPrueba.AddCell(clApellido);
-
+                
 
                 clApellido = new PdfPCell(new Phrase(usu.IdEscuela, fuente2));
                 clApellido.BorderWidth = 0;
@@ -313,7 +303,7 @@ namespace SurfTribeSystem1._0
                 PdfPCell linea = new PdfPCell(new Phrase(" ", fuente));
                 linea.BorderWidth = 0;
                 clNombre.HorizontalAlignment = PdfPCell.ALIGN_LEFT;
-                linea.Colspan = 11;
+                linea.Colspan = 10;
                 tblPrueba.AddCell(linea);
 
 

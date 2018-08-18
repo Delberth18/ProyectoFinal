@@ -85,10 +85,11 @@ namespace SurfTribeSystem_Datos
                             {
                                 IdSesion = row["ID_SESION"] is DBNull ? null : row["ID_SESION"].ToString(),
                                 IdUsuario = row["ID_USUARIO"] is DBNull ? null : row["ID_USUARIO"].ToString(),
-                                Fecha = row["FECHA"] is DBNull ?"" : row["FECHA"].ToString(),
+                                Fecha = row["FECHA"] is DBNull ?"" :row["FECHA"].ToString(),
                                 NombreIns = row["NOMBRE_INS"] is DBNull ? null : row["NOMBRE_INS"].ToString(),
                                 Precio = row["PRECIO"] is DBNull ? null : row["PRECIO"].ToString(),
                                 NombreUsu = row["NOMBRE_USU"] is DBNull ? null : row["NOMBRE_USU"].ToString(),
+                                Correo= row["CORREO"] is DBNull ? null : row["CORREO"].ToString()
                             });
                         }
                     }

@@ -109,7 +109,7 @@ namespace SurfTribeSystem_Datos
                             reservas.Add(new Reserva
                             {
                                 Dificultad = row["DIFICULTAD"] is DBNull ? null : row["DIFICULTAD"].ToString(),
-                                Fecha = row["FECHA"] is DBNull ? "" : row["FECHA"].ToString(),
+                                Fecha = row["FECHA"] is DBNull ? "" :Convert.ToDateTime( row["FECHA"].ToString()).ToShortDateString(),
                                 Horainicio = row["HORA_INICIO"] is DBNull ? null : row["HORA_INICIO"].ToString(),
                                 IdEscuela = row["ID_ESCUELA"] is DBNull ? null : row["ID_ESCUELA"].ToString(),
                                 NombreUsu = row["NC"] is DBNull ? null : row["NC"].ToString(),
@@ -133,7 +133,7 @@ namespace SurfTribeSystem_Datos
                             reservas.Add(new Reserva
                             {
                                 Dificultad = row["DIFICULTAD"] is DBNull ? null : row["DIFICULTAD"].ToString(),
-                                Fecha = row["FECHA"] is DBNull ? "" : row["FECHA"].ToString(),
+                                Fecha = row["FECHA"] is DBNull ? "" : Convert.ToDateTime(row["FECHA"].ToString()).ToShortDateString(),
                                 Horainicio = row["HORA_INICIO"] is DBNull ? null : row["HORA_INICIO"].ToString(),
                                 IdEscuela = row["ID_ESCUELA"] is DBNull ? null : row["ID_ESCUELA"].ToString(),
                                 NombreUsu = row["NC"] is DBNull ? null : row["NC"].ToString(),

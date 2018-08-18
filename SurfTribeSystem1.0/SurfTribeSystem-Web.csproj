@@ -3691,6 +3691,7 @@
     <Content Include="Site2.Master" />
     <Content Include="Site3.Master" />
     <Content Include="Site4.Master" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

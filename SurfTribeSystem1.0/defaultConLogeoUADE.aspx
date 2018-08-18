@@ -382,7 +382,7 @@
                                     <img class="media-object" src="Imagenes/PIC_20160827_140254.JPG" alt="Destination" />
                                 </a>--%>
                                 <div class="media-body">
-                                    <h3 class="media-heading">Escoga
+                                    <h3 class="media-heading">Escoja
                                         <br />
                                         La escuela que desee</h3>
                                     <p>Visualize la información más relevante de cada escuela. Esta información es brindada por cada una de las escuelas. Puede ser de ayuda para la escongencia de la escuela que más se adecue a lo que ande buscando</p>
